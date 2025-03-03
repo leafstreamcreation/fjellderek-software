@@ -1,5 +1,11 @@
-# Fjellderek Software
+My software development page
 
-My software development homepage showcasing my projects, experience, credentials, philosophy, hiring pitches, and contact information
+Showcasing my accomplishments and skills
 
+enabling connection with clients
 
+and holding knowledge that I share with visitors
+
+Built using HeroUI and Tailwind
+
+My first step back into React
