@@ -1,19 +1,25 @@
 import { Route, Routes } from "react-router-dom";
 
 import IndexPage from "@/pages/index";
-import DocsPage from "@/pages/docs";
-import PricingPage from "@/pages/pricing";
+import VisionPage from "@/pages/vision";
+import SkillsPage from "@/pages/Skills";
+import ExperiencePage from "@/pages/experience";
+import ProjectsPage from "./pages/projects";
+import ContactPage from "./pages/contact";
 import BlogPage from "@/pages/blog";
-import AboutPage from "@/pages/about";
+import ToolkitsPage from "./pages/toolkits";
 
 function App() {
   return (
     <Routes>
       <Route element={<IndexPage />} path="/" />
-      <Route element={<DocsPage />} path="/docs" />
-      <Route element={<PricingPage />} path="/pricing" />
+      <Route element={<VisionPage />} path="/vision" />
+      <Route element={<SkillsPage />} path="/skills" />
+      <Route element={<ExperiencePage />} path="/experience" />
+      <Route element={<ProjectsPage />} path="/projects" />
+      <Route element={<ContactPage />} path="/contact" />
       <Route element={<BlogPage />} path="/blog" />
-      <Route element={<AboutPage />} path="/about" />
+      <Route element={<ToolkitsPage />} path="/toolkits" />
     </Routes>
   );
 }

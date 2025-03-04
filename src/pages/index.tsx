@@ -1,59 +1,25 @@
-import { Link } from "@heroui/link";
-import { Snippet } from "@heroui/snippet";
-import { Code } from "@heroui/code";
-import { button as buttonStyles } from "@heroui/theme";
 
-import { siteConfig } from "@/config/site";
 import { title, subtitle } from "@/components/primitives";
-import { GithubIcon } from "@/components/icons";
 import DefaultLayout from "@/layouts/default";
+import { Button } from "@heroui/button";
+import { Link } from "@heroui/link";
 
 export default function IndexPage() {
   return (
     <DefaultLayout>
       <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
         <div className="inline-block max-w-lg text-center justify-center">
-          <span className={title()}>Make&nbsp;</span>
-          <span className={title({ color: "violet" })}>beautiful&nbsp;</span>
+          <span className={title()}>Hello!&nbsp;I'm&nbsp;</span>
+          <span className={title({ color: "violet" })}>Derek.&nbsp;</span>
           <br />
           <span className={title()}>
-            websites regardless of your design experience.
+            Welcome to my web developer page.
           </span>
           <div className={subtitle({ class: "mt-4" })}>
-            Beautiful, fast and modern React UI library.
+            Here you may learn about my skills, projects, and vision. Whether you are a fellow coder or a prospective client, there are resources here to find the sofware solution you need.
           </div>
         </div>
-
-        <div className="flex gap-3">
-          <Link
-            isExternal
-            className={buttonStyles({
-              color: "primary",
-              radius: "full",
-              variant: "shadow",
-            })}
-            href={siteConfig.links.docs}
-          >
-            Documentation
-          </Link>
-          <Link
-            isExternal
-            className={buttonStyles({ variant: "bordered", radius: "full" })}
-            href={siteConfig.links.github}
-          >
-            <GithubIcon size={20} />
-            GitHub
-          </Link>
-        </div>
-
-        <div className="mt-8">
-          <Snippet hideCopyButton hideSymbol variant="bordered">
-            <span>
-              Get started by editing{" "}
-              <Code color="primary">pages/index.tsx</Code>
-            </span>
-          </Snippet>
-        </div>
+        <Button as={Link} href="/vision" size="lg" radius="full" variant="bordered" color="success">Start Here</Button>
       </section>
     </DefaultLayout>
   );
