@@ -15,22 +15,21 @@ import {
 } from "@/components/icons";
 import { Logo } from "@/components/icons";
 
+import { useState, useEffect } from "react";
+
 export const Navbar = () => {
 
-  return (
-    <HeroUINavbar maxWidth="xl" position="sticky">
-      <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
-        <NavbarBrand className="gap-3 max-w-fit">
-          <Link
-            className="flex justify-start items-center gap-1"
-            color="foreground"
-            href="/"
-          >
-            <Logo />
-            <p className="font-bold text-inherit">FJELL</p>
-          </Link>
-        </NavbarBrand>
-        <div className="hidden lg:flex gap-4 justify-start ml-2">
+  const [screenWidthIsMobile, setScreenWidthIsMobile] = useState(window.screen.width < 400);
+  useEffect(() => {
+    function handleResize() {
+      setScreenWidthIsMobile(window.screen.width < 400);
+    }
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+  function LargeScreenOptions({ isLargeScreen }: { isLargeScreen: boolean }) {
+    if (isLargeScreen) {
+      return <div className="flex gap-4 justify-start ml-2">
           {siteConfig.navItems.map((item) => (
             <NavbarItem key={item.href}>
               <Link
@@ -45,14 +44,34 @@ export const Navbar = () => {
               </Link>
             </NavbarItem>
           ))}
-        </div>
+        </div>;
+    }
+    else return null;
+  };
+  
+
+
+  return (
+    <HeroUINavbar maxWidth="xl" position="sticky">
+      <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
+        <NavbarBrand className="gap-3 max-w-fit">
+          <Link
+            className="flex justify-start items-center gap-1"
+            color="foreground"
+            href="/"
+          >
+            <Logo />
+            <p className="font-bold text-inherit">FJELL</p>
+          </Link>
+        </NavbarBrand>
+        <LargeScreenOptions isLargeScreen={!screenWidthIsMobile}></LargeScreenOptions>
       </NavbarContent>
 
       <NavbarContent
-        className="hidden sm:flex basis-1/5 sm:basis-full"
+        className="flex basis-1/5 basis-full"
         justify="end"
       >
-        <NavbarItem className="hidden sm:flex gap-2">
+        <NavbarItem className="flex gap-2">
           <Link isExternal href={siteConfig.links.github} title="GitHub">
             <GithubIcon className="text-default-500" />
           </Link>
