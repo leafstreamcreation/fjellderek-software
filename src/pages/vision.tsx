@@ -9,7 +9,7 @@ export default function VisionPage() {
       <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
         <div className="inline-block max-w-lg text-center justify-center">
           <span className={title()}>My&nbsp;</span>
-          <span className={title({ color: "violet" })}>Vision&nbsp;</span>
+          <span className={title({ color: "green" })}>Vision&nbsp;</span>
           <br />
           <div className={subtitle({ class: "mt-4" })}>
             I build tools that help. I design software that puts people first, helping others to gain connection with themselves and others and helping to solve problems that people cannot achieve on their own.
