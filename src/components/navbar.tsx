@@ -10,7 +10,6 @@ import {
   DrawerContent,
   DrawerHeader,
   DrawerBody,
-  DrawerFooter,
 } from "@heroui/drawer";
 import { Button } from "@heroui/button";
 import { link as linkStyles } from "@heroui/theme";
