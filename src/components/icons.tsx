@@ -24,7 +24,6 @@ export const Logo: React.FC<IconSvgProps> = ({
   </svg>
 );
 
-//TODO: add icon for linkedin
 export const LinkedInIcon: React.FC<IconSvgProps> = ({
   size = 24,
   width,
@@ -90,6 +89,33 @@ export const GithubIcon: React.FC<IconSvgProps> = ({
     </svg>
   );
 };
+
+//SIMPLE ICONS
+
+export const HamburgerMenuIcon = ({
+  size = 24,
+  width,
+  height,
+  ...props
+}: IconSvgProps) => (
+  <svg
+    aria-hidden="true"
+    focusable="false"
+    height={size || height}
+    role="presentation"
+    viewBox="0 0 24 24"
+    width={size || width}
+    {...props}
+  >
+    <path 
+      d="M3 6.00092H21M3 12.0009H21M3 18.0009H21" 
+      stroke="currentColor" 
+      strokeWidth={2.5} 
+      strokeLinecap="round" 
+      strokeLinejoin="round"
+    />
+  </svg>
+);
 
 export const MoonFilledIcon = ({
   size = 24,

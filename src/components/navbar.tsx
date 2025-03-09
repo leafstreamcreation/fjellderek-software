@@ -1,27 +1,26 @@
-import { Link } from "@heroui/link";
-import {
+import { 
+  Link, 
+  Button,
   Navbar as HeroUINavbar,
   NavbarBrand,
   NavbarContent,
   NavbarItem,
-} from "@heroui/navbar";
-import {
   Drawer,
   DrawerContent,
   DrawerHeader,
   DrawerBody,
-} from "@heroui/drawer";
-import { Button } from "@heroui/button";
+ } from "@heroui/react";
 import { link as linkStyles } from "@heroui/theme";
 import clsx from "clsx";
 
 import { siteConfig } from "@/config/site";
 import { ThemeSwitch } from "@/components/theme-switch";
 import {
+  Logo,
   GithubIcon,
-  LinkedInIcon
+  LinkedInIcon,
+  HamburgerMenuIcon
 } from "@/components/icons";
-import { Logo, HeartFilledIcon } from "@/components/icons";
 
 import { useState, useEffect } from "react";
 
@@ -98,15 +97,15 @@ export const Navbar = () => {
     else return null;
   }
 
-  function MobileDrawerButton({ isSmallScreen, onOpen }: { isSmallScreen: boolean, onOpen: () => void }) {
+  function MobileDrawerButton({ isSmallScreen, onPress }: { isSmallScreen: boolean, onPress: () => void }) {
     if (isSmallScreen) {
       return <NavbarItem>
         <Button
           isIconOnly
           variant="light"
-          onPress={onOpen}
+          onPress={onPress}
         >
-          <HeartFilledIcon />
+          <HamburgerMenuIcon />
         </Button>
       </NavbarItem>;
     }
@@ -118,7 +117,7 @@ export const Navbar = () => {
     <HeroUINavbar maxWidth="xl" position="sticky">
       <SmallScreenDrawer isSmallScreen={screenWidthIsMobile} isOpen={drawerOpen} onClose={() => {setDrawerOpen(false)}}></SmallScreenDrawer>
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
-        <MobileDrawerButton isSmallScreen={screenWidthIsMobile} onOpen={() => {setDrawerOpen(true)}}></MobileDrawerButton>
+        <MobileDrawerButton isSmallScreen={screenWidthIsMobile} onPress={() => { setDrawerOpen(true); }}></MobileDrawerButton>
         <NavbarBrand className="gap-3 max-w-fit">
           <Link
             className="flex justify-start items-center gap-1"

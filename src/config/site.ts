@@ -1,4 +1,3 @@
-import { link } from "fs";
 
 
 export type SiteConfig = typeof siteConfig;
