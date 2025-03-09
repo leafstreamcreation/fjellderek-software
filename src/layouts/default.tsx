@@ -13,7 +13,7 @@ export default function DefaultLayout({
       </main>
       <footer className="w-full flex items-center justify-center py-3 text-xs">
         <span>Copyright&nbsp;2025&nbsp;|&nbsp;</span>
-        <span className="text-sky-400">Fjellderek&nbsp;Software</span>
+        <span className="text-sky-500">Fjellderek&nbsp;Software</span>
       </footer>
     </div>
   );

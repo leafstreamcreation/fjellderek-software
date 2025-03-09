@@ -1,3 +1,4 @@
+import { link } from "fs";
 
 
 export type SiteConfig = typeof siteConfig;
@@ -37,5 +38,6 @@ export const siteConfig = {
   ],
   links: {
     github: "https://github.com/leafstreamcreation",
+    linkedin: "https://www.linkedin.com/in/dereknoblesoftware/",
   },
 };

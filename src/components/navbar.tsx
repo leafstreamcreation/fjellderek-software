@@ -19,6 +19,7 @@ import { siteConfig } from "@/config/site";
 import { ThemeSwitch } from "@/components/theme-switch";
 import {
   GithubIcon,
+  LinkedInIcon
 } from "@/components/icons";
 import { Logo, HeartFilledIcon } from "@/components/icons";
 
@@ -139,7 +140,10 @@ export const Navbar = () => {
           <Link isExternal href={siteConfig.links.github} title="GitHub">
             <GithubIcon className="text-default-500" />
           </Link>
-          <ThemeSwitch />
+          <Link isExternal href={siteConfig.links.linkedin} title="GitHub">
+            <LinkedInIcon className="text-default-500" />
+          </Link>
+          <ThemeSwitch className="ml-2" />
         </NavbarItem>
       </NavbarContent>
     </HeroUINavbar>
