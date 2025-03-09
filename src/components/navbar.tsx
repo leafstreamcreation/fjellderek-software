@@ -62,8 +62,21 @@ export const Navbar = () => {
     if (isSmallScreen) {
      return <Drawer isOpen={isOpen} size="xs" placement="left" onClose={onClose}>
         <DrawerContent>
-          <DrawerHeader className="flex flex-col gap-1">Site Nav</DrawerHeader>
+          <DrawerHeader className="flex items-center gap-1">
+          <Logo />
+          <p className="font-bold text-inherit">FJELL</p>
+          </DrawerHeader>
               <DrawerBody>
+                  <Link
+                    className={clsx(
+                      linkStyles({ color: "foreground" }),
+                      "data-[active=true]:text-primary data-[active=true]:font-medium"
+                    )}
+                    color="foreground"
+                    href="/"
+                  >
+                    Home
+                  </Link>
                   {siteConfig.navItems.map((item) => (
                       <Link
                         key={item.href}
