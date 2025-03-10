@@ -2,7 +2,7 @@ import { Route, Routes } from "react-router-dom";
 
 import IndexPage from "@/pages/index";
 import VisionPage from "@/pages/vision";
-import SkillsPage from "@/pages/Skills";
+import SkillsPage from "@/pages/skills";
 import ExperiencePage from "@/pages/experience";
 import ProjectsPage from "./pages/projects";
 import ContactPage from "./pages/contact";
