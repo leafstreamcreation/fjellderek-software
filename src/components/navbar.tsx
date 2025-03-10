@@ -60,7 +60,7 @@ export const Navbar = () => {
   
   function SmallScreenDrawer({ isSmallScreen, isOpen, onClose }: { isSmallScreen: boolean, isOpen: boolean, onClose: () => void }) {
     if (isSmallScreen) {
-     return <Drawer isOpen={isOpen} size="xs" placement="left" onClose={onClose}>
+     return <Drawer isOpen={isOpen} hideCloseButton size="xs" placement="left" onClose={onClose}>
         <DrawerContent>
           <DrawerHeader className="flex items-center gap-1">
           <Logo />
