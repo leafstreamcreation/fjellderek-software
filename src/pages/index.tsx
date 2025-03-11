@@ -1,5 +1,5 @@
 
-import { title, subtitle } from "@/components/primitives";
+import { title, subtitle, text } from "@/components/primitives";
 import DefaultLayout from "@/layouts/default";
 import { Button } from "@heroui/button";
 import { Link } from "@heroui/link";
@@ -7,19 +7,67 @@ import { Link } from "@heroui/link";
 export default function IndexPage() {
   return (
     <DefaultLayout>
-      <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
+      <section className="flex flex-col items-center justify-center  md:py-10">
         <div className="inline-block max-w-lg text-center justify-center">
-          <span className={title()}>Hello!&nbsp;I'm&nbsp;</span>
-          <span className={title({ color: "violet" })}>Derek.&nbsp;</span>
-          <br />
-          <span className={title()}>
-            Welcome to my web developer page.
-          </span>
-          <div className={subtitle({ class: "mt-4" })}>
-            Here you may learn about my skills, projects, and vision. Whether you are a fellow coder or a prospective client, there are resources here to find the sofware solution you need.
-          </div>
+          <h1>
+            <span className={title()}>Hello!&nbsp;I'm&nbsp;</span>
+            <span className={title({ color: "cyan" })}>Derek</span>
+          </h1>
+          <h2 className="mt-4">
+            <span className={subtitle({ color: "yellow", class: "mt-6" })}>Welcome&nbsp;</span>
+            <span className={subtitle()}>to&nbsp;my&nbsp;</span>
+            <p className={subtitle({ color: "blue" })}>
+              software development homepage
+            </p>
+          </h2>
+          <p className="mt-8">
+            <span className={text()}>A portal to my </span>
+            <span className={text({ color: "cyan" })}>
+            vision, experience, projects,
+            </span>
+            <span className={text()}> and </span>
+            <span className={text({ color: "cyan" })}>
+            resources
+            </span>
+          </p>
+          <p className="mt-6">
+            <span className={text()}>
+            This site contains&nbsp;
+            </span>
+            <span className={text({ color: "yellow" })}>
+              all about me and my work&nbsp;
+            </span>
+            <span className={text()}>
+            as a software developer
+            </span>
+          </p>
+          <p className="mt-6">
+            <span className={text()}>
+            May you&nbsp;
+            </span>
+            <span className={text({ color: "blue" })}>
+              find what you seek&nbsp;
+            </span>
+            <span className={text()}>
+            here - if not, you are invited to&nbsp;
+            </span>
+            <Link href="/contact" className={text({ color: "pink" })}>
+              connect with me directly&nbsp;
+            </Link>
+          </p>
+          <p className="mt-6">
+            <span className={text()}>
+             Once again,&nbsp;
+            </span>
+            <span className={text({ color: "cyan" })}>
+              welcome!&nbsp;
+            </span>
+            <span className={text()}>
+             press the button below or the links above to get started
+            </span>
+          </p>
         </div>
-        <Button as={Link} href="/vision" size="lg" radius="full" variant="bordered" color="success">Start Here</Button>
+        <Button as={Link} href="/vision" className="mt-6" size="lg" radius="full" variant="bordered" color="success">Start Here</Button>
       </section>
     </DefaultLayout>
   );
