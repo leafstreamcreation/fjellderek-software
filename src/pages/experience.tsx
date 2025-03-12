@@ -3,6 +3,8 @@ import DefaultLayout from "@/layouts/default";
 import { Button } from "@heroui/button";
 import { Link } from "@heroui/link";
 
+import { InProgress } from "@/components/in-progress";
+
 export default function ExperiencePage() {
   return (
     <DefaultLayout>
@@ -15,6 +17,7 @@ export default function ExperiencePage() {
             Here I will place a timeline of my experience from the beggining as a timeline. A search bar will allow the user to seek along the time line and jump to each point along the timeline which the relevant experience.
           </div>
         </div>
+        <InProgress />
         <Button as={Link} href="/projects" size="lg" radius="full" variant="bordered" color="success">Next -&gt; Projects</Button>
       </section>
     </DefaultLayout>

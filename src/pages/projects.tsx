@@ -3,6 +3,8 @@ import DefaultLayout from "@/layouts/default";
 import { Button } from "@heroui/button";
 import { Link } from "@heroui/link";
 
+import { InProgress } from "@/components/in-progress";
+
 export default function ProjectsPage() {
   return (
     <DefaultLayout>
@@ -15,7 +17,8 @@ export default function ProjectsPage() {
             Here I will have a project gallery featuring a card for each project with a thumbnail image and an expanding description of the project and a link to the project, if applicable.
           </div>
         </div>
-        <Button as={Link} href="/vision" size="lg" radius="full" variant="bordered" color="success">My Contact Page -&gt;</Button>
+        <InProgress />
+        <Button as={Link} href="/vision" size="lg" radius="full" variant="bordered" color="success">Who I am -&gt;</Button>
       </section>
     </DefaultLayout>
   );

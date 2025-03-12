@@ -4,6 +4,8 @@ import DefaultLayout from "@/layouts/default";
 import { Button } from "@heroui/button";
 import { Link } from "@heroui/link";
 
+import { InProgress } from "@/components/in-progress";
+
 export default function BlogPage() {
   return (
     <DefaultLayout>
@@ -15,6 +17,7 @@ export default function BlogPage() {
           <div className={subtitle({ class: "mt-4" })}>
             My blog posts which will be searchable and have cards with descriptions which link to a blog page for each post. Topics covered will be tutorials, learning processes, critical analyses of important technologies, and journal posts.    
           </div>
+          <InProgress />
         </div>
         <Button as={Link} href="/toolkits" size="lg" radius="full" variant="bordered" color="success">Toolkits -&gt;</Button>
       </section>

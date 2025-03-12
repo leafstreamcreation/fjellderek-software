@@ -3,6 +3,8 @@ import DefaultLayout from "@/layouts/default";
 import { Button } from "@heroui/button";
 import { Link } from "@heroui/link";
 
+import { InProgress } from "@/components/in-progress";
+
 export default function SkillsPage() {
   return (
     <DefaultLayout>
@@ -14,6 +16,7 @@ export default function SkillsPage() {
           <div className={subtitle({ class: "mt-4" })}>
             Here I will have a skill table that has skills grouped by stack and visual indicators of proficiency level. The user can select a stack and search for relevant skills. There will also be a default set of displayed skills
           </div>
+          <InProgress />
         </div>
         <Button as={Link} href="/experience" size="lg" radius="full" variant="bordered" color="success">See My Experience</Button>
       </section>

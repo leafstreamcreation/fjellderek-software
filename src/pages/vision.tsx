@@ -3,6 +3,8 @@ import DefaultLayout from "@/layouts/default";
 import { Button } from "@heroui/button";
 import { Link } from "@heroui/link";
 
+import { InProgress } from "@/components/in-progress";
+
 export default function VisionPage() {
   return (
     <DefaultLayout>
@@ -14,7 +16,8 @@ export default function VisionPage() {
           </div>
           <div className={subtitle({ class: "mt-4" })}>
         </div>
-        <Button as={Link} href="/contact" size="lg" radius="full" variant="bordered" color="success">See My Skills</Button>
+        <InProgress />
+        <Button as={Link} href="/contact" size="lg" radius="full" variant="bordered" color="success">Contact Me -&gt;</Button>
       </section>
     </DefaultLayout>
   );

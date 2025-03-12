@@ -1,6 +1,7 @@
 import { title, subtitle } from "@/components/primitives";
 import DefaultLayout from "@/layouts/default";
 
+import { InProgress } from "@/components/in-progress";
 
 export default function ToolkitsPage() {
   return (
@@ -14,6 +15,7 @@ export default function ToolkitsPage() {
             My toolkit page which contains sets of tools I use to develop software. Tools listed will include things like IDE configurations, frameworks, reference sheets, external reference links (like MDN, but also eventually saved internally to enable PWA/offline access), and AI/content generation tools, all of which will be searchable by topic. Topics will concern all areas of software development I have needed tools for.
           </div>
         </div>
+        <InProgress />
       </section>
     </DefaultLayout>
   );
