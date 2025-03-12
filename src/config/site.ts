@@ -7,10 +7,6 @@ export const siteConfig = {
   description: "The official website of Fjellderek Software",
   navItems: [
     {
-      label: "Vision",
-      href: "/vision",
-    },
-    {
       label: "Skills",
       href: "/skills",
     },
@@ -21,6 +17,10 @@ export const siteConfig = {
     {
       label: "Projects",
       href: "/projects",
+    },
+    {
+      label: "Vision",
+      href: "/vision",
     },
     {
       label: "Contact",

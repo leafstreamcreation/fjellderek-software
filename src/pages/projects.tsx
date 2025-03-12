@@ -15,7 +15,7 @@ export default function ProjectsPage() {
             Here I will have a project gallery featuring a card for each project with a thumbnail image and an expanding description of the project and a link to the project, if applicable.
           </div>
         </div>
-        <Button as={Link} href="/contact" size="lg" radius="full" variant="bordered" color="success">My Contact Page -&gt;</Button>
+        <Button as={Link} href="/vision" size="lg" radius="full" variant="bordered" color="success">My Contact Page -&gt;</Button>
       </section>
     </DefaultLayout>
   );

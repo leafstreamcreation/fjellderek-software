@@ -67,7 +67,7 @@ export default function IndexPage() {
             </span>
           </p>
         </div>
-        <Button as={Link} href="/vision" className="mt-6" size="lg" radius="full" variant="bordered" color="success">Start Here</Button>
+        <Button as={Link} href="/skills" className="mt-6" size="lg" radius="full" variant="bordered" color="success">Start Here</Button>
       </section>
     </DefaultLayout>
   );
