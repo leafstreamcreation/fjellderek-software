@@ -1,4 +1,4 @@
-import { title, subtitle, text } from "@/components/primitives";
+import { title, subtitle } from "@/components/primitives";
 import DefaultLayout from "@/layouts/default";
 import { Button } from "@heroui/button";
 import { Link } from "@heroui/link";
