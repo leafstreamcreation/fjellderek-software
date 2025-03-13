@@ -2,7 +2,7 @@ import { title, subtitle } from "@/components/primitives";
 import DefaultLayout from "@/layouts/default";
 import { Button } from "@heroui/button";
 import { Link } from "@heroui/link";
-import { Progress } from "@heroui/react";
+import { Progress, Input } from "@heroui/react";
 import { skills, Skill } from "@/site-content/skills.ts";
 
 
@@ -21,6 +21,7 @@ export default function SkillsPage() {
             Here I will have a skill table that has skills grouped by stack and visual indicators of proficiency level. The user can select a stack and search for relevant skills. There will also be a default set of displayed skills
           </div>
         </div>
+        <Input placeholder="Filter by stack or context:" size="lg" />
         {
           skills.map((skill:Skill) => {
             return (
