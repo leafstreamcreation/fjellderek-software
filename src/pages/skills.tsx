@@ -4,11 +4,14 @@ import { Button } from "@heroui/button";
 import { Link } from "@heroui/link";
 import { Progress, Input } from "@heroui/react";
 import { skills, Skill } from "@/site-content/skills.ts";
+import { useState } from "react";
 
 
 import { InProgress } from "@/components/in-progress";
 
 export default function SkillsPage() {
+  const [searchKey, setSearchKey] = useState("");
+
   return (
     <DefaultLayout>
       <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
@@ -21,12 +24,15 @@ export default function SkillsPage() {
             Here I will have a skill table that has skills grouped by stack and visual indicators of proficiency level. The user can select a stack and search for relevant skills. There will also be a default set of displayed skills
           </div>
         </div>
-        <Input placeholder="Filter by stack or context:" size="lg" />
+        <Input placeholder="Filter by stack or context:" size="lg" value={searchKey} onValueChange={setSearchKey} />
         {
           skills.map((skill:Skill) => {
-            return (
-              <Progress key={skill.name} value={skill.proficiency}  label={skill.name} size="lg" />
-            );
+            if (skill.name.toLowerCase().includes(searchKey.toLowerCase()) || skill.keys.some(key => key.toLowerCase().includes(searchKey.toLowerCase()))) {
+              return (
+                <Progress key={skill.name} value={skill.proficiency}  label={skill.name} size="lg" />
+              );
+            }
+            else return null;
           })
         }
         <Button as={Link} href="/experience" size="lg" radius="full" variant="bordered" color="success">See My Experience</Button>
