@@ -4,6 +4,8 @@ export type Skill = {
     years: number;
     keys: string[];
     icon: string;
+    subSkills: Skill[];
+    description: string;
 };
 
 export const skills = [
@@ -16,6 +18,8 @@ export const skills = [
                 "Frontend",
             ],
             icon: "react",
+            subSkills: [],
+            description: "",
         },
         {
             name: "JavaScript",
@@ -27,6 +31,8 @@ export const skills = [
                 "node",
             ],
             icon: "javascript",
+            subSkills: [],
+            description: "",
         },
         {
             name: "TypeScript",
@@ -37,6 +43,8 @@ export const skills = [
                 "node",
             ],
             icon: "typescript",
+            subSkills: [],
+            description: "",
         },
         {
             name: "HTML",
@@ -46,6 +54,8 @@ export const skills = [
                 "web",
             ],
             icon: "html",
+            subSkills: [],
+            description: "",
         },
         {
             name: "CSS",
@@ -55,6 +65,8 @@ export const skills = [
                 "web",
             ],
             icon: "css",
+            subSkills: [],
+            description: "",
         },
         {
             name: "Tailwind CSS",
@@ -64,6 +76,8 @@ export const skills = [
                 "web",
             ],
             icon: "tailwindcss",
+            subSkills: [],
+            description: "",
         },
         {
             name: "Node.js",
@@ -74,6 +88,8 @@ export const skills = [
                 "web",
             ],
             icon: "nodejs",
+            subSkills: [],
+            description: "",
         },
         {
             name: "Express.js",
@@ -84,6 +100,8 @@ export const skills = [
                 "web",
             ],
             icon: "express",
+            subSkills: [],
+            description: "",
         },
         {
             name: "MongoDB",
@@ -95,6 +113,8 @@ export const skills = [
                 "web",
             ],
             icon: "mongodb",
+            subSkills: [],
+            description: "",
         },
         {
             name: "PostgreSQL",
@@ -105,6 +125,8 @@ export const skills = [
                 "web",
             ],
             icon: "postgresql",
+            subSkills: [],
+            description: "",
         },
         {
             name: "Git",
@@ -114,6 +136,8 @@ export const skills = [
                 "version control",
             ],
             icon: "git",
+            subSkills: [],
+            description: "",
         },
         {
             name: "GitHub",
@@ -123,6 +147,8 @@ export const skills = [
                 "version control",
             ],
             icon: "github",
+            subSkills: [],
+            description: "",
         },
         {
             name: "Jira",
@@ -132,10 +158,12 @@ export const skills = [
                 "project management",
             ],
             icon: "jira",
+            subSkills: [],
+            description: "",
         },
 ];
 
-const keys = {
+export const keys = {
     items: [
 
     ]
