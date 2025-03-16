@@ -3,15 +3,20 @@ import DefaultLayout from "@/layouts/default";
 import { Button } from "@heroui/button";
 import { Link } from "@heroui/link";
 import { Progress, Input, Select, SelectItem, Selection } from "@heroui/react";
-import { skills, Skill, groups, Group } from "@/site-content/skills.ts";
-import { useState } from "react";
+import { Skill, Group, groups } from "@/site-content/skills.ts";
+import { useState, useRef } from "react";
 
 
 import { InProgress } from "@/components/in-progress";
 
 export default function SkillsPage() {
   const [searchKey, setSearchKey] = useState("");
-  const [selectedGroup, setSelectedGroup] = useState<Selection>(new Set(["All"]));
+  const [selectedGroup, setSelectedGroup] = useState<Selection>(new Set([]));
+  const groupKey = useRef("all");
+  function handleSelection(selection: Selection) {
+    groupKey.current = Array.from(selection).join(', ');
+    setSelectedGroup(selection);
+  }
 
   return (
     <DefaultLayout>
@@ -25,8 +30,8 @@ export default function SkillsPage() {
             Here I will have a skill table that has skills grouped by stack and visual indicators of proficiency level. The user can select a stack and search for relevant skills. There will also be a default set of displayed skills
           </div>
         </div>
-        <Select selectedKeys={selectedGroup} onSelectionChange={setSelectedGroup} label="Skill Domain(s)">
-          {groups.map((group:Group) => (
+        <Select selectedKeys={selectedGroup} onSelectionChange={handleSelection} label="Skill Domain(s)">
+          {Object.values(groups).map((group:Group) => (
             <SelectItem key={group.name}>
               {group.label}
             </SelectItem>
@@ -34,7 +39,7 @@ export default function SkillsPage() {
         </Select>
         <Input placeholder="Search within this domain:" size="lg" value={searchKey} onValueChange={setSearchKey} />
         {
-          skills.map((skill:Skill) => {
+          groups[groupKey.current].skills.map((skill:Skill) => {
             if (skill.name.toLowerCase().includes(searchKey.toLowerCase()) || skill.keys.some(key => key.toLowerCase().includes(searchKey.toLowerCase()))) {
               return (
                 <Progress key={skill.name} value={skill.proficiency}  label={skill.name} size="lg" />
