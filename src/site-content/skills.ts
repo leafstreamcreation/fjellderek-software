@@ -8,6 +8,12 @@ export type Skill = {
     description: string;
 };
 
+export type Group = {
+    name: string;
+    label: string;
+    skills: Skill[];
+};
+
 export const skills = [
         {
             name: "React.js",
@@ -163,8 +169,103 @@ export const skills = [
         },
 ];
 
-export const keys = {
-    items: [
+export const groups = [
+    {
+        name: "Frontend",
+        label: "Frontend",
+        skills: [
 
-    ]
-};
+        ],
+    },
+    {
+        name: "Backend",
+        label: "Backend",
+        skills: [
+
+        ],
+    },
+    {
+        name: "Full Stack",
+        label: "Full Stack",
+        skills: [
+
+        ],
+    },
+    {
+        name: "Apple",
+        label: "Apple",
+        skills: [
+
+        ],
+    },
+    {
+        name: "Google",
+        label: "Google",
+        skills: [
+
+        ],
+    },
+    {
+        name: "Linux",
+        label: "Linux",
+        skills: [
+
+        ],
+    },
+    {
+        name: "Microsoft",
+        label: "Microsoft",
+        skills: [
+
+        ],
+    },  
+    {
+        name: "Mobile",
+        label: "Mobile",
+        skills: [
+
+        ],
+    },
+    {
+        name: "Cloud",
+        label: "Cloud",
+        skills: [
+
+        ],
+    },
+    {
+        name: "DevOps",
+        label: "DevOps",
+        skills: [
+
+        ],
+    },
+    {
+        name: "AI",
+        label: "Artificial Intelligence",
+        skills: [
+
+        ],
+    },
+    {
+        name: "Lanugages",
+        label: "Languages",
+        skills: [
+
+        ],
+    },
+    {
+        name: "Soft Skills",
+        label: "Soft Skills",
+        skills: [
+
+        ],
+    },
+    {
+        name: "All",
+        label: "All",
+        skills: [
+
+        ],
+    },
+]

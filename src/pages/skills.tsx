@@ -2,8 +2,8 @@ import { title, subtitle } from "@/components/primitives";
 import DefaultLayout from "@/layouts/default";
 import { Button } from "@heroui/button";
 import { Link } from "@heroui/link";
-import { Progress, Input } from "@heroui/react";
-import { skills, Skill } from "@/site-content/skills.ts";
+import { Progress, Input, Select, SelectItem, Selection } from "@heroui/react";
+import { skills, Skill, groups, Group } from "@/site-content/skills.ts";
 import { useState } from "react";
 
 
@@ -11,6 +11,7 @@ import { InProgress } from "@/components/in-progress";
 
 export default function SkillsPage() {
   const [searchKey, setSearchKey] = useState("");
+  const [selectedGroup, setSelectedGroup] = useState<Selection>(new Set(["All"]));
 
   return (
     <DefaultLayout>
@@ -24,7 +25,14 @@ export default function SkillsPage() {
             Here I will have a skill table that has skills grouped by stack and visual indicators of proficiency level. The user can select a stack and search for relevant skills. There will also be a default set of displayed skills
           </div>
         </div>
-        <Input placeholder="Filter by stack or context:" size="lg" value={searchKey} onValueChange={setSearchKey} />
+        <Select selectedKeys={selectedGroup} onSelectionChange={setSelectedGroup} label="Skill Domain(s)">
+          {groups.map((group:Group) => (
+            <SelectItem key={group.name}>
+              {group.label}
+            </SelectItem>
+          ))}
+        </Select>
+        <Input placeholder="Search within this domain:" size="lg" value={searchKey} onValueChange={setSearchKey} />
         {
           skills.map((skill:Skill) => {
             if (skill.name.toLowerCase().includes(searchKey.toLowerCase()) || skill.keys.some(key => key.toLowerCase().includes(searchKey.toLowerCase()))) {
