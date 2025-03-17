@@ -4,17 +4,17 @@ import { Button } from "@heroui/button";
 import { Link } from "@heroui/link";
 import { Progress, Input, Select, SelectItem, Selection } from "@heroui/react";
 import { Skill, Group, groups } from "@/site-content/skills.ts";
-import { useState, useRef } from "react";
+import { useState } from "react";
 
 
 import { InProgress } from "@/components/in-progress";
 
 export default function SkillsPage() {
   const [searchKey, setSearchKey] = useState("");
-  const [selectedGroup, setSelectedGroup] = useState<Selection>(new Set([]));
-  const groupKey = useRef("all");
+  const [selectedGroup, setSelectedGroup] = useState<Selection>(new Set(["all"]));
+  const [groupKey, setGroupKey] = useState("all");
   function handleSelection(selection: Selection) {
-    groupKey.current = Array.from(selection).join(', ');
+    setGroupKey(Array.from(selection).join(', '));
     setSelectedGroup(selection);
   }
 
@@ -39,7 +39,7 @@ export default function SkillsPage() {
         </Select>
         <Input placeholder="Search within this domain:" size="lg" value={searchKey} onValueChange={setSearchKey} />
         {
-          groups[groupKey.current].skills.map((skill:Skill) => {
+          groups[groupKey].skills.map((skill:Skill) => {
             if (skill.name.toLowerCase().includes(searchKey.toLowerCase()) || skill.keys.some(key => key.toLowerCase().includes(searchKey.toLowerCase()))) {
               return (
                 <Progress key={skill.name} value={skill.proficiency}  label={skill.name} size="lg" />
