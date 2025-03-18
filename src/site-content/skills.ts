@@ -11,6 +11,8 @@ export type Skill = {
 export type Group = {
     name: string;
     label: string;
+    title: string;
+    description: string;
     skills: Skill[];
 };
 
@@ -22,6 +24,8 @@ export const groups: GroupContainer = {
     frontend: {
         name: "frontend",
         label: "Frontend",
+        title: "Frontend Technologies & Concepts",
+        description: "What I use to create performant and pleasant user interfaces for web applications",
         skills: [
 
         ],
@@ -29,76 +33,17 @@ export const groups: GroupContainer = {
     backend: {
         name: "backend",
         label: "Backend",
+        title: "Backend Technologies & Concepts",
+        description: "What I use to build robust servers and data persistence for web-based applications",
         skills: [
 
         ],
     },
-    fullstack: {
-        name: "fullstack",
-        label: "Full Stack",
-        skills: [
-
-        ],
-    },
-    apple: {
-        name: "apple",
-        label: "Apple",
-        skills: [
-
-        ],
-    },
-    google: {
-        name: "google",
-        label: "Google",
-        skills: [
-
-        ],
-    },
-    linux: {
-        name: "linux",
-        label: "Linux",
-        skills: [
-
-        ],
-    },
-    microsoft: {
-        name: "microsoft",
-        label: "Microsoft",
-        skills: [
-
-        ],
-    },  
-    mobile: {
-        name: "mobile",
-        label: "Mobile",
-        skills: [
-
-        ],
-    },
-    cloud: {
-        name: "cloud",
-        label: "Cloud",
-        skills: [
-
-        ],
-    },
-    devops: {
-        name: "devops",
-        label: "DevOps",
-        skills: [
-
-        ],
-    },
-    ai: {
-        name: "ai",
-        label: "Artificial Intelligence",
-        skills: [
-
-        ],
-    },
-    languages: {
-        name: "languages",
-        label: "Languages",
+    lifecyclecollab: {
+        name: "lifecyclecollab",
+        label: "Collaboration",
+        title: "Software Lifecycle & Collaboration",
+        description: "The tools and methodologies I use to work effectively in local and global software teams",
         skills: [
 
         ],
@@ -106,6 +51,89 @@ export const groups: GroupContainer = {
     softskills: {
         name: "softskills",
         label: "Soft Skills",
+        title: "Personal Qualities & Soft Skills",
+        description: "The innate and invaluable qualities and skills I bring to every project and setting",
+        skills: [
+
+        ],
+    },
+    devops: {
+        name: "devops",
+        label: "Dev Ops",
+        title: "Developer Operations",
+        description: "What I use to create high-powered developer tools as well as virtualization, test automation, and continuous deployment pipelines",
+        skills: [
+
+        ],
+    },
+    qa: {
+        name: "qa",
+        label: "QA",
+        title: "Quality Assurance",
+        description: "What I use to ensure my software performs fast and flawlessly",
+        skills: [
+
+        ],
+    },
+    design: {
+        name: "design",
+        label: "UX",
+        title: "User Experience Design",
+        description: "What I use to craft useful, beautiful, and accesible user interfaces",
+        skills: [
+
+        ],
+    },  
+    accesssecurity: {
+        name: "accesssecurity",
+        label: "Security/Accessibility/Compliance",
+        title: "Security, Accessibility, and Compliance",
+        description: "What I use to ensure my applications are secure, accessible, and compliant with the highest regulatory standards",
+        skills: [
+
+        ],
+    },
+    knowledge: {
+        name: "knowledge",
+        label: "Langs/Knowledge",
+        title: "Languages, Knowledge, and Patterns",
+        description: "My software knowledge providing versatility, innovation, and comprehension to a broad range of project environments",
+        skills: [
+
+        ],
+    },
+    ai: {
+        name: "ai",
+        label: "AI",
+        title: "Artificial Intelligence Tools & Concepts",
+        description: "What I use for creating cutting edge AI models and the AI powered tools I use for next-generation application development",
+        skills: [
+
+        ],
+    },
+    nativemobilegames: {
+        name: "nativemobilegames",
+        label: "Native/Mobile/Games",
+        title: "Native, Mobile, and Game Development",
+        description: "What I use for proprietary platforms such as Apple, Google, and Unity to deliver applications with supercharged performance and user experience",
+        skills: [
+
+        ],
+    },
+    workspaces: {
+        name: "workspaces",
+        label: "Workspaces",
+        title: "Development Workspaces",
+        description: "Platforms, IDEs, and development tools I use to work in a broad range of environments",
+        skills: [
+
+        ],
+    },
+    languagesandmore: {
+        name: "languagesandmore",
+        label: "Languages",
+        title: "Languages and More",
+        description: "My spoken languages and skills beyond the software realm which give a human touch to the work I do",
         skills: [
 
         ],
@@ -113,6 +141,8 @@ export const groups: GroupContainer = {
     all: {
         name: "all",
         label: "All",
+        title: "Everything Under the Sun",
+        description: "Every skill I use in my expansive software experience",
         skills: [
             {
                 name: "React.js",
