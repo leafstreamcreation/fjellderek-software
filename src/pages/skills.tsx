@@ -40,7 +40,7 @@ export default function SkillsPage() {
         <Input placeholder="Search within this domain:" size="lg" value={searchKey} onValueChange={setSearchKey} />
         {
           groups[groupKey].skills.map((skill:Skill) => {
-            if (skill.name.toLowerCase().includes(searchKey.toLowerCase()) || skill.keys.some(key => key.toLowerCase().includes(searchKey.toLowerCase()))) {
+            if (skill.name.toLowerCase().includes(searchKey.toLowerCase()) || skill.keys?.some(key => key.includes(searchKey.toLowerCase()))) {
               return (
                 <Progress key={skill.name} value={skill.proficiency}  label={skill.name} size="lg" />
               );
