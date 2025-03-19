@@ -3,7 +3,7 @@ import DefaultLayout from "@/layouts/default";
 import { Button } from "@heroui/button";
 import { Link } from "@heroui/link";
 import { Progress, Input, Select, SelectItem, Selection } from "@heroui/react";
-import { Skill, Group, groups } from "@/site-content/skills.ts";
+import { Skill, Group, groups } from "@/site-content/Skills/skills";
 import { useState } from "react";
 
 
