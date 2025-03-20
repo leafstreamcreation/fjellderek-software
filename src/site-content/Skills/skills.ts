@@ -1,6 +1,9 @@
 import { Group } from "./types.ts";
 
 import { Frontend } from "./frontend.ts";
+import { Backend } from "./backend.ts";
+import { LifecycleCollab } from "./lifecyclecollab.ts";
+import { SoftSkills } from "./softskills.ts";
 
 export * from "./types.ts";
 
@@ -28,33 +31,9 @@ export interface GroupContainer {
 
 export const groups: GroupContainer = {
     frontend: Frontend,
-    backend: {
-        name: "backend",
-        label: "Backend",
-        title: "Backend Technologies & Concepts",
-        description: "What I use to build robust servers and data persistence for web-based applications",
-        skills: [
-
-        ],
-    },
-    lifecyclecollab: {
-        name: "lifecyclecollab",
-        label: "Collaboration",
-        title: "Software Lifecycle & Collaboration",
-        description: "The tools and methodologies I use to work effectively in local and global software teams",
-        skills: [
-
-        ],
-    },
-    softskills: {
-        name: "softskills",
-        label: "Soft Skills",
-        title: "Personal Qualities & Soft Skills",
-        description: "The innate and invaluable qualities and skills I bring to every project and setting",
-        skills: [
-
-        ],
-    },
+    backend: Backend,
+    lifecyclecollab: LifecycleCollab,
+    softskills: SoftSkills,
     devops: {
         name: "devops",
         label: "Dev Ops",
