@@ -556,22 +556,6 @@ const Axios: Skill = {
     url: "https://axios-http.com",
 };
 
-const NodeMailer: Skill = {
-    name: "NodeMailer",
-    years: 1,
-    proficiency: 70,
-    keys: [
-        "email",
-        "smtp",
-        "vue",
-        "package",
-    ],
-    icon: "nodemailer",
-    subSkills: [],
-    description: "module for Node.js applications to allow easy email sending",
-    url: "https://nodemailer.com",
-};
-
 const BcryptJS: Skill = {
     name: "BcryptJS",
     years: 1,
@@ -664,7 +648,6 @@ export const Frontend: Group = {
             OpenSeaDragon,
             SpaceMouse,
             Axios,
-            NodeMailer,
             BcryptJS,
             LocalForage,
             Lodash,

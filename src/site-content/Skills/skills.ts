@@ -1,4 +1,4 @@
-import { Group } from "./types.ts";
+import { Group, Skill } from "./types.ts";
 
 import { Frontend } from "./frontend.ts";
 import { Backend } from "./backend.ts";
@@ -38,6 +38,952 @@ export interface GroupContainer {
 //     proficiency: ,
 // }
 
+
+const React: Skill = {
+    name: "React.js",
+    proficiency: 50,
+    years: 2,
+    keys: [
+        "mern",
+        "frontend",
+        "framework",
+        "component",
+        "spa"
+    ],
+    icon: "react",
+    subSkills: [],
+    description: "A frontend component framework for building Single Page Applications",
+};
+
+const Vue: Skill = {
+    name: "Vue.js",
+    proficiency: 90,
+    years: 2,
+    keys: [
+        "frontend",
+        "vue",
+        "framework",
+        "component",
+        "spa"
+    ],
+    icon: "vue",
+    subSkills: [
+        {
+            name: "Options API",
+            proficiency: 90,
+        },
+        {
+            name: "Composition API",
+            proficiency: 90,
+        },
+        {
+            name: "reactivity",
+            proficiency: 90,
+        },
+        {
+            name: "component lifecycle",
+            proficiency: 90,
+        },
+        {
+            name: "vue-router",
+            proficiency: 90,
+            icon: "vue",
+            description: "routing library",
+            url: "https://router.vuejs.org",
+        },
+        {
+            name: "vue-use",
+            proficiency: 70,
+            icon: "vueuse",
+            description: "vue composable library",
+            url: "https://vueuse.org",
+        },
+        {
+            name: "pinia",
+            proficiency: 80,
+            icon: "pinia",
+            description: "state management library",
+            url: "https://pinia.vuejs.org",
+        },
+        {
+            name: "vue-test-utils",
+            proficiency: 60,
+            description: "component testing utilities",
+            url: "https://github.com/vuejs/test-utils",
+        },
+        {
+            name: "Vue I18n",
+            proficiency: 50,
+            icon: "vue-i18n",
+            description: "internationalization library",
+            url: "https://vue-i18n.intlify.dev",
+        },
+    ],
+    description: "A frontend component framework for building Single Page Applications",
+    url: "https://vuejs.org",
+};
+
+const Vuetify: Skill = {
+    name: "Vuetify",
+    proficiency: 70,
+    years: 1,
+    keys: [
+        "component library",
+        "vue",
+        "material design",
+    ],
+    icon: "vuetify",
+    subSkills: null,
+    description: "a material design component library for Vue.js",
+    url: "https://vuetifyjs.com/",
+};
+
+const MDBootstrap: Skill = {
+    name: "MDBootstrap",
+    proficiency: 40,
+    years: 1,
+    keys: [
+        "component library",
+        "vue",
+        "bootstrap",
+        "material design",
+    ],
+    icon: "mdbootstrap",
+    subSkills: null,
+    description: "a material design component library for Vue.js with Bootstrap 5",
+    url: "https://mdbootstrap.com/docs/vue/",
+};
+
+const Typescript: Skill = {
+    name: "Typescript",
+    years: 2,
+    keys: [
+        "vue",
+        "node",
+        "javascript",
+        "type",
+        "vue",
+        "react",
+    ],
+    proficiency: 70,
+    icon: "typescript",
+    subSkills: [
+        
+    ],
+    description: "JavaScript with strong typing support",
+    url: "https://www.typescriptlang.org",
+};
+
+const JavaScript: Skill = {
+    name: "JavaScript",
+    proficiency: 90,
+    years: 5,
+    keys: [
+        "ES6",
+        "web",
+        "node",
+        "script",
+        "w3",
+        "vue",
+        "react",
+    ],
+    icon: "javascript",
+    subSkills: [],
+    description: "web scripting language",
+    url: "https://tc39.es/ecma262/",
+
+};
+
+const HTML: Skill = {
+    name: "HTML",
+    proficiency: 90,
+    years: 5,
+    keys: [
+        "web",
+        "markup",
+        "hypertext",
+        "language",
+        "dom",
+        "document object model",
+        "w3",
+        "vue",
+        "react",
+    ],
+    icon: "html",
+    subSkills: [],
+    description: "Hypertext Markup Language",
+    url: "https://www.w3.org/TR/2011/WD-html5-20110405/",
+};
+
+const CSS: Skill = {
+    name: "CSS",
+    proficiency: 90,
+    years: 5,
+    keys: [
+        "web",
+        "style",
+        "cascading style sheets",
+        "w3",
+        "vue",
+        "react",
+    ],
+    icon: "css",
+    subSkills: [],
+    description: "Cascading Style Sheets",
+    url: "https://www.w3.org/TR/css-2023/",
+};
+
+const SASS: Skill = {
+    name: "Sass/SCSS",
+    proficiency: 90,
+    years: 5,
+    keys: [
+        "web",
+        "style",
+        "cascading style sheets",
+        "css",
+        "vue",
+        "react",
+    ],
+    icon: "sass",
+    subSkills: [],
+    description: "CSS preprocessor with enhanced usability",
+    url: "https://sass-lang.com",
+};
+
+const Tailwind: Skill = {
+    name: "Tailwind CSS",
+    proficiency: 60,
+    years: 1,
+    keys: [
+        "web",
+        "style",
+        "cascading style sheets",
+        "react",
+    ],
+    icon: "tailwindcss",
+    subSkills: [],
+    description: "CSS framework for in-component styling",
+    url: "https://tailwindcss.com",
+};
+
+const WebAPIs: Skill = {
+    name: "Web APIs",
+    proficiency: 70,
+    years: 6,
+    keys: [
+        "web",
+        "api",
+        "web3",
+        "vue",
+        "react",
+    ],
+    subSkills: [
+        {
+            name: "Canvas",
+            years: 3,
+            proficiency: 75,
+            description: "drawing 2d graphics with JavaScript and HTML",
+            url: "https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API",
+        },
+        {
+            name: "Clipboard",
+            years: 1,
+            proficiency: 30,
+            description: "responding to clipboard commands and interacting with the system clipboard",
+            url: "https://developer.mozilla.org/en-US/docs/Web/API/Clipboard_API",
+        },
+        {
+            name: "Console",
+            years: 4,
+            proficiency: 80,
+            description: "printing messages to the browser console",
+            url: "https://developer.mozilla.org/en-US/docs/Web/API/Console_API",
+        },
+        {
+            name: "Cookie Store",
+            years: 1,
+            proficiency: 40,
+            description: "managing browser cookies",
+            url: "https://developer.mozilla.org/en-US/docs/Web/API/Cookie_Store_API",
+        },
+        {
+            name: "Encoding",
+            years: 2,
+            proficiency: 65,
+            description: "handling character encodings",
+            url: "https://developer.mozilla.org/en-US/docs/Web/API/Encoding_API",
+        },
+        {
+            name: "Fetch",
+            years: 3,
+            proficiency: 90,
+            description: "making HTTP requests and fetching resources across the network",
+            url: "https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API",
+        },
+        {
+            name: "File",
+            years: 3,
+            proficiency: 65,
+            description: "enabling web applications to access files",
+            url: "https://developer.mozilla.org/en-US/docs/Web/API/File_API",
+        },
+        {
+            name: "File System",
+            years: 3,
+            proficiency: 70,
+            description: "accessing the device file system for reading and writing files",
+            url: "https://developer.mozilla.org/en-US/docs/Web/API/File_System_API",
+        },
+        {
+            name: "Gamepad",
+            years: 3,
+            proficiency: 90,
+            description: "responding to signals from gamepads, controllers, and alternative input devices",
+            url: "https://developer.mozilla.org/en-US/docs/Web/API/Gamepad_API",
+        },
+        {
+            name: "HTML Drag and Drop",
+            years: 3,
+            proficiency: 70,
+            description: "enabling applications to use drag-and-drop features in browsers",
+            url: "https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API",
+        },
+        {
+            name: "History",
+            years: 1,
+            proficiency: 50,
+            description: "enabling access to browsers' session history and manipulating it",
+            url: "https://developer.mozilla.org/en-US/docs/Web/API/History_API",
+        },
+        {
+            name: "IndexedDB",
+            years: 1,
+            proficiency: 20,
+            description: "enabling client side storage of significant amounts of data",
+            url: "https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API",
+        },
+        {
+            name: "Keyboard",
+            years: 2,
+            proficiency: 60,
+            description: "enabling keyboard mapping and keyboard locking",
+            url: "https://developer.mozilla.org/en-US/docs/Web/API/Keyboard_API",
+        },
+        {
+            name: "Notifications",
+            years: 2,
+            proficiency: 30,
+            description: "enableing web apps to send notifications to the user",
+            url: "https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API",
+        },
+        {
+            name: "Permissions",
+            years: 1,
+            proficiency: 60,
+            description: "querying whether permission is granted to use Web APIs that require it",
+            url: "https://developer.mozilla.org/en-US/docs/Web/API/Permissions_API",
+        },
+        {
+            name: "Push",
+            years: 1,
+            proficiency: 40,
+            description: "enabling web applications to receive push notifications from a server",
+            url: "https://developer.mozilla.org/en-US/docs/Web/API/Push_API",
+        },
+        {
+            name: "Service Worker",
+            years: 2,
+            proficiency: 80,
+            description: "intercepting web application requests and resand responding before the network is accessed",
+            url: "https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"
+        },
+        {
+            name: "UI Events",
+            years: 2,
+            proficiency: 90,
+            description: "responding to DOM events",
+            url: "https://developer.mozilla.org/en-US/docs/Web/API/UI_Events"
+        },
+        {
+            name: "URL",
+            years: 2, 
+            proficiency: 60,
+            description: "providing handles to a raw URL to facilitate its modification",
+            url: "https://developer.mozilla.org/en-US/docs/Web/API/URL_API",
+        },
+        {
+            name: "Web Crypto",
+            years: 2, 
+            proficiency: 60,
+            description: "providing cryptographic primitives for web applications",
+            url: "https://developer.mozilla.org/en-US/docs/Web/API/Web_Crypto_API",
+        },
+        {
+            name: "Web Storage",
+            years: 4,
+            proficiency: 30,
+            description: "providing web apps with the ability to store k/v pairs via sessionStorage or localStorage",
+            url: "https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API",
+        }
+    ],
+    description: "Functionality for browser-based applications",
+    url: "https://developer.mozilla.org/en-US/docs/Web/API",
+};
+
+const DOM: Skill = {
+    name: "DOM",
+    years: 5,
+    proficiency: 90,
+    keys: [
+        "web",
+        "document object model",
+        "vue",
+        "react",
+        "html",
+        "hypertext markup language",
+        "javascript",
+        "svg",
+        "scalable vector graphics",
+    ],
+    description: "enabling programmatic access to HTML, SVG, and XML nodes using JavaScript",
+    url: "https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model",
+};
+
+const PWAs: Skill = {
+    name: "Progressive Web apps",
+    years: 1,
+    proficiency: 80,
+    keys: [
+        "web",
+        "offline",
+        "mobile",
+        "vue",
+        "react",
+    ],
+    subSkills: [
+        {
+            name: "Service Worker",
+            years: 2,
+            proficiency: 80,
+            description: "intercepting web application requests and resand responding before the network is accessed",
+            url: "https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"
+        },
+    ],
+    description: "web applications which can be installed and operate offline",
+    url: "https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps#core_pwa_guides",
+};
+
+const SVG: Skill = {
+    name: "SVG API",
+    years: 1,
+    proficiency: 75,
+    keys: [
+        "web",
+        "svg",
+        "image",
+        "vue",
+        "react",
+    ],
+    icon: "tailwindcss",
+    subSkills: [],
+    description: "elements for scalable vector graphics",
+    url: "https://https://developer.mozilla.org/en-US/docs/Web/API/SVG_API.com",
+};
+
+const JQuery: Skill = {
+    name: "jQuery",
+    years: 1,
+    proficiency: 60,
+    keys: [
+        "web",
+        "javascript",
+        "dom",
+    ],
+    icon: "jquery",
+    subSkills: [],
+    description: "JavaScript library for DOM manipulation and event handling",
+    url: "https://jquery.com",
+};
+
+const AJAX: Skill = {
+    name: "AJAX",
+    years: 5,
+    proficiency: 95,
+    keys: [
+        "web",
+        "javascript",
+        "api",
+        "fetch",
+        "react",
+        "vue",
+    ],
+    icon: "ajax",
+    subSkills: [],
+    description: "Asynchronous JavaScript and XML for fetching data without refreshing the page",
+    url: "https://developer.mozilla.org/en-US/docs/Web/Guide/AJAX",
+};
+
+const Handlebars: Skill = {
+    name: "Handlebars",
+    years: 1,
+    proficiency: 60,
+    keys: [
+        "template",
+        "javascript",
+    ],
+    icon: "handlebars",
+    subSkills: [],
+    description: "JavaScript templating engine for building semantic templates",
+    url: "https://handlebarsjs.com",
+};
+
+const OpenSeaDragon: Skill = {
+    name: "OpenSeaDragon",
+    years: 1,
+    proficiency: 70,
+    keys: [
+        "image",
+        "viewer",
+        "zoomable",
+        "pan",
+        "dzi",
+        "canvas",
+        "deep zoom",
+        "vue",
+        "package",
+    ],
+    icon: "openseadragon",
+    subSkills: [],
+    description: "JavaScript library for displaying high-resolution deep-zooming images with zoom and pan capabilities",
+    url: "https://openseadragon.github.io/",
+};
+
+const SpaceMouse: Skill = {
+    name: "3DConnexion SpaceMouse",
+    years: 3,
+    proficiency: 90,
+    keys: [
+        "3d",
+        "input device",
+        "mouse",
+        "vue",
+    ],
+    icon: "3dconnexion",
+    subSkills: [],
+    description: "3D mouse for navigating deep zoom images and 3D environments in web and native applications",
+    url: "https://3dconnexion.com/us/spacemouse/",
+};
+
+const Axios: Skill = {
+    name: "Axios",
+    years: 4,
+    proficiency: 80,
+    keys: [
+        "api",
+        "http",
+        "fetch",
+        "promise",
+        "vue",
+        "react",
+        "package",
+    ],
+    icon: "axios",
+    subSkills: [],
+    description: "Promise-based HTTP client for making requests to APIs",
+    url: "https://axios-http.com",
+};
+
+const BcryptJS: Skill = {
+    name: "BcryptJS",
+    years: 1,
+    proficiency: 70,
+    keys: [
+        "hash",
+        "password",
+        "vue",
+        "package",
+    ],
+    icon: "bcryptjs",
+    subSkills: [],
+    description: "JavaScript library for hashing passwords",
+    url: "https://www.npmjs.com/package/bcrypt",
+};
+
+const LocalForage: Skill = {
+    name: "LocalForage",
+    years: 1,
+    proficiency: 70,
+    keys: [
+        "storage",
+        "offline",
+        "vue",
+        "package",
+    ],
+    icon: "localforage",
+    subSkills: [],
+    description: "JavaScript library for offline storage, using IndexedDB, WebSQL, or localStorage",
+    url: "https://localforage.github.io/localForage/",
+};
+
+const Lodash: Skill = {
+    name: "Lodash",
+    years: 3,
+    proficiency: 80,
+    keys: [
+        "utility",
+        "javascript",
+        "vue",
+        "react",
+        "package",
+    ],
+    icon: "lodash",
+    subSkills: [],
+    description: "JavaScript utility library for common programming tasks",
+    url: "https://lodash.com",
+};
+
+const PopperJS: Skill = {
+    name: "PopperJS",
+    years: 1,
+    proficiency: 70,
+    keys: [
+        "tooltip",
+        "popover",
+        "vue",
+        "react",
+        "package",
+    ],
+    icon: "popperjs",
+    subSkills: [],
+    description: "JavaScript library for managing poppers (tooltips, dropdowns) in web applications",
+    url: "https://popper.js.org",
+};
+
+const NodeMailer: Skill = {
+    name: "NodeMailer",
+    years: 1,
+    proficiency: 70,
+    keys: [
+        "email",
+        "smtp",
+        "package",
+    ],
+    icon: "nodemailer",
+    subSkills: [],
+    description: "module for Node.js applications to allow easy email sending",
+    url: "https://nodemailer.com",
+};
+
+const NodeJS: Skill = {
+    name: "NodeJS",
+    years: 5,
+    proficiency: 95,
+    keys: [
+        "javascript",
+        "server",
+    ],
+    icon: "nodejs",
+    subSkills: [],
+    description: "JavaScript runtime",
+    url: "https://nodejs.org",
+};
+
+const ExpressJS: Skill = {
+    name: "ExpressJS",
+    years: 5,
+    proficiency: 90,
+    keys: [
+        "javascript",
+        "server",
+        "framework",
+    ],
+    icon: "express",
+    subSkills: [],
+    description: "web application framework for Node.js",
+    url: "https://expressjs.com",
+};
+
+const MongoDB: Skill = {
+    name: "MongoDB",
+    years: 1,
+    proficiency: 70,
+    keys: [
+        "database",
+        "nosql",
+    ],
+    icon: "mongodb",
+    subSkills: [],
+    description: "NoSQL database",
+    url: "https://www.mongodb.com",
+};
+
+const REST: Skill = {
+    name: "REST",
+    years: 5,
+    proficiency: 90,
+    keys: [
+        "api",
+        "architecture",
+        "design",
+    ],
+    subSkills: [],
+    description: "Representational State Transfer architecture for networked applications",
+    url: "https://www.redhat.com/en/topics/api/what-is-a-rest-api",
+};
+
+const Microservices: Skill = {
+    name: "Microservices",
+    years: 3,
+    proficiency: 80,
+    keys: [
+        "architecture",
+        "design",
+        "distributed",
+    ],
+    subSkills: [],
+    description: "architectural style that structures an application as a collection of loosely coupled services",
+    url: "https://microservices.io",
+};
+
+const KnexJS: Skill = {
+    name: "KnexJS",
+    years: 1,
+    proficiency: 70,
+    keys: [
+        "database",
+        "sql",
+    ],
+    icon: "knex",
+    subSkills: [],
+    description: "SQL query builder for Node.js",
+    url: "http://knexjs.org",
+};
+
+const PostgreSQL: Skill = {
+    name: "PostgreSQL",
+    years: 1,
+    proficiency: 70,
+    keys: [
+        "database",
+        "sql",
+    ],
+    icon: "postgresql",
+    subSkills: [],
+    description: "open-source relational database",
+    url: "https://www.postgresql.org",
+};
+
+const SQL: Skill = {
+    name: "SQL",
+    years: 1,
+    proficiency: 70,
+    keys: [
+        "database",
+        "query",
+    ],
+    icon: "sql",
+    subSkills: [],
+    description: "Structured Query Language for managing relational databases",
+    url: "https://www.w3schools.com/sql/",
+};
+
+const DatabaseMigrations: Skill = {
+    name: "Database Migrations",
+    years: 1,
+    proficiency: 70,
+    keys: [
+        "database",
+        "schema",
+        "versioning",
+    ],
+    subSkills: [],
+    description: "managing changes to the database schema over time",
+    url: "https://en.wikipedia.org/wiki/Database_migration",
+};
+
+const JSONSchema: Skill = {
+    name: "JSON Schema",
+    years: 1,
+    proficiency: 70,
+    keys: [
+        "validation",
+        "json",
+        "schema",
+    ],
+    subSkills: [],
+    description: "a vocabulary that allows you to annotate and validate JSON documents",
+    url: "https://json-schema.org",
+};
+
+const OpenAPI: Skill = {
+    name: "OpenAPI",
+    years: 1,
+    proficiency: 70,
+    keys: [
+        "api",
+        "specification",
+        "documentation",
+    ],
+    subSkills: [],
+    description: "a specification for building APIs",
+    url: "https://swagger.io/specification/",
+};
+
+const SwaggerJSDoc: Skill = {
+    name: "SwaggerJSDoc",
+    years: 1,
+    proficiency: 70,
+    keys: [
+        "api",
+        "documentation",
+        "jsdoc",
+    ],
+    subSkills: [],
+    description: "Generates OpenAPI documentation from JSDoc comments in your code",
+    url: "https://www.npmjs.com/package/swagger-jsdoc",
+};
+
+const SwaggerUiExpress: Skill = {
+    name: "swaggerUiExpress",
+    years: 1,
+    proficiency: 70,
+    keys: [
+        "api",
+        "documentation",
+        "express",
+    ],
+    subSkills: [],
+    description: "Swagger UI for Express.js to serve OpenAPI documentation",
+    url: "https://www.npmjs.com/package/swagger-ui-express",
+};
+
+const ExpressOpenAPIValidator: Skill = {
+    name: "express-openapi-validator",
+    years: 1,
+    proficiency: 70,
+    keys: [
+        "api",
+        "validation",
+        "express",
+    ],
+    subSkills: [],
+    description: "Middleware for validating OpenAPI requests and responses in Express.js",
+    url: "https://www.npmjs.com/package/express-openapi-validator",
+};
+
+const CORS: Skill = {
+    name: "CORS",
+    years: 1,
+    proficiency: 70,
+    keys: [
+        "security",
+        "http",
+        "cross-origin",
+    ],
+    subSkills: [],
+    description: "Cross-Origin Resource Sharing, a security feature for web applications",
+    url: "https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS",
+};
+
+const Dotenv: Skill = {
+    name: "dotenv",
+    years: 1,
+    proficiency: 70,
+    keys: [
+        "environment",
+        "configuration",
+        "variables",
+    ],
+    subSkills: [],
+    description: "zero-dependency module that loads environment variables from a .env file into process.env",
+    url: "https://www.npmjs.com/package/dotenv",
+};
+
+const Helmet: Skill = {
+    name: "Helmet",
+    years: 1,
+    proficiency: 70,
+    keys: [
+        "security",
+        "http",
+        "headers",
+    ],
+    subSkills: [],
+    description: "helps you secure your Express apps by setting various HTTP headers",
+    url: "https://helmetjs.github.io",
+};
+
+const Morgan: Skill = {
+    name: "Morgan",
+    years: 1,
+    proficiency: 70,
+    keys: [
+        "logging",
+        "http",
+        "middleware",
+    ],
+    subSkills: [],
+    description: "HTTP request logger middleware for Node.js",
+    url: "https://www.npmjs.com/package/morgan",
+};
+
+const ExpressSession: Skill = {
+    name: "express-session",
+    years: 1,
+    proficiency: 70,
+    keys: [
+        "session",
+        "middleware",
+        "express",
+    ],
+    subSkills: [],
+    description: "middleware for managing sessions in Express.js",
+    url: "https://www.npmjs.com/package/express-session",
+};
+
+const CookieParser: Skill = {
+    name: "cookie-parser",
+    years: 1,
+    proficiency: 70,
+    keys: [
+        "cookies",
+        "middleware",
+        "express",
+    ],
+    subSkills: [],
+    description: "middleware for parsing cookies in Express.js",
+    url: "https://www.npmjs.com/package/cookie-parser",
+};
+
+const ConnectMongo: Skill = {
+    name: "connect-mongo",
+    years: 1,
+    proficiency: 70,
+    keys: [
+        "session",
+        "mongodb",
+        "express",
+    ],
+    subSkills: [],
+    description: "MongoDB session store for Express.js",
+    url: "https://www.npmjs.com/package/connect-mongo",
+};
+
+const Mongoose: Skill = {
+    name: "Mongoose",
+    years: 1,
+    proficiency: 70,
+    keys: [
+        "mongodb",
+        "object modeling",
+        "schema",
+    ],
+    subSkills: [],
+    description: "MongoDB object modeling tool designed to work in an asynchronous environment",
+    url: "https://mongoosejs.com",
+};
+
 export const groups: GroupContainer = {
     frontend: Frontend,
     backend: Backend,
@@ -58,173 +1004,13 @@ export const groups: GroupContainer = {
         title: "Everything Under the Sun",
         description: "Every skill I use in my expansive software experience",
         skills: [
-            {
-                name: "React.js",
-                proficiency: 50,
-                years: 2,
-                keys: [
-                    "MERN",
-                    "Frontend",
-                ],
-                icon: "react",
-                subSkills: [],
-                description: "",
-            },
-            {
-                name: "JavaScript",
-                proficiency: 90,
-                years: 5,
-                keys: [
-                    "ES6",
-                    "web",
-                    "node",
-                    "script",
-                    "w3",
-                    "vue",
-                    "react",
-                ],
-                icon: "javascript",
-                subSkills: [],
-                description: "web scripting language",
-                url: "https://tc39.es/ecma262/",
-
-            },
-            {
-                name: "Typescript",
-                years: 2,
-                keys: [
-                    "vue",
-                    "node",
-                    "javascript",
-                    "type",
-                    "react"
-                ],
-                proficiency: 70,
-                icon: "typescript",
-                subSkills: [
-                    
-                ],
-                url: "https://www.typescriptlang.org",
-                description: "JavaScript with strong typing support",
-            },
-            {
-                name: "HTML",
-                proficiency: 90,
-                years: 5,
-                keys: [
-                    "web",
-                    "markup",
-                    "hypertext",
-                    "language",
-                    "dom",
-                    "document object model",
-                    "w3",
-                    "vue",
-                    "react",
-                ],
-                icon: "html",
-                subSkills: [],
-                description: "Hypertext Markup Language",
-                url: "https://www.w3.org/TR/2011/WD-html5-20110405/",
-            },
-            {
-                name: "CSS",
-                proficiency: 90,
-                years: 5,
-                keys: [
-                    "web",
-                    "style",
-                    "cascading style sheets",
-                    "w3",
-                    "vue",
-                    "react",
-                ],
-                icon: "css",
-                subSkills: [],
-                description: "Cascading Style Sheets",
-                url: "https://www.w3.org/TR/css-2023/",
-            },
-            {
-                name: "Sass/SCSS",
-                proficiency: 90,
-                years: 5,
-                keys: [
-                    "web",
-                    "style",
-                    "cascading style sheets",
-                    "css",
-                    "vue",
-                    "react",
-                ],
-                icon: "sass",
-                subSkills: [],
-                description: "CSS preprocessor with enhanced usability",
-                url: "https://sass-lang.com",
-            },
-            {
-                name: "Tailwind CSS",
-                proficiency: 60,
-                years: 1,
-                keys: [
-                    "web",
-                    "style",
-                    "cascading style sheets",
-                    "react",
-                ],
-                icon: "tailwindcss",
-                subSkills: [],
-                description: "CSS framework for in-component styling",
-                url: "https://tailwindcss.com",
-            },
-            {
-                name: "Node.js",
-                proficiency: 90,
-                years: 5,
-                keys: [
-                    "backend",
-                    "web",
-                ],
-                icon: "nodejs",
-                subSkills: [],
-                description: "",
-            },
-            {
-                name: "Express.js",
-                proficiency: 85,
-                years: 5,
-                keys: [
-                    "backend",
-                    "web",
-                ],
-                icon: "express",
-                subSkills: [],
-                description: "",
-            },
-            {
-                name: "MongoDB",
-                proficiency: 50,
-                years: 1,
-                keys: [
-                    "MERN",
-                    "backend",
-                    "web",
-                ],
-                icon: "mongodb",
-                subSkills: [],
-                description: "",
-            },
-            {
-                name: "PostgreSQL",
-                proficiency: 40,
-                years: 3,
-                keys: [
-                    "backend",
-                    "web",
-                ],
-                icon: "postgresql",
-                subSkills: [],
-                description: "",
-            },
+            React,
+            JavaScript,
+            Typescript,
+            HTML,
+            CSS,
+            SASS,
+            Tailwind,
             {
                 name: "Git",
                 proficiency: 80,
@@ -341,322 +1127,62 @@ export const groups: GroupContainer = {
                 url: "https://vue-i18n.intlify.dev",
                 description: "internationalization library",
             },
-            {
-                name: "Vue.js",
-                proficiency: 90,
-                years: 2,
-                keys: [
-                    "frontend",
-                    "vue",
-                    "framework",
-                    "component",
-                    "spa"
-                ],
-                icon: "vue",
-                subSkills: [
-                    {
-                        name: "Options API",
-                        proficiency: 90,
-                    },
-                    {
-                        name: "Composition API",
-                        proficiency: 90,
-                    },
-                    {
-                        name: "reactivity",
-                        proficiency: 90,
-                    },
-                    {
-                        name: "component lifecycle",
-                        proficiency: 90,
-                    },
-                    {
-                        name: "vue-router",
-                        proficiency: 90,
-                        icon: "vue",
-                        description: "routing library",
-                        url: "https://router.vuejs.org",
-                    },
-                    {
-                        name: "vue-use",
-                        proficiency: 70,
-                        icon: "vueuse",
-                        description: "vue composable library",
-                        url: "https://vueuse.org",
-                    },
-                    {
-                        name: "pinia",
-                        proficiency: 80,
-                        icon: "pinia",
-                        description: "state management library",
-                        url: "https://pinia.vuejs.org",
-                    },
-                    {
-                        name: "vue-test-utils",
-                        proficiency: 60,
-                        description: "component testing utilities",
-                        url: "https://github.com/vuejs/test-utils",
-                    },
-                    {
-                        name: "Vue I18n",
-                        proficiency: 50,
-                        icon: "vue-i18n",
-                        description: "internationalization library",
-                        url: "https://vue-i18n.intlify.dev",
-                    },
-                ],
-                description: "A frontend component framework for building Single Page Applications",
-                url: "https://vuejs.org",
-            },
-            {
-                name: "Vuetify",
-                proficiency: 70,
-                years: 1,
-                keys: [
-                    "component library",
-                    "vue",
-                    "material design",
-                ],
-                icon: "vuetify",
-                subSkills: null,
-                description: "a material design component library for Vue.js",
-                url: "https://vuetifyjs.com/",
-            },
-            {
-                name: "MDBootstrap",
-                proficiency: 40,
-                years: 1,
-                keys: [
-                    "component library",
-                    "vue",
-                    "bootstrap",
-                    "material design",
-                ],
-                icon: "mdbootstrap",
-                subSkills: null,
-                description: "a material design component library for Vue.js with Bootstrap 5",
-                url: "https://mdbootstrap.com/docs/vue/",
-            },
-
-            {
-                name: "Web APIs",
-                proficiency: 70,
-                years: 6,
-                keys: [
-                    "web",
-                    "api",
-                    "web3",
-                    "vue",
-                    "react",
-                ],
-                subSkills: [
-                    {
-                        name: "Canvas",
-                        years: 3,
-                        proficiency: 75,
-                        description: "drawing 2d graphics with JavaScript and HTML",
-                        url: "https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API",
-                    },
-                    {
-                        name: "Clipboard",
-                        years: 1,
-                        proficiency: 30,
-                        description: "responding to clipboard commands and interacting with the system clipboard",
-                        url: "https://developer.mozilla.org/en-US/docs/Web/API/Clipboard_API",
-                    },
-                    {
-                        name: "Console",
-                        years: 4,
-                        proficiency: 80,
-                        description: "printing messages to the browser console",
-                        url: "https://developer.mozilla.org/en-US/docs/Web/API/Console_API",
-                    },
-                    {
-                        name: "Cookie Store",
-                        years: 1,
-                        proficiency: 40,
-                        description: "managing browser cookies",
-                        url: "https://developer.mozilla.org/en-US/docs/Web/API/Cookie_Store_API",
-                    },
-                    {
-                        name: "Encoding",
-                        years: 2,
-                        proficiency: 65,
-                        description: "handling character encodings",
-                        url: "https://developer.mozilla.org/en-US/docs/Web/API/Encoding_API",
-                    },
-                    {
-                        name: "Fetch",
-                        years: 3,
-                        proficiency: 90,
-                        description: "making HTTP requests and fetching resources across the network",
-                        url: "https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API",
-                    },
-                    {
-                        name: "File",
-                        years: 3,
-                        proficiency: 65,
-                        description: "enabling web applications to access files",
-                        url: "https://developer.mozilla.org/en-US/docs/Web/API/File_API",
-                    },
-                    {
-                        name: "File System",
-                        years: 3,
-                        proficiency: 70,
-                        description: "accessing the device file system for reading and writing files",
-                        url: "https://developer.mozilla.org/en-US/docs/Web/API/File_System_API",
-                    },
-                    {
-                        name: "Gamepad",
-                        years: 3,
-                        proficiency: 90,
-                        description: "responding to signals from gamepads, controllers, and alternative input devices",
-                        url: "https://developer.mozilla.org/en-US/docs/Web/API/Gamepad_API",
-                    },
-                    {
-                        name: "HTML Drag and Drop",
-                        years: 3,
-                        proficiency: 70,
-                        description: "enabling applications to use drag-and-drop features in browsers",
-                        url: "https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API",
-                    },
-                    {
-                        name: "History",
-                        years: 1,
-                        proficiency: 50,
-                        description: "enabling access to browsers' session history and manipulating it",
-                        url: "https://developer.mozilla.org/en-US/docs/Web/API/History_API",
-                    },
-                    {
-                        name: "IndexedDB",
-                        years: 1,
-                        proficiency: 20,
-                        description: "enabling client side storage of significant amounts of data",
-                        url: "https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API",
-                    },
-                    {
-                        name: "Keyboard",
-                        years: 2,
-                        proficiency: 60,
-                        description: "enabling keyboard mapping and keyboard locking",
-                        url: "https://developer.mozilla.org/en-US/docs/Web/API/Keyboard_API",
-                    },
-                    {
-                        name: "Notifications",
-                        years: 2,
-                        proficiency: 30,
-                        description: "enableing web apps to send notifications to the user",
-                        url: "https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API",
-                    },
-                    {
-                        name: "Permissions",
-                        years: 1,
-                        proficiency: 60,
-                        description: "querying whether permission is granted to use Web APIs that require it",
-                        url: "https://developer.mozilla.org/en-US/docs/Web/API/Permissions_API",
-                    },
-                    {
-                        name: "Push",
-                        years: 1,
-                        proficiency: 40,
-                        description: "enabling web applications to receive push notifications from a server",
-                        url: "https://developer.mozilla.org/en-US/docs/Web/API/Push_API",
-                    },
-                    {
-                        name: "Service Worker",
-                        years: 2,
-                        proficiency: 80,
-                        description: "intercepting web application requests and resand responding before the network is accessed",
-                        url: "https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"
-                    },
-                    {
-                        name: "UI Events",
-                        years: 2,
-                        proficiency: 90,
-                        description: "responding to DOM events",
-                        url: "https://developer.mozilla.org/en-US/docs/Web/API/UI_Events"
-                    },
-                    {
-                        name: "URL",
-                        years: 2, 
-                        proficiency: 60,
-                        description: "providing handles to a raw URL to facilitate its modification",
-                        url: "https://developer.mozilla.org/en-US/docs/Web/API/URL_API",
-                    },
-                    {
-                        name: "Web Crypto",
-                        years: 2, 
-                        proficiency: 60,
-                        description: "providing cryptographic primitives for web applications",
-                        url: "https://developer.mozilla.org/en-US/docs/Web/API/Web_Crypto_API",
-                    },
-                    {
-                        name: "Web Storage",
-                        years: 4,
-                        proficiency: 30,
-                        description: "providing web apps with the ability to store k/v pairs via sessionStorage or localStorage",
-                        url: "https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API",
-                    }
-                ],
-                description: "Functionality for browser-based applications",
-                url: "https://developer.mozilla.org/en-US/docs/Web/API",
-            },
-            {
-                name: "DOM",
-                years: 5,
-                proficiency: 90,
-                keys: [
-                    "web",
-                    "document object model",
-                    "vue",
-                    "react",
-                    "html",
-                    "hypertext markup language",
-                    "javascript",
-                    "svg",
-                    "scalable vector graphics",
-                ],
-                description: "enabling programmatic access to HTML, SVG, and XML nodes using JavaScript",
-                url: "https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model",
-            },
-            {
-                name: "Progressive Web apps",
-                years: 1,
-                proficiency: 80,
-                keys: [
-                    "web",
-                    "offline",
-                    "mobile",
-                    "vue",
-                    "react",
-                ],
-                subSkills: [
-                    {
-                        name: "Service Worker",
-                        years: 2,
-                        proficiency: 80,
-                        description: "intercepting web application requests and resand responding before the network is accessed",
-                        url: "https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"
-                    },
-                ],
-                description: "web applications which can be installed and operate offline",
-                url: "https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps#core_pwa_guides",
-            },
-            {
-                name: "SVG API",
-                years: 1,
-                proficiency: 75,
-                keys: [
-                    "web",
-                    "svg",
-                    "image",
-                    "vue",
-                    "react",
-                ],
-                subSkills: [],
-                description: "elements for scalable vector graphics",
-                url: "https://https://developer.mozilla.org/en-US/docs/Web/API/SVG_API.com",
-            },
+            Vue,
+            Vuetify,
+            MDBootstrap,
+            WebAPIs,
+            DOM,
+            PWAs,
+            SVG,
+            JQuery,
+            AJAX,
+            Lodash,
+            Axios,
+            NodeMailer,
+            BcryptJS,
+            LocalForage,
+            PopperJS,
+            OpenSeaDragon,
+            SpaceMouse,
+            Handlebars,
+            KnexJS,
+            REST,
+            Microservices,
+            SQL,
+            DatabaseMigrations,
+            JSONSchema,
+            OpenAPI,
+            SwaggerJSDoc,
+            SwaggerUiExpress,
+            ExpressOpenAPIValidator,
+            CORS,
+            Dotenv,
+            Helmet,
+            Morgan,
+            ExpressSession,
+            CookieParser,
+            ConnectMongo,
+            Mongoose,
+            Typescript,
+            NodeJS,
+            ExpressJS,
+            MongoDB,
+            PostgreSQL,
+            SQL,
+            DatabaseMigrations,
+            JSONSchema,
+            OpenAPI,
+            SwaggerJSDoc,
+            SwaggerUiExpress,
+            ExpressOpenAPIValidator,
+            CORS,
+            Dotenv,
+            Helmet,
+            Morgan,
+            ExpressSession,
+            CookieParser,
+            ConnectMongo,
+            Mongoose,
         ],
     },
 }
