@@ -453,6 +453,191 @@ const SVG: Skill = {
     url: "https://https://developer.mozilla.org/en-US/docs/Web/API/SVG_API.com",
 };
 
+const JQuery: Skill = {
+    name: "jQuery",
+    years: 1,
+    proficiency: 60,
+    keys: [
+        "web",
+        "javascript",
+        "dom",
+    ],
+    icon: "jquery",
+    subSkills: [],
+    description: "JavaScript library for DOM manipulation and event handling",
+    url: "https://jquery.com",
+};
+
+const AJAX: Skill = {
+    name: "AJAX",
+    years: 5,
+    proficiency: 95,
+    keys: [
+        "web",
+        "javascript",
+        "api",
+        "fetch",
+        "react",
+        "vue",
+    ],
+    icon: "ajax",
+    subSkills: [],
+    description: "Asynchronous JavaScript and XML for fetching data without refreshing the page",
+    url: "https://developer.mozilla.org/en-US/docs/Web/Guide/AJAX",
+};
+
+const Handlebars: Skill = {
+    name: "Handlebars",
+    years: 1,
+    proficiency: 60,
+    keys: [
+        "template",
+        "javascript",
+    ],
+    icon: "handlebars",
+    subSkills: [],
+    description: "JavaScript templating engine for building semantic templates",
+    url: "https://handlebarsjs.com",
+};
+
+const OpenSeaDragon: Skill = {
+    name: "OpenSeaDragon",
+    years: 1,
+    proficiency: 70,
+    keys: [
+        "image",
+        "viewer",
+        "zoomable",
+        "pan",
+        "dzi",
+        "canvas",
+        "deep zoom",
+        "vue",
+        "package",
+    ],
+    icon: "openseadragon",
+    subSkills: [],
+    description: "JavaScript library for displaying high-resolution deep-zooming images with zoom and pan capabilities",
+    url: "https://openseadragon.github.io/",
+};
+
+const SpaceMouse: Skill = {
+    name: "3DConnexion SpaceMouse",
+    years: 3,
+    proficiency: 90,
+    keys: [
+        "3d",
+        "input device",
+        "mouse",
+        "vue",
+    ],
+    icon: "3dconnexion",
+    subSkills: [],
+    description: "3D mouse for navigating deep zoom images and 3D environments in web and native applications",
+    url: "https://3dconnexion.com/us/spacemouse/",
+};
+
+const Axios: Skill = {
+    name: "Axios",
+    years: 4,
+    proficiency: 80,
+    keys: [
+        "api",
+        "http",
+        "fetch",
+        "promise",
+        "vue",
+        "react",
+        "package",
+    ],
+    icon: "axios",
+    subSkills: [],
+    description: "Promise-based HTTP client for making requests to APIs",
+    url: "https://axios-http.com",
+};
+
+const NodeMailer: Skill = {
+    name: "NodeMailer",
+    years: 1,
+    proficiency: 70,
+    keys: [
+        "email",
+        "smtp",
+        "vue",
+        "package",
+    ],
+    icon: "nodemailer",
+    subSkills: [],
+    description: "module for Node.js applications to allow easy email sending",
+    url: "https://nodemailer.com",
+};
+
+const BcryptJS: Skill = {
+    name: "BcryptJS",
+    years: 1,
+    proficiency: 70,
+    keys: [
+        "hash",
+        "password",
+        "vue",
+        "package",
+    ],
+    icon: "bcryptjs",
+    subSkills: [],
+    description: "JavaScript library for hashing passwords",
+    url: "https://www.npmjs.com/package/bcrypt",
+};
+
+const LocalForage: Skill = {
+    name: "LocalForage",
+    years: 1,
+    proficiency: 70,
+    keys: [
+        "storage",
+        "offline",
+        "vue",
+        "package",
+    ],
+    icon: "localforage",
+    subSkills: [],
+    description: "JavaScript library for offline storage, using IndexedDB, WebSQL, or localStorage",
+    url: "https://localforage.github.io/localForage/",
+};
+
+const Lodash: Skill = {
+    name: "Lodash",
+    years: 3,
+    proficiency: 80,
+    keys: [
+        "utility",
+        "javascript",
+        "vue",
+        "react",
+        "package",
+    ],
+    icon: "lodash",
+    subSkills: [],
+    description: "JavaScript utility library for common programming tasks",
+    url: "https://lodash.com",
+};
+
+const PopperJS: Skill = {
+    name: "PopperJS",
+    years: 1,
+    proficiency: 70,
+    keys: [
+        "tooltip",
+        "popover",
+        "vue",
+        "react",
+        "package",
+    ],
+    icon: "popperjs",
+    subSkills: [],
+    description: "JavaScript library for managing poppers (tooltips, dropdowns) in web applications",
+    url: "https://popper.js.org",
+};
+
 export const Frontend: Group = {
     name: "frontend",
         label: "Frontend",
@@ -473,5 +658,16 @@ export const Frontend: Group = {
             DOM,
             PWAs,
             SVG,
+            JQuery,
+            AJAX,
+            Handlebars,
+            OpenSeaDragon,
+            SpaceMouse,
+            Axios,
+            NodeMailer,
+            BcryptJS,
+            LocalForage,
+            Lodash,
+            PopperJS,
         ],
 };
