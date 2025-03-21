@@ -4,6 +4,15 @@ import { Frontend } from "./frontend.ts";
 import { Backend } from "./backend.ts";
 import { LifecycleCollab } from "./lifecyclecollab.ts";
 import { SoftSkills } from "./softskills.ts";
+import { DevOps } from "./devops.ts";
+import { QA } from "./qa.ts";
+import { Design } from "./design.ts";
+import { AccessSecurity } from "./accesssecurity.ts";
+import { Knowledge } from "./knowledge.ts";
+import { AI } from "./artificialintelligence.ts";
+import { NativeMobileGames } from "./nativemobilegames.ts";
+import { Workspaces } from "./workspaces.ts";
+import { LanguagesAndMore } from "./languagesandmore.ts";
 
 export * from "./types.ts";
 
@@ -34,204 +43,15 @@ export const groups: GroupContainer = {
     backend: Backend,
     lifecyclecollab: LifecycleCollab,
     softskills: SoftSkills,
-    devops: {
-        name: "devops",
-        label: "Dev Ops",
-        title: "Developer Operations",
-        description: "What I use to create high-powered developer tools as well as virtualization, test automation, and continuous deployment pipelines",
-        skills: [
-
-        ],
-    },
-    qa: {
-        name: "qa",
-        label: "QA",
-        title: "Quality Assurance",
-        description: "What I use to ensure my software performs fast and flawlessly",
-        skills: [
-            {
-                name: "Playwright",
-                years: 1,
-                proficiency: 10,
-                keys: [
-                    "e2e",
-                    "end to end",
-                    "vue",
-                    "component"
-                ],
-                icon: "playwright",
-                url: "https://playwright.dev",
-                description: "end to end component testing library",
-            },
-            {
-                name: "Cypress",
-                years: 2,
-                proficiency: 10,
-                keys: [
-                    "e2e",
-                    "end to end",
-                    "vue",
-                    "component"
-                ],
-                icon: "cypress",
-                url: "https://www.cypress.io",
-                description: "end to end component testing library",
-            },
-            {
-                name: "Vitest",
-                years: 3,
-                proficiency: 80,
-                keys: [
-                    "unit test",
-                    "vue",
-                    "react",
-                ],
-                icon: "vitest",
-                url: "https://vitest.dev",
-            },
-            {
-                name: "Git",
-                proficiency: 80,
-                years: 15,
-                keys: [
-                    "version control",
-                ],
-                icon: "git",
-                subSkills: [],
-                description: "version control",
-                url: "https://git-scm.com",
-            },
-        ],
-    },
-    design: {
-        name: "design",
-        label: "UX",
-        title: "User Experience Design",
-        description: "What I use to craft useful, beautiful, and accesible user interfaces",
-        skills: [
-            {
-                name: "Storybook",
-                years: 1,
-                proficiency: 10,
-                keys: [
-                    "design",
-                    "component",
-                    "documentation"
-                ],
-                icon: "storybook",
-                url: "https://storybook.js.org",
-                description: "a UI component workshop with generated component documentation"
-            },
-        ],
-    },  
-    accesssecurity: {
-        name: "accesssecurity",
-        label: "Security/Accessibility/Compliance",
-        title: "Security, Accessibility, and Compliance",
-        description: "What I use to ensure my applications are secure, accessible, and compliant with the highest regulatory standards",
-        skills: [
-            {
-                name: "Vue I18n",
-                years: 3,
-                proficiency: 50,
-                keys: [
-                    "vue",
-                    "i18n",
-                    "internationalization",
-                ],
-                icon: "vue-i18n",
-                url: "https://vue-i18n.intlify.dev",
-                description: "internationalization library",
-            },
-        ],
-    },
-    knowledge: {
-        name: "knowledge",
-        label: "Langs/Knowledge",
-        title: "Languages, Knowledge, and Patterns",
-        description: "My software knowledge providing versatility, innovation, and comprehension to a broad range of project environments",
-        skills: [
-            {
-                name: "Typescript",
-                years: 2,
-                proficiency: 70,
-                keys: [
-                    "vue",
-                    "node",
-                    "javascript",
-                    "type",
-                    "react"
-                ],
-                icon: "typescript",
-                subSkills: [
-
-                ],
-                url: "https://www.typescriptlang.org",
-                description: "JavaScript with strong typing support",
-            },
-        ],
-    },
-    ai: {
-        name: "ai",
-        label: "AI",
-        title: "Artificial Intelligence Tools & Concepts",
-        description: "What I use for creating cutting edge AI models and the AI powered tools I use for next-generation application development",
-        skills: [
-
-        ],
-    },
-    nativemobilegames: {
-        name: "nativemobilegames",
-        label: "Native/Mobile/Games",
-        title: "Native, Mobile, and Game Development",
-        description: "What I use for proprietary platforms such as Apple, Google, and Unity to deliver applications with supercharged performance and user experience",
-        skills: [
-
-        ],
-    },
-    workspaces: {
-        name: "workspaces",
-        label: "Workspaces",
-        title: "Development Workspaces",
-        description: "Platforms, IDEs, and development tools I use to work in a broad range of environments",
-        skills: [
-            {
-                name: "vite",
-                years: 4,
-                proficiency: 80,
-                keys: [
-                    "build",
-                    "web",
-                    "vue",
-                    "react",
-                ],
-                icon: "vite",
-                url: "https://vite.dev",
-                description: "a build tool for web applications",
-            },
-            {
-                name: "Git",
-                proficiency: 80,
-                years: 15,
-                keys: [
-                    "version control",
-                ],
-                icon: "git",
-                subSkills: [],
-                description: "version control",
-                url: "https://git-scm.com",
-            },
-        ],
-    },
-    languagesandmore: {
-        name: "languagesandmore",
-        label: "Languages",
-        title: "Languages and More",
-        description: "My spoken languages and skills beyond the software realm which give a human touch to the work I do",
-        skills: [
-
-        ],
-    },
+    devops: DevOps,
+    qa: QA,
+    design: Design,  
+    accesssecurity: AccessSecurity,
+    knowledge: Knowledge,
+    ai: AI,
+    nativemobilegames: NativeMobileGames,
+    workspaces: Workspaces,
+    languagesandmore: LanguagesAndMore,
     all: {
         name: "all",
         label: "All",
