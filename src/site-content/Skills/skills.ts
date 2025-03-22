@@ -2463,6 +2463,20 @@ const SSL: Skill = {
     url: "https://en.wikipedia.org/wiki/Transport_Layer_Security",
 };
 
+const Datadog: Skill = {
+    name: "Datadog",
+    proficiency: 60,
+    years: 2,
+    keys: [
+        "monitoring",
+        "observability",
+        "datadog",
+    ],
+    icon: "datadog",
+    description: "monitoring and observability platform for cloud-scale applications",
+    url: "https://www.datadoghq.com",
+};
+
 export const groups: GroupContainer = {
     frontend: Frontend,
     backend: Backend,
@@ -2678,6 +2692,7 @@ export const groups: GroupContainer = {
             OKTA,
             CrowdStrike,
             SSL,
+            Datadog,
         ],
     },
 }

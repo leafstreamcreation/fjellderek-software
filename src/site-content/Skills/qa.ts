@@ -280,6 +280,20 @@ const EdgeCaseTesting: Skill = {
     url: "https://en.wikipedia.org/wiki/Edge_case",
 };
 
+const Datadog: Skill = {
+    name: "Datadog",
+    proficiency: 60,
+    years: 2,
+    keys: [
+        "monitoring",
+        "observability",
+        "datadog",
+    ],
+    icon: "datadog",
+    description: "monitoring and observability platform for cloud-scale applications",
+    url: "https://www.datadoghq.com",
+};
+
 export const QA: Group = {
     name: "qa",
     label: "QA",
@@ -305,6 +319,7 @@ export const QA: Group = {
         Storybook,
         PerformanceTesting,
         Debugging,
-        EdgeCaseTesting
+        EdgeCaseTesting,
+        Datadog,
     ],
 };
