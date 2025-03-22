@@ -6,8 +6,8 @@ import { LifecycleCollab } from "./lifecyclecollab.ts";
 import { SoftSkills } from "./softskills.ts";
 import { DevOps } from "./devops.ts";
 import { QA } from "./qa.ts";
-import { Design } from "./design.ts";
-import { AccessSecurity } from "./accesssecurity.ts";
+import { AccessDesign } from "./accessibilityanddesign.ts";
+import { SecurityCompliance } from "./securityandcompliance.ts";
 import { Knowledge } from "./knowledge.ts";
 import { AI } from "./artificialintelligence.ts";
 import { NativeMobileGames } from "./nativemobilegames.ts";
@@ -2104,7 +2104,363 @@ const ComponentFeedback: Skill = {
         "ux",
     ],
     description: "providing feedback to users when they interact with UI components",
-    url: "https://uxdesign.cc/feedback-in-ui-design-7f3b2a4c5b1e",
+    url: "https://givegoodux.com/feedback-5-principles-interaction-design-supercharge-ui-5-5/",
+};
+
+const VueI18n: Skill = {
+    name: "Vue I18n",
+    years: 3,
+    proficiency: 50,
+    keys: [
+        "vue",
+        "i18n",
+        "internationalization",
+    ],
+    icon: "vue-i18n",
+    description: "internationalization library",
+    url: "https://vue-i18n.intlify.dev",
+};
+
+const A11y: Skill = {
+    name: "A11y",
+    years: 5,
+    proficiency: 80,
+    keys: [
+        "accessibility",
+        "a11y",
+    ],
+    icon: "eye",
+    description: "Ensuring web content is accessible to all users, including those with disabilities",
+    url: "https://www.a11yproject.com",
+};
+
+const I18n: Skill = {
+    name: "I18n",
+    years: 3,
+    proficiency: 50,
+    keys: [
+        "internationalization",
+        "i18n",
+    ],
+    icon: "globe",
+    description: "Preparing software for localization into multiple languages and regions",
+    url: "https://www.w3.org/International/questions/qa-i18n",
+};
+
+const Aria: Skill = {
+    name: "Aria",
+    years: 4,
+    proficiency: 70,
+    keys: [
+        "aria",
+        "accessibility",
+        "a11y",
+    ],
+    icon: "aria",
+    description: "Accessible Rich Internet Applications for enhancing the accessibility of web content",
+    url: "https://www.w3.org/TR/wai-aria-1.2/",
+};
+
+const AccessControl: Skill = {
+    name: "Access Control",
+    years: 5,
+    proficiency: 70,
+    keys: [
+        "access",
+        "control",
+        "permissions",
+        "role",
+        "rbac",
+    ],
+    subSkills: [
+        {
+            name: "User Authentication",
+            years: 5,
+            proficiency: 75,
+        },
+        {
+            name: "Role-Based Access Control (RBAC)",
+            years: 4,
+            proficiency: 70,
+        }
+    ],
+    description: "Managing user permissions and access rights",
+    url: "https://www.microsoft.com/en-us/security/business/security-101/what-is-access-control#:~:text=In%20its%20simplest%20form%2C%20access,identify%20and%20authenticate%20a%20user.",
+};
+
+const GDPR: Skill = {
+    name: "GDPR Compliance",
+    years: 3,
+    proficiency: 60,
+    keys: [
+        "gdpr",
+        "compliance",
+        "data protection",
+        "privacy",
+    ],
+    description: "General Data Protection Regulation compliance for handling user data",
+    url: "https://gdpr.eu",
+};
+
+const FDA: Skill = {
+    name: "FDA Compliance",
+    years: 2,
+    proficiency: 50,
+    keys: [
+        "fda",
+        "compliance",
+        "food and drug administration",
+        "regulation",
+    ],
+    description: "Compliance with FDA regulations for software in the healthcare and food industries",
+    url: "https://www.fda.gov/medical-devices/digital-health-center-excellence/software-medical-device-samd",
+};
+
+const HIPAA: Skill = {
+    name: "HIPAA Compliance",
+    years: 3,
+    proficiency: 65,
+    keys: [
+        "hipaa",
+        "compliance",
+        "health insurance portability and accountability act",
+        "privacy",
+    ],
+    description: "Health Insurance Portability and Accountability Act compliance for handling healthcare data",
+    url: "https://www.hhs.gov/hipaa/index.html",
+};
+
+const CyberSecurity: Skill = {
+    name: "Cybersecurity",
+    years: 4,
+    proficiency: 70,
+    keys: [
+        "cybersecurity",
+        "security",
+        "information security",
+        "data security",
+    ],
+    description: "Protecting systems, networks, and programs from digital attacks",
+    url: "https://www.cisa.gov/cybersecurity",
+};
+
+const DataPrivacy: Skill = {
+    name: "Data Privacy",
+    years: 3,
+    proficiency: 60,
+    keys: [
+        "data privacy",
+        "privacy",
+        "data protection",
+        "information privacy",
+    ],
+    description: "Ensuring the proper handling and protection of personal data",
+    url: "https://www.privacyinternational.org",
+};
+
+const Oauth: Skill = {
+    name: "OAuth",
+    years: 4,
+    proficiency: 70,
+    keys: [
+        "oauth",
+        "authentication",
+    ],
+    description: "Open standard for access delegation commonly used for token-based authentication",
+    url: "https://oauth.net",
+};
+
+const VPN: Skill = {
+    name: "VPN",
+    years: 3,
+    proficiency: 60,
+    keys: [
+        "vpn",
+        "virtual private network",
+        "network security",
+    ],
+    description: "Virtual Private Network for secure remote access",
+    url: "https://usa.kaspersky.com/resource-center/definitions/what-is-a-vpn?srsltid=AfmBOoqNAsGUmw7zIHAYitEKAv1TodluHRtd-Nam8te0VoojcclLPHVy",
+};
+
+const Encryption: Skill = {
+    name: "Encryption",
+    years: 4,
+    proficiency: 75,
+    keys: [
+        "encryption",
+        "data security",
+        "cryptography",
+    ],
+    subSkills: [
+        {
+            name: "Symmetric Encryption",
+            years: 4,
+            proficiency: 75,
+        },
+        {
+            name: "Asymmetric Encryption",
+            years: 3,
+            proficiency: 70,
+        },
+        {
+            name: "Hashing",
+            years: 4,
+            proficiency: 75,
+        },
+    ],
+    description: "Securing data by converting it into a code to prevent unauthorized access",
+    url: "https://www.khanacademy.org/computing/computer-science/cryptography",
+};
+
+const WebCrypto: Skill = {
+    name: "Web Crypto API",
+    years: 3,
+    proficiency: 65,
+    keys: [
+        "web crypto",
+        "webcrypto",
+        "cryptography",
+        "api",
+    ],
+    description: "JavaScript API for performing cryptographic operations in web applications",
+    url: "https://developer.mozilla.org/en-US/docs/Web/API/Web_Crypto_API",
+};
+
+const bcrypt: Skill = {
+    name: "bcrypt",
+    years: 4,
+    proficiency: 70,
+    keys: [
+        "bcrypt",
+        "password hashing",
+        "hashing",
+    ],
+    description: "Library for hashing passwords securely",
+    url: "https://www.npmjs.com/package/bcrypt",
+};
+
+const AES: Skill = {
+    name: "AES Encryption",
+    years: 4,
+    proficiency: 75,
+    keys: [
+        "aes",
+        "aes encryption",
+        "advanced encryption standard",
+        "cryptography",
+        "gcm",
+        "aes-gcm",
+        "256",
+        "galois/ctr",
+        "galois counter mode",
+        "symmetric encryption",
+        "symmetric key encryption",
+    ],
+    subSkills: [
+        {
+            name: "AES-GCM-256",
+            years: 4,
+            proficiency: 75,
+        },
+    ],
+    description: "Advanced Encryption Standard for secure data encryption",
+    url: "https://en.wikipedia.org/wiki/Advanced_Encryption_Standard",
+};
+
+const MongoDBCSFLE: Skill = {
+    name: "MongoDB CSFLE",
+    years: 3,
+    proficiency: 65,
+    keys: [
+        "mongodb",
+        "csfle",
+        "client-side field level encryption",
+        "encryption",
+    ],
+    description: "Client-Side Field Level Encryption for MongoDB to encrypt data on the client side",
+    url: "https://docs.mongodb.com/manual/core/client-side-field-level-encryption/",
+};
+
+const JWT: Skill = {
+    name: "JWT",
+    years: 4,
+    proficiency: 70,
+    keys: [
+        "jwt",
+        "json web token",
+        "authentication",
+    ],
+    description: "JSON Web Token for securely transmitting information between parties as a JSON object",
+    url: "https://jwt.io",
+};
+
+const SSO: Skill = {
+    name: "SSO",
+    years: 3,
+    proficiency: 65,
+    keys: [
+        "sso",
+        "single sign-on",
+        "authentication",
+    ],
+    description: "Single Sign-On for allowing users to authenticate once and gain access to multiple applications",
+    url: "https://en.wikipedia.org/wiki/Single_sign-on",
+};
+
+const MFA: Skill = {
+    name: "MFA",
+    years: 3,
+    proficiency: 70,
+    keys: [
+        "mfa",
+        "multi-factor authentication",
+    ],
+    description: "Multi-Factor Authentication for adding an extra layer of security to the authentication process",
+    url: "https://www.okta.com/identity-101/multi-factor-authentication/",
+};
+
+const OKTA: Skill = {
+    name: "OKTA",
+    years: 2,
+    proficiency: 60,
+    keys: [
+        "okta",
+        "identity management",
+        "access management",
+    ],
+    description: "Identity and access management service for securing user authentication and authorization",
+    url: "https://www.okta.com",
+};
+
+const CrowdStrike: Skill = {
+    name: "CrowdStrike",
+    years: 2,
+    proficiency: 60,
+    keys: [
+        "crowdstrike",
+        "endpoint security",
+        "cybersecurity",
+    ],
+    description: "Endpoint security platform for detecting and responding to cyber threats",
+    url: "https://www.crowdstrike.com",
+};
+
+const SSL: Skill = {
+    name: "SSL/TLS",
+    years: 4,
+    proficiency: 75,
+    keys: [
+        "ssl",
+        "tls",
+        "secure sockets layer",
+        "transport layer security",
+        "encryption",
+        "data security",
+        "secure communication",
+    ],
+    description: "Secure Sockets Layer/Transport Layer Security for securing communication over a computer network",
+    url: "https://en.wikipedia.org/wiki/Transport_Layer_Security",
 };
 
 export const groups: GroupContainer = {
@@ -2114,8 +2470,8 @@ export const groups: GroupContainer = {
     softskills: SoftSkills,
     devops: DevOps,
     qa: QA,
-    design: Design,  
-    accesssecurity: AccessSecurity,
+    accessdesign: AccessDesign,  
+    securitycompliance: SecurityCompliance,
     knowledge: Knowledge,
     ai: AI,
     nativemobilegames: NativeMobileGames,
@@ -2147,19 +2503,6 @@ export const groups: GroupContainer = {
                 icon: "vite",
                 url: "https://vite.dev",
                 description: "a build tool for web applications",
-            },
-            {
-                name: "Vue I18n",
-                years: 3,
-                proficiency: 50,
-                keys: [
-                    "vue",
-                    "i18n",
-                    "internationalization",
-                ],
-                icon: "vue-i18n",
-                url: "https://vue-i18n.intlify.dev",
-                description: "internationalization library",
             },
             Vue,
             Vuetify,
@@ -2312,6 +2655,29 @@ export const groups: GroupContainer = {
             ResponsiveDesign,
             RTL,
             ComponentFeedback,
+            VueI18n,
+            A11y,
+            I18n,
+            Aria,
+            AccessControl,
+            GDPR,
+            FDA,
+            HIPAA,
+            CyberSecurity,
+            DataPrivacy,
+            Oauth,
+            VPN,
+            Encryption,
+            WebCrypto,
+            bcrypt,
+            AES,
+            MongoDBCSFLE,
+            JWT,
+            SSO,
+            MFA,
+            OKTA,
+            CrowdStrike,
+            SSL,
         ],
     },
 }

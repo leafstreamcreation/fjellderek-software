@@ -174,13 +174,67 @@ const ComponentFeedback: Skill = {
         "ux",
     ],
     description: "providing feedback to users when they interact with UI components",
-    url: "https://uxdesign.cc/feedback-in-ui-design-7f3b2a4c5b1e",
+    url: "https://givegoodux.com/feedback-5-principles-interaction-design-supercharge-ui-5-5/",
 };
 
-export const Design: Group = {
-    name: "Design",
-    label: "UX",
-    title: "User Experience Design",
+const VueI18n: Skill = {
+    name: "Vue I18n",
+    years: 3,
+    proficiency: 50,
+    keys: [
+        "vue",
+        "i18n",
+        "internationalization",
+    ],
+    icon: "vue-i18n",
+    description: "internationalization library",
+    url: "https://vue-i18n.intlify.dev",
+};
+
+const A11y: Skill = {
+    name: "A11y",
+    years: 5,
+    proficiency: 80,
+    keys: [
+        "accessibility",
+        "a11y",
+    ],
+    icon: "eye",
+    description: "Ensuring web content is accessible to all users, including those with disabilities",
+    url: "https://www.a11yproject.com",
+};
+
+const I18n: Skill = {
+    name: "I18n",
+    years: 3,
+    proficiency: 50,
+    keys: [
+        "internationalization",
+        "i18n",
+    ],
+    icon: "globe",
+    description: "Preparing software for localization into multiple languages and regions",
+    url: "https://www.w3.org/International/questions/qa-i18n",
+};
+
+const Aria: Skill = {
+    name: "Aria",
+    years: 4,
+    proficiency: 70,
+    keys: [
+        "aria",
+        "accessibility",
+        "a11y",
+    ],
+    icon: "aria",
+    description: "Accessible Rich Internet Applications for enhancing the accessibility of web content",
+    url: "https://www.w3.org/TR/wai-aria-1.2/",
+};
+
+export const AccessDesign: Group = {
+    name: "accessdesign",
+    label: "Accessibility & UX",
+    title: "Accessibility & User Experience",
     description: "What I use to craft useful, beautiful, and accesible user interfaces",
     skills: [
         Storybook,
@@ -197,5 +251,9 @@ export const Design: Group = {
         ResponsiveDesign,
         RTL,
         ComponentFeedback,
+        VueI18n,
+        A11y,
+        I18n,
+        Aria,
     ],
 };
