@@ -6633,6 +6633,102 @@ const MobileFirst: Skill = {
     url: "https://www.smashingmagazine.com/2018/02/mobile-first-responsive-web-design/",
 };
 
+const ServiceDogHandling: Skill = {
+    name: "Service Dog Handling",
+    proficiency: 80,
+    years: 5,
+    keys: [
+        "service dog handling",
+        "service dog training",
+        "canine training",
+        "dog obedience",
+        "dog behavior",
+        "animal training",
+        "animal behavior",
+        "pet care",
+        "public access",
+        "scent training",
+        "deep pressure therapy",
+        "light pressure therapy",
+        "canine psychology",
+        "canine enrichment",
+        "prey model nutrition",
+        "crate training",
+        "leash training",
+        "socialization",
+        "correctionless methodology",
+        "positive reinforcement",
+        "service dog laws",
+    ],
+    subSkills: [
+        {
+            name: "obedience training",
+            proficiency: 80,
+            years: 5,
+        },
+        {
+            name: "public access",
+            proficiency: 80,
+            years: 5,
+        },
+        {
+            name: "scent training",
+            proficiency: 80,
+            years: 5,
+        },
+        {
+            name: "deep/light pressure therapy",
+            proficiency: 80,
+            years: 5,
+        },
+        {
+            name: "canine psychology",
+            proficiency: 80,
+            years: 5,
+        },
+        {
+            name: "canine enrichment",
+            proficiency: 80,
+            years: 5,
+        },
+        {
+            name: "prey model nutrition",
+            proficiency: 80,
+            years: 5,
+        },
+        {
+            name: "crate training",
+            proficiency: 80,
+            years: 5,
+        },
+        {
+            name: "leash training",
+            proficiency: 80,
+            years: 5,
+        },
+        {
+            name: "socialization",
+            proficiency: 80,
+            years: 5,
+        },
+        {
+            name: "correctionless methodology",
+            proficiency: 80,
+            years: 5,
+        },
+        {
+            name: "positive reinforcement",
+            proficiency: 80,
+            years: 5,
+        },
+        {
+            name: "Service Dog Laws",
+            proficiency: 80,
+            years: 5,
+        },
+    ],
+};
+
 export const groups: GroupContainer = {
     frontend: Frontend,
     backend: Backend,
@@ -6897,6 +6993,7 @@ export const groups: GroupContainer = {
             NPM,
             yarn,
             MobileFirst,
+            ServiceDogHandling
         ],
     },
 }
