@@ -329,6 +329,34 @@ const CleanCode: Skill = {
     url: "https://en.wikipedia.org/wiki/Clean_code",
 };
 
+const ConventionalCommits: Skill = {
+    name: "Conventional Commits",
+    proficiency: 70,
+    years: 3,
+    keys: [
+        "conventional commits",
+        "commit message",
+        "commit",
+    ],
+    subSkills: [],
+    description: "specification for adding human and machine readable meaning to commit messages",
+    url: "https://www.conventionalcommits.org",
+};
+
+const SemanticVersioning: Skill = {
+    name: "Semantic Versioning",
+    proficiency: 70,
+    years: 3,
+    keys: [
+        "semantic versioning",
+        "semver",
+        "versioning",
+    ],
+    subSkills: [],
+    description: "versioning scheme for software that reflects the nature of changes in each release",
+    url: "https://semver.org",
+};
+
 export const QA: Group = {
     name: "qa",
     label: "QA",
@@ -357,5 +385,7 @@ export const QA: Group = {
         EdgeCaseTesting,
         Datadog,
         CleanCode,
+        ConventionalCommits,
+        SemanticVersioning,
     ],
 };
