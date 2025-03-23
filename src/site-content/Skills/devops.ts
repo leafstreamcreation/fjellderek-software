@@ -158,6 +158,18 @@ const AWSS3: Skill = {
     url: "https://aws.amazon.com/s3/",
 };
 
+const Helm: Skill = {
+    name: "Helm",
+    years: 1,
+    proficiency: 60,
+    keys: [
+        "Kubernetes",
+        "package manager",
+    ],
+    description: "Package manager for Kubernetes that helps you manage Kubernetes applications",
+    url: "https://helm.sh",
+};
+
 export const DevOps: Group = {
     name: "devops",
     label: "Dev Ops",
@@ -177,5 +189,6 @@ export const DevOps: Group = {
         Netlify,
         Heroku,
         AWSS3,
+        Helm,
     ],
 };

@@ -622,6 +622,22 @@ const PopperJS: Skill = {
     url: "https://popper.js.org",
 };
 
+const JSX: Skill = {
+    name: "JSX",
+    proficiency: 75,
+    years: 3,
+    keys: [
+        "react",
+        "javascript",
+        "html",
+        "web",
+    ],
+    icon: "react",
+    subSkills: [],
+    description: "JavaScript XML, a syntax extension for JavaScript",
+    url: "https://reactjs.org/docs/introducing-jsx.html",
+};
+
 export const Frontend: Group = {
     name: "frontend",
         label: "Frontend",
@@ -652,5 +668,6 @@ export const Frontend: Group = {
             LocalForage,
             Lodash,
             PopperJS,
+            JSX,
         ],
 };

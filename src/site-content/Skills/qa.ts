@@ -294,6 +294,41 @@ const Datadog: Skill = {
     url: "https://www.datadoghq.com",
 };
 
+const CleanCode: Skill = {
+    name: "Clean Coding",
+    proficiency: 80,
+    years: 5,
+    keys: [
+        "clean code",
+        "code quality",
+        "best practices",
+    ],
+    subSkills: [
+        {
+            name: "duplication removal",
+            proficiency: 80,
+            years: 5,
+        },
+        {
+            name: "code readability",
+            proficiency: 80,
+            years: 5,
+        },
+        {
+            name: "refactoring",
+            proficiency: 80,
+            years: 5,
+        },
+        {
+            name: "descriptive naming",
+            proficiency: 80,
+            years: 5,
+        },
+    ],
+    description: "practice of writing code that is easy to read, understand, and maintain",
+    url: "https://en.wikipedia.org/wiki/Clean_code",
+};
+
 export const QA: Group = {
     name: "qa",
     label: "QA",
@@ -321,5 +356,6 @@ export const QA: Group = {
         Debugging,
         EdgeCaseTesting,
         Datadog,
+        CleanCode,
     ],
 };
