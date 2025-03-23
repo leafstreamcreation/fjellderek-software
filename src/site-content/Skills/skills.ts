@@ -8,7 +8,7 @@ import { DevOps } from "./devops.ts";
 import { QA } from "./qa.ts";
 import { AccessDesign } from "./accessibilityanddesign.ts";
 import { SecurityCompliance } from "./securityandcompliance.ts";
-import { StructuresAlgorithmsPatterns } from "./computationalgorithmspatterns.ts";
+import { ComputationAlgorithmsPatterns, StructuresAlgorithmsPatterns } from "./computationalgorithmspatterns.ts";
 import { AI } from "./artificialintelligence.ts";
 import { NativeMobileGames } from "./nativemobilegames.ts";
 import { Workspaces } from "./workspaces.ts";
@@ -4155,7 +4155,7 @@ export const groups: GroupContainer = {
     qa: QA,
     accessdesign: AccessDesign,  
     securitycompliance: SecurityCompliance,
-    knowledge: StructuresAlgorithmsPatterns,
+    computationalgorithmspatterns: ComputationAlgorithmsPatterns,
     ai: AI,
     nativemobilegames: NativeMobileGames,
     workspaces: Workspaces,
@@ -4164,7 +4164,7 @@ export const groups: GroupContainer = {
         name: "all",
         label: "All",
         title: "Everything Under the Sun",
-        description: "Every skill I use in my expansive software experience",
+        description: "Every skill I use in my growing software experience",
         skills: [
             React,
             JavaScript,
@@ -4208,10 +4208,6 @@ export const groups: GroupContainer = {
             KnexJS,
             REST,
             Microservices,
-            SQL,
-            DatabaseMigrations,
-            JSONSchema,
-            OpenAPI,
             SwaggerJSDoc,
             SwaggerUiExpress,
             ExpressOpenAPIValidator,
@@ -4220,10 +4216,8 @@ export const groups: GroupContainer = {
             Helmet,
             Morgan,
             ExpressSession,
-            CookieParser,
             ConnectMongo,
             Mongoose,
-            Typescript,
             NodeJS,
             ExpressJS,
             MongoDB,
@@ -4232,17 +4226,7 @@ export const groups: GroupContainer = {
             DatabaseMigrations,
             JSONSchema,
             OpenAPI,
-            SwaggerJSDoc,
-            SwaggerUiExpress,
-            ExpressOpenAPIValidator,
-            CORS,
-            Dotenv,
-            Helmet,
-            Morgan,
-            ExpressSession,
             CookieParser,
-            ConnectMongo,
-            Mongoose,
             GlobalTeamCollaboration,
             RemoteTeamCollaboration,
             AGILE,
