@@ -1703,6 +1703,80 @@ const Abolitionism: Skill = {
     description: "Knowledgeable about abolitionism and advocacy for social justice.",
 };
 
+const SpiritualityAndMysticism: Skill = {
+    name: "Spirituality and Mysticism",
+    proficiency: 70,
+    years: 5,
+    keys: [
+        "spirituality",
+        "mysticism",
+        "meditation",
+        "mindfulness",
+        "yoga",
+        "energy work",
+        "astrology",
+        "intuition",
+        "manifestation",
+        "spiritual growth",
+        "self-discovery",
+        "inner peace",
+        "enlightenment",
+        "sufism",
+        "shamanism",
+        "earth-based spirituality",
+        "pachamama",
+        "nature spirituality",
+    ],
+    subSkills: [
+        {
+            name: "meditation",
+            proficiency: 70,
+            years: 5,
+        },
+        {
+            name: "mindfulness",
+            proficiency: 70,
+            years: 5,
+        },
+        {
+            name: "energy work",
+            proficiency: 70,
+            years: 5,
+        },
+        {
+            name: "intuition",
+            proficiency: 70,
+            years: 5,
+        },
+        {
+            name: "self-discovery",
+            proficiency: 70,
+            years: 5,
+        },
+        {
+            name: "sufism",
+            proficiency: 70,
+            years: 5,
+        },
+        {
+            name: "shamanism",
+            proficiency: 70,
+            years: 5,
+        },
+        {
+            name: "earth-based spirituality",
+            proficiency: 70,
+            years: 5,
+        },
+        {
+            name: "mysticism",
+            proficiency: 70,
+            years: 5,
+        },
+    ],
+    description: "Knowledgeable in various spiritual and mystical practices.",
+};
+
 export const LanguagesAndMore: Group = {
     name: "languagesandmore",
     label: "Languages & More",
@@ -1727,5 +1801,6 @@ export const LanguagesAndMore: Group = {
         EthnoAnthropology,
         Linguistics,
         Abolitionism,
+        SpiritualityAndMysticism,
     ],
 };

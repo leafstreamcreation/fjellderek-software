@@ -6401,6 +6401,186 @@ const Abolitionism: Skill = {
     description: "Knowledgeable about abolitionism and advocacy for social justice.",
 };
 
+const Reading: Skill = {
+    name: "Reading",
+    proficiency: 90,
+    years: 20,
+    keys: [
+        "reading",
+        "books",
+        "literature",
+        "fiction",
+        "non-fiction",
+        "poetry",
+        "novels",
+        "short stories",
+        "articles",
+        "essays",
+    ],
+    subSkills: [
+        {
+            name: "fiction",
+            proficiency: 90,
+            years: 20,
+        },
+        {
+            name: "non-fiction",
+            proficiency: 90,
+            years: 20,
+        },
+        {
+            name: "poetry",
+            proficiency: 90,
+            years: 20,
+        },
+        {
+            name: "novels",
+            proficiency: 90,
+            years: 20,
+        },
+        {
+            name: "short stories",
+            proficiency: 90,
+            years: 20,
+        },
+        {
+            name: "articles",
+            proficiency: 90,
+            years: 20,
+        },
+        {
+            name: "essays",
+            proficiency: 90,
+            years: 20,
+        },
+    ],
+    description: "Avid reader with a passion for various genres and forms of literature.",
+};
+
+const Shows: Skill = {
+    name: "Shows",
+    proficiency: 90,
+    years: 20,
+    keys: [
+        "shows",
+        "television",
+        "series",
+        "drama",
+        "comedy",
+        "documentary",
+        "reality",
+        "anime",
+        "cartoons",
+    ],
+    subSkills: [
+        {
+            name: "drama",
+            proficiency: 90,
+            years: 20,
+        },
+        {
+            name: "comedy",
+            proficiency: 90,
+            years: 20,
+        },
+        {
+            name: "documentary",
+            proficiency: 90,
+            years: 20,
+        },
+        {
+            name: "reality",
+            proficiency: 90,
+            years: 20,
+        },
+        {
+            name: "anime",
+            proficiency: 90,
+            years: 20,
+        },
+        {
+            name: "cartoons",
+            proficiency: 90,
+            years: 20,
+        },
+    ],
+    description: "Avid viewer of various television shows and series.",
+};
+
+const SpiritualityAndMysticism: Skill = {
+    name: "Spirituality and Mysticism",
+    proficiency: 70,
+    years: 5,
+    keys: [
+        "spirituality",
+        "mysticism",
+        "meditation",
+        "mindfulness",
+        "yoga",
+        "energy work",
+        "astrology",
+        "intuition",
+        "manifestation",
+        "spiritual growth",
+        "self-discovery",
+        "inner peace",
+        "enlightenment",
+        "sufism",
+        "shamanism",
+        "earth-based spirituality",
+        "pachamama",
+        "nature spirituality",
+    ],
+    subSkills: [
+        {
+            name: "meditation",
+            proficiency: 70,
+            years: 5,
+        },
+        {
+            name: "mindfulness",
+            proficiency: 70,
+            years: 5,
+        },
+        {
+            name: "energy work",
+            proficiency: 70,
+            years: 5,
+        },
+        {
+            name: "intuition",
+            proficiency: 70,
+            years: 5,
+        },
+        {
+            name: "self-discovery",
+            proficiency: 70,
+            years: 5,
+        },
+        {
+            name: "sufism",
+            proficiency: 70,
+            years: 5,
+        },
+        {
+            name: "shamanism",
+            proficiency: 70,
+            years: 5,
+        },
+        {
+            name: "earth-based spirituality",
+            proficiency: 70,
+            years: 5,
+        },
+        {
+            name: "mysticism",
+            proficiency: 70,
+            years: 5,
+        },
+    ],
+    description: "Knowledgeable in various spiritual and mystical practices.",
+};
+
 export const groups: GroupContainer = {
     frontend: Frontend,
     backend: Backend,
@@ -6658,6 +6838,9 @@ export const groups: GroupContainer = {
             EthnoAnthropology,
             Linguistics,
             Abolitionism,
+            Reading,
+            Shows,
+            SpiritualityAndMysticism,
         ],
     },
 }
