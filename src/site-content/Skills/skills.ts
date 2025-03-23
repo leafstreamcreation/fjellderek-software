@@ -6581,6 +6581,58 @@ const SpiritualityAndMysticism: Skill = {
     description: "Knowledgeable in various spiritual and mystical practices.",
 };
 
+const Pip: Skill = {
+    name: "Pip",
+    years: 5,
+    proficiency: 70,
+    keys: [
+        "package manager",
+        "python",
+    ],
+    icon: "pip",
+    url: "https://pip.pypa.io/en/stable/",
+    description: "a package manager for Python",
+};
+
+const NPM: Skill = {
+    name: "NPM",
+    years: 6,
+    proficiency: 80,
+    keys: [
+        "package manager",
+        "javascript",
+        "node",
+    ],
+    icon: "npm",
+    url: "https://www.npmjs.com",
+    description: "a package manager for JavaScript",
+};
+
+const yarn: Skill = {
+    name: "Yarn",
+    years: 5,
+    proficiency: 70,
+    keys: [
+        "package manager",
+        "javascript",
+        "node",
+    ],
+    icon: "yarn",
+    url: "https://yarnpkg.com",
+    description: "a package manager for JavaScript",
+};
+
+const MobileFirst: Skill = {
+    name: "Mobile First",
+    years: 2,
+    proficiency: 9,
+    keys: [
+        "ui",
+    ],
+    description: "designing user interfaces with a mobile-first approach, prioritizing mobile devices",
+    url: "https://www.smashingmagazine.com/2018/02/mobile-first-responsive-web-design/",
+};
+
 export const groups: GroupContainer = {
     frontend: Frontend,
     backend: Backend,
@@ -6841,6 +6893,10 @@ export const groups: GroupContainer = {
             Reading,
             Shows,
             SpiritualityAndMysticism,
+            Pip,
+            NPM,
+            yarn,
+            MobileFirst,
         ],
     },
 }

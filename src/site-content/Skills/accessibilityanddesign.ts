@@ -231,6 +231,17 @@ const Aria: Skill = {
     url: "https://www.w3.org/TR/wai-aria-1.2/",
 };
 
+const MobileFirst: Skill = {
+    name: "Mobile First",
+    years: 2,
+    proficiency: 9,
+    keys: [
+        "ui",
+    ],
+    description: "designing user interfaces with a mobile-first approach, prioritizing mobile devices",
+    url: "https://www.smashingmagazine.com/2018/02/mobile-first-responsive-web-design/",
+};
+
 export const AccessDesign: Group = {
     name: "accessdesign",
     label: "Accessibility & UX",
@@ -255,5 +266,6 @@ export const AccessDesign: Group = {
         A11y,
         I18n,
         Aria,
+        MobileFirst,
     ],
 };

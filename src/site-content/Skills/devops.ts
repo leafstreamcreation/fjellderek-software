@@ -170,6 +170,47 @@ const Helm: Skill = {
     url: "https://helm.sh",
 };
 
+const Pip: Skill = {
+    name: "Pip",
+    years: 5,
+    proficiency: 70,
+    keys: [
+        "package manager",
+        "python",
+    ],
+    icon: "pip",
+    url: "https://pip.pypa.io/en/stable/",
+    description: "a package manager for Python",
+};
+
+const NPM: Skill = {
+    name: "NPM",
+    years: 6,
+    proficiency: 80,
+    keys: [
+        "package manager",
+        "javascript",
+        "node",
+    ],
+    icon: "npm",
+    url: "https://www.npmjs.com",
+    description: "a package manager for JavaScript",
+};
+
+const yarn: Skill = {
+    name: "Yarn",
+    years: 5,
+    proficiency: 70,
+    keys: [
+        "package manager",
+        "javascript",
+        "node",
+    ],
+    icon: "yarn",
+    url: "https://yarnpkg.com",
+    description: "a package manager for JavaScript",
+};
+
 export const DevOps: Group = {
     name: "devops",
     label: "Dev Ops",
@@ -190,5 +231,8 @@ export const DevOps: Group = {
         Heroku,
         AWSS3,
         Helm,
+        Pip,
+        NPM,
+        yarn,
     ],
 };
