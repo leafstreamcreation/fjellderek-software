@@ -253,3 +253,16 @@ export const SearchIcon = (props: IconSvgProps) => (
     />
   </svg>
 );
+
+export const UtilityIcons = {
+  hamburgermenu: HamburgerMenuIcon,
+  moonfilled: MoonFilledIcon,
+  sunfilled: SunFilledIcon,
+  heartfilled: HeartFilledIcon,
+  search: SearchIcon,
+};
+
+export const BrandIcons = {
+  linkedin: LinkedInIcon,
+  github: GithubIcon,
+};
