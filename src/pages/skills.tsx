@@ -2,10 +2,12 @@ import { title, subtitle } from "@/components/primitives";
 import DefaultLayout from "@/layouts/default";
 import { Button } from "@heroui/button";
 import { Link } from "@heroui/link";
-import { Progress, Input, Select, SelectItem, Selection, Accordion, AccordionItem, } from "@heroui/react";
+import { Input, Select, SelectItem, Selection, Accordion, AccordionItem, } from "@heroui/react";
 import { Skill, Group, groups } from "@/site-content/Skills/skills";
 import { useState } from "react";
-import PrimarySkill from "@/components/primaryskill";
+import { PrimarySkill, SubSkills } from "@/components/skill";
+
+import { BrandIcons } from "@/components/icons";
 
 
 import { InProgress } from "@/components/in-progress";
@@ -39,14 +41,31 @@ export default function SkillsPage() {
           ))}
         </Select>
         <Input placeholder="Search within this domain:" size="lg" value={searchKey} onValueChange={setSearchKey} />
-        <Accordion selectionMode="none">  
+        <Accordion selectionMode="single" selectionBehavior="replace" itemClasses={{ trigger: "justify-between", startContent: "grow", titleWrapper: "w-0 flex-none" }}>  
         {
           groups[groupKey].skills.map((skill:Skill) => {
             if (skill.name.toLowerCase().includes(searchKey.toLowerCase()) || skill.keys?.some(key => key.includes(searchKey.toLowerCase()))) {
-              return (
-                <AccordionItem key={skill.name} classNames={{startContent:"w-full"}} startContent={
-                  <Progress value={skill.proficiency} label={skill.name} size="lg" />
-                }>
+              if (skill.subSkills){
+                return (
+                  <AccordionItem 
+                    key={skill.name} 
+                    startContent={
+                      <PrimarySkill skill={skill} />
+                    }
+                  >
+                    <SubSkills skill={skill} />
+                  </AccordionItem>
+                );
+              }
+              else return (
+                <AccordionItem 
+                  key={skill.name}
+                  hideIndicator
+                  classNames={{ base: "pointer-events-none" }}
+                  startContent={
+                    <PrimarySkill skill={skill} />
+                  }
+                >
                 </AccordionItem>
               );
             }
