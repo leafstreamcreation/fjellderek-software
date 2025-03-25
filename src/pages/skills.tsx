@@ -45,10 +45,11 @@ export default function SkillsPage() {
         {
           groups[groupKey].skills.map((skill:Skill) => {
             if (skill.name.toLowerCase().includes(searchKey.toLowerCase()) || skill.keys?.some(key => key.includes(searchKey.toLowerCase()))) {
-              if (skill.subSkills){
+              if (skill.subSkills && skill.subSkills.length > 0) {
                 return (
                   <AccordionItem 
-                    key={skill.name} 
+                    key={skill.name}
+                    classNames={{ content: "ml-4" }}
                     startContent={
                       <PrimarySkill skill={skill} />
                     }
