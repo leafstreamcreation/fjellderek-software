@@ -15,7 +15,7 @@ import { BrandIcons } from "./icons";
 export function PrimarySkill({ skill }: { skill: Skill }) {
   const { name, proficiency, years, keys, icon, subSkills, description, url } = skill
   return (
-    <Progress value={proficiency} label={name} size="lg" />
+    <Progress value={proficiency} label={name} showValueLabel valueLabel={(years ? years : 0) + ' years'} size="lg" />
   );
 };
 
@@ -27,7 +27,7 @@ export function SubSkills({ skill }: { skill: Skill }) {
     {
         subSkills!.map((subSkill: Skill) => {
           return (
-            <Progress key={skill.name + '-' + subSkill.name} classNames={{ base: "w-auto mb-4" }} value={subSkill.proficiency} label={subSkill.name} size="md" />
+            <Progress key={skill.name + '-' + subSkill.name} classNames={{ base: "w-auto mb-4" }} value={subSkill.proficiency} label={subSkill.name} showValueLabel valueLabel={(subSkill.years ? subSkill.years : 0)} size="md" />
           );    
         }
       )

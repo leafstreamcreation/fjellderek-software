@@ -16,6 +16,13 @@ export default function SkillsPage() {
   const [searchKey, setSearchKey] = useState("");
   const [selectedGroup, setSelectedGroup] = useState<Selection>(new Set(["all"]));
   const [groupKey, setGroupKey] = useState("all");
+  const [sortFunctionIndex, setSortFunctionIndex] = useState(0);
+
+  const sortFunctions = [
+    new Intl.Collator("en").compare,
+    (a: number, b: number) => b - a,
+    (a: number, b: number) => b - a,
+  ];
   function handleSelection(selection: Selection) {
     setGroupKey(Array.from(selection).join(', '));
     setSelectedGroup(selection);
@@ -33,14 +40,14 @@ export default function SkillsPage() {
             Here I will have a skill table that has skills grouped by stack and visual indicators of proficiency level. The user can select a stack and search for relevant skills. There will also be a default set of displayed skills
           </div>
         </div>
-        <Select selectedKeys={selectedGroup} onSelectionChange={handleSelection} label="Skill Domain(s)">
+        <Select selectedKeys={selectedGroup} onSelectionChange={handleSelection} label="Category">
           {Object.values(groups).map((group:Group) => (
             <SelectItem key={group.name}>
               {group.label}
             </SelectItem>
           ))}
         </Select>
-        <Input placeholder="Search within this domain:" size="lg" value={searchKey} onValueChange={setSearchKey} />
+        <Input placeholder="Filter within this domain:" size="lg" value={searchKey} onValueChange={setSearchKey} />
         <Accordion selectionMode="single" selectionBehavior="replace" itemClasses={{ trigger: "justify-between", startContent: "grow", titleWrapper: "w-0 flex-none" }}>  
         {
           groups[groupKey].skills.map((skill:Skill) => {
