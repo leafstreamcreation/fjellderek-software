@@ -71,6 +71,7 @@ export default function SkillsPage() {
                 return (
                   <AccordionItem 
                     key={skill.name}
+                    textValue={skill.name + ' proficiency: ' + skill.proficiency + ', years experience: ' + (skill.years || 0)}
                     classNames={{ content: "mx-4" }}
                     startContent={
                       <PrimarySkill skill={skill} />
@@ -83,6 +84,7 @@ export default function SkillsPage() {
               else return (
                 <AccordionItem 
                   key={skill.name}
+                  textValue={skill.name + ' proficiency: ' + skill.proficiency + ', years experience: ' + (skill.years || 0)}
                   hideIndicator
                   classNames={{ base: "pointer-events-none" }}
                   startContent={
