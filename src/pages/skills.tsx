@@ -51,7 +51,7 @@ export default function SkillsPage() {
           ))}
         </Select>
         <Input placeholder="Filter within this category:" size="lg" value={searchKey} onValueChange={setSearchKey} />
-        <RadioGroup size="sm" orientation="horizontal" value={sortSelection} onValueChange={setSortSelection} label="Sort By">
+        <RadioGroup size="sm" orientation="horizontal" value={sortSelection} onValueChange={(value: string) => setSortSelection(value as "alphabetic-ascending" | "alphabetic-descending" | "years" | "proficiency")} label="Sort By">
           <Radio value="alphabetic-ascending">Name</Radio>
           <Radio value="alphabetic-descending">Name Z-A</Radio>
           <Radio value="years">Years</Radio>
