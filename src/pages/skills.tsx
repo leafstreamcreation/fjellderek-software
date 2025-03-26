@@ -14,8 +14,10 @@ import { InProgress } from "@/components/in-progress";
 
 export default function SkillsPage() {
   const [searchKey, setSearchKey] = useState("");
-  const [selectedGroup, setSelectedGroup] = useState<Selection>(new Set(["all"]));
+  const [groupSelection, setGroupSelection] = useState<Selection>((new Set(["all"])));
   const [groupKey, setGroupKey] = useState("all");
+  const [currentSkills, setCurrentSkills] = useState(groups[groupKey].skills);
+  const [selectedSkillKey, setSelectedSkillKey] = useState<Selection>(new Set([currentSkills[currentSkills.length - 1].name]));
   const [sortFunctionIndex, setSortFunctionIndex] = useState(0);
 
   const sortFunctions = [
@@ -24,8 +26,12 @@ export default function SkillsPage() {
     (a: number, b: number) => b - a,
   ];
   function handleSelection(selection: Selection) {
-    setGroupKey(Array.from(selection).join(', '));
-    setSelectedGroup(selection);
+      if (selection !== 'all' && selection.size == 0) setGroupSelection(new Set([groupKey]));
+      else {
+        setGroupKey(Array.from(selection).join(', '));
+        setCurrentSkills(groups[groupKey].skills);
+        setGroupSelection(selection);
+      }
   }
 
   return (
@@ -40,23 +46,29 @@ export default function SkillsPage() {
             Here I will have a skill table that has skills grouped by stack and visual indicators of proficiency level. The user can select a stack and search for relevant skills. There will also be a default set of displayed skills
           </div>
         </div>
-        <Select selectedKeys={selectedGroup} onSelectionChange={handleSelection} label="Category">
+        <Select selectedKeys={groupSelection} onSelectionChange={handleSelection} label="Category">
           {Object.values(groups).map((group:Group) => (
             <SelectItem key={group.name}>
               {group.label}
             </SelectItem>
           ))}
         </Select>
-        <Input placeholder="Filter within this domain:" size="lg" value={searchKey} onValueChange={setSearchKey} />
-        <Accordion selectionMode="single" selectionBehavior="replace" itemClasses={{ trigger: "justify-between", startContent: "grow", titleWrapper: "w-0 flex-none" }}>  
+        <Input placeholder="Filter within this category:" size="lg" value={searchKey} onValueChange={setSearchKey} />
+        <Accordion 
+          selectionMode="single" 
+          selectionBehavior="replace" 
+          itemClasses={{ trigger: "justify-between", startContent: "w-3/4 grow", titleWrapper: "w-0 flex-none" }}
+          selectedKeys={selectedSkillKey}
+          onSelectionChange={setSelectedSkillKey}
+        >  
         {
-          groups[groupKey].skills.map((skill:Skill) => {
+          currentSkills.map((skill:Skill) => {
             if (skill.name.toLowerCase().includes(searchKey.toLowerCase()) || skill.keys?.some(key => key.includes(searchKey.toLowerCase()))) {
               if (skill.subSkills && skill.subSkills.length > 0) {
                 return (
                   <AccordionItem 
                     key={skill.name}
-                    classNames={{ content: "ml-4" }}
+                    classNames={{ content: "mx-4" }}
                     startContent={
                       <PrimarySkill skill={skill} />
                     }

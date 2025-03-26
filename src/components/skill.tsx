@@ -1,4 +1,4 @@
-import { Progress, AccordionItem, Link } from "@heroui/react";
+import { Progress, Link } from "@heroui/react";
 import { Skill } from "@/site-content/Skills/skills";
 
 
@@ -13,9 +13,24 @@ import { Skill } from "@/site-content/Skills/skills";
 import { BrandIcons } from "./icons";
 
 export function PrimarySkill({ skill }: { skill: Skill }) {
-  const { name, proficiency, years, keys, icon, subSkills, description, url } = skill
+  const { name, proficiency, years, icon, subSkills, description, url } = skill
   return (
-    <Progress value={proficiency} label={name} showValueLabel valueLabel={(years ? years : 0) + ' years'} size="lg" />
+    <div className="w-">
+      <Progress 
+        value={proficiency} 
+        label={
+          !url || url === "" ? name :
+          <div>
+            <span>{name}</span>
+            <Link className="pointer-events-auto" isExternal showAnchorIcon href={url}></Link>
+          </div>
+        }
+        showValueLabel={years ? true : false} 
+        valueLabel={(years ? years : 0) + 'y'} 
+        size="lg" 
+      />
+      <p className="mx-2 text-wrap text-left">{description}</p>
+    </div>
   );
 };
 
@@ -27,7 +42,15 @@ export function SubSkills({ skill }: { skill: Skill }) {
     {
         subSkills!.map((subSkill: Skill) => {
           return (
-            <Progress key={skill.name + '-' + subSkill.name} classNames={{ base: "w-auto mb-4" }} value={subSkill.proficiency} label={subSkill.name} showValueLabel valueLabel={(subSkill.years ? subSkill.years : 0)} size="md" />
+            <Progress 
+              key={skill.name + '-' + subSkill.name} 
+              classNames={{ base: "w-auto mb-4" }} 
+              value={subSkill.proficiency} 
+              label={subSkill.name} 
+              showValueLabel={subSkill.years ? true : false} 
+              valueLabel={(subSkill.years ? subSkill.years : 0) + 'y'} 
+              size="md" 
+            />
           );    
         }
       )
