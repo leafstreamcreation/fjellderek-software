@@ -1,6 +1,7 @@
 import { title, subtitle } from "@/components/primitives";
 import DefaultLayout from "@/layouts/default";
 import { Button } from "@heroui/button";
+import { Radio, RadioGroup } from "@heroui/radio";
 import { Link } from "@heroui/link";
 import { Input, Select, SelectItem, Selection, Accordion, AccordionItem, } from "@heroui/react";
 import { Skill, Group, groups } from "@/site-content/Skills/skills";
@@ -16,22 +17,22 @@ export default function SkillsPage() {
   const [searchKey, setSearchKey] = useState("");
   const [groupSelection, setGroupSelection] = useState<Selection>((new Set(["all"])));
   const [groupKey, setGroupKey] = useState("all");
-  const [currentSkills, setCurrentSkills] = useState(groups[groupKey].skills);
-  const [selectedSkillKey, setSelectedSkillKey] = useState<Selection>(new Set([currentSkills[currentSkills.length - 1].name]));
-  const [sortFunctionIndex, setSortFunctionIndex] = useState(0);
+  const [selectedSkillKey, setSelectedSkillKey] = useState<Selection>(new Set([groups[groupKey].skills[groups[groupKey].skills.length - 1].name]));
+  const [sortSelection, setSortSelection] = useState<"alphabetic-ascending" | "alphabetic-descending" | "years" | "proficiency">("alphabetic-ascending");
 
-  const sortFunctions = [
-    new Intl.Collator("en").compare,
-    (a: number, b: number) => b - a,
-    (a: number, b: number) => b - a,
-  ];
+  const sortFunctions = {
+    "alphabetic-ascending": (a: Skill, b: Skill) => new Intl.Collator("en").compare(a.name, b.name),
+    "alphabetic-descending": (a: Skill, b: Skill) => new Intl.Collator("en").compare(b.name, a.name),
+    "years": (a: Skill, b: Skill) => (b.years || 0) - (a.years || 0),
+    "proficiency": (a: Skill, b: Skill) => b.proficiency - a.proficiency,
+  };
+
   function handleSelection(selection: Selection) {
       if (selection !== 'all' && selection.size == 0) setGroupSelection(new Set([groupKey]));
       else {
         setGroupKey(Array.from(selection).join(', '));
-        setCurrentSkills(groups[groupKey].skills);
         setGroupSelection(selection);
-      }
+    }
   }
 
   return (
@@ -54,6 +55,12 @@ export default function SkillsPage() {
           ))}
         </Select>
         <Input placeholder="Filter within this category:" size="lg" value={searchKey} onValueChange={setSearchKey} />
+        <RadioGroup size="sm" orientation="horizontal" value={sortSelection} onValueChange={setSortSelection} label="Sort By">
+          <Radio value="alphabetic-ascending">Name</Radio>
+          <Radio value="alphabetic-descending">Name Z-A</Radio>
+          <Radio value="years">Years</Radio>
+          <Radio value="proficiency">Proficiency</Radio>
+        </RadioGroup>
         <Accordion 
           selectionMode="single" 
           selectionBehavior="replace" 
@@ -62,7 +69,7 @@ export default function SkillsPage() {
           onSelectionChange={setSelectedSkillKey}
         >  
         {
-          currentSkills.map((skill:Skill) => {
+          groups[groupKey].skills.sort(sortFunctions[sortSelection]).map((skill:Skill) => {
             if (skill.name.toLowerCase().includes(searchKey.toLowerCase()) || skill.keys?.some(key => key.includes(searchKey.toLowerCase()))) {
               if (skill.subSkills && skill.subSkills.length > 0) {
                 return (
