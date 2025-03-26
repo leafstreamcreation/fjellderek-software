@@ -38,14 +38,10 @@ export default function SkillsPage() {
   return (
     <DefaultLayout>
       <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
-          <InProgress />
+
         <div className="inline-block max-w-lg text-center justify-center">
           <span className={title()}>My&nbsp;</span>
           <span className={title({ color: "blue" })}>Skills&nbsp;</span>
-          <br />
-          <div className={subtitle({ class: "mt-4" })}>
-            Here I will have a skill table that has skills grouped by stack and visual indicators of proficiency level. The user can select a stack and search for relevant skills. There will also be a default set of displayed skills
-          </div>
         </div>
         <Select selectedKeys={groupSelection} onSelectionChange={handleSelection} label="Category">
           {Object.values(groups).map((group:Group) => (
