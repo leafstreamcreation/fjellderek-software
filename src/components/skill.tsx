@@ -17,6 +17,7 @@ export function PrimarySkill({ skill }: { skill: Skill }) {
   return (
     <div>
       <Progress 
+        classNames={{ base: "mb-2" }}
         value={proficiency} 
         label={
           !url || url === "" ? name :
@@ -39,7 +40,7 @@ export function SubSkills({ skill }: { skill: Skill }) {
 
   function SubSkillDescription({ subSkill }: { subSkill: Skill }) {
     const { description } = subSkill;
-    return description ? <p className="text-wrap text-left">{description}</p> : null;
+    return description ? <p className="text-wrap text-left mr-4">{description}</p> : null;
   };
 
   return (
@@ -52,13 +53,19 @@ export function SubSkills({ skill }: { skill: Skill }) {
                   <Progress  
                     classNames={{ base: "w-full" }} 
                     value={subSkill.proficiency} 
-                    label={subSkill.name} 
+                    label={
+                      !subSkill.url || subSkill.url === "" ? subSkill.name :
+                      <div>
+                        <span>{subSkill.name}</span>
+                        <Link isExternal showAnchorIcon href={subSkill.url}></Link>
+                      </div>
+                    } 
                     showValueLabel={subSkill.years ? true : false} 
                     valueLabel={(subSkill.years ? subSkill.years : 0) + 'y'} 
                     size="md" 
                   />
                 </CardHeader>
-                <CardBody>
+                <CardBody className="pt-0 mx-2">
                   <SubSkillDescription subSkill={subSkill}></SubSkillDescription>
                 </CardBody>
               </Card>
