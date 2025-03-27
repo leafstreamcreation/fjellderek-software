@@ -8,7 +8,7 @@ import { DevOps } from "./devops.ts";
 import { QA } from "./qa.ts";
 import { AccessDesign } from "./accessibilityanddesign.ts";
 import { SecurityCompliance } from "./securityandcompliance.ts";
-import { ComputationAlgorithmsPatterns, StructuresAlgorithmsPatterns } from "./computationalgorithmspatterns.ts";
+import { ComputationAlgorithmsPatterns } from "./computationalgorithmspatterns.ts";
 import { AI } from "./artificialintelligence.ts";
 import { NativeMobileGames } from "./nativemobilegames.ts";
 import { Workspaces } from "./workspaces.ts";

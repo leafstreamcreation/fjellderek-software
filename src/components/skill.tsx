@@ -1,4 +1,4 @@
-import { Progress, Link } from "@heroui/react";
+import { Progress, Link, Card, CardHeader, CardBody } from "@heroui/react";
 import { Skill } from "@/site-content/Skills/skills";
 
 
@@ -15,7 +15,7 @@ import { BrandIcons } from "./icons";
 export function PrimarySkill({ skill }: { skill: Skill }) {
   const { name, proficiency, years, icon, subSkills, description, url } = skill
   return (
-    <div className="w-">
+    <div>
       <Progress 
         value={proficiency} 
         label={
@@ -37,24 +37,35 @@ export function PrimarySkill({ skill }: { skill: Skill }) {
 export function SubSkills({ skill }: { skill: Skill }) {
   const { subSkills } = skill;
 
+  function SubSkillDescription({ subSkill }: { subSkill: Skill }) {
+    const { description } = subSkill;
+    return description ? <p className="text-wrap text-left">{description}</p> : null;
+  };
+
   return (
     <>
-    {
-        subSkills!.map((subSkill: Skill) => {
-          return (
-            <Progress 
-              key={skill.name + '-' + subSkill.name} 
-              classNames={{ base: "w-auto mb-4" }} 
-              value={subSkill.proficiency} 
-              label={subSkill.name} 
-              showValueLabel={subSkill.years ? true : false} 
-              valueLabel={(subSkill.years ? subSkill.years : 0) + 'y'} 
-              size="md" 
-            />
-          );    
-        }
-      )
-    }
+      {
+          subSkills!.map((subSkill: Skill) => {
+            return (
+              <Card key={skill.name + '-' + subSkill.name} className="mb-2" fullWidth>
+                <CardHeader>
+                  <Progress  
+                    classNames={{ base: "w-full" }} 
+                    value={subSkill.proficiency} 
+                    label={subSkill.name} 
+                    showValueLabel={subSkill.years ? true : false} 
+                    valueLabel={(subSkill.years ? subSkill.years : 0) + 'y'} 
+                    size="md" 
+                  />
+                </CardHeader>
+                <CardBody>
+                  <SubSkillDescription subSkill={subSkill}></SubSkillDescription>
+                </CardBody>
+              </Card>
+            );    
+          }
+        )
+      }
     </>
   );
 }
