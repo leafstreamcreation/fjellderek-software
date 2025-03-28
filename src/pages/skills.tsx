@@ -1,12 +1,13 @@
 import { title, subtitle } from "@/components/primitives";
 import DefaultLayout from "@/layouts/default";
 import { Button } from "@heroui/button";
-import { Radio, RadioGroup } from "@heroui/radio";
+import { RadioGroup } from "@heroui/radio";
 import { Link } from "@heroui/link";
 import { Input, Select, SelectItem, Selection, Accordion, AccordionItem, } from "@heroui/react";
 import { Skill, Group, groups } from "@/site-content/Skills/skills";
 import { useState } from "react";
 import { PrimarySkill, SubSkills } from "@/components/skill";
+import { AlpineRadio } from "@/components/alpine-radio";
 
 import { BrandIcons } from "@/components/icons";
 
@@ -18,14 +19,18 @@ export default function SkillsPage() {
   const [groupSelection, setGroupSelection] = useState<Selection>((new Set(["all"])));
   const [groupKey, setGroupKey] = useState("all");
   const [selectedSkillKey, setSelectedSkillKey] = useState<Selection>(new Set([groups[groupKey].skills[groups[groupKey].skills.length - 1].name]));
-  const [sortSelection, setSortSelection] = useState<"alphabetic-ascending" | "alphabetic-descending" | "years" | "proficiency">("alphabetic-ascending");
+  const [sortSelection, setSortSelection] = useState<"none" | "alphabetic-ascending" | "alphabetic-descending" | "years" | "proficiency">("none");
 
   const sortFunctions = {
+    "none": (a: Skill, b: Skill) => 0, // No sorting
     "alphabetic-ascending": (a: Skill, b: Skill) => new Intl.Collator("en").compare(a.name, b.name),
     "alphabetic-descending": (a: Skill, b: Skill) => new Intl.Collator("en").compare(b.name, a.name),
     "years": (a: Skill, b: Skill) => (b.years || 0) - (a.years || 0),
     "proficiency": (a: Skill, b: Skill) => b.proficiency - a.proficiency,
   };
+
+  const radioStyles =
+            "hover:bg-content2 cursor-pointer p-2 data-[selected=true]:bg-primary data-[selected=true]:border-primary border-default border-x-1 border-y-2 ";
 
   function handleSelection(selection: Selection) {
       if (selection !== 'all' && selection.size == 0) setGroupSelection(new Set([groupKey]));
@@ -51,11 +56,20 @@ export default function SkillsPage() {
           ))}
         </Select>
         <Input placeholder="Filter within this category:" size="lg" value={searchKey} onValueChange={setSearchKey} />
-        <RadioGroup size="sm" orientation="horizontal" value={sortSelection} onValueChange={(value: string) => setSortSelection(value as "alphabetic-ascending" | "alphabetic-descending" | "years" | "proficiency")} label="Sort By">
-          <Radio value="alphabetic-ascending">Name</Radio>
-          <Radio value="alphabetic-descending">Name Z-A</Radio>
-          <Radio value="years">Years</Radio>
-          <Radio value="proficiency">Proficiency</Radio>
+        <RadioGroup 
+          size="sm" 
+          orientation="horizontal" 
+          value={sortSelection} 
+          onValueChange={(value: string) => setSortSelection(value as "alphabetic-ascending" | "alphabetic-descending" | "years" | "proficiency")} 
+          label="Sort By"
+          classNames={{
+            wrapper: "gap-4"
+          }}>
+          <AlpineRadio value="none" classNames={{base: radioStyles + "rounded-l-full border-l-2"}}>None</AlpineRadio>
+          <AlpineRadio value="alphabetic-ascending" classNames={{base: radioStyles + "border-x-1"}}>Name</AlpineRadio>
+          <AlpineRadio value="alphabetic-descending" classNames={{base: radioStyles + "border-x-1"}}>Name Z-A</AlpineRadio>
+          <AlpineRadio value="years" classNames={{base: radioStyles + "border-x-1"}}>Years</AlpineRadio>
+          <AlpineRadio value="proficiency" classNames={{base: radioStyles + "border-l-1 pr-3 rounded-r-full"}}>Level</AlpineRadio>
         </RadioGroup>
         <Accordion 
           selectionMode="single" 
@@ -65,7 +79,7 @@ export default function SkillsPage() {
           onSelectionChange={setSelectedSkillKey}
         >  
         {
-          groups[groupKey].skills.sort(sortFunctions[sortSelection]).map((skill:Skill) => {
+          groups[groupKey].skills.slice().sort(sortFunctions[sortSelection]).map((skill:Skill) => {
             if (skill.name.toLowerCase().includes(searchKey.toLowerCase()) || skill.keys?.some(key => key.includes(searchKey.toLowerCase()))) {
               if (skill.subSkills && skill.subSkills.length > 0) {
                 return (

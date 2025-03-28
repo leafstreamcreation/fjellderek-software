@@ -4,6 +4,13 @@ import DefaultLayout from "@/layouts/default";
 import { Button } from "@heroui/button";
 import { Link } from "@heroui/link";
 
+//holistic software engineering
+//full stack web development
+//data science and machine learning
+//cloud computing and devops
+//mobile app development
+//cybersecurity and ethical hacking
+
 export default function IndexPage() {
   return (
     <DefaultLayout>
