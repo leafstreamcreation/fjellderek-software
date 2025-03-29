@@ -1,12 +1,12 @@
 export type Skill = {
     name: string;
     proficiency: number;
-    years?: number | null;
-    keys?: string[] | null;
-    icon?: string | null;
-    subSkills?: Skill[] | null;
-    description?: string | null;
-    url?: string | null;
+    years?: number;
+    keys?: string[];
+    icon?: string;
+    subSkills?: Skill[];
+    description?: string;
+    url?: string;
 };
 
 export type Group = {
@@ -15,4 +15,5 @@ export type Group = {
     title: string;
     description: string;
     skills: Skill[];
+    featuredFilters?: string[];
 };

@@ -299,6 +299,52 @@ const yarn: Skill = {
     description: "a package manager for JavaScript",
 };
 
+const Browsers: Skill = {
+    name: "Browsers",
+    years: 10,
+    proficiency: 90,
+    keys: [
+        "web development",
+        "javascript",
+        "testing",
+    ],
+    subSkills: [
+        {
+            name: "Chrome",
+            years: 10,
+            proficiency: 90,
+            icon: "chrome",
+            url: "https://www.google.com/chrome/",
+            description: "a web browser developed by Google",
+        },
+        {
+            name: "Firefox",
+            years: 5,
+            proficiency: 70,
+            icon: "firefox",
+            url: "https://www.mozilla.org/en-US/firefox/new/",
+            description: "a free and open-source web browser developed by Mozilla Foundation",
+        },
+        {
+            name: "Safari",
+            years: 5,
+            proficiency: 70,
+            icon: "safari",
+            url: "https://www.apple.com/safari/",
+            description: "a web browser developed by Apple Inc.",
+        },
+        {
+            name: "Edge",
+            years: 3,
+            proficiency: 60,
+            icon: "edge",
+            url: "https://www.microsoft.com/edge",
+            description: "a web browser developed by Microsoft, built on the Chromium engine",
+        },
+    ],
+    description: "software applications used to access information on the World Wide Web",
+};
+
 
 
 export const Workspaces: Group = {
@@ -325,5 +371,12 @@ export const Workspaces: Group = {
             Pip,
             NPM,
             yarn,
+            Browsers,
+        ],
+        featuredFilters: [
+            "frontend",
+            "IDE",
+            "OS",
+            "package manager",
         ],
     };

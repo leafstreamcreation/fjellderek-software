@@ -30,7 +30,7 @@ export function PrimarySkill({ skill }: { skill: Skill }) {
         valueLabel={(years ? years : 0) + 'y'} 
         size="lg" 
       />
-      <p className="mx-2 text-wrap text-left">{description}</p>
+      <p className="mx-2 text-wrap text-left text-default-500">{description}</p>
     </div>
   );
 };
@@ -40,7 +40,7 @@ export function SubSkills({ skill }: { skill: Skill }) {
 
   function SubSkillDescription({ subSkill }: { subSkill: Skill }) {
     const { description } = subSkill;
-    return description ? <p className="text-wrap text-left mr-4">{description}</p> : null;
+    return description ? <p className="text-wrap text-left mr-4 text-default-500">{description}</p> : null;
   };
 
   return (

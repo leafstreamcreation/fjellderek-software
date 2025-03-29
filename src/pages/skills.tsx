@@ -12,13 +12,11 @@ import { AlpineRadio } from "@/components/alpine-radio";
 import { BrandIcons } from "@/components/icons";
 
 
-import { InProgress } from "@/components/in-progress";
-
 export default function SkillsPage() {
   const [searchKey, setSearchKey] = useState("");
-  const [groupSelection, setGroupSelection] = useState<Selection>((new Set(["all"])));
-  const [groupKey, setGroupKey] = useState("all");
-  const [selectedSkillKey, setSelectedSkillKey] = useState<Selection>(new Set([groups[groupKey].skills[groups[groupKey].skills.length - 1].name]));
+  const [groupSelection, setGroupSelection] = useState<Selection>((new Set(["frontend"])));
+  const [groupKey, setGroupKey] = useState("frontend");
+  const [selectedSkillKey, setSelectedSkillKey] = useState<Selection>(new Set([groups[groupKey].skills[0].name]));
   const [sortSelection, setSortSelection] = useState<"none" | "alphabetic-ascending" | "alphabetic-descending" | "years" | "proficiency">("none");
 
   const sortFunctions = {
@@ -55,7 +53,10 @@ export default function SkillsPage() {
             </SelectItem>
           ))}
         </Select>
-        <Input placeholder="Filter within this category:" size="lg" value={searchKey} onValueChange={setSearchKey} />
+        <div className="inline-block max-w-lg text-center justify-center">
+          <span className={title({ color: "yellow" })}>{groups[groupKey].title}</span> 
+        </div>
+        <Input placeholder="Filter within this category:" size="lg" value={searchKey} onValueChange={setSearchKey} isClearable />
         <RadioGroup 
           size="sm" 
           orientation="horizontal" 
