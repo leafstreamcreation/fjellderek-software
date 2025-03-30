@@ -306,8 +306,8 @@ const SSL: Skill = {
 export const SecurityCompliance: Group = {
     name: "securitycompliance",
     label: "Cybersecurity & Compliance",
-    title: "Cybersecurity and Compliance",
-    description: "What I use to ensure my applications are secure, and compliant with the highest regulatory standards",
+    title: "Cybersecurity & Compliance",
+    description: "For secure and reliable applications maintaining the highest regulatory standards",
     skills: [
         AccessControl,
         GDPR,

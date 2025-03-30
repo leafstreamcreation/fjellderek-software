@@ -1876,8 +1876,8 @@ const ServiceDogHandling: Skill = {
 export const LanguagesAndMore: Group = {
     name: "languagesandmore",
     label: "Languages & More",
-    title: "Languages and More",
-    description: "My spoken languages and skills beyond the software realm which give a human touch to the work I do",
+    title: "Languages & More",
+    description: "Skills providing a human touch, inspiration, and enrichment beyond software",
     skills: [
         English,
         Spanish,

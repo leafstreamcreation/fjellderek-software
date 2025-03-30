@@ -112,8 +112,8 @@ const IbexAI: Skill = {
 export const AI: Group = {
     name: "ai",
     label: "AI",
-    title: "Artificial Intelligence Tools & Concepts",
-    description: "What I use for creating cutting edge AI models and the AI powered tools I use for next-generation application development",
+    title: "Artificial Intelligence",
+    description: "Skills using AI models and tools for next-generation application development",
     skills: [
         Copilot,
         ChatGPT,

@@ -245,8 +245,8 @@ const MobileFirst: Skill = {
 export const AccessDesign: Group = {
     name: "accessdesign",
     label: "Accessibility & UX",
-    title: "Accessibility & User Experience",
-    description: "What I use to craft useful, beautiful, and accesible user interfaces",
+    title: "Accessibility & UX",
+    description: "Skills to craft useful, beautiful, global, and accessible user interfaces",
     skills: [
         Storybook,
         Figma,

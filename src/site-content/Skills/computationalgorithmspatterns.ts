@@ -1626,7 +1626,7 @@ export const ComputationAlgorithmsPatterns: Group = {
     name: "computationalgorithmspatterns",
     label: "Computation, Algorithms & Patterns",
     title: "Computation, Algorithms, and Patterns",
-    description: "My software knowledge providing versatility, innovation, and comprehension to a broad range of project environments",
+    description: "Versatile and comprehensive engineering knowledge driving broad-field innovation",
     skills: [
         DataStructures,
         SortingAlgorithms,

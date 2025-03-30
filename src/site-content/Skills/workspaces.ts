@@ -351,7 +351,7 @@ export const Workspaces: Group = {
         name: "workspaces",
         label: "Workspaces",
         title: "Development Workspaces",
-        description: "Platforms, IDEs, and development tools I use to work in a broad range of environments",
+        description: "Skills for developing world-class applications in a variety of environments",
         skills: [
             Vite,
             Webpack,

@@ -361,7 +361,7 @@ export const QA: Group = {
     name: "qa",
     label: "QA",
     title: "Quality Assurance",
-    description: "What I use to ensure my software performs fast and flawlessly",
+    description: "Skills to debug and produce fast and flawless applications",
     skills: [
         Playwright,
         Cypress,

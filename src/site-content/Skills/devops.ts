@@ -214,8 +214,8 @@ const yarn: Skill = {
 export const DevOps: Group = {
     name: "devops",
     label: "Dev Ops",
-    title: "Developer Operations",
-    description: "What I use to create high-powered developer tools as well as virtualization, test automation, and continuous deployment pipelines",
+    title: "Dev Ops",
+    description: "Skills for supercharging production with developer tools, virtualization, and automated pipelines",
     skills: [
         ContinuousIntegration,
         Docker,
