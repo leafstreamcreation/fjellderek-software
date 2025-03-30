@@ -95,7 +95,6 @@ const Vuetify: Skill = {
         "material design",
     ],
     icon: "vuetify",
-    subSkills: null,
     description: "a material design component library for Vue.js",
     url: "https://vuetifyjs.com/",
 };
@@ -111,7 +110,6 @@ const MDBootstrap: Skill = {
         "material design",
     ],
     icon: "mdbootstrap",
-    subSkills: null,
     description: "a material design component library for Vue.js with Bootstrap 5",
     url: "https://mdbootstrap.com/docs/vue/",
 };
@@ -641,8 +639,8 @@ const JSX: Skill = {
 export const Frontend: Group = {
     name: "frontend",
         label: "Frontend",
-        title: "Frontend Technologies & Concepts",
-        description: "What I use to create performant and pleasant user interfaces for web applications",
+        title: "Frontend Skills",
+        description: "For creating performant, complex, and diverse web interfaces and applications",
         skills: [
             React,
             Vue,

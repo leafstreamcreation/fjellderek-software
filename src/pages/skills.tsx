@@ -55,6 +55,8 @@ export default function SkillsPage() {
         </Select>
         <div className="inline-block max-w-lg text-center justify-center">
           <span className={title({ color: "yellow" })}>{groups[groupKey].title}</span> 
+          <br />
+          <p className={subtitle() + " mt-4"}>{groups[groupKey].description}</p>
         </div>
         <Input placeholder="Filter within this category:" size="lg" value={searchKey} onValueChange={setSearchKey} isClearable />
         <RadioGroup 

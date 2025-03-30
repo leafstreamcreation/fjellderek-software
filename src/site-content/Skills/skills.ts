@@ -6791,7 +6791,7 @@ export const groups: GroupContainer = {
         name: "all",
         label: "All",
         title: "Everything Under the Sun",
-        description: "Every skill I use in my growing software experience",
+        description: "My expansive list of professional software skills",
         skills: [
             React,
             JavaScript,

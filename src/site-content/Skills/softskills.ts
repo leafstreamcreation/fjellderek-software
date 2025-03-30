@@ -157,8 +157,8 @@ const CulturalCompetence: Skill = {
 export const SoftSkills: Group = {
     name: "softskills",
     label: "Soft Skills",
-    title: "Personal Qualities & Soft Skills",
-    description: "The innate and invaluable qualities and skills I bring to every project and setting",
+    title: "Soft Skills",
+    description: "Invaluable skills and innate qualities for every project and setting",
     skills: [
         ConstructiveFeedback,
         CriticalThinking,
@@ -183,4 +183,10 @@ export const SoftSkills: Group = {
         Integrity,
         CulturalCompetence
     ],
+    featuredFilters: [
+        "social",
+        "intellectual",
+        "self-management",
+        "ethics",
+    ]
 };
