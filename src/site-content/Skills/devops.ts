@@ -235,4 +235,14 @@ export const DevOps: Group = {
         NPM,
         yarn,
     ],
+    featuredFilters: [
+        {
+            name: "ci/cd",
+            label: "CI/CD",
+        },
+        {
+            name: "virtualization",
+            label: "Virtualization",
+        },
+    ],
 };

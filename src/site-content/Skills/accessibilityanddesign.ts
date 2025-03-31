@@ -268,4 +268,28 @@ export const AccessDesign: Group = {
         Aria,
         MobileFirst,
     ],
+    featuredFilters: [
+        {
+            name: "accessibility",
+            label: "Accessibility",
+        },
+        {
+            name: "i18n",
+            label: "I18n",
+        },
+        {
+            name: "ux",
+            label: "UX",
+        },
+        {
+            name: "vue",
+            label: "Vue.js",
+            icon: "vue",
+        },
+        {
+            name: "react",
+            label: "React.js",
+            icon: "react",
+        },
+    ],
 };

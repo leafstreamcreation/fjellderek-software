@@ -15,6 +15,7 @@ const WebProtocols: Skill = {
         "DNS",
         "SSH",
         "WebSocket",
+        "programming pattern",
     ],
     subSkills: [
         {
@@ -179,6 +180,7 @@ const ProgrammingLanguages: Skill = {
         "SQL",
         "Prolog",
         "Lisp",
+        "engineering",
     ],
     subSkills: [
         {
@@ -272,6 +274,7 @@ const CodeCompilation: Skill = {
         "source code",
         "compiler design",
         "interpreters",
+        "engineering",
     ],
     subSkills: [
         {
@@ -328,6 +331,7 @@ const ComputerAchitecture: Skill = {
         "bus architecture",
         "embedded systems",
         "digital logic design",
+        "engineering",
     ],
     subSkills: [
         {
@@ -877,6 +881,7 @@ const Recursion: Skill = {
         "backtracking",
         "tree traversal",
         "graph traversal",
+        "programming pattern"
     ],
     subSkills: [
         {
@@ -923,6 +928,8 @@ const DataStructures: Skill = {
         "AVL trees",
         "red-black trees",
         "B-trees",
+        "engineering",
+        "algorithm"
     ],
     subSkills: [
         {
@@ -1168,6 +1175,7 @@ const BooleanLogic: Skill = {
         "logical operators",
         "conditional statements",
         "logical expressions",
+        "engineering",
     ],
     subSkills: [
         {
@@ -1259,6 +1267,7 @@ const Mathematics: Skill = {
         "polar coordinates",
         "spherical coordinates",
         "transcendental numbers",
+        "engineering",
     ],
     subSkills: [
         {
@@ -1649,5 +1658,19 @@ export const ComputationAlgorithmsPatterns: Group = {
         CompressionAlgorithms,
         WebProtocols,
         ProgrammingPatterns,
+    ],
+    featuredFilters: [
+        {
+            name: "algorithm",
+            label: "Algorithm",
+        },
+        {
+            name: "engineering",
+            label: "Engineering",
+        },
+        {
+            name: "programming pattern",
+            label: "Programming Pattern",
+        },
     ],
 };

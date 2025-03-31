@@ -374,9 +374,9 @@ export const Workspaces: Group = {
             Browsers,
         ],
         featuredFilters: [
-            "frontend",
-            "IDE",
-            "OS",
-            "package manager",
+            // "frontend",
+            // "IDE",
+            // "OS",
+            // "package manager",
         ],
     };

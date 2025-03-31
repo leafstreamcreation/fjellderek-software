@@ -6,6 +6,20 @@ import { Link } from "@heroui/link";
 
 import { InProgress } from "@/components/in-progress";
 
+// include problems I solved and walkthroughs
+
+//sensor drift
+
+//procedural clouds
+
+//rotated rectangles
+
+//virtualized 3d mouse
+
+//gamepad and keyboard input
+
+//encryption and pwas
+
 export default function BlogPage() {
   return (
     <DefaultLayout>

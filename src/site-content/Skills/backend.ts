@@ -386,4 +386,15 @@ export const Backend: Group = {
         ConnectMongo,
         Mongoose,
     ],
+    featuredFilters: [
+        {
+            name: "expressjs",
+            label: "ExpressJS",
+            icon: "express",
+        },
+        {
+            name: "database",
+            label: "Database",
+        }
+    ],
 };

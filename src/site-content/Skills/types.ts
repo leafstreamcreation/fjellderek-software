@@ -9,11 +9,17 @@ export type Skill = {
     url?: string;
 };
 
+export type Filter = {
+    name: string;
+    label: string;
+    icon?: string;
+};
+
 export type Group = {
     name: string;
     label: string;
     title: string;
     description: string;
     skills: Skill[];
-    featuredFilters?: string[];
+    featuredFilters?: Filter[];
 };

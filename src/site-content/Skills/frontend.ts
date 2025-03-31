@@ -563,6 +563,7 @@ const BcryptJS: Skill = {
         "password",
         "vue",
         "package",
+        "react",
     ],
     icon: "bcryptjs",
     subSkills: [],
@@ -667,5 +668,17 @@ export const Frontend: Group = {
             Lodash,
             PopperJS,
             JSX,
+        ],
+        featuredFilters: [
+            {
+                name: "vue",
+                label: "Vue.js",
+                icon: "vue",
+            },
+            {
+                name: "react",
+                label: "React.js",
+                icon: "react",
+            },
         ],
 };

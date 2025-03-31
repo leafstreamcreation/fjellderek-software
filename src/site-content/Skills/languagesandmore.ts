@@ -10,6 +10,7 @@ const English: Skill = {
         "language",
         "spoken",
         "written",
+        "culture",
     ],
     subSkills: [
         {
@@ -45,6 +46,8 @@ const Spanish: Skill = {
         "language",
         "spoken",
         "written",
+        "culture",
+
     ],
     subSkills: [
         {
@@ -79,6 +82,7 @@ const PublicSpeaking: Skill = {
         "public speaking",
         "presentation",
         "communication",
+        "language",
     ],
     description: "Experienced in public speaking and delivering presentations.",
 };
@@ -91,6 +95,9 @@ const AmericanSignLanguage: Skill = {
         "american sign language",
         "asl",
         "sign language",
+        "lifestyle",
+        "culture",
+
     ],
     subSkills: [
         {
@@ -130,6 +137,8 @@ const Cooking: Skill = {
         "cooking",
         "culinary",
         "food",
+        "lifestyle",
+        "culture",
     ],
     subSkills: [
         {
@@ -245,7 +254,8 @@ const Music: Skill = {
         "mastering",
         "music theory",
         "ear training",
-        "MIDI"
+        "MIDI",
+        "media",
     ],
     subSkills: [
         {
@@ -370,6 +380,8 @@ const VideoGaming: Skill = {
         "Broken Age",
         "Grim Fandango",
         "The Stanley Parable",
+        "media",
+        "games",
     ],
     subSkills: [
         {
@@ -670,6 +682,8 @@ const RolePlaying: Skill = {
         "encounters",
         "campaign",
         "adventure",
+        "media",
+        "games",
     ],
     subSkills: [
         {
@@ -726,6 +740,7 @@ const Nature: Skill = {
         "climate",
         "weather",
         "spirituality",
+        "lifestyle",
     ],
     subSkills: [
         {
@@ -843,6 +858,8 @@ const Sciences: Skill = {
         "hypothesis testing",
         "experimental design",
         "statistical analysis",
+        "lifestyle",
+        "philosophy",
     ],
     subSkills: [
         {
@@ -994,6 +1011,7 @@ const Gardening: Skill = {
         "hydroponics",
         "aquaponics",
         "aeroponics",
+        "lifestyle",
     ],
     subSkills: [
         {
@@ -1077,6 +1095,7 @@ const DeafCulture: Skill = {
         "deaf awareness",
         "deaf history",
         "audism",
+        "lifestyle",
     ],
     subSkills: [
         {
@@ -1122,6 +1141,7 @@ const MentalHealth: Skill = {
         "emotional intelligence",
         "resilience",
         "mental illness awareness",
+        "lifestyle",
     ],
     subSkills: [
         {
@@ -1184,6 +1204,8 @@ const InterdependentRelationships: Skill = {
         "relationship building",
         "conflict resolution",
         "communication",
+        "philosophy",
+        "lifestyle",
     ],
     subSkills: [
         {
@@ -1310,6 +1332,7 @@ const EthnoAnthropology: Skill = {
         "cultural sensitivity",
         "cultural competence",
         "epigenetics",
+        "culture",
     ],
     subSkills: [
         {
@@ -1388,6 +1411,8 @@ const Linguistics: Skill = {
         "register",
         "vernacular",
         "idiom",
+        "philosophy",
+        "culture",
     ],
     subSkills: [
         {
@@ -1527,6 +1552,9 @@ const Abolitionism: Skill = {
         "feminism",
         "anti-fascism",
         "liberation",
+        "philosophy",
+        "culture",
+        "lifestyle",
     ],
     subSkills: [
         {
@@ -1726,6 +1754,9 @@ const SpiritualityAndMysticism: Skill = {
         "earth-based spirituality",
         "pachamama",
         "nature spirituality",
+        "lifestyle",
+        "philosophy",
+        "culture",
     ],
     subSkills: [
         {
@@ -1803,6 +1834,7 @@ const ServiceDogHandling: Skill = {
         "correctionless methodology",
         "positive reinforcement",
         "service dog laws",
+        "lifestyle",
     ],
     subSkills: [
         {
@@ -1899,5 +1931,31 @@ export const LanguagesAndMore: Group = {
         Abolitionism,
         SpiritualityAndMysticism,
         ServiceDogHandling,
+    ],
+    featuredFilters: [
+        {
+            name: "languages",
+            label: "Languages",
+        },
+        {
+            name: "lifestyle",
+            label: "Lifestyle",
+        },
+        {
+            name: "games",
+            label: "Games",
+        },
+        {
+            name: "media",
+            label: "Media",
+        },
+        {
+            name: "culture",
+            label: "Culture",
+        },
+        {
+            name: "philosophy",
+            label: "Philosophy",
+        },
     ],
 };
