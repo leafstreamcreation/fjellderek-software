@@ -159,6 +159,9 @@ const GoogleVR: Skill = {
         "game development",
         "game engine",
         "mobile games",
+        "apple",
+        "android",
+        "unity",
     ],
     icon: "googlevr",
     subSkills: [
@@ -180,5 +183,19 @@ export const NativeMobileGames: Group = {
         Unity,
         QT,
         GoogleVR,
+    ],
+    featuredFilters: [
+        {
+            name: "apple",
+            label: "Apple",
+        },
+        {
+            name: "unity",
+            label: "Unity",
+        },
+        {
+            name: "android",
+            label: "Android",
+        },
     ],
 };

@@ -10,6 +10,7 @@ const AccessControl: Skill = {
         "permissions",
         "role",
         "rbac",
+        "cybersecurity",
     ],
     subSkills: [
         {
@@ -92,6 +93,8 @@ const DataPrivacy: Skill = {
         "privacy",
         "data protection",
         "information privacy",
+        "cybersecurity",
+        "compliance",
     ],
     description: "Ensuring the proper handling and protection of personal data",
     url: "https://www.privacyinternational.org",
@@ -104,6 +107,7 @@ const Oauth: Skill = {
     keys: [
         "oauth",
         "authentication",
+        "cybersecurity",
     ],
     description: "Open standard for access delegation commonly used for token-based authentication",
     url: "https://oauth.net",
@@ -117,6 +121,7 @@ const VPN: Skill = {
         "vpn",
         "virtual private network",
         "network security",
+        "cybersecurity",
     ],
     description: "Virtual Private Network for secure remote access",
     url: "https://usa.kaspersky.com/resource-center/definitions/what-is-a-vpn?srsltid=AfmBOoqNAsGUmw7zIHAYitEKAv1TodluHRtd-Nam8te0VoojcclLPHVy",
@@ -130,6 +135,7 @@ const Encryption: Skill = {
         "encryption",
         "data security",
         "cryptography",
+        "cybersecurity",
     ],
     subSkills: [
         {
@@ -161,6 +167,7 @@ const WebCrypto: Skill = {
         "webcrypto",
         "cryptography",
         "api",
+        "cybersecurity",
     ],
     description: "JavaScript API for performing cryptographic operations in web applications",
     url: "https://developer.mozilla.org/en-US/docs/Web/API/Web_Crypto_API",
@@ -174,6 +181,7 @@ const bcrypt: Skill = {
         "bcrypt",
         "password hashing",
         "hashing",
+        "cybersecurity",
     ],
     description: "Library for hashing passwords securely",
     url: "https://www.npmjs.com/package/bcrypt",
@@ -195,6 +203,7 @@ const AES: Skill = {
         "galois counter mode",
         "symmetric encryption",
         "symmetric key encryption",
+        "cybersecurity",
     ],
     subSkills: [
         {
@@ -216,6 +225,7 @@ const MongoDBCSFLE: Skill = {
         "csfle",
         "client-side field level encryption",
         "encryption",
+        "cybersecurity",
     ],
     description: "Client-Side Field Level Encryption for MongoDB to encrypt data on the client side",
     url: "https://docs.mongodb.com/manual/core/client-side-field-level-encryption/",
@@ -229,6 +239,7 @@ const JWT: Skill = {
         "jwt",
         "json web token",
         "authentication",
+        "cybersecurity",
     ],
     description: "JSON Web Token for securely transmitting information between parties as a JSON object",
     url: "https://jwt.io",
@@ -242,6 +253,9 @@ const SSO: Skill = {
         "sso",
         "single sign-on",
         "authentication",
+        "identity management",
+        "access management",
+        "cybersecurity",
     ],
     description: "Single Sign-On for allowing users to authenticate once and gain access to multiple applications",
     url: "https://en.wikipedia.org/wiki/Single_sign-on",
@@ -254,6 +268,8 @@ const MFA: Skill = {
     keys: [
         "mfa",
         "multi-factor authentication",
+        "authentication",
+        "cybersecurity",
     ],
     description: "Multi-Factor Authentication for adding an extra layer of security to the authentication process",
     url: "https://www.okta.com/identity-101/multi-factor-authentication/",
@@ -267,6 +283,8 @@ const OKTA: Skill = {
         "okta",
         "identity management",
         "access management",
+        "cybersecurity",
+        "authentication",
     ],
     description: "Identity and access management service for securing user authentication and authorization",
     url: "https://www.okta.com",
@@ -297,6 +315,7 @@ const SSL: Skill = {
         "encryption",
         "data security",
         "secure communication",
+        "cybersecurity",
     ],
     description: "Secure Sockets Layer/Transport Layer Security for securing communication over a computer network",
     url: "https://en.wikipedia.org/wiki/Transport_Layer_Security",
@@ -329,4 +348,14 @@ export const SecurityCompliance: Group = {
         CrowdStrike,
         SSL,
     ],
+    featuredFilters: [
+        {
+            name: "cybersecurity",
+            label: "Cybersecurity",
+        },
+        {
+            name: "compliance",
+            label: "Compliance",
+        },
+    ]
 };

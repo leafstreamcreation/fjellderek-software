@@ -156,6 +156,7 @@ const MacOS: Skill = {
         "operating system",
         "development",
         "ide",
+        "os",
     ],
     icon: "macos",
     url: "https://www.apple.com/macos",
@@ -170,6 +171,7 @@ const Windows: Skill = {
         "operating system",
         "development",
         "ide",
+        "os",
     ],
     icon: "windows",
     url: "https://www.microsoft.com/windows",
@@ -184,7 +186,8 @@ const Linux: Skill = {
         "operating system",
         "development",
         "ide",
-    ],
+        "os",
+   ],
     icon: "linux",
     subSkills: [
         {
@@ -226,6 +229,7 @@ const CLIs: Skill = {
         "cli",
         "bash",
         "zsh",
+        "os",
     ],
     icon: "cli",
     subSkills: [
@@ -307,6 +311,14 @@ const Browsers: Skill = {
         "web development",
         "javascript",
         "testing",
+        "frontend",
+        "web",
+        "browser",
+        "chrome",
+        "firefox",
+        "safari",
+        "edge",
+        "webkit",
     ],
     subSkills: [
         {
@@ -374,9 +386,21 @@ export const Workspaces: Group = {
             Browsers,
         ],
         featuredFilters: [
-            // "frontend",
-            // "IDE",
-            // "OS",
-            // "package manager",
+            { 
+                name: "frontend", 
+                label: "Frontend" 
+            },
+            { 
+                name: "ide", 
+                label: "IDE" 
+            },
+            { 
+                name: "os", 
+                label: "OS" 
+            },
+            { 
+                name: "package manager", 
+                label: "Package Manager" 
+            },
         ],
     };
