@@ -173,9 +173,9 @@ const GoogleVR: Skill = {
 
 export const NativeMobileGames: Group = {
     name: "nativemobilegames",
-    label: "Native/Mobile/Games",
-    title: "Native Mobile & Game Development",
-    description: "Skills for mobile innovation, supercharged proprietary applications, and AAA game development",
+    label: "Native, Mobile & Games",
+    title: "Native, Mobile & Games",
+    description: "Creating mobile innovation, supercharged proprietary applications, and immersive gaming experiences",
     skills: [
         IOs,
         Cocoa,

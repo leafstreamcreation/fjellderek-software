@@ -13,7 +13,9 @@ const React: Skill = {
         "spa"
     ],
     icon: "react",
-    subSkills: [],
+    subSkills: [
+
+    ],
     description: "A frontend component framework for building Single Page Applications",
 };
 
@@ -640,8 +642,8 @@ const JSX: Skill = {
 export const Frontend: Group = {
     name: "frontend",
         label: "Frontend",
-        title: "Frontend Skills",
-        description: "For creating performant, complex, and diverse web interfaces and applications",
+        title: "Frontend",
+        description: "Creating performant, complex, and diverse web interfaces and applications",
         skills: [
             React,
             Vue,

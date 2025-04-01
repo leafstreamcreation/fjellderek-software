@@ -246,7 +246,7 @@ export const AccessDesign: Group = {
     name: "accessdesign",
     label: "Accessibility & UX",
     title: "Accessibility & UX",
-    description: "Skills to craft useful, beautiful, global, and accessible user interfaces",
+    description: "Crafting intuitive, beautiful, and responsive user interfaces for every human",
     skills: [
         Storybook,
         Figma,

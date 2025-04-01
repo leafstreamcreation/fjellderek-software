@@ -6790,8 +6790,8 @@ export const groups: GroupContainer = {
     all: {
         name: "all",
         label: "All",
-        title: "Everything Under the Sun",
-        description: "My expansive list of professional software skills",
+        title: "Everything",
+        description: "My full repertoire of professional software skills",
         skills: [
             React,
             JavaScript,

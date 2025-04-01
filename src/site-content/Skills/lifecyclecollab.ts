@@ -446,7 +446,7 @@ export const LifecycleCollab: Group = {
     name: "lifecyclecollab",
     label: "Collaboration",
     title: "Software Lifecycle & Collaboration",
-    description: "Skills for stellar coordination and agility in local and global software teams",
+    description: "Coordinating global software teams with stellar cohesion and agility",
     skills: [
         GlobalTeamCollaboration,
         RemoteTeamCollaboration,

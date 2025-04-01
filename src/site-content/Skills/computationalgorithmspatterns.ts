@@ -1634,8 +1634,8 @@ const SortingAlgorithms: Skill = {
 export const ComputationAlgorithmsPatterns: Group = {
     name: "computationalgorithmspatterns",
     label: "Computation, Algorithms & Patterns",
-    title: "Computation, Algorithms, and Patterns",
-    description: "Versatile and comprehensive engineering knowledge driving broad-field innovation",
+    title: "Computation, Algorithms & Patterns",
+    description: "Driving broad-field innovation with comprehensive engineering knowledge",
     skills: [
         DataStructures,
         SortingAlgorithms,

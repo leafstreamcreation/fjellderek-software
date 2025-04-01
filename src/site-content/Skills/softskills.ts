@@ -319,7 +319,7 @@ export const SoftSkills: Group = {
     name: "softskills",
     label: "Soft Skills",
     title: "Soft Skills",
-    description: "Invaluable skills and innate qualities for every project and setting",
+    description: "Bringing invaluable integrity and quality to every project and setting",
     skills: [
         ConstructiveFeedback,
         CriticalThinking,

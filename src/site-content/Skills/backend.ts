@@ -357,8 +357,8 @@ const Mongoose: Skill = {
 export const Backend: Group = {
     name: "backend",
     label: "Backend",
-    title: "Backend Skills",
-    description: "For building robust servers, services, and data persistence in web-based applications",
+    title: "Backend",
+    description: "Building robust servers, services, and data persistence in web-based applications",
     skills: [
         NodeMailer,
         NodeJS,

@@ -387,7 +387,7 @@ export const QA: Group = {
     name: "qa",
     label: "QA",
     title: "Quality Assurance",
-    description: "Skills to debug and produce fast and flawless applications",
+    description: "Creating fast and flawless applications through comprehensive testing and specification",
     skills: [
         Playwright,
         Cypress,

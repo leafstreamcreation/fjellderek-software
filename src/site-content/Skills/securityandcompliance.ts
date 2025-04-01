@@ -326,7 +326,7 @@ export const SecurityCompliance: Group = {
     name: "securitycompliance",
     label: "Cybersecurity & Compliance",
     title: "Cybersecurity & Compliance",
-    description: "For secure and reliable applications maintaining the highest regulatory standards",
+    description: "Creating secure and reliable applications with the highest regulatory standards",
     skills: [
         AccessControl,
         GDPR,

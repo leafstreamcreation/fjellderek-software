@@ -215,7 +215,7 @@ export const DevOps: Group = {
     name: "devops",
     label: "Dev Ops",
     title: "Dev Ops",
-    description: "Skills for supercharging production with developer tools, virtualization, and automated pipelines",
+    description: "Supercharging production with developer tools, virtualization, and automated pipelines",
     skills: [
         ContinuousIntegration,
         Docker,

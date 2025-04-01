@@ -125,7 +125,7 @@ export const AI: Group = {
     name: "ai",
     label: "AI",
     title: "Artificial Intelligence",
-    description: "Skills using AI models and tools for next-generation application development",
+    description: "Creating with AI models and tools for next-generation application development",
     skills: [
         Copilot,
         ChatGPT,

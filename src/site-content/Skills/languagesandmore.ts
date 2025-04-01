@@ -1909,7 +1909,7 @@ export const LanguagesAndMore: Group = {
     name: "languagesandmore",
     label: "Languages & More",
     title: "Languages & More",
-    description: "Skills providing a human touch, inspiration, and enrichment beyond software",
+    description: "Providing a human touch, inspiration, and enrichment beyond software",
     skills: [
         English,
         Spanish,
