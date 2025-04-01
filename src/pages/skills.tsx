@@ -86,51 +86,57 @@ export default function SkillsPage() {
               </DropdownMenu>
             </Dropdown>
         </div>
-        <Card>
-          <CardHeader>
-            <div className="inline-block max-w-lg text-center justify-center">
-              <span className={title({ color: "yellow" })}>{groups[groupKey].title}</span> 
-              <br />
-              <p className={subtitle() + " mt-4"}>{groups[groupKey].description}</p>
-            </div>
-          </CardHeader>
-          <Divider />
+        <Card fullWidth>
           <CardBody>
-            <Card fullWidth>
-              <CardHeader>
-                <span className="mr-4 text-xl font-semibold inline text-default-600">Filters</span>
-                <Input classNames={{label: "text-xs"}} label="Applied Filter:" size="lg" value={searchKey} onValueChange={setSearchKey} isClearable />
-              </CardHeader>
-              <CardBody className="grid grid-cols-2 gap-2">
-                {
-                  groups[groupKey].featuredFilters?.map((filter: Filter) => {
-                    return (
-                      <Button 
-                        key={filter.name} 
-                        color={filterButtonColor(filter.name)} 
-                        size="sm"
-                        variant="bordered"
-                        onPress={() => {setSearchKey(filter.name)}}
-                      >
-                        {filter.label}
-                      </Button>
-                    );
-                  })
-                }
-              </CardBody>
-            </Card>
-            
+            <Accordion>
+              <AccordionItem 
+                key="1"
+                aria-label="Filter and sort options"
+                textValue="Filter and sort options"
+                title={<div className="inline-block max-w-lg text-center justify-center">
+                  <span className={title({ color: "yellow" })}>{groups[groupKey].title}</span> 
+                  <br /> </div>}
+                subtitle={<div className="inline-block max-w-lg text-center justify-center">
+                    <p className={subtitle() + " mt-4"}>{groups[groupKey].description}</p>
+                  </div>}
+                classNames={{ trigger: "flex-col", title: "text-center", indicator: "rotate-90" }}
+              >
+                  
+                <Divider />
+                <div className="my-4 flex items-center justify-between">
+                  <span className="ml-2 mr-4 text-xl font-semibold inline text-default-600">Filters</span>
+                  <Input classNames={{label: "text-xs"}} label="Applied Filter:" size="lg" value={searchKey} onValueChange={setSearchKey} isClearable />
+                </div>
+                <div className="grid grid-cols-2 gap-2">
+                  {
+                    groups[groupKey].featuredFilters?.map((filter: Filter) => {
+                      return (
+                        <Button 
+                          key={filter.name} 
+                          color={filterButtonColor(filter.name)} 
+                          size="sm"
+                          variant="bordered"
+                          onPress={() => {setSearchKey(filter.name)}}
+                        >
+                          {filter.label}
+                        </Button>
+                      );
+                    })
+                  }
+                </div>
+                <div className="flex flex-col">
+                  <span className="ml-2 mb-2 mt-4 text-xl font-semibold text-default-600">Sort By</span>
+                  <ButtonGroup fullWidth size="sm" radius="full" color="default">
+                    <Button color={sortButtonColor("none")} onPress={() => setSortSelection("none")}>None</Button>
+                    <Button color={sortButtonColor("alphabetic-ascending")} onPress={() => setSortSelection("alphabetic-ascending")}>Name</Button>
+                    <Button color={sortButtonColor("alphabetic-descending")} onPress={() => setSortSelection("alphabetic-descending")}>Name Z-A</Button>
+                    <Button color={sortButtonColor("years")} onPress={() => setSortSelection("years")}>Years</Button>
+                    <Button color={sortButtonColor("proficiency")} onPress={() => setSortSelection("proficiency")}>Level</Button>
+                  </ButtonGroup>
+                </div>
+              </AccordionItem>
+            </Accordion>
           </CardBody>
-          <CardFooter className="flex-wrap">
-            <span className="m-2 text-xl font-semibold text-default-600">Sort By</span>
-            <ButtonGroup fullWidth size="sm" radius="full" color="default">
-              <Button color={sortButtonColor("none")} onPress={() => setSortSelection("none")}>None</Button>
-              <Button color={sortButtonColor("alphabetic-ascending")} onPress={() => setSortSelection("alphabetic-ascending")}>Name</Button>
-              <Button color={sortButtonColor("alphabetic-descending")} onPress={() => setSortSelection("alphabetic-descending")}>Name Z-A</Button>
-              <Button color={sortButtonColor("years")} onPress={() => setSortSelection("years")}>Years</Button>
-              <Button color={sortButtonColor("proficiency")} onPress={() => setSortSelection("proficiency")}>Level</Button>
-            </ButtonGroup>
-          </CardFooter>
         </Card>
         <Accordion 
           selectionMode="single" 
@@ -146,6 +152,7 @@ export default function SkillsPage() {
                 return (
                   <AccordionItem 
                     key={skill.name}
+                    aria-label={skill.name + ' proficiency: ' + skill.proficiency + ', years experience: ' + (skill.years || 0)}
                     textValue={skill.name + ' proficiency: ' + skill.proficiency + ', years experience: ' + (skill.years || 0)}
                     classNames={{ content: "mx-4" }}
                     startContent={
@@ -159,6 +166,7 @@ export default function SkillsPage() {
               else return (
                 <AccordionItem 
                   key={skill.name}
+                  aria-label={skill.name + ' proficiency: ' + skill.proficiency + ', years experience: ' + (skill.years || 0)}
                   textValue={skill.name + ' proficiency: ' + skill.proficiency + ', years experience: ' + (skill.years || 0)}
                   hideIndicator
                   classNames={{ base: "pointer-events-none" }}
