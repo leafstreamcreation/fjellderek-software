@@ -1,7 +1,5 @@
 import { title, subtitle } from "@/components/primitives";
 import DefaultLayout from "@/layouts/default";
-import { Button } from "@heroui/button";
-import { RadioGroup } from "@heroui/radio";
 import { Link } from "@heroui/link";
 import { 
   Input, 
@@ -16,12 +14,13 @@ import {
   CardHeader,
   CardBody,
   CardFooter,
-  Divider
+  Divider,
+  Button,
+  ButtonGroup,
  } from "@heroui/react";
 import { Skill, Group, groups } from "@/site-content/Skills/skills";
 import { useState } from "react";
 import { PrimarySkill, SubSkills } from "@/components/skill";
-import { AlpineRadio } from "@/components/alpine-radio";
 
 import { BrandIcons } from "@/components/icons";
 
@@ -47,6 +46,10 @@ export default function SkillsPage() {
   function handleSelection(selection: Selection) {
       setGroupKey(Array.from(selection).join(', '));
       setGroupSelection(selection);
+  };
+
+  function sortButtonColor (selection: "none" | "alphabetic-ascending" | "alphabetic-descending" | "years" | "proficiency") {
+    return selection === sortSelection ? "primary" : "default";
   }
 
   return (
@@ -99,22 +102,15 @@ export default function SkillsPage() {
             </Card>
             
           </CardBody>
-          <CardFooter>
-            <RadioGroup 
-              size="sm" 
-              orientation="horizontal" 
-              value={sortSelection} 
-              onValueChange={(value: string) => setSortSelection(value as "alphabetic-ascending" | "alphabetic-descending" | "years" | "proficiency")} 
-              label="Sort By"
-              classNames={{
-                wrapper: "gap-4"
-              }}>
-              <AlpineRadio value="none" classNames={{base: radioStyles + "rounded-l-full border-l-2"}}>None</AlpineRadio>
-              <AlpineRadio value="alphabetic-ascending" classNames={{base: radioStyles + "border-x-1"}}>Name</AlpineRadio>
-              <AlpineRadio value="alphabetic-descending" classNames={{base: radioStyles + "border-x-1"}}>Name Z-A</AlpineRadio>
-              <AlpineRadio value="years" classNames={{base: radioStyles + "border-x-1"}}>Years</AlpineRadio>
-              <AlpineRadio value="proficiency" classNames={{base: radioStyles + "border-l-1 pr-3 rounded-r-full"}}>Level</AlpineRadio>
-            </RadioGroup>
+          <CardFooter className="flex-wrap">
+            <span className="m-2 text-xl font-semibold text-default-600">Sort By</span>
+            <ButtonGroup fullWidth size="sm" radius="full" color="default">
+              <Button color={sortButtonColor("none")} onPress={() => setSortSelection("none")}>None</Button>
+              <Button color={sortButtonColor("alphabetic-ascending")} onPress={() => setSortSelection("alphabetic-ascending")}>Name</Button>
+              <Button color={sortButtonColor("alphabetic-descending")} onPress={() => setSortSelection("alphabetic-descending")}>Name Z-A</Button>
+              <Button color={sortButtonColor("years")} onPress={() => setSortSelection("years")}>Years</Button>
+              <Button color={sortButtonColor("proficiency")} onPress={() => setSortSelection("proficiency")}>Level</Button>
+            </ButtonGroup>
           </CardFooter>
         </Card>
         <Accordion 
