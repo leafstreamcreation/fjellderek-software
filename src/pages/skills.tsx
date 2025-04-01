@@ -3,7 +3,21 @@ import DefaultLayout from "@/layouts/default";
 import { Button } from "@heroui/button";
 import { RadioGroup } from "@heroui/radio";
 import { Link } from "@heroui/link";
-import { Input, Select, SelectItem, Selection, Accordion, AccordionItem, } from "@heroui/react";
+import { 
+  Input, 
+  Dropdown, 
+  DropdownTrigger, 
+  DropdownMenu, 
+  DropdownItem,
+  Selection, 
+  Accordion, 
+  AccordionItem, 
+  Card,
+  CardHeader,
+  CardBody,
+  CardFooter,
+  Divider
+ } from "@heroui/react";
 import { Skill, Group, groups } from "@/site-content/Skills/skills";
 import { useState } from "react";
 import { PrimarySkill, SubSkills } from "@/components/skill";
@@ -31,49 +45,78 @@ export default function SkillsPage() {
             "hover:bg-content2 cursor-pointer p-2 data-[selected=true]:bg-primary data-[selected=true]:border-primary border-default border-x-1 border-y-2 ";
 
   function handleSelection(selection: Selection) {
-      if (selection !== 'all' && selection.size == 0) setGroupSelection(new Set([groupKey]));
-      else {
-        setGroupKey(Array.from(selection).join(', '));
-        setGroupSelection(selection);
-    }
+      setGroupKey(Array.from(selection).join(', '));
+      setGroupSelection(selection);
   }
 
   return (
     <DefaultLayout>
       <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
-
-        <div className="inline-block max-w-lg text-center justify-center">
-          <span className={title()}>My&nbsp;</span>
-          <span className={title({ color: "blue" })}>Skills&nbsp;</span>
+        <div className="w-full flex items-center justify-center">
+          <div className="absolute inline-block max-w-lg text-center">
+            <span className={title()}>My&nbsp;</span>
+            <span className={title({ color: "blue" })}>Skills&nbsp;</span>
+          </div>
+            <Dropdown>
+              <DropdownTrigger>
+                <Button className="relative -right-24" size="sm" isIconOnly variant="bordered" color="default">
+                  
+                </Button>
+              </DropdownTrigger>
+              <DropdownMenu 
+                disallowEmptySelection
+                aria-label="Skill category options"
+                selectedKeys={groupSelection}
+                selectionMode="single"
+                variant="flat"
+                onSelectionChange={handleSelection}>
+                {Object.values(groups).map((group:Group) => (
+                  <DropdownItem key={group.name}>
+                    {group.label}
+                  </DropdownItem>
+                ))}
+              </DropdownMenu>
+            </Dropdown>
         </div>
-        <Select selectedKeys={groupSelection} onSelectionChange={handleSelection} label="Category">
-          {Object.values(groups).map((group:Group) => (
-            <SelectItem key={group.name}>
-              {group.label}
-            </SelectItem>
-          ))}
-        </Select>
-        <div className="inline-block max-w-lg text-center justify-center">
-          <span className={title({ color: "yellow" })}>{groups[groupKey].title}</span> 
-          <br />
-          <p className={subtitle() + " mt-4"}>{groups[groupKey].description}</p>
-        </div>
-        <Input placeholder="Filter within this category:" size="lg" value={searchKey} onValueChange={setSearchKey} isClearable />
-        <RadioGroup 
-          size="sm" 
-          orientation="horizontal" 
-          value={sortSelection} 
-          onValueChange={(value: string) => setSortSelection(value as "alphabetic-ascending" | "alphabetic-descending" | "years" | "proficiency")} 
-          label="Sort By"
-          classNames={{
-            wrapper: "gap-4"
-          }}>
-          <AlpineRadio value="none" classNames={{base: radioStyles + "rounded-l-full border-l-2"}}>None</AlpineRadio>
-          <AlpineRadio value="alphabetic-ascending" classNames={{base: radioStyles + "border-x-1"}}>Name</AlpineRadio>
-          <AlpineRadio value="alphabetic-descending" classNames={{base: radioStyles + "border-x-1"}}>Name Z-A</AlpineRadio>
-          <AlpineRadio value="years" classNames={{base: radioStyles + "border-x-1"}}>Years</AlpineRadio>
-          <AlpineRadio value="proficiency" classNames={{base: radioStyles + "border-l-1 pr-3 rounded-r-full"}}>Level</AlpineRadio>
-        </RadioGroup>
+        <Card>
+          <CardHeader>
+            <div className="inline-block max-w-lg text-center justify-center">
+              <span className={title({ color: "yellow" })}>{groups[groupKey].title}</span> 
+              <br />
+              <p className={subtitle() + " mt-4"}>{groups[groupKey].description}</p>
+            </div>
+          </CardHeader>
+          <Divider />
+          <CardBody>
+            <Card fullWidth>
+              <CardHeader>
+                <span className="mr-4 text-xl font-semibold inline text-default-600">Filters</span>
+                <Input classNames={{label: "text-xs"}} label="Applied Filter:" size="lg" value={searchKey} onValueChange={setSearchKey} isClearable />
+              </CardHeader>
+              <CardBody>
+                Foo
+              </CardBody>
+            </Card>
+            
+          </CardBody>
+          <CardFooter>
+            <RadioGroup 
+              size="sm" 
+              orientation="horizontal" 
+              value={sortSelection} 
+              onValueChange={(value: string) => setSortSelection(value as "alphabetic-ascending" | "alphabetic-descending" | "years" | "proficiency")} 
+              label="Sort By"
+              classNames={{
+                wrapper: "gap-4"
+              }}>
+              <AlpineRadio value="none" classNames={{base: radioStyles + "rounded-l-full border-l-2"}}>None</AlpineRadio>
+              <AlpineRadio value="alphabetic-ascending" classNames={{base: radioStyles + "border-x-1"}}>Name</AlpineRadio>
+              <AlpineRadio value="alphabetic-descending" classNames={{base: radioStyles + "border-x-1"}}>Name Z-A</AlpineRadio>
+              <AlpineRadio value="years" classNames={{base: radioStyles + "border-x-1"}}>Years</AlpineRadio>
+              <AlpineRadio value="proficiency" classNames={{base: radioStyles + "border-l-1 pr-3 rounded-r-full"}}>Level</AlpineRadio>
+            </RadioGroup>
+          </CardFooter>
+        </Card>
         <Accordion 
           selectionMode="single" 
           selectionBehavior="replace" 
