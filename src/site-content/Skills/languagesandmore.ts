@@ -1934,7 +1934,7 @@ export const LanguagesAndMore: Group = {
     ],
     featuredFilters: [
         {
-            name: "languages",
+            name: "language",
             label: "Languages",
         },
         {

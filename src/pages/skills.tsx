@@ -18,7 +18,7 @@ import {
   Button,
   ButtonGroup,
  } from "@heroui/react";
-import { Skill, Group, groups } from "@/site-content/Skills/skills";
+import { Skill, Group, Filter, groups } from "@/site-content/Skills/skills";
 import { useState } from "react";
 import { PrimarySkill, SubSkills } from "@/components/skill";
 
@@ -26,9 +26,9 @@ import { BrandIcons } from "@/components/icons";
 
 
 export default function SkillsPage() {
-  const [searchKey, setSearchKey] = useState("");
   const [groupSelection, setGroupSelection] = useState<Selection>((new Set(["frontend"])));
   const [groupKey, setGroupKey] = useState("frontend");
+  const [searchKey, setSearchKey] = useState("vue");
   const [selectedSkillKey, setSelectedSkillKey] = useState<Selection>(new Set([groups[groupKey].skills[0].name]));
   const [sortSelection, setSortSelection] = useState<"none" | "alphabetic-ascending" | "alphabetic-descending" | "years" | "proficiency">("none");
 
@@ -40,13 +40,18 @@ export default function SkillsPage() {
     "proficiency": (a: Skill, b: Skill) => b.proficiency - a.proficiency,
   };
 
-  const radioStyles =
-            "hover:bg-content2 cursor-pointer p-2 data-[selected=true]:bg-primary data-[selected=true]:border-primary border-default border-x-1 border-y-2 ";
-
   function handleSelection(selection: Selection) {
-      setGroupKey(Array.from(selection).join(', '));
-      setGroupSelection(selection);
+    const selectedKey = Array.from(selection).join(', ');
+    setSearchKey("");
+    setGroupKey(selectedKey);
+    setGroupSelection(selection);
+    setSortSelection("none");
+    if (groups[selectedKey].featuredFilters) setSearchKey(groups[selectedKey].featuredFilters[0].name);
   };
+
+  function filterButtonColor(filterName: string) {
+    return searchKey.toLowerCase().includes(filterName) ? "primary" : "default";
+  }
 
   function sortButtonColor (selection: "none" | "alphabetic-ascending" | "alphabetic-descending" | "years" | "proficiency") {
     return selection === sortSelection ? "primary" : "default";
@@ -96,8 +101,22 @@ export default function SkillsPage() {
                 <span className="mr-4 text-xl font-semibold inline text-default-600">Filters</span>
                 <Input classNames={{label: "text-xs"}} label="Applied Filter:" size="lg" value={searchKey} onValueChange={setSearchKey} isClearable />
               </CardHeader>
-              <CardBody>
-                Foo
+              <CardBody className="grid grid-cols-2 gap-2">
+                {
+                  groups[groupKey].featuredFilters?.map((filter: Filter) => {
+                    return (
+                      <Button 
+                        key={filter.name} 
+                        color={filterButtonColor(filter.name)} 
+                        size="sm"
+                        variant="bordered"
+                        onPress={() => {setSearchKey(filter.name)}}
+                      >
+                        {filter.label}
+                      </Button>
+                    );
+                  })
+                }
               </CardBody>
             </Card>
             
