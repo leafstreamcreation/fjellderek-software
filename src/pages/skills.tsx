@@ -22,7 +22,7 @@ import { Skill, Group, Filter, groups } from "@/site-content/Skills/skills";
 import { useState } from "react";
 import { PrimarySkill, SubSkills } from "@/components/skill";
 
-import { BrandIcons } from "@/components/icons";
+import { BrandIcons, HamburgerMenuIcon } from "@/components/icons";
 
 
 export default function SkillsPage() {
@@ -68,7 +68,7 @@ export default function SkillsPage() {
             <Dropdown>
               <DropdownTrigger>
                 <Button className="relative -right-24" size="sm" isIconOnly variant="bordered" color="default">
-                  
+                  <HamburgerMenuIcon className="m-1 text-default-500"></HamburgerMenuIcon>
                 </Button>
               </DropdownTrigger>
               <DropdownMenu 
