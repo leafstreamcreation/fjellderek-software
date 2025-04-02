@@ -60,14 +60,13 @@ export default function SkillsPage() {
   return (
     <DefaultLayout>
       <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
-        <div className="w-full flex items-center justify-center">
-          <div className="absolute inline-block max-w-lg text-center">
+        <div className="w-full flex justify-center items-center">
+          <div className="flex max-w-lg text-center justify-end items-center">
             <span className={title()}>My&nbsp;</span>
             <span className={title({ color: "blue" })}>Skills&nbsp;</span>
-          </div>
             <Dropdown>
               <DropdownTrigger>
-                <Button className="relative -right-24" size="sm" isIconOnly variant="bordered" color="default">
+                <Button className="absolute translate-x-full" size="sm" isIconOnly variant="bordered" color="default">
                   <HamburgerMenuIcon className="m-1 text-default-500"></HamburgerMenuIcon>
                 </Button>
               </DropdownTrigger>
@@ -85,6 +84,7 @@ export default function SkillsPage() {
                 ))}
               </DropdownMenu>
             </Dropdown>
+          </div>
         </div>
         <Card fullWidth>
           <CardBody>
