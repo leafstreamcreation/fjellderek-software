@@ -64,10 +64,14 @@ export default function SkillsPage() {
           <div className="flex max-w-lg text-center justify-end items-center">
             <span className={title()}>My&nbsp;</span>
             <span className={title({ color: "blue" })}>Skills&nbsp;</span>
-            <Dropdown>
+          </div>
+        </div>
+        <Card fullWidth>
+          <CardBody className="items-center overflow-hidden">
+          <Dropdown shouldBlockScroll={false}>
               <DropdownTrigger>
-                <Button className="absolute translate-x-full" size="sm" isIconOnly variant="bordered" color="default">
-                  <HamburgerMenuIcon className="m-1 text-default-500"></HamburgerMenuIcon>
+                <Button size="lg" startContent={<HamburgerMenuIcon />} color="default" className="text-primary mb-3">
+                  Category
                 </Button>
               </DropdownTrigger>
               <DropdownMenu 
@@ -84,10 +88,7 @@ export default function SkillsPage() {
                 ))}
               </DropdownMenu>
             </Dropdown>
-          </div>
-        </div>
-        <Card fullWidth>
-          <CardBody>
+            <Divider />
             <Accordion>
               <AccordionItem 
                 key="1"
