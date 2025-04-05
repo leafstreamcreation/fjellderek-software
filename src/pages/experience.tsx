@@ -2,8 +2,14 @@ import { title, subtitle } from "@/components/primitives";
 import DefaultLayout from "@/layouts/default";
 import { Button } from "@heroui/button";
 import { Link } from "@heroui/link";
+import {
+  Card,
+  CardHeader,
+  CardBody,
+} from "@heroui/react";
 
 import { InProgress } from "@/components/in-progress";
+import { form } from "@heroui/react";
 
 export default function ExperiencePage() {
   return (
@@ -18,6 +24,15 @@ export default function ExperiencePage() {
           </div>
         </div>
         <InProgress />
+        <Card>
+
+        </Card>
+        <Card>
+
+        </Card>
+        <Card>
+          
+        </Card>
         <Button as={Link} href="/projects" size="lg" radius="full" variant="bordered" color="success">Next -&gt; Projects</Button>
       </section>
     </DefaultLayout>
