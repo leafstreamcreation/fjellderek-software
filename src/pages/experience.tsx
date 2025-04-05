@@ -9,7 +9,6 @@ import {
 } from "@heroui/react";
 
 import { InProgress } from "@/components/in-progress";
-import { form } from "@heroui/react";
 
 export default function ExperiencePage() {
   return (
@@ -31,7 +30,7 @@ export default function ExperiencePage() {
 
         </Card>
         <Card>
-          
+
         </Card>
         <Button as={Link} href="/projects" size="lg" radius="full" variant="bordered" color="success">Next -&gt; Projects</Button>
       </section>

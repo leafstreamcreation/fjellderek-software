@@ -8,6 +8,7 @@ import {
   CardHeader,
   CardBody,
   CardFooter,
+  Divider,
 } from "@heroui/react";
 
 //software for a new age
@@ -23,20 +24,27 @@ export default function IndexPage() {
       <section className="flex flex-col items-center justify-center  md:py-10">
         <div className="inline-block max-w-lg text-center justify-center">
           <h1>
-            <span className={title({ color: "cyan" })}>Borderless &nbsp;</span>
+            <span className={title({ color: "cyan", offset: "topleft" })}>Borderless&nbsp;</span>
             <span className={title()}>Software Development</span>
           </h1>
         </div>
-        <Card fullWidth className="mt-6 max-w-lg">
+        <Card fullWidth className="mt-8 max-w-lg px-2">
           <CardHeader>
-            <h2>
-              <span className={subtitle()}>I am&nbsp;</span>
-              <span className={subtitle({ color: "blue" })}>Derek</span>
+            <h2 className="mt-4">
+              <span className={subtitle({ offset: "topleft"})}>I&nbsp;am&nbsp;</span>
+              <span className={subtitle({ color: "blue", offset: "topleft"})}>Derek</span>
+              <br />
+              <span className={subtitle()}>Welcome to my software page</span>
             </h2>
           </CardHeader>
           <CardBody>
-            <p className="text-wrap text-left">
-              A software engineer with a passion for creating innovative solutions that make a difference. I specialize in full-stack development, with a focus on building scalable and efficient applications. My goal is to deliver high-quality software that meets the needs of users and businesses alike.
+            <Divider className="mb-4"></Divider>
+            <p>
+              The landscape of technology is ever-growing. Seasoned, adaptable engineers are needed to explore it
+            </p>
+            <br />
+            <p>
+              I navigate the breadth of possibilities with experience and an open mind, applying global perspectives and modern techniques to serve a worldwide audience
             </p>
           </CardBody>
         </Card>

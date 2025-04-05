@@ -20,6 +20,10 @@ export const title = tv({
     fullWidth: {
       true: "w-full block",
     },
+    offset: {
+      topleft: "relative -top-1 -left-1",
+      topright: "relative -top-1 -right-1",
+    },
   },
   defaultVariants: {
     size: "md",
@@ -55,6 +59,10 @@ export const subtitle = tv({
     },
     fullWidth: {
       true: "w-full block",
+    },
+    offset: {
+      topleft: "relative -top-1 -left-1",
+      topright: "relative -top-1 -right-1",
     },
   },
   defaultVariants: {
