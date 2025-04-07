@@ -22,13 +22,12 @@ export default function IndexPage() {
   return (
     <DefaultLayout>
       <section className="flex flex-col items-center justify-center  md:py-10">
-        <div className="inline-block max-w-lg text-center justify-center">
-          <h1>
+        
+          <h1 className="inline-block max-w-lg text-center justify-center">
             <span className={title({ color: "cyan", offset: "topleft" })}>Borderless&nbsp;</span>
-            <span className={title()}>Software Development</span>
+            <span className={title()}>Software Applications</span>
           </h1>
-        </div>
-        <Card fullWidth className="mt-8 max-w-lg px-2">
+        <Card fullWidth className="my-8 px-2">
           <CardHeader>
             <h2 className="mt-4">
               <span className={subtitle({ offset: "topleft"})}>I&nbsp;am&nbsp;</span>
@@ -40,47 +39,45 @@ export default function IndexPage() {
           <CardBody>
             <Divider className="mb-4"></Divider>
             <p>
-              The landscape of technology is ever-growing. Seasoned, adaptable engineers are needed to explore it
+              The landscape of technology is ever-growing.
             </p>
             <br />
             <p>
-              I navigate the breadth of possibilities with experience and an open mind, applying global perspectives and modern techniques to serve a worldwide audience
+              I bring experience and an open mind to navigate the wilderness of possibilities.
+            </p>
+            <br />
+            <p>
+              Returning with global perspectives and modern techniques to create powerful applications for a worldwide audience.
             </p>
           </CardBody>
         </Card>
-        <Card>
-          <CardHeader>
-            <h2>
-              <span className={subtitle({ color: "blue" })}>Holistic&nbsp;</span>
-              <span className={subtitle()}>Software Engineering</span>
-            </h2>
-          </CardHeader>
+        <h1 className="my-8 inline-block max-w-lg text-center justify-center">
+          <span className={title({ color: "blue", offset: "topleft" })}>Holistic&nbsp;</span>
+          <span className={title()}>Engineering</span>
+        </h1>
+        <Card fullWidth className="mb-8 px-2">
           <CardBody>
             <p className="text-wrap text-left">
-              I have a diverse skill set that includes proficiency in various programming languages, frameworks, and tools. I am constantly learning and adapting to new technologies to stay ahead in the ever-evolving tech landscape.
+              Software solutions that are scalable, maintainable, and adaptable to the ever-changing needs of users. I focus on creating software that is not only functional but also user-friendly and accessible to everyone.
             </p>
           </CardBody>
         </Card>
+        <h1 className="my-8 inline-block max-w-lg text-center justify-center">
+          <span className={title({ color: "yellow", offset: "topleft" })}>Human</span>
+          <span className={title()}>-First Solutions</span>
+        </h1>
         <Card>
-          <CardHeader>
-            <h2>
-              <span className={subtitle({ color: "blue" })}>Human-first&nbsp;</span>
-              <span className={subtitle()}>Products</span>
-            </h2>
-          </CardHeader>
           <CardBody>
             <p className="text-wrap text-left">
-              I believe in creating software that is user-friendly and accessible to everyone. My approach to development is centered around understanding the needs of users and delivering solutions that enhance their experience.
+              Software solutions that are scalable, maintainable, and adaptable to the ever-changing needs of users. I focus on creating software that is not only functional but also user-friendly and accessible to everyone.
             </p>
           </CardBody>
         </Card>
+        <h1 className="my-8 inline-block max-w-lg text-center justify-center">
+          <span className={title({ color: "cyan", offset: "topleft" })}>Formidable&nbsp;</span>
+          <span className={title()}>Cost Efficiency</span>
+        </h1>
         <Card>
-          <CardHeader>
-            <h2>
-              <span className={subtitle({ color: "blue" })}>Competitive&nbsp;</span>
-              <span className={subtitle()}>Pricing</span>
-            </h2>
-          </CardHeader>
           <CardBody>
             <p className="text-wrap text-left">
               I offer competitive pricing for my services, ensuring that you get the best value for your investment. My goal is to build long-term relationships with clients by delivering exceptional results at a fair price.
