@@ -66,7 +66,7 @@ export default function SkillsPage() {
             <span className={title({ color: "blue" })}>Skills&nbsp;</span>
           </div>
         </div>
-        <Card fullWidth>
+        <Card fullWidth className="my-8">
           <CardBody className="items-center overflow-hidden">
           <Dropdown shouldBlockScroll={false}>
               <DropdownTrigger>

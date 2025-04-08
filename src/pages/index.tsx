@@ -66,7 +66,7 @@ export default function IndexPage() {
           <span className={title({ color: "yellow", offset: "topleft" })}>Human</span>
           <span className={title()}>-First Solutions</span>
         </h1>
-        <Card>
+        <Card fullWidth className="mb-8 px-2">
           <CardBody>
             <p className="text-wrap text-left">
               Software solutions that are scalable, maintainable, and adaptable to the ever-changing needs of users. I focus on creating software that is not only functional but also user-friendly and accessible to everyone.
@@ -77,14 +77,14 @@ export default function IndexPage() {
           <span className={title({ color: "cyan", offset: "topleft" })}>Formidable&nbsp;</span>
           <span className={title()}>Cost Efficiency</span>
         </h1>
-        <Card>
+        <Card fullWidth className="px-2">
           <CardBody>
             <p className="text-wrap text-left">
               I offer competitive pricing for my services, ensuring that you get the best value for your investment. My goal is to build long-term relationships with clients by delivering exceptional results at a fair price.
             </p>
           </CardBody>
         </Card>
-        <Button as={Link} href="/skills" className="mt-6" size="lg" radius="full" variant="bordered" color="success">See My Skills -&gt;</Button>
+        <Button as={Link} href="/skills" className="my-6" size="lg" radius="full" variant="bordered" color="success">See My Skills -&gt;</Button>
       </section>
     </DefaultLayout>
   );
