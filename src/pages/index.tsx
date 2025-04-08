@@ -58,7 +58,7 @@ export default function IndexPage() {
         <Card fullWidth className="mb-8 px-2">
           <CardBody>
             <p className="text-wrap text-left">
-              Software solutions that are scalable, maintainable, and adaptable to the ever-changing needs of users. I focus on creating software that is not only functional but also user-friendly and accessible to everyone.
+              Software solutions from the ground up, with a focus on every component of the system.
             </p>
           </CardBody>
         </Card>
