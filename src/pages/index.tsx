@@ -43,11 +43,23 @@ export default function IndexPage() {
             </p>
             <br />
             <p>
-              I bring experience and an open mind to navigate the wilderness of possibilities.
+              My experience and open mind are a compass.
             </p>
             <br />
             <p>
-              Returning with global perspectives and modern techniques to create powerful applications for a worldwide audience.
+              Keeping us from being lost in the possibilities
+            </p>
+            <br />
+            <p>
+            And returning from the journey
+            </p>
+            <br />
+            <p>
+               With diverse perspectives and modern techniques
+            </p>
+            <br />
+            <p>
+               Creating software worthy of a global stage
             </p>
           </CardBody>
         </Card>
