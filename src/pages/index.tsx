@@ -5,10 +5,7 @@ import {
   Button,
   Link,
   Card,
-  CardHeader,
   CardBody,
-  CardFooter,
-  Divider,
 } from "@heroui/react";
 
 //software for a new age
@@ -27,17 +24,8 @@ export default function IndexPage() {
             <span className={title({ color: "cyan", offset: "topleft" })}>Borderless&nbsp;</span>
             <span className={title()}>Software Applications</span>
           </h1>
-        <Card fullWidth className="my-8 px-2">
-          <CardHeader>
-            <h2 className="mt-4">
-              <span className={subtitle({ offset: "topleft"})}>I&nbsp;am&nbsp;</span>
-              <span className={subtitle({ color: "blue", offset: "topleft"})}>Derek</span>
-              <br />
-              <span className={subtitle()}>Welcome to my software page</span>
-            </h2>
-          </CardHeader>
+        <Card fullWidth className="my-8 px-2 max-w-lg">
           <CardBody>
-            <Divider className="mb-4"></Divider>
             <p>
               Any problem, any team, anywhere
             </p>
@@ -55,18 +43,22 @@ export default function IndexPage() {
           <span className={title({ color: "blue", offset: "topleft" })}>Holistic&nbsp;</span>
           <span className={title()}>Engineering</span>
         </h1>
-        <Card fullWidth className="mb-8 px-2">
+        <Card fullWidth className="mb-8 px-2 max-w-lg">
           <CardBody>
             <p>
+              A comprehensive approach to development
+            </p>
+            <br />
+            <p>
+              Drawing on expansive engineering and domain knowledge
+            </p>
+            <br />
+            <p>
+              To build each software component from the ground up
+            </p>
+            <br />
+            <p>
               From specification and architecture to testing and deployment
-            </p>
-            <br />
-            <p>
-              This comprehensive approach to development
-            </p>
-            <br />
-            <p>
-              Examines every component of the software from the ground up
             </p>
             <br />
             <p>
@@ -78,7 +70,7 @@ export default function IndexPage() {
           <span className={title({ color: "yellow", offset: "topleft" })}>Human</span>
           <span className={title()}>-First Solutions</span>
         </h1>
-        <Card fullWidth className="mb-8 px-2">
+        <Card fullWidth className="mb-8 px-2 max-w-lg">
           <CardBody>
             <p>
               Humane development for people and the planet
@@ -97,18 +89,18 @@ export default function IndexPage() {
           <span className={title({ color: "cyan", offset: "topleft" })}>Formidable&nbsp;</span>
           <span className={title()}>Cost Efficiency</span>
         </h1>
-        <Card fullWidth className="px-2">
+        <Card fullWidth className="px-2 max-w-lg">
           <CardBody>
             <p>
-              More value for less resources
+              More value, less resources
             </p>
             <br />
             <p>
-              Lean workflows, efficient tools, and a global advantage come together
+              Lean workflows, efficient tools and a global advantage come together
             </p>
             <br />
             <p>
-              To provide flexible, equitable and competitive pricing for all project sizes
+              Providing flexible, equitable and competitive pricing for every project
             </p>
           </CardBody>
         </Card>
