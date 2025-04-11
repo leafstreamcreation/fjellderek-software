@@ -39,27 +39,15 @@ export default function IndexPage() {
           <CardBody>
             <Divider className="mb-4"></Divider>
             <p>
-              The landscape of technology is ever-growing.
+              Any problem, any team, anywhere
             </p>
             <br />
             <p>
-              My experience and open mind are a compass.
+              Bringing experience, adaptability, diverse perspective and modern techniques
             </p>
             <br />
             <p>
-              Keeping us from being lost in the possibilities
-            </p>
-            <br />
-            <p>
-            And returning from the journey
-            </p>
-            <br />
-            <p>
-               With diverse perspectives and modern techniques
-            </p>
-            <br />
-            <p>
-               Creating software worthy of a global stage
+              To create software fit for a global stage
             </p>
           </CardBody>
         </Card>
@@ -69,8 +57,20 @@ export default function IndexPage() {
         </h1>
         <Card fullWidth className="mb-8 px-2">
           <CardBody>
-            <p className="text-wrap text-left">
-              Software solutions from the ground up, with a focus on every component of the system.
+            <p>
+              From specification and architecture to testing and deployment
+            </p>
+            <br />
+            <p>
+              This comprehensive approach to development
+            </p>
+            <br />
+            <p>
+              Examines every component of the software from the ground up
+            </p>
+            <br />
+            <p>
+              Delivering robust applications and total user satisfaction
             </p>
           </CardBody>
         </Card>
@@ -80,8 +80,16 @@ export default function IndexPage() {
         </h1>
         <Card fullWidth className="mb-8 px-2">
           <CardBody>
-            <p className="text-wrap text-left">
-              Software solutions that are scalable, maintainable, and adaptable to the ever-changing needs of users. I focus on creating software that is not only functional but also user-friendly and accessible to everyone.
+            <p>
+              Humane development for people and the planet
+            </p>
+            <br />
+            <p>
+              Applications that empower users' lives and communities
+            </p>
+            <br />
+            <p>
+              With practical, accessible, localized and user-friendly design
             </p>
           </CardBody>
         </Card>
@@ -91,8 +99,16 @@ export default function IndexPage() {
         </h1>
         <Card fullWidth className="px-2">
           <CardBody>
-            <p className="text-wrap text-left">
-              I offer competitive pricing for my services, ensuring that you get the best value for your investment. My goal is to build long-term relationships with clients by delivering exceptional results at a fair price.
+            <p>
+              More value for less resources
+            </p>
+            <br />
+            <p>
+              Lean workflows, efficient tools, and a global advantage come together
+            </p>
+            <br />
+            <p>
+              To provide flexible, equitable and competitive pricing for all project sizes
             </p>
           </CardBody>
         </Card>
