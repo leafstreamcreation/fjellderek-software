@@ -22,10 +22,9 @@ export default function IndexPage() {
           </h1>
         <Card fullWidth className="my-8 px-2 max-w-lg">
           <CardHeader>
-            <h2 className="flex justify-between w-full text-center">
-              <span className={subtitle()}>Any&nbsp;problem.</span>
-              <span className={subtitle()}>Any&nbsp;team.</span>
-              <span className={subtitle({ italic:true, color:"cyan" })}>Anywhere.</span>
+            <h2 className="flex w-full gap-2">
+              <span className={subtitle()}>Any&nbsp;problem.&nbsp;Any&nbsp;team.&nbsp;</span>
+              <span className={subtitle({ italic:true, color:"cyan" })}>Anywhere</span>
             </h2>
           </CardHeader>
             <Divider></Divider>
@@ -44,25 +43,36 @@ export default function IndexPage() {
           <span className={title()}>Engineering</span>
         </h1>
         <Card fullWidth className="mb-8 px-2 max-w-lg">
+          <CardHeader>
+            <h2 className="flex w-full gap-0 sm:gap-2">
+              <span className={subtitle({ italic: true, color: "blue" })}>Comprehensive&nbsp;</span>
+              <span className={subtitle()}>production&nbsp;methods</span>
+            </h2>
+          </CardHeader>
+            <Divider></Divider>
           <CardBody>
-            <p>
-              A comprehensive approach to development
-            </p>
-            <br />
-            <p>
+            <p className={text()}>
               Drawing on expansive engineering and domain knowledge
             </p>
-            <br />
-            <p>
-              To build each software component from the ground up
+            <p className={text()}>
+              Building each software component from the ground up
             </p>
-            <br />
-            <p>
+            <p className={text()}>
               From specification and architecture to testing and deployment
             </p>
-            <br />
             <p>
-              Delivering robust applications and total user satisfaction
+              <span className={text()}>
+                Delivering&nbsp;
+              </span>
+              <span className={text({ color: "blue" })}>
+                robust&nbsp;applications
+              </span>
+              <span className={text()}>
+                &nbsp;and&nbsp;
+              </span>
+              <span className={text({ color: "blue", textWrap: "none" })}>
+                total&nbsp;user&nbsp;satisfaction.
+              </span>
             </p>
           </CardBody>
         </Card>
@@ -71,17 +81,25 @@ export default function IndexPage() {
           <span className={title()}>-First Solutions</span>
         </h1>
         <Card fullWidth className="mb-8 px-2 max-w-lg">
+          <CardHeader>
+            <h2 className="flex w-full gap-2">
+              <span className={subtitle()}>Software with a&nbsp;</span>
+              <span className={subtitle({ italic: true, color: "yellow" })}>Beating&nbsp;Heart</span>
+            </h2>
+          </CardHeader>
+            <Divider></Divider>
           <CardBody>
-            <p>
+            <p className={text()}>
               Humane development for people and the planet
             </p>
-            <br />
-            <p>
+            <p className={text()}>
               Applications that empower users' lives and communities
             </p>
-            <br />
-            <p>
-              With practical, accessible, localized and user-friendly design
+            <p className={text()}>
+              Practical, accessible, localized and user-friendly design
+            </p>
+            <p className={text({ color: "yellow", textWrap: "none" })}>
+                People&nbsp;and&nbsp;technology working&nbsp;in&nbsp;harmony.
             </p>
           </CardBody>
         </Card>
@@ -89,18 +107,34 @@ export default function IndexPage() {
           <span className={title({ color: "cyan", offset: "topleft" })}>Formidable&nbsp;</span>
           <span className={title()}>Cost Efficiency</span>
         </h1>
-        <Card fullWidth className="px-2 max-w-lg">
+        <Card fullWidth className="px-2 max-w-lg mb-4">
+          <CardHeader>
+            <h2 className="flex w-full gap-2">
+              <span className={subtitle({ italic: true, color: "cyan" })}>More&nbsp;value.&nbsp;</span>
+              <span className={subtitle()}>Less&nbsp;resources</span>
+            </h2>
+          </CardHeader>
+            <Divider></Divider>
           <CardBody>
-            <p>
-              More value, less resources
-            </p>
-            <br />
-            <p>
+            <p className={text()}>
               Lean workflows, efficient tools and a global advantage come together
             </p>
-            <br />
             <p>
-              Providing flexible, equitable and competitive pricing for every project
+              <span className={text()}>
+                Providing&nbsp;
+              </span>
+              <span className={text({ color: "cyan"  })}>
+                flexible,&nbsp;equitable&nbsp;
+              </span>
+              <span className={text()}>
+                and&nbsp;
+              </span>
+              <span className={text({ color: "cyan", textWrap: "none" })}>
+                competitive&nbsp;pricing&nbsp;
+              </span>
+              <span className={text()}>
+                for every project.
+              </span>
             </p>
           </CardBody>
         </Card>

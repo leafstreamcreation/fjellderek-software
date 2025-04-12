@@ -45,7 +45,7 @@ export const title = tv({
 });
 
 export const subtitle = tv({
-  base: "w-full md:w-1/2 my-2 md:text-xl sm:text-lg font-semibold lg:text-2xl inline max-w-full",
+  base: "my-2 md:text-xl sm:text-lg font-semibold lg:text-2xl inline max-w-full",
   variants: {
     color: {
       default: "text-default-600",
@@ -88,7 +88,7 @@ export const subtitle = tv({
 });
 
 export const text = tv({
-  base: "w-full md:w-1/2 my-2 text-sm lg:text-base text-default-600 inline max-w-full",
+  base: "my-2 text-sm lg:text-base text-default-600 inline max-w-full",
   variants: {
     color: {
       default: "text-default-600",
@@ -101,8 +101,14 @@ export const text = tv({
       foreground: "dark:from-[#FFFFFF] dark:to-[#4B4B4B]",
     },
     fullWidth: {
-      true: "!w-full",
+      true: "w-full",
     },
+    textWrap: {
+      wrap: "text-wrap",
+      none: "text-nowrap",
+      balance: "text-balance",
+      pretty: "text-pretty",
+    }
   },
   defaultVariants: {
     color: "default",
