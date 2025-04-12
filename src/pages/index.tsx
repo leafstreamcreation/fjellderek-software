@@ -5,14 +5,10 @@ import {
   Button,
   Link,
   Card,
+  CardHeader,
   CardBody,
+  Divider,
 } from "@heroui/react";
-
-//software for a new age
-//holistic software engineering
-//borderless software development
-//human-first products                    
-//competitive pricing
 
 
 export default function IndexPage() {
@@ -25,17 +21,21 @@ export default function IndexPage() {
             <span className={title()}>Software Applications</span>
           </h1>
         <Card fullWidth className="my-8 px-2 max-w-lg">
+          <CardHeader>
+            <h2 className="flex justify-between w-full text-center">
+              <span className={subtitle()}>Any&nbsp;problem.</span>
+              <span className={subtitle()}>Any&nbsp;team.</span>
+              <span className={subtitle({ italic:true, color:"cyan" })}>Anywhere.</span>
+            </h2>
+          </CardHeader>
+            <Divider></Divider>
           <CardBody>
-            <p>
-              Any problem, any team, anywhere
-            </p>
-            <br />
-            <p>
+            <p className={text()}>
               Bringing experience, adaptability, diverse perspective and modern techniques
             </p>
-            <br />
             <p>
-              To create software fit for a global stage
+              <span className={text()}>to create </span>
+              <span className={text({color: "cyan"})}>software fit for a global stage.</span>
             </p>
           </CardBody>
         </Card>
@@ -109,56 +109,3 @@ export default function IndexPage() {
     </DefaultLayout>
   );
 }
-          // <h2 className="mt-4">
-          //   <span className={subtitle({ color: "yellow", class: "mt-6" })}>Welcome&nbsp;</span>
-          //   <span className={subtitle()}>to&nbsp;my&nbsp;</span>
-          //   <p className={subtitle({ color: "blue" })}>
-          //     software development homepage
-          //   </p>
-          // </h2>
-          // <p className="mt-8">
-          //   <span className={text()}>A portal to my </span>
-          //   <span className={text({ color: "cyan" })}>
-          //   vision, experience, projects,
-          //   </span>
-          //   <span className={text()}> and </span>
-          //   <span className={text({ color: "cyan" })}>
-          //   resources
-          //   </span>
-          // </p>
-          // <p className="mt-6">
-          //   <span className={text()}>
-          //   This site contains&nbsp;
-          //   </span>
-          //   <span className={text({ color: "yellow" })}>
-          //     all about me and my work&nbsp;
-          //   </span>
-          //   <span className={text()}>
-          //   as a software developer
-          //   </span>
-          // </p>
-          // <p className="mt-6">
-          //   <span className={text()}>
-          //   May you&nbsp;
-          //   </span>
-          //   <span className={text({ color: "blue" })}>
-          //     find what you seek&nbsp;
-          //   </span>
-          //   <span className={text()}>
-          //   here - if not, you are invited to&nbsp;
-          //   </span>
-          //   <Link href="/contact" className={text({ color: "pink" })}>
-          //     connect with me directly&nbsp;
-          //   </Link>
-          // </p>
-          // <p className="mt-6">
-          //   <span className={text()}>
-          //    Once again,&nbsp;
-          //   </span>
-          //   <span className={text({ color: "cyan" })}>
-          //     welcome!&nbsp;
-          //   </span>
-          //   <span className={text()}>
-          //    press the button below or the links above to get started
-          //   </span>
-          // </p>

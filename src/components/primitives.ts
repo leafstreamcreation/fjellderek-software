@@ -45,7 +45,7 @@ export const title = tv({
 });
 
 export const subtitle = tv({
-  base: "w-full md:w-1/2 my-2 text-xl font-semibold lg:text-2xl inline max-w-full",
+  base: "w-full md:w-1/2 my-2 md:text-xl sm:text-lg font-semibold lg:text-2xl inline max-w-full",
   variants: {
     color: {
       default: "text-default-600",
@@ -63,6 +63,9 @@ export const subtitle = tv({
     offset: {
       topleft: "relative -top-1 -left-1",
       topright: "relative -top-1 -right-1",
+    },
+    italic: {
+      true: "italic",
     },
   },
   defaultVariants: {
