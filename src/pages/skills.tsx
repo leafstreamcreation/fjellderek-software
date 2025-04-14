@@ -11,9 +11,7 @@ import {
   Accordion, 
   AccordionItem, 
   Card,
-  CardHeader,
   CardBody,
-  CardFooter,
   Divider,
   Button,
   ButtonGroup,
@@ -71,7 +69,7 @@ export default function SkillsPage() {
           <Dropdown shouldBlockScroll={false}>
               <DropdownTrigger>
                 <Button size="lg" startContent={<HamburgerMenuIcon />} color="default" className="text-primary mb-3">
-                  Category
+                  Choose Category
                 </Button>
               </DropdownTrigger>
               <DropdownMenu 
