@@ -21,8 +21,8 @@ export const title = tv({
       true: "w-full block",
     },
     offset: {
-      topleft: "relative -top-1 -left-1",
-      topright: "relative -top-1 -right-1",
+      topleft: "relative -top-1 -left-1 md:-top-2 md:-left-2",
+      topright: "relative -top-1 -right-1 md:-top-2 md:-right-2",
     },
   },
   defaultVariants: {
@@ -61,8 +61,8 @@ export const subtitle = tv({
       true: "w-full block",
     },
     offset: {
-      topleft: "relative -top-1 -left-1",
-      topright: "relative -top-1 -right-1",
+      topleft: "relative -top-1 -left-1 md:-top-2 md:-left-2",
+      topright: "relative -top-1 -right-1 md:-top-2 md:-right-2",
     },
     italic: {
       true: "italic",
