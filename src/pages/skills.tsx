@@ -20,7 +20,7 @@ import { Skill, Group, Filter, groups } from "@/site-content/Skills/skills";
 import { useState } from "react";
 import { PrimarySkill, SubSkills } from "@/components/skill";
 
-import { BrandIcons, HamburgerMenuIcon } from "@/components/icons";
+import { HamburgerMenuIcon } from "@/components/icons";
 
 
 export default function SkillsPage() {
@@ -31,7 +31,7 @@ export default function SkillsPage() {
   const [sortSelection, setSortSelection] = useState<"none" | "alphabetic-ascending" | "alphabetic-descending" | "years" | "proficiency">("none");
 
   const sortFunctions = {
-    "none": (a: Skill, b: Skill) => 0, // No sorting
+    "none": (_a: Skill, _b: Skill) => 0, // No sorting
     "alphabetic-ascending": (a: Skill, b: Skill) => new Intl.Collator("en").compare(a.name, b.name),
     "alphabetic-descending": (a: Skill, b: Skill) => new Intl.Collator("en").compare(b.name, a.name),
     "years": (a: Skill, b: Skill) => (b.years || 0) - (a.years || 0),

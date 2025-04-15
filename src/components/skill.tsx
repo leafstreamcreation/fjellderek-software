@@ -10,10 +10,10 @@ import { Skill } from "@/site-content/Skills/skills";
 // subSkills?: Skill[] | null;
 // description?: string | null;
 // url?: string | null;
-import { BrandIcons } from "./icons";
+// import { BrandIcons } from "./icons";
 
 export function PrimarySkill({ skill }: { skill: Skill }) {
-  const { name, proficiency, years, icon, subSkills, description, url } = skill
+  const { name, proficiency, years, description, url, /* icon, subSkills */ } = skill
   return (
     <div>
       <Progress 
