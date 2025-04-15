@@ -1,4 +1,4 @@
-import { title, subtitle } from "@/components/primitives";
+import { title, subtitle, text } from "@/components/primitives";
 import DefaultLayout from "@/layouts/default";
 import { Button } from "@heroui/button";
 import { Link } from "@heroui/link";
@@ -23,14 +23,41 @@ export default function ExperiencePage() {
           </div>
         </div>
         <InProgress />
-        <Card>
-
+        <Card fullWidth className="my-8 px-2 max-w-lg">
+          <CardHeader>
+            <h2 className="flex w-full gap-2">
+              <span className={subtitle({ italic:true, color:"yellow" })}>Proscia Inc</span>
+            </h2>
+          </CardHeader>
+          <CardBody>
+            <p className={text()}>
+            Stuff I did at Proscia
+            </p>
+          </CardBody>
         </Card>
-        <Card>
-
+        <Card fullWidth className="my-8 px-2 max-w-lg">
+          <CardHeader>
+            <h2 className="flex w-full gap-2">
+              <span className={subtitle({ italic:true, color:"cyan" })}>FreeWave Inc</span>
+            </h2>
+          </CardHeader>
+          <CardBody>
+            <p className={text()}>
+              Stuff I did at Freewave
+            </p>
+          </CardBody>
         </Card>
-        <Card>
-
+        <Card fullWidth className="my-8 px-2 max-w-lg">
+          <CardHeader>
+            <h2 className="flex w-full gap-2">
+              <span className={subtitle({ italic:true, color:"blue" })}>Hazeron Freehold LLC</span>
+            </h2>
+          </CardHeader>
+          <CardBody>
+            <p className={text()}>
+              Stuff I did at Hazeron
+            </p>
+          </CardBody>
         </Card>
         <Button as={Link} href="/projects" size="lg" radius="full" variant="bordered" color="success">Next -&gt; Projects</Button>
       </section>
