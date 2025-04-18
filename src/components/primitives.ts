@@ -41,6 +41,22 @@ export const title = tv({
       ],
       class: "bg-clip-text text-transparent bg-gradient-to-b",
     },
+    {
+      color: [
+        "violet",
+        "yellow",
+        "blue",
+        "cyan",
+        "green",
+        "pink",
+        "foreground",
+      ],
+      offset: [
+        "topleft",
+        "topright",
+      ],
+      class: "text-shadow-lg bg-clip-text text-transparent bg-gradient-to-b"
+    }
   ],
 });
 
