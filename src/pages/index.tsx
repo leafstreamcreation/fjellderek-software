@@ -76,12 +76,10 @@ export default function IndexPage() {
             </p>
           </CardBody>
         </Card>
-        <div className="bg-linear-to-r from-[#FF705B] to-[#FFB457]">
-          <h1 className="my-8 inline-block max-w-lg text-center justify-center">
+          <h1 className="mt-4 inline-block w-full py-4 text-center justify-center bg-gradient-to-br from-[#FF705B] via-white to-[#FFB457]">
             <span className={title({ color: "yellow", offset: "topleft" })}>Human</span>
             <span className={title()}>-First Solutions</span>
           </h1>
-        </div>
         <Card fullWidth className="mb-8 px-2 max-w-lg">
           <CardHeader>
             <h2 className="flex w-full gap-2">
