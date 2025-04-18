@@ -16,7 +16,7 @@ export default function IndexPage() {
     <DefaultLayout>
       <section className="flex flex-col items-center justify-center  md:py-10">
         
-          <h1 className="inline-block max-w-lg text-center justify-center">
+          <h1 className="mt-4 inline-block w-full py-4 text-center justify-center bg-gradient-to-b from-[#5EA2EF] to-[#0072F5]">
             <span className={title({ color: "cyan", offset: "topleft" })}>Borderless&nbsp;</span>
             <span className={title()}>Software Applications</span>
           </h1>
@@ -38,7 +38,7 @@ export default function IndexPage() {
             </p>
           </CardBody>
         </Card>
-        <h1 className="my-8 inline-block max-w-lg text-center justify-center">
+        <h1 className="mt-4 inline-block w-full py-4 text-center justify-center bg-gradient-to-b from-[#FF705B] to-[#FFB457]">
           <span className={title({ color: "blue", offset: "topleft" })}>Holistic&nbsp;</span>
           <span className={title()}>Engineering</span>
         </h1>
@@ -76,7 +76,7 @@ export default function IndexPage() {
             </p>
           </CardBody>
         </Card>
-          <h1 className="mt-4 inline-block w-full py-4 text-center justify-center bg-gradient-to-br from-[#FF705B] via-white to-[#FFB457]">
+          <h1 className="mt-4 inline-block w-full py-4 text-center justify-center bg-gradient-to-b from-[#5EA2EF] to-[#0072F5]">
             <span className={title({ color: "yellow", offset: "topleft" })}>Human</span>
             <span className={title()}>-First Solutions</span>
           </h1>
@@ -103,7 +103,7 @@ export default function IndexPage() {
             </p>
           </CardBody>
         </Card>
-        <h1 className="my-8 inline-block max-w-lg text-center justify-center">
+        <h1 className="mt-4 inline-block w-full py-4 text-center justify-center bg-gradient-to-b from-[#FF705B] to-[#FFB457]">
           <span className={title({ color: "cyan", offset: "topleft" })}>Formidable&nbsp;</span>
           <span className={title()}>Cost Efficiency</span>
         </h1>
