@@ -64,7 +64,7 @@ export default function SkillsPage() {
             <span className={title({ color: "blue" })}>Skills&nbsp;</span>
           </div>
         </div>
-        <Card fullWidth className="my-8">
+        <Card fullWidth className="my-8 max-w-xl">
           <CardBody className="items-center overflow-hidden">
           <Dropdown shouldBlockScroll={false}>
               <DropdownTrigger>
@@ -98,7 +98,7 @@ export default function SkillsPage() {
                 subtitle={<div className="inline-block max-w-lg text-center justify-center">
                     <p className={subtitle() + " mt-4"}>{groups[groupKey].description}</p>
                   </div>}
-                classNames={{ trigger: "flex-col", title: "text-center", indicator: "rotate-90" }}
+                classNames={{ base: "max-w-3xl", trigger: "flex-col", title: "text-center", indicator: "rotate-90" }}
               >
                   
                 <Divider />

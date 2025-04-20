@@ -55,7 +55,7 @@ export const title = tv({
         "topleft",
         "topright",
       ],
-      class: "text-shadow-lg bg-clip-text text-transparent bg-gradient-to-b"
+      class: "bg-clip-text text-transparent bg-gradient-to-b"
     }
   ],
 });
