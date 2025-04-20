@@ -98,7 +98,7 @@ export default function SkillsPage() {
                 subtitle={<div className="inline-block max-w-lg text-center justify-center">
                     <p className={subtitle() + " mt-4"}>{groups[groupKey].description}</p>
                   </div>}
-                classNames={{ base: "max-w-3xl", trigger: "flex-col", title: "text-center", indicator: "rotate-90" }}
+                classNames={{ trigger: "flex-col", title: "text-center", indicator: "rotate-90" }}
               >
                   
                 <Divider />
@@ -143,6 +143,7 @@ export default function SkillsPage() {
           itemClasses={{ trigger: "justify-between", startContent: "w-3/4 grow", titleWrapper: "w-0 flex-none" }}
           selectedKeys={selectedSkillKey}
           onSelectionChange={setSelectedSkillKey}
+          className="max-w-3xl align-center"
         >  
         {
           groups[groupKey].skills.slice().sort(sortFunctions[sortSelection]).map((skill:Skill) => {
@@ -153,7 +154,7 @@ export default function SkillsPage() {
                     key={skill.name}
                     aria-label={skill.name + ' proficiency: ' + skill.proficiency + ', years experience: ' + (skill.years || 0)}
                     textValue={skill.name + ' proficiency: ' + skill.proficiency + ', years experience: ' + (skill.years || 0)}
-                    classNames={{ content: "mx-4" }}
+                    classNames={{ base: "max-w-3xl", content: "mx-4" }}
                     startContent={
                       <PrimarySkill skill={skill} />
                     }
@@ -168,7 +169,7 @@ export default function SkillsPage() {
                   aria-label={skill.name + ' proficiency: ' + skill.proficiency + ', years experience: ' + (skill.years || 0)}
                   textValue={skill.name + ' proficiency: ' + skill.proficiency + ', years experience: ' + (skill.years || 0)}
                   hideIndicator
-                  classNames={{ base: "pointer-events-none" }}
+                  classNames={{ base: "max-w-3xl pointer-events-none" }}
                   startContent={
                     <PrimarySkill skill={skill} />
                   }
