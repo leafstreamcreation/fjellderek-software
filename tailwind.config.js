@@ -198,7 +198,6 @@ module.exports = {
     }
   })],
 }
-// SWATCHES IN PROGRESS
 // [
 //   {
 //     "paletteName": "Light Primary",
@@ -254,7 +253,15 @@ module.exports = {
 //       },
 //       {
 //         "name": "New Swatch",
+//         "color": "184F80"
+//       },
+//       {
+//         "name": "New Swatch",
 //         "color": "164773"
+//       },
+//       {
+//         "name": "New Swatch",
+//         "color": "143F65"
 //       },
 //       {
 //         "name": "New Swatch",
@@ -262,7 +269,19 @@ module.exports = {
 //       },
 //       {
 //         "name": "New Swatch",
-//         "color": "0E263C"
+//         "color": "11304D"
+//       },
+//       {
+//         "name": "New Swatch",
+//         "color": "0F2A42"
+//       },
+//       {
+//         "name": "New Swatch",
+//         "color": "0E2337"
+//       },
+//       {
+//         "name": "New Swatch",
+//         "color": "0C1C2B"
 //       },
 //       {
 //         "name": "New Swatch",
@@ -271,27 +290,47 @@ module.exports = {
 //     ]
 //   },
 //   {
-//     "paletteName": "Dark Secondary",
+//     "paletteName": "Secondary",
 //     "swatches": [
 //       {
 //         "name": "New Swatch",
-//         "color": "330C05"
+//         "color": "331305"
 //       },
 //       {
 //         "name": "New Swatch",
-//         "color": "662114"
+//         "color": "4E1C07"
 //       },
 //       {
 //         "name": "New Swatch",
-//         "color": "C23F0E"
+//         "color": "692508"
 //       },
 //       {
 //         "name": "New Swatch",
-//         "color": "CC6452"
+//         "color": "842D08"
 //       },
 //       {
 //         "name": "New Swatch",
-//         "color": "FF9380"
+//         "color": "9F3508"
+//       },
+//       {
+//         "name": "New Swatch",
+//         "color": "D87E59"
+//       },
+//       {
+//         "name": "New Swatch",
+//         "color": "D98866"
+//       },
+//       {
+//         "name": "New Swatch",
+//         "color": "DF9271"
+//       },
+//       {
+//         "name": "New Swatch",
+//         "color": "E69877"
+//       },
+//       {
+//         "name": "New Swatch",
+//         "color": "F2A17F"
 //       }
 //     ]
 //   },
@@ -355,7 +394,7 @@ module.exports = {
 //     ]
 //   },
 //   {
-//     "paletteName": "New Palette",
+//     "paletteName": "Default",
 //     "swatches": [
 //       {
 //         "name": "New Swatch",
