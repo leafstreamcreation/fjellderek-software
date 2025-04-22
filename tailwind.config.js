@@ -204,23 +204,23 @@ module.exports = {
 //     "swatches": [
 //       {
 //         "name": "New Swatch",
-//         "color": "02BAF2"
+//         "color": "3CC4ED"
 //       },
 //       {
 //         "name": "New Swatch",
-//         "color": "04B6EC"
+//         "color": "28BBE8"
 //       },
 //       {
 //         "name": "New Swatch",
-//         "color": "06B2E6"
+//         "color": "1BB5E3"
 //       },
 //       {
 //         "name": "New Swatch",
-//         "color": "08ADE0"
+//         "color": "0FADDE"
 //       },
 //       {
 //         "name": "New Swatch",
-//         "color": "0AA9DA"
+//         "color": "08A8D9"
 //       },
 //       {
 //         "name": "New Swatch",
@@ -228,19 +228,19 @@ module.exports = {
 //       },
 //       {
 //         "name": "New Swatch",
-//         "color": "19A3CD"
+//         "color": "38A9CC"
 //       },
 //       {
 //         "name": "New Swatch",
-//         "color": "29A1C6"
+//         "color": "52AAC6"
 //       },
 //       {
 //         "name": "New Swatch",
-//         "color": "3EA4C3"
+//         "color": "69ABC0"
 //       },
 //       {
 //         "name": "New Swatch",
-//         "color": "53A0B7"
+//         "color": "80ACB9"
 //       }
 //     ]
 //   },
@@ -294,19 +294,19 @@ module.exports = {
 //     "swatches": [
 //       {
 //         "name": "New Swatch",
-//         "color": "331305"
+//         "color": "331000"
 //       },
 //       {
 //         "name": "New Swatch",
-//         "color": "4E1C07"
+//         "color": "4E1801"
 //       },
 //       {
 //         "name": "New Swatch",
-//         "color": "692508"
+//         "color": "692103"
 //       },
 //       {
 //         "name": "New Swatch",
-//         "color": "842D08"
+//         "color": "842B05"
 //       },
 //       {
 //         "name": "New Swatch",
@@ -314,23 +314,23 @@ module.exports = {
 //       },
 //       {
 //         "name": "New Swatch",
-//         "color": "D87E59"
+//         "color": "F0703B"
 //       },
 //       {
 //         "name": "New Swatch",
-//         "color": "D98866"
+//         "color": "F98B5C"
 //       },
 //       {
 //         "name": "New Swatch",
-//         "color": "DF9271"
+//         "color": "FC9C73"
 //       },
 //       {
 //         "name": "New Swatch",
-//         "color": "E69877"
+//         "color": "FEAA87"
 //       },
 //       {
 //         "name": "New Swatch",
-//         "color": "F2A17F"
+//         "color": "FFB899"
 //       }
 //     ]
 //   },
@@ -339,23 +339,43 @@ module.exports = {
 //     "swatches": [
 //       {
 //         "name": "New Swatch",
-//         "color": "190533"
+//         "color": "05331C"
 //       },
 //       {
 //         "name": "New Swatch",
-//         "color": "381466"
+//         "color": "0E4A2C"
 //       },
 //       {
 //         "name": "New Swatch",
-//         "color": "5C2E99"
+//         "color": "175536"
 //       },
 //       {
 //         "name": "New Swatch",
-//         "color": "8752CC"
+//         "color": "215D3F"
 //       },
 //       {
 //         "name": "New Swatch",
-//         "color": "B780FF"
+//         "color": "2C6248"
+//       },
+//       {
+//         "name": "New Swatch",
+//         "color": "05AF5B"
+//       },
+//       {
+//         "name": "New Swatch",
+//         "color": "1DC371"
+//       },
+//       {
+//         "name": "New Swatch",
+//         "color": "39D789"
+//       },
+//       {
+//         "name": "New Swatch",
+//         "color": "5AEBA3"
+//       },
+//       {
+//         "name": "New Swatch",
+//         "color": "80FFC0"
 //       }
 //     ]
 //   },
@@ -389,7 +409,7 @@ module.exports = {
 //     "swatches": [
 //       {
 //         "name": "New Swatch",
-//         "color": "052D33"
+//         "color": "C41313"
 //       }
 //     ]
 //   },
