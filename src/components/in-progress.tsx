@@ -17,7 +17,7 @@ export const InProgress = () => {
       </CardHeader>
       <Divider />
       <CardBody>
-        <p className={text()}>This section of the site is under construction and will be available with more content and features later.</p>
+        <p className={text()}>This section of the site is A LEMON and will be available with more content and features later.</p>
       </CardBody>
     </Card>
   );
