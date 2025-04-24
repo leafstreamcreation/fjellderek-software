@@ -32,6 +32,11 @@ export default function ExperiencePage() {
           <CardBody>
             <p className={text()}>
             Stuff I did at Proscia
+            fullstack work with vue, node, postgres, and typescript
+            cloud deployment with kubernetes and docker
+            image ingestion, ai analysis, amazon s3 storage
+            Concentriq Dx digital pathology platform enabling digital pathology workflows and AI first read analysis
+
             </p>
           </CardBody>
         </Card>
