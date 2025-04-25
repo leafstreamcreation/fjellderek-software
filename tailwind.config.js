@@ -39,43 +39,43 @@ module.exports = {
             DEFAULT: "#d4d4d8",
           },
           primary: {
-            50: "#e6f1fe",
-            100: "#cce3fd",
-            200: "#99c7fb",
-            300: "#66aaf9",
-            400: "#338ef7",
-            500: "#006FEE",
-            600: "#005bc4",
-            700: "#004493",
-            800: "#002e62",
-            900: "#001731",
-            DEFAULT: "#006FEE",
+            50: "#3CC4ED",
+            100: "#28BBE8",
+            200: "#1BB5E3",
+            300: "#0FADDE",
+            400: "#08A8D9",
+            500: "#0DA6D4",
+            600: "#38A9CC",
+            700: "#52AAC6",
+            800: "#69ABC0",
+            900: "#80ACB9",
+            DEFAULT: "#0DA6D4",
           },
           secondary: {
-            50: "#f2eafa",
-            100: "#e4d4f4",
-            200: "#c9a9e9",
-            300: "#ae7ede",
-            400: "#9353d3",
-            500: "#7828c8",
-            600: "#6020a0",
-            700: "#481878",
-            800: "#301050",
-            900: "#180828",
-            DEFAULT: "#7828c8",
+            50: "#331000",
+            100: "#4E1801",
+            200: "#692103",
+            300: "#842B05",
+            400: "#9F3508",
+            500: "#F0703B",
+            600: "#F98B5C",
+            700: "#FC9C73",
+            800: "#FEAA87",
+            900: "#FFB899",
+            DEFAULT: "#F0703B",
           },
           success: {
-            50: "#e8faf0",
-            100: "#d1f4e0",
-            200: "#a2e9c1",
-            300: "#74dfa2",
-            400: "#45d483",
-            500: "#17c964",
-            600: "#12a150",
-            700: "#0e793c",
-            800: "#095028",
-            900: "#052814",
-            DEFAULT: "#17c964",
+            50: "#05331C",
+            100: "#0E4A2C",
+            200: "#175536",
+            300: "#215D3F",
+            400: "#2C6248",
+            500: "#05AF5B",
+            600: "#1DC371",
+            700: "#39D789",
+            800: "#5AEBA3",
+            900: "#80FFC0",
+            DEFAULT: "#05AF5B",
           },
           warning: {
             50: "#fefce8",
@@ -129,43 +129,43 @@ module.exports = {
             DEFAULT: "#3f3f46",
           },
           primary: {
-            50: "#001731",
-            100: "#002e62",
-            200: "#004493",
-            300: "#005bc4",
-            400: "#006FEE",
-            500: "#338ef7",
-            600: "#66aaf9",
-            700: "#99c7fb",
-            800: "#cce3fd",
-            900: "#e6f1fe",
-            DEFAULT: "#006FEE",
+            50: "#1A578D",
+            100: "#184F80",
+            200: "#164773",
+            300: "#143F65",
+            400: "#123758",
+            500: "#11304D",
+            600: "#0F2A42",
+            700: "#0E2337",
+            800: "#0C1C2B",
+            900: "#091520",
+            DEFAULT: "#11304D",
           },
           secondary: {
-            50: "#180828",
-            100: "#301050",
-            200: "#481878",
-            300: "#6020a0",
-            400: "#7828c8",
-            500: "#9353d3",
-            600: "#ae7ede",
-            700: "#c9a9e9",
-            800: "#e4d4f4",
-            900: "#f2eafa",
-            DEFAULT: "#9353d3",
+            50: "#FFB899",
+            100: "#FEAA87",
+            200: "#FC9C73",
+            300: "#F98B5C",
+            400: "#F0703B",
+            500: "#9F3508",
+            600: "#842B05",
+            700: "#692103",
+            800: "#4E1801",
+            900: "#331000",
+            DEFAULT: "#9F3508",
           },
           success: {
-            50: "#052814",
-            100: "#095028",
-            200: "#0e793c",
-            300: "#12a150",
-            400: "#17c964",
-            500: "#45d483",
-            600: "#74dfa2",
-            700: "#a2e9c1",
-            800: "#d1f4e0",
-            900: "#e8faf0",
-            DEFAULT: "#17c964",
+            50: "#80FFC0",
+            100: "#5AEBA3",
+            200: "#39D789",
+            300: "#1DC371",
+            400: "#05AF5B",
+            500: "#2C6248",
+            600: "#215D3F",
+            700: "#175536",
+            800: "#0E4A2C",
+            900: "#05331C",
+            DEFAULT: "#2C6248",
           },
           warning: {
             50: "#312107",
@@ -199,208 +199,230 @@ module.exports = {
   })],
 }
 // [
-//   {
-//     "paletteName": "Light Primary",
-//     "swatches": [
-//       {
-//         "name": "New Swatch",
-//         "color": "3CC4ED"
-//       },
-//       {
-//         "name": "New Swatch",
-//         "color": "28BBE8"
-//       },
-//       {
-//         "name": "New Swatch",
-//         "color": "1BB5E3"
-//       },
-//       {
-//         "name": "New Swatch",
-//         "color": "0FADDE"
-//       },
-//       {
-//         "name": "New Swatch",
-//         "color": "08A8D9"
-//       },
-//       {
-//         "name": "New Swatch",
-//         "color": "0DA6D4"
-//       },
-//       {
-//         "name": "New Swatch",
-//         "color": "38A9CC"
-//       },
-//       {
-//         "name": "New Swatch",
-//         "color": "52AAC6"
-//       },
-//       {
-//         "name": "New Swatch",
-//         "color": "69ABC0"
-//       },
-//       {
-//         "name": "New Swatch",
-//         "color": "80ACB9"
-//       }
-//     ]
-//   },
-//   {
-//     "paletteName": "Dark Primary",
-//     "swatches": [
-//       {
-//         "name": "New Swatch",
-//         "color": "1A578D"
-//       },
-//       {
-//         "name": "New Swatch",
-//         "color": "184F80"
-//       },
-//       {
-//         "name": "New Swatch",
-//         "color": "164773"
-//       },
-//       {
-//         "name": "New Swatch",
-//         "color": "143F65"
-//       },
-//       {
-//         "name": "New Swatch",
-//         "color": "123758"
-//       },
-//       {
-//         "name": "New Swatch",
-//         "color": "11304D"
-//       },
-//       {
-//         "name": "New Swatch",
-//         "color": "0F2A42"
-//       },
-//       {
-//         "name": "New Swatch",
-//         "color": "0E2337"
-//       },
-//       {
-//         "name": "New Swatch",
-//         "color": "0C1C2B"
-//       },
-//       {
-//         "name": "New Swatch",
-//         "color": "091520"
-//       }
-//     ]
-//   },
-//   {
-//     "paletteName": "Secondary",
-//     "swatches": [
-//       {
-//         "name": "New Swatch",
-//         "color": "331000"
-//       },
-//       {
-//         "name": "New Swatch",
-//         "color": "4E1801"
-//       },
-//       {
-//         "name": "New Swatch",
-//         "color": "692103"
-//       },
-//       {
-//         "name": "New Swatch",
-//         "color": "842B05"
-//       },
-//       {
-//         "name": "New Swatch",
-//         "color": "9F3508"
-//       },
-//       {
-//         "name": "New Swatch",
-//         "color": "F0703B"
-//       },
-//       {
-//         "name": "New Swatch",
-//         "color": "F98B5C"
-//       },
-//       {
-//         "name": "New Swatch",
-//         "color": "FC9C73"
-//       },
-//       {
-//         "name": "New Swatch",
-//         "color": "FEAA87"
-//       },
-//       {
-//         "name": "New Swatch",
-//         "color": "FFB899"
-//       }
-//     ]
-//   },
-//   {
-//     "paletteName": "Success",
-//     "swatches": [
-//       {
-//         "name": "New Swatch",
-//         "color": "05331C"
-//       },
-//       {
-//         "name": "New Swatch",
-//         "color": "0E4A2C"
-//       },
-//       {
-//         "name": "New Swatch",
-//         "color": "175536"
-//       },
-//       {
-//         "name": "New Swatch",
-//         "color": "215D3F"
-//       },
-//       {
-//         "name": "New Swatch",
-//         "color": "2C6248"
-//       },
-//       {
-//         "name": "New Swatch",
-//         "color": "05AF5B"
-//       },
-//       {
-//         "name": "New Swatch",
-//         "color": "1DC371"
-//       },
-//       {
-//         "name": "New Swatch",
-//         "color": "39D789"
-//       },
-//       {
-//         "name": "New Swatch",
-//         "color": "5AEBA3"
-//       },
-//       {
-//         "name": "New Swatch",
-//         "color": "80FFC0"
-//       }
-//     ]
-//   },
+  // {
+  //   "paletteName": "Light Primary",
+  //   "swatches": [
+  //     {
+  //       "name": "New Swatch",
+  //       "color": "3CC4ED"
+  //     },
+  //     {
+  //       "name": "New Swatch",
+  //       "color": "28BBE8"
+  //     },
+  //     {
+  //       "name": "New Swatch",
+  //       "color": "1BB5E3"
+  //     },
+  //     {
+  //       "name": "New Swatch",
+  //       "color": "0FADDE"
+  //     },
+  //     {
+  //       "name": "New Swatch",
+  //       "color": "08A8D9"
+  //     },
+  //     {
+  //       "name": "New Swatch",
+  //       "color": "0DA6D4"
+  //     },
+  //     {
+  //       "name": "New Swatch",
+  //       "color": "38A9CC"
+  //     },
+  //     {
+  //       "name": "New Swatch",
+  //       "color": "52AAC6"
+  //     },
+  //     {
+  //       "name": "New Swatch",
+  //       "color": "69ABC0"
+  //     },
+  //     {
+  //       "name": "New Swatch",
+  //       "color": "80ACB9"
+  //     }
+  //   ]
+  // },
+  // {
+  //   "paletteName": "Dark Primary",
+  //   "swatches": [
+  //     {
+  //       "name": "New Swatch",
+  //       "color": "1A578D"
+  //     },
+  //     {
+  //       "name": "New Swatch",
+  //       "color": "184F80"
+  //     },
+  //     {
+  //       "name": "New Swatch",
+  //       "color": "164773"
+  //     },
+  //     {
+  //       "name": "New Swatch",
+  //       "color": "143F65"
+  //     },
+  //     {
+  //       "name": "New Swatch",
+  //       "color": "123758"
+  //     },
+  //     {
+  //       "name": "New Swatch",
+  //       "color": "11304D"
+  //     },
+  //     {
+  //       "name": "New Swatch",
+  //       "color": "0F2A42"
+  //     },
+  //     {
+  //       "name": "New Swatch",
+  //       "color": "0E2337"
+  //     },
+  //     {
+  //       "name": "New Swatch",
+  //       "color": "0C1C2B"
+  //     },
+  //     {
+  //       "name": "New Swatch",
+  //       "color": "091520"
+  //     }
+  //   ]
+  // },
+  // {
+  //   "paletteName": "Secondary",
+  //   "swatches": [
+  //     {
+  //       "name": "New Swatch",
+  //       "color": "331000"
+  //     },
+  //     {
+  //       "name": "New Swatch",
+  //       "color": "4E1801"
+  //     },
+  //     {
+  //       "name": "New Swatch",
+  //       "color": "692103"
+  //     },
+  //     {
+  //       "name": "New Swatch",
+  //       "color": "842B05"
+  //     },
+  //     {
+  //       "name": "New Swatch",
+  //       "color": "9F3508"
+  //     },
+  //     {
+  //       "name": "New Swatch",
+  //       "color": "F0703B"
+  //     },
+  //     {
+  //       "name": "New Swatch",
+  //       "color": "F98B5C"
+  //     },
+  //     {
+  //       "name": "New Swatch",
+  //       "color": "FC9C73"
+  //     },
+  //     {
+  //       "name": "New Swatch",
+  //       "color": "FEAA87"
+  //     },
+  //     {
+  //       "name": "New Swatch",
+  //       "color": "FFB899"
+  //     }
+  //   ]
+  // },
+  // {
+  //   "paletteName": "Success",
+  //   "swatches": [
+      // {
+      //   "name": "New Swatch",
+      //   "color": "05331C"
+      // },
+      // {
+      //   "name": "New Swatch",
+      //   "color": "0E4A2C"
+      // },
+      // {
+      //   "name": "New Swatch",
+      //   "color": "175536"
+      // },
+      // {
+      //   "name": "New Swatch",
+      //   "color": "215D3F"
+      // },
+      // {
+      //   "name": "New Swatch",
+      //   "color": "2C6248"
+      // },
+      // {
+      //   "name": "New Swatch",
+      //   "color": "05AF5B"
+      // },
+      // {
+      //   "name": "New Swatch",
+      //   "color": "1DC371"
+      // },
+      // {
+      //   "name": "New Swatch",
+      //   "color": "39D789"
+      // },
+      // {
+      //   "name": "New Swatch",
+      //   "color": "5AEBA3"
+      // },
+      // {
+      //   "name": "New Swatch",
+      //   "color": "80FFC0"
+      // }
+  //   ]
+  // },
+
+
 //   {
 //     "paletteName": "Warning",
 //     "swatches": [
 //       {
 //         "name": "New Swatch",
-//         "color": "313305"
+//         "color": "332605"
 //       },
 //       {
 //         "name": "New Swatch",
-//         "color": "636614"
+//         "color": "413108"
 //       },
 //       {
 //         "name": "New Swatch",
-//         "color": "95992E"
+//         "color": "4F3C0D"
 //       },
 //       {
 //         "name": "New Swatch",
-//         "color": "C8CC52"
+//         "color": "5D4815"
 //       },
 //       {
 //         "name": "New Swatch",
-//         "color": "FBFF80"
+//         "color": "6B5623"
+//       },
+//       {
+//         "name": "New Swatch",
+//         "color": "AB8E45"
+//       },
+//       {
+//         "name": "New Swatch",
+//         "color": "C4A456"
+//       },
+//       {
+//         "name": "New Swatch",
+//         "color": "D8B767"
+//       },
+//       {
+//         "name": "New Swatch",
+//         "color": "EDCC7B"
+//       },
+//       {
+//         "name": "New Swatch",
+//         "color": "FFDE8E"
 //       }
 //     ]
 //   },
@@ -409,7 +431,43 @@ module.exports = {
 //     "swatches": [
 //       {
 //         "name": "New Swatch",
-//         "color": "C41313"
+//         "color": "470207"
+//       },
+//       {
+//         "name": "New Swatch",
+//         "color": "62040B"
+//       },
+//       {
+//         "name": "New Swatch",
+//         "color": "7D060F"
+//       },
+//       {
+//         "name": "New Swatch",
+//         "color": "970913"
+//       },
+//       {
+//         "name": "New Swatch",
+//         "color": "B20D19"
+//       },
+//       {
+//         "name": "New Swatch",
+//         "color": "FA626C"
+//       },
+//       {
+//         "name": "New Swatch",
+//         "color": "FB6C77"
+//       },
+//       {
+//         "name": "New Swatch",
+//         "color": "FC7780"
+//       },
+//       {
+//         "name": "New Swatch",
+//         "color": "FE818A"
+//       },
+//       {
+//         "name": "New Swatch",
+//         "color": "FF8C95"
 //       }
 //     ]
 //   },
@@ -418,23 +476,43 @@ module.exports = {
 //     "swatches": [
 //       {
 //         "name": "New Swatch",
-//         "color": "330F05"
+//         "color": "0E0E0E"
 //       },
 //       {
 //         "name": "New Swatch",
-//         "color": "662614"
+//         "color": "1F2121"
 //       },
 //       {
 //         "name": "New Swatch",
-//         "color": "99452E"
+//         "color": "313334"
 //       },
 //       {
 //         "name": "New Swatch",
-//         "color": "CC6C52"
+//         "color": "424546"
 //       },
 //       {
 //         "name": "New Swatch",
-//         "color": "FF9B80"
+//         "color": "535859"
+//       },
+//       {
+//         "name": "New Swatch",
+//         "color": "8F9799"
+//       },
+//       {
+//         "name": "New Swatch",
+//         "color": "A3ACAE"
+//       },
+//       {
+//         "name": "New Swatch",
+//         "color": "B7C1C4"
+//       },
+//       {
+//         "name": "New Swatch",
+//         "color": "CBD6D9"
+//       },
+//       {
+//         "name": "New Swatch",
+//         "color": "DFEBEF"
 //       }
 //     ]
 //   }
