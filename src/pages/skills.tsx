@@ -104,7 +104,7 @@ export default function SkillsPage() {
                 <Divider />
                 <div className="my-4 flex items-center justify-between">
                   <span className="ml-2 mr-4 text-xl font-semibold inline text-default-200">Filters</span>
-                  <Input classNames={{label: "text-xs", input: "text-default-900"}} label="Applied Filter:" size="lg" value={searchKey} onValueChange={setSearchKey} isClearable />
+                  <Input classNames={{ label: "text-xs"}} label="Applied Filter:" size="lg" value={searchKey} onValueChange={setSearchKey} isClearable />
                 </div>
                 <div className="grid grid-cols-2 gap-2">
                   {
