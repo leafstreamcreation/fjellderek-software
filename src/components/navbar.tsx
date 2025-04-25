@@ -137,10 +137,10 @@ export const Navbar = () => {
       >
         <NavbarItem className="flex gap-2">
           <Link isExternal href={siteConfig.links.github} title="GitHub">
-            <GithubIcon className="text-default-500" />
+            <GithubIcon className="text-default-200" />
           </Link>
           <Link isExternal href={siteConfig.links.linkedin} title="GitHub">
-            <LinkedInIcon className="text-default-500" />
+            <LinkedInIcon className="text-default-200" />
           </Link>
           <ThemeSwitch className="ml-2" />
         </NavbarItem>

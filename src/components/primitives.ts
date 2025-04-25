@@ -64,7 +64,7 @@ export const subtitle = tv({
   base: "my-2 md:text-xl sm:text-lg font-semibold lg:text-2xl inline max-w-full",
   variants: {
     color: {
-      default: "text-default-600",
+      default: "text-default-400",
       violet: "from-[#FF1CF7] to-[#b249f8]",
       yellow: "from-[#FF705B] to-[#FFB457]",
       blue: "from-[#5EA2EF] to-[#0072F5]",
@@ -107,7 +107,7 @@ export const text = tv({
   base: "my-2 text-sm lg:text-base text-default-600 inline max-w-full",
   variants: {
     color: {
-      default: "text-default-600",
+      default: "text-default-400",
       violet: "from-[#FF1CF7] to-[#b249f8]",
       yellow: "from-[#FF705B] to-[#FFB457]",
       blue: "from-[#5EA2EF] to-[#0072F5]",

@@ -3,7 +3,7 @@ import { subtitle, text } from "@/components/primitives";
 
 export const InProgress = () => {
   return (
-    <Card className="bg-warning-100 border border-warning-200">
+    <Card className="bg-warning-700 border border-warning-400">
       <CardHeader className="flex gap-3">
         <Image
           alt="lemon"

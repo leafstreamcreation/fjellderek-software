@@ -68,7 +68,7 @@ export default function SkillsPage() {
           <CardBody className="items-center overflow-hidden">
           <Dropdown shouldBlockScroll={false}>
               <DropdownTrigger>
-                <Button size="lg" startContent={<HamburgerMenuIcon />} color="default" className="text-primary mb-3">
+                <Button size="lg" startContent={<HamburgerMenuIcon />} color="default" className="text-primary-200 mb-3">
                   Choose Category
                 </Button>
               </DropdownTrigger>
@@ -103,8 +103,8 @@ export default function SkillsPage() {
                   
                 <Divider />
                 <div className="my-4 flex items-center justify-between">
-                  <span className="ml-2 mr-4 text-xl font-semibold inline text-default-600">Filters</span>
-                  <Input classNames={{label: "text-xs"}} label="Applied Filter:" size="lg" value={searchKey} onValueChange={setSearchKey} isClearable />
+                  <span className="ml-2 mr-4 text-xl font-semibold inline text-default-200">Filters</span>
+                  <Input classNames={{label: "text-xs", input: "text-default-900"}} label="Applied Filter:" size="lg" value={searchKey} onValueChange={setSearchKey} isClearable />
                 </div>
                 <div className="grid grid-cols-2 gap-2">
                   {
@@ -124,7 +124,7 @@ export default function SkillsPage() {
                   }
                 </div>
                 <div className="flex flex-col">
-                  <span className="ml-2 mb-2 mt-4 text-xl font-semibold text-default-600">Sort By</span>
+                  <span className="ml-2 mb-2 mt-4 text-xl font-semibold text-default-200">Sort By</span>
                   <ButtonGroup fullWidth size="sm" radius="full" color="default">
                     <Button color={sortButtonColor("none")} onPress={() => setSortSelection("none")}>None</Button>
                     <Button color={sortButtonColor("alphabetic-ascending")} onPress={() => setSortSelection("alphabetic-ascending")}>Name</Button>
@@ -143,7 +143,7 @@ export default function SkillsPage() {
           itemClasses={{ trigger: "justify-between", startContent: "w-3/4 grow", titleWrapper: "w-0 flex-none" }}
           selectedKeys={selectedSkillKey}
           onSelectionChange={setSelectedSkillKey}
-          className="max-w-3xl align-center"
+          className="max-w-3xl"
         >  
         {
           groups[groupKey].skills.slice().sort(sortFunctions[sortSelection]).map((skill:Skill) => {
