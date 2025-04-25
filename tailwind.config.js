@@ -91,17 +91,17 @@ module.exports = {
             DEFAULT: "#AB8E45",
           },
           danger: {
-            50: "#fee7ef",
-            100: "#fdd0df",
-            200: "#faa0bf",
-            300: "#f871a0",
-            400: "#f54180",
-            500: "#f31260",
-            600: "#c20e4d",
-            700: "#920b3a",
-            800: "#610726",
-            900: "#310413",
-            DEFAULT: "#f31260",
+            50: "#470207",
+            100: "#62040B",
+            200: "#7D060F",
+            300: "#970913",
+            400: "#B20D19",
+            500: "#FA626C",
+            600: "#FB6C77",
+            700: "#FC7780",
+            800: "#FE818A",
+            900: "#FF8C95",
+            DEFAULT: "#FA626C",
           },
         },
       },
@@ -181,17 +181,17 @@ module.exports = {
             DEFAULT: "#6B5623",
           },
           danger: {
-            50: "#310413",
-            100: "#610726",
-            200: "#920b3a",
-            300: "#c20e4d",
-            400: "#f31260",
-            500: "#f54180",
-            600: "#f871a0",
-            700: "#faa0bf",
-            800: "#fdd0df",
-            900: "#fee7ef",
-            DEFAULT: "#f31260",
+            50: "#FF8C95",
+            100: "#FE818A",
+            200: "#FC7780",
+            300: "#FB6C77",
+            400: "#FA626C",
+            500: "#B20D19",
+            600: "#970913",
+            700: "#7D060F",
+            800: "#62040B",
+            900: "#470207",
+            DEFAULT: "#B20D19",
           },
         },
       }
@@ -201,46 +201,46 @@ module.exports = {
 //   {
 //     "paletteName": "Danger",
 //     "swatches": [
-//       {
-//         "name": "New Swatch",
-//         "color": "470207"
-//       },
-//       {
-//         "name": "New Swatch",
-//         "color": "62040B"
-//       },
-//       {
-//         "name": "New Swatch",
-//         "color": "7D060F"
-//       },
-//       {
-//         "name": "New Swatch",
-//         "color": "970913"
-//       },
-//       {
-//         "name": "New Swatch",
-//         "color": "B20D19"
-//       },
-//       {
-//         "name": "New Swatch",
-//         "color": "FA626C"
-//       },
-//       {
-//         "name": "New Swatch",
-//         "color": "FB6C77"
-//       },
-//       {
-//         "name": "New Swatch",
-//         "color": "FC7780"
-//       },
-//       {
-//         "name": "New Swatch",
-//         "color": "FE818A"
-//       },
-//       {
-//         "name": "New Swatch",
-//         "color": "FF8C95"
-//       }
+      // {
+      //   "name": "New Swatch",
+      //   "color": "470207"
+      // },
+      // {
+      //   "name": "New Swatch",
+      //   "color": "62040B"
+      // },
+      // {
+      //   "name": "New Swatch",
+      //   "color": "7D060F"
+      // },
+      // {
+      //   "name": "New Swatch",
+      //   "color": "970913"
+      // },
+      // {
+      //   "name": "New Swatch",
+      //   "color": "B20D19"
+      // },
+      // {
+      //   "name": "New Swatch",
+      //   "color": "FA626C"
+      // },
+      // {
+      //   "name": "New Swatch",
+      //   "color": "FB6C77"
+      // },
+      // {
+      //   "name": "New Swatch",
+      //   "color": "FC7780"
+      // },
+      // {
+      //   "name": "New Swatch",
+      //   "color": "FE818A"
+      // },
+      // {
+      //   "name": "New Swatch",
+      //   "color": "FF8C95"
+      // }
 //     ]
 //   },
 //   {

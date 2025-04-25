@@ -16,7 +16,7 @@ export default function DefaultLayout({
       <footer className="w-full flex items-center justify-center py-3 text-xs">
         <span className="text-yellow-500">Copyright&nbsp;</span>
         <span>2025</span>
-        <HeartFilledIcon className="w-4 h-4 mx-1 text-red-500" />
+        <HeartFilledIcon className="w-4 h-4 mx-1 text-danger" />
         <span className="text-sky-500">Fjellderek&nbsp;Software</span>
       </footer>
     </div>
