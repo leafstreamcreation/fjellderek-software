@@ -18,7 +18,7 @@ module.exports = {
       light: {
         colors: {
           background: "#3CC4ED",
-          foreground: "#1F2121",
+          foreground: "#343738",
           divider: "rgba(17, 17, 17, 0.15)",
           focus: "#123758",
           content1: "#DFEBEF",
