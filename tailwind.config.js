@@ -22,7 +22,7 @@ module.exports = {
           divider: "rgba(17, 17, 17, 0.15)",
           focus: "#123758",
           content1: "#DFEBEF",
-          content2: "#CBD6D9",
+          content2: "#123758",
           content3: "#B7C1C4",
           content4: "#A3ACAE",
           default: {
@@ -172,7 +172,7 @@ module.exports = {
           divider: "rgba(255, 255, 255, 0.15)",
           focus: "#0DA6D4",
           content1: "#1F2121",
-          content2: "#313334",
+          content2: "#0DA6D4",
           content3: "#424546",
           content4: "#535859",
           default: {

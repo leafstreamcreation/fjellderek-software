@@ -68,7 +68,7 @@ export default function SkillsPage() {
           <CardBody className="items-center overflow-hidden">
           <Dropdown shouldBlockScroll={false}>
               <DropdownTrigger>
-                <Button size="lg" startContent={<HamburgerMenuIcon />} color="default" className="text-primary-200 mb-3">
+                <Button size="lg" startContent={<HamburgerMenuIcon />} color="default" className="text-content2 mb-3">
                   Choose Category
                 </Button>
               </DropdownTrigger>
