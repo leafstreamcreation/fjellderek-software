@@ -103,7 +103,7 @@ export default function SkillsPage() {
                   
                 <Divider />
                 <div className="my-4 flex items-center justify-between">
-                  <span className="ml-2 mr-4 text-xl font-semibold inline text-default-200">Filters</span>
+                  <span className="ml-2 mr-4 text-xl font-semibold inline text-foreground">Filters</span>
                   <Input classNames={{ label: "text-xs"}} label="Applied Filter:" size="lg" value={searchKey} onValueChange={setSearchKey} isClearable />
                 </div>
                 <div className="grid grid-cols-2 gap-2">
@@ -124,7 +124,7 @@ export default function SkillsPage() {
                   }
                 </div>
                 <div className="flex flex-col">
-                  <span className="ml-2 mb-2 mt-4 text-xl font-semibold text-default-200">Sort By</span>
+                  <span className="ml-2 mb-2 mt-4 text-xl font-semibold text-foreground">Sort By</span>
                   <ButtonGroup fullWidth size="sm" radius="full" color="default">
                     <Button color={sortButtonColor("none")} onPress={() => setSortSelection("none")}>None</Button>
                     <Button color={sortButtonColor("alphabetic-ascending")} onPress={() => setSortSelection("alphabetic-ascending")}>Name</Button>
