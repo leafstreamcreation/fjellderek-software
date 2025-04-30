@@ -23,7 +23,7 @@ export function PrimarySkill({ skill }: { skill: Skill }) {
           !url || url === "" ? name :
           <div>
             <span>{name}</span>
-            <Link className="pointer-events-auto" isExternal showAnchorIcon href={url}></Link>
+            <Link className="pointer-events-auto" isExternal showAnchorIcon href={url} color="foreground"></Link>
           </div>
         }
         showValueLabel={years ? true : false} 
@@ -57,7 +57,7 @@ export function SubSkills({ skill }: { skill: Skill }) {
                       !subSkill.url || subSkill.url === "" ? subSkill.name :
                       <div>
                         <span>{subSkill.name}</span>
-                        <Link isExternal showAnchorIcon href={subSkill.url}></Link>
+                        <Link isExternal showAnchorIcon href={subSkill.url} color="foreground"></Link>
                       </div>
                     } 
                     showValueLabel={subSkill.years ? true : false} 
