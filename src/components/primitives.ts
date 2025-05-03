@@ -104,7 +104,7 @@ export const subtitle = tv({
 });
 
 export const text = tv({
-  base: "my-2 text-sm lg:text-base text-default-600 inline max-w-full",
+  base: "my-2 text-sm lg:text-base inline max-w-full text-foreground",
   variants: {
     color: {
       default: "foreground",
@@ -127,7 +127,7 @@ export const text = tv({
     }
   },
   defaultVariants: {
-    color: "default",
+    color: "foreground",
   },
   compoundVariants: [
     {
