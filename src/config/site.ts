@@ -7,20 +7,16 @@ export const siteConfig = {
   description: "The official website of Fjellderek Software",
   navItems: [
     {
-      label: "Skills",
-      href: "/skills",
+      label: "About",
+      href: "/about",
     },
     {
-      label: "Experience",
-      href: "/experience",
+      label: "Services",
+      href: "/services",
     },
     {
-      label: "Projects",
-      href: "/projects",
-    },
-    {
-      label: "Vision",
-      href: "/vision",
+      label: "Portfolio",
+      href: "/portfolio",
     },
     {
       label: "Contact",
@@ -30,10 +26,6 @@ export const siteConfig = {
       label: "Blog",
       href: "/blog",
     },
-    {
-      label: "Toolkits",
-      href: "/Toolkits",
-    }
   ],
   links: {
     github: "https://github.com/leafstreamcreation",

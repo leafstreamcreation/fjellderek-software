@@ -33,7 +33,7 @@ export default function IndexPage() {
                   variant="solid" 
                   radius="md"
                   as={Link}
-                  href="#portfolio"
+                  href="/portfolio"
                   className="font-medium"
                 >
                   View Portfolio
@@ -43,7 +43,7 @@ export default function IndexPage() {
                   variant="bordered" 
                   radius="md"
                   as={Link}
-                  href="#contact"
+                  href="/contact"
                   className="font-medium bg-white/10 backdrop-blur-sm text-white"
                 >
                   Hire Me
@@ -104,7 +104,7 @@ export default function IndexPage() {
                     color="primary" 
                     variant="flat" 
                     radius="md"
-                    href="/services/web-development"
+                    href="/services"
                   >
                     Learn More
                   </Button>
@@ -138,7 +138,7 @@ export default function IndexPage() {
                     color="secondary" 
                     variant="flat" 
                     radius="md"
-                    href="/services/ai-solutions"
+                    href="/services"
                   >
                     Learn More
                   </Button>
@@ -172,7 +172,7 @@ export default function IndexPage() {
                     color="primary" 
                     variant="flat" 
                     radius="md"
-                    href="/services/consulting"
+                    href="/services"
                   >
                     Learn More
                   </Button>
@@ -223,7 +223,7 @@ export default function IndexPage() {
                 <CardFooter>
                   <Button 
                     as={Link}
-                    href="/projects/ai-analytics-dashboard"
+                    href="/portfolio"
                     color="primary"
                     variant="flat"
                     radius="md"
@@ -263,7 +263,7 @@ export default function IndexPage() {
                 <CardFooter>
                   <Button 
                     as={Link}
-                    href="/projects/ecommerce-platform"
+                    href="/portfolio"
                     color="primary"
                     variant="flat"
                     radius="md"
@@ -303,7 +303,7 @@ export default function IndexPage() {
                 <CardFooter>
                       <Button 
                         as={Link}
-                        href="/projects/smart-city-platform"
+                        href="/portfolio"
                         color="secondary"
                         variant="flat"
                         radius="md"
@@ -423,7 +423,7 @@ export default function IndexPage() {
               </Button>
               <Button
                 as={Link}
-                href="mailto:hello@fjellderek.com"
+                href="mailto:shouldergiant@icloud.com"
                 size="lg"
                 variant="bordered"
                 radius="full"
