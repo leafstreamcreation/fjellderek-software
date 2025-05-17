@@ -210,7 +210,7 @@ export default function BlogPage() {
               <CardFooter className="px-6 py-4 border-t border-default-100">
                 <Button
                   as={Link}
-                  href={`/blog/post/${post.id}`}
+                  href={`/blog/${post.id}`}
                   color="primary"
                   variant="flat"
                   radius="full"

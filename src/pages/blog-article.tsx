@@ -18,6 +18,7 @@ import {
   Tabs,
   Tab
 } from "@heroui/react";
+// import { useParams } from "react-router-dom";
 
 // Sample blog post data - replace with your actual data fetching logic
 const blogPost = {
@@ -164,7 +165,8 @@ function updateCalibrationModel(
 };
 
 export default function BlogArticlePage() {
-  
+  // const params = useParams();
+
   return (
     <DefaultLayout>
       {/* Article Header */}

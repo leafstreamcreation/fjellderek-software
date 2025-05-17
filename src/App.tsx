@@ -6,6 +6,7 @@ import ServicesPage from "@/pages/services";
 import PortfolioPage from "./pages/portfolio";
 import ContactPage from "./pages/contact";
 import BlogPage from "@/pages/blog";
+import BlogArticle from "@/pages/blog-article";
 // import ToolkitsPage from "./pages/toolkits";
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
       <Route element={<PortfolioPage />} path="/portfolio" />
       <Route element={<ContactPage />} path="/contact" />
       <Route element={<BlogPage />} path="/blog" />
+      <Route element={<BlogArticle />} path="/blog/:id" />
       {/* <Route element={<ToolkitsPage />} path="/toolkits" /> */}
     </Routes>
   );
