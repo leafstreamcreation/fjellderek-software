@@ -8,7 +8,6 @@ import {
   CardFooter,
   Image,
   Chip,
-  Avatar,
 } from "@heroui/react";
 
 export default function IndexPage() {
@@ -19,7 +18,7 @@ export default function IndexPage() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
             <div className="w-full lg:w-1/2 space-y-6">
-              <Chip color="secondary" variant="flat" className="mb-2">Full Stack Developer & AI Specialist</Chip>
+              <Chip color="secondary" variant="flat" className="mb-2">Full Stack Developer & AI Automation Specialist</Chip>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
                 Transforming <span className="text-secondary-400">Ideas</span> into <span className="text-secondary-400">Intelligent</span> Solutions
               </h1>
@@ -90,12 +89,12 @@ export default function IndexPage() {
                 </CardHeader>
                 <CardBody className="text-center">
                   <p className="text-foreground-500">
-                    Modern, responsive web applications built with React, Next.js, and other cutting-edge frameworks. From concept to deployment, creating seamless user experiences.
+                    Modern, responsive web applications built with React, Vue.js, and other cutting-edge frameworks. From concept to deployment, creating seamless user experiences.
                   </p>
                   <div className="flex flex-wrap justify-center gap-2 mt-4">
-                    <Chip size="sm" variant="flat">React</Chip>
-                    <Chip size="sm" variant="flat">Next.js</Chip>
-                    <Chip size="sm" variant="flat">Node.js</Chip>
+                    <Chip size="sm" color="secondary" variant="flat">React</Chip>
+                    <Chip size="sm" color="secondary" variant="flat">Next.js</Chip>
+                    <Chip size="sm" color="secondary" variant="flat">Node.js</Chip>
                   </div>
                 </CardBody>
                 <CardFooter className="justify-center">
@@ -127,9 +126,9 @@ export default function IndexPage() {
                     Custom AI implementations that transform your business capabilities. From predictive analytics to natural language processing and computer vision applications.
                   </p>
                   <div className="flex flex-wrap justify-center gap-2 mt-4">
-                    <Chip size="sm" variant="flat">TensorFlow</Chip>
-                    <Chip size="sm" variant="flat">PyTorch</Chip>
-                    <Chip size="sm" variant="flat">OpenAI</Chip>
+                    <Chip size="sm" color="primary" variant="flat">TensorFlow</Chip>
+                    <Chip size="sm" color="primary" variant="flat">PyTorch</Chip>
+                    <Chip size="sm" color="primary" variant="flat">OpenAI</Chip>
                   </div>
                 </CardBody>
                 <CardFooter className="justify-center">
@@ -161,9 +160,9 @@ export default function IndexPage() {
                     Strategic technology consulting to help you navigate complex technical decisions. Architecture planning, tech stack selection, and digital transformation guidance.
                   </p>
                   <div className="flex flex-wrap justify-center gap-2 mt-4">
-                    <Chip size="sm" variant="flat">Architecture</Chip>
-                    <Chip size="sm" variant="flat">Strategy</Chip>
-                    <Chip size="sm" variant="flat">Optimization</Chip>
+                    <Chip size="sm" color="secondary" variant="flat">Architecture</Chip>
+                    <Chip size="sm" color="secondary" variant="flat">Strategy</Chip>
+                    <Chip size="sm" color="secondary" variant="flat">Optimization</Chip>
                   </div>
                 </CardBody>
                 <CardFooter className="justify-center">
@@ -205,7 +204,7 @@ export default function IndexPage() {
                     width={800}
                     height={500}
                   />
-                  <div className="absolute top-3 right-3">
+                  <div className="absolute top-3 right-3 z-10">
                     <Chip color="secondary" variant="solid">Featured</Chip>
                   </div>
                 </div>
@@ -215,9 +214,9 @@ export default function IndexPage() {
                     A comprehensive analytics platform using machine learning to generate actionable business insights from complex datasets.
                   </p>
                   <div className="flex flex-wrap gap-2 mb-4">
-                    <Chip size="sm" variant="flat" color="primary">React</Chip>
-                    <Chip size="sm" variant="flat" color="primary">Python</Chip>
-                    <Chip size="sm" variant="flat" color="primary">TensorFlow</Chip>
+                    <Chip size="sm" variant="flat" color="secondary">React</Chip>
+                    <Chip size="sm" variant="flat" color="secondary">Python</Chip>
+                    <Chip size="sm" variant="flat" color="secondary">TensorFlow</Chip>
                   </div>
                 </CardBody>
                 <CardFooter>
@@ -245,7 +244,7 @@ export default function IndexPage() {
                     width={800}
                     height={500}
                   />
-                  <div className="absolute top-3 right-3">
+                  <div className="absolute top-3 right-3 z-10">
                     <Chip color="primary" variant="solid">Latest</Chip>
                   </div>
                 </div>
@@ -255,9 +254,9 @@ export default function IndexPage() {
                     A full-featured online shopping experience with AI-powered product recommendations and advanced search capabilities.
                   </p>
                   <div className="flex flex-wrap gap-2 mb-4">
-                    <Chip size="sm" variant="flat" color="primary">Next.js</Chip>
-                    <Chip size="sm" variant="flat" color="primary">Node.js</Chip>
-                    <Chip size="sm" variant="flat" color="primary">MongoDB</Chip>
+                    <Chip size="sm" variant="flat" color="secondary">Next.js</Chip>
+                    <Chip size="sm" variant="flat" color="secondary">Node.js</Chip>
+                    <Chip size="sm" variant="flat" color="secondary">MongoDB</Chip>
                   </div>
                 </CardBody>
                 <CardFooter>
@@ -285,7 +284,7 @@ export default function IndexPage() {
                     width={800}
                     height={500}
                   />
-                  <div className="absolute top-3 right-3">
+                  <div className="absolute top-3 right-3 z-10">
                     <Chip color="secondary" variant="solid">Showcase</Chip>
                   </div>
                 </div>
@@ -295,16 +294,16 @@ export default function IndexPage() {
                     An integrated IoT and AI solution for modern urban management, processing real-time data from thousands of sensors.
                   </p>
                   <div className="flex flex-wrap gap-2 mb-4">
-                    <Chip size="sm" variant="flat" color="primary">Next.js</Chip>
-                    <Chip size="sm" variant="flat" color="primary">Node.js</Chip>
-                    <Chip size="sm" variant="flat" color="primary">MongoDB</Chip>
+                    <Chip size="sm" variant="flat" color="secondary">Next.js</Chip>
+                    <Chip size="sm" variant="flat" color="secondary">Node.js</Chip>
+                    <Chip size="sm" variant="flat" color="secondary">MongoDB</Chip>
                   </div>
                 </CardBody>
                 <CardFooter>
                       <Button 
                         as={Link}
                         href="/portfolio"
-                        color="secondary"
+                        color="primary"
                         variant="flat"
                         radius="md"
                         className="w-full"
@@ -332,7 +331,7 @@ export default function IndexPage() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-16 md:py-24 bg-content1">
+      {/* <section className="py-16 md:py-24 bg-content1">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
             <Chip color="secondary" variant="flat" className="mb-4">Testimonials</Chip>
@@ -396,7 +395,7 @@ export default function IndexPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA Section */}
       <section id="contact" className="py-16 md:py-24 bg-gradient-to-tr from-primary-700 to-primary-500 text-white">
