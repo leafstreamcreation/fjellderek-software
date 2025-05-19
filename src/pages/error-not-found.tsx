@@ -14,8 +14,6 @@ import {
   PiRobot,
 } from "react-icons/pi";
 
-// Hidden dev joke
-console.log("404: The AI rebellion has begun... 🤖☕️");
 
 // Easter egg state
 let clickCount = 0;

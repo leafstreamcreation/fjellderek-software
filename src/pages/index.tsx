@@ -8,6 +8,7 @@ import {
   CardFooter,
   Image,
   Chip,
+  Avatar
 } from "@heroui/react";
 
 export default function IndexPage() {
@@ -198,8 +199,8 @@ export default function IndexPage() {
               <Card isHoverable className="w-full h-full">
                 <div className="relative overflow-hidden h-60">
                   <Image
-                    src="https://placehold.co/800x500/0DA6D4/FFFFFF?text=AI+Analytics+Dashboard"
-                    alt="AI Analytics Dashboard"
+                    src="https://placehold.co/800x500/0DA6D4/FFFFFF?text=Langflow+Resume+Writer"
+                    alt="Langflow Resume Writer"
                     className="object-cover w-full h-full transition-transform duration-500 hover:scale-105"
                     width={800}
                     height={500}
@@ -209,9 +210,9 @@ export default function IndexPage() {
                   </div>
                 </div>
                 <CardBody>
-                  <h3 className="text-2xl font-bold mb-2">AI Analytics Dashboard</h3>
+                  <h3 className="text-2xl font-bold mb-2">Langflow Resume Writer</h3>
                   <p className="text-foreground-500 mb-4">
-                    A comprehensive analytics platform using machine learning to generate actionable business insights from complex datasets.
+                    A powerful AI-driven resume builder that tailors resumes to job descriptions, enhancing job application success rates.
                   </p>
                   <div className="flex flex-wrap gap-2 mb-4">
                     <Chip size="sm" variant="flat" color="secondary">React</Chip>
@@ -238,8 +239,8 @@ export default function IndexPage() {
               <Card isHoverable className="w-full h-full">
                 <div className="relative overflow-hidden h-60">
                   <Image
-                    src="https://placehold.co/800x500/123758/FFFFFF?text=E-Commerce+Platform"
-                    alt="E-Commerce Platform"
+                    src="https://placehold.co/800x500/123758/FFFFFF?text=Cocina+De+Viaje"
+                    alt="Cocina De Viaje"
                     className="object-cover w-full h-full transition-transform duration-500 hover:scale-105"
                     width={800}
                     height={500}
@@ -249,9 +250,9 @@ export default function IndexPage() {
                   </div>
                 </div>
                 <CardBody>
-                  <h3 className="text-2xl font-bold mb-2">Next-Gen E-Commerce Platform</h3>
+                  <h3 className="text-2xl font-bold mb-2">Cocina de Viaje</h3>
                   <p className="text-foreground-500 mb-4">
-                    A full-featured online shopping experience with AI-powered product recommendations and advanced search capabilities.
+                    An interactive travel and cooking platform using AI to book catering and suggest recipes based on travel destinations and local ingredients.
                   </p>
                   <div className="flex flex-wrap gap-2 mb-4">
                     <Chip size="sm" variant="flat" color="secondary">Next.js</Chip>
@@ -278,8 +279,8 @@ export default function IndexPage() {
               <Card isHoverable className="w-full h-full">
                 <div className="relative overflow-hidden h-72 md:h-80">
                   <Image
-                    src="https://placehold.co/1600x800/C23F0E/FFFFFF?text=Smart+City+Platform"
-                    alt="Smart City Platform"
+                    src="https://placehold.co/1600x800/C23F0E/FFFFFF?text=Buffalo+Cleaning+Platform"
+                    alt="Buffalo Cleaning Platform"
                     className="object-cover w-full h-full transition-transform duration-500 hover:scale-105"
                     width={800}
                     height={500}
@@ -289,9 +290,9 @@ export default function IndexPage() {
                   </div>
                 </div>
                 <CardBody>
-                  <h3 className="text-2xl font-bold mb-2">Smart City Management Platform</h3>
+                  <h3 className="text-2xl font-bold mb-2">Buffalo Cleaning Services Platform</h3>
                   <p className="text-foreground-500 mb-4">
-                    An integrated IoT and AI solution for modern urban management, processing real-time data from thousands of sensors.
+                    A full featured web application for managing cleaning services, including scheduling, payments, and customer management.
                   </p>
                   <div className="flex flex-wrap gap-2 mb-4">
                     <Chip size="sm" variant="flat" color="secondary">Next.js</Chip>
@@ -331,7 +332,7 @@ export default function IndexPage() {
       </section>
 
       {/* Testimonials Section */}
-      {/* <section className="py-16 md:py-24 bg-content1">
+      <section className="py-16 md:py-24 bg-content1">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
             <Chip color="secondary" variant="flat" className="mb-4">Testimonials</Chip>
@@ -342,7 +343,7 @@ export default function IndexPage() {
           </div>
           
           <div className="flex flex-wrap gap-6">
-            <div className="w-full md:w-[calc(50%-12px)]">
+            {/* <div className="w-full md:w-[calc(50%-12px)]">
               <Card className="bg-gradient-to-br from-primary-100 to-primary-50 dark:from-primary-800 dark:to-primary-900 h-full">
                 <CardBody>
                   <div className="text-secondary-500 mb-4 text-4xl">
@@ -366,7 +367,7 @@ export default function IndexPage() {
                   </div>
                 </CardBody>
               </Card>
-            </div>
+            </div> */}
             
             <div className="w-full md:w-[calc(50%-12px)]">
               <Card className="bg-gradient-to-br from-secondary-100 to-secondary-50 dark:from-secondary-800 dark:to-secondary-900 h-full">
@@ -386,8 +387,8 @@ export default function IndexPage() {
                       className="mr-4 border-2 border-white"
                     />
                     <div>
-                      <p className="font-bold text-lg">Michael Chen</p>
-                      <p className="text-foreground-500">Founder, NexShop Global</p>
+                      <p className="font-bold text-lg">Omar Dames</p>
+                      <p className="text-foreground-500">Founder, Buffalo Sparkling Cleaners</p>
                     </div>
                   </div>
                 </CardBody>
@@ -395,7 +396,7 @@ export default function IndexPage() {
             </div>
           </div>
         </div>
-      </section> */}
+      </section>
 
       {/* CTA Section */}
       <section id="contact" className="py-16 md:py-24 bg-gradient-to-tr from-primary-700 to-primary-500 text-white">
