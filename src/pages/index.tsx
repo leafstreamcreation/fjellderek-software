@@ -388,7 +388,9 @@ export default function IndexPage() {
                     />
                     <div>
                       <p className="font-bold text-lg">Omar Dames</p>
-                      <p className="text-foreground-500">Founder, Buffalo Sparkling Cleaners</p>
+                      <p className="text-foreground-500">Founder, Buffalo Sparkling Cleaners
+                        
+                      </p>
                     </div>
                   </div>
                 </CardBody>

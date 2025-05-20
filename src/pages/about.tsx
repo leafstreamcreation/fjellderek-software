@@ -13,6 +13,9 @@ import {
   Progress,
 } from "@heroui/react";
 
+import { experience } from "@/site-content/Experience/experience";
+import { certifications } from "@/site-content/Experience/certifications";
+
 export default function AboutPage() {
   const skills = [
     { name: "JavaScript", level: 90 },
@@ -25,65 +28,21 @@ export default function AboutPage() {
     { name: "AWS", level: 78 },
   ];
 
-  const careerHighlights = [
-    {
-      period: "2022 - Present",
-      role: "Senior Full Stack Developer",
-      company: "InnovateTech Solutions",
-      description: "Leading development of AI-powered web applications and consulting on technology strategy for enterprise clients.",
-      achievements: ["Launched 5 major products", "Reduced system latency by 40%", "Mentored junior developers"]
-    },
-    {
-      period: "2019 - 2022",
-      role: "Software Engineer",
-      company: "DataVision Analytics",
-      description: "Developed data visualization tools and machine learning models for business intelligence applications.",
-      achievements: ["Built real-time analytics dashboard", "Implemented predictive modeling system", "Optimized database performance"]
-    },
-    {
-      period: "2017 - 2019",
-      role: "Frontend Developer",
-      company: "WebCraft Studios",
-      description: "Created responsive web interfaces and interactive experiences for various client projects.",
-      achievements: ["Redesigned 12 client websites", "Improved page load times by 60%", "Implemented CI/CD pipeline"]
-    }
-  ];
 
-  const certifications = [
-    {
-      title: "AWS Certified Solutions Architect",
-      issuer: "Amazon Web Services",
-      year: 2023,
-      icon: "https://placehold.co/60x60/123758/FFFFFF?text=AWS"
-    },
-    {
-      title: "TensorFlow Developer Certificate",
-      issuer: "Google",
-      year: 2022,
-      icon: "https://placehold.co/60x60/0DA6D4/FFFFFF?text=TF"
-    },
-    {
-      title: "Microsoft Certified: Azure AI Engineer",
-      issuer: "Microsoft",
-      year: 2021,
-      icon: "https://placehold.co/60x60/C23F0E/FFFFFF?text=Azure"
-    }
-  ];
-
-  const awards = [
-    {
-      title: "Innovation Award",
-      organization: "Tech Leaders Summit",
-      year: 2023,
-      description: "Recognized for groundbreaking work in AI-powered analytics solutions."
-    },
-    {
-      title: "Best Web Application",
-      organization: "Developer Excellence Awards",
-      year: 2022,
-      description: "Awarded for exceptional user experience and technical implementation."
-    }
-  ];
+  // const awards = [
+  //   {
+  //     title: "Innovation Award",
+  //     organization: "Tech Leaders Summit",
+  //     year: 2023,
+  //     description: "Recognized for groundbreaking work in AI-powered analytics solutions."
+  //   },
+  //   {
+  //     title: "Best Web Application",
+  //     organization: "Developer Excellence Awards",
+  //     year: 2022,
+  //     description: "Awarded for exceptional user experience and technical implementation."
+  //   }
+  // ];
 
   return (
     <DefaultLayout>
@@ -180,7 +139,7 @@ export default function AboutPage() {
           </div>
           
           <div className="space-y-8">
-            {careerHighlights.map((job, index) => (
+            {experience.map((job, index) => (
               <Card key={index} className="border-l-4 border-primary-500 dark:border-primary-400">
                 <CardBody>
                   <div className="flex flex-col md:flex-row justify-between mb-4">
@@ -214,7 +173,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
             <Chip color="primary" variant="flat" className="mb-4">Recognition</Chip>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Certifications & Awards</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Certifications</h2>
             <p className="text-foreground-500 max-w-2xl mx-auto">
               Professional certifications and industry recognition for my work.
             </p>
@@ -248,7 +207,7 @@ export default function AboutPage() {
               </div>
             </div>
             
-            <div>
+            {/* <div>
               <h3 className="text-2xl font-bold mb-6 text-center md:text-left mt-8 md:mt-0">Awards</h3>
               <div className="space-y-4">
                 {awards.map((award, index) => (
@@ -264,7 +223,7 @@ export default function AboutPage() {
                   </Card>
                 ))}
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
