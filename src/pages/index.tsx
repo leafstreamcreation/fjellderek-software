@@ -196,7 +196,7 @@ export default function IndexPage() {
           
           <div className="flex flex-wrap gap-6">
             <div className="w-full lg:w-[calc(50%-12px)]">
-              <Card isHoverable className="w-full h-full">
+              <Card isHoverable className="w-full h-full hover:text-default-500">
                 <div className="relative overflow-hidden h-60">
                   <Image
                     src="https://placehold.co/800x500/0DA6D4/FFFFFF?text=Langflow+Resume+Writer"
@@ -209,9 +209,9 @@ export default function IndexPage() {
                     <Chip color="secondary" variant="solid">Featured</Chip>
                   </div>
                 </div>
-                <CardBody>
+                <CardBody className="">
                   <h3 className="text-2xl font-bold mb-2">Langflow Resume Writer</h3>
-                  <p className="text-foreground-500 mb-4">
+                  <p className="mb-4">
                     A powerful AI-driven resume builder that tailors resumes to job descriptions, enhancing job application success rates.
                   </p>
                   <div className="flex flex-wrap gap-2 mb-4">
@@ -236,7 +236,7 @@ export default function IndexPage() {
             </div>
             
             <div className="w-full lg:w-[calc(50%-12px)]">
-              <Card isHoverable className="w-full h-full">
+              <Card isHoverable className="w-full h-full hover:text-default-500">
                 <div className="relative overflow-hidden h-60">
                   <Image
                     src="https://placehold.co/800x500/123758/FFFFFF?text=Cocina+De+Viaje"
@@ -251,7 +251,7 @@ export default function IndexPage() {
                 </div>
                 <CardBody>
                   <h3 className="text-2xl font-bold mb-2">Cocina de Viaje</h3>
-                  <p className="text-foreground-500 mb-4">
+                  <p className="mb-4">
                     An interactive travel and cooking platform using AI to book catering and suggest recipes based on travel destinations and local ingredients.
                   </p>
                   <div className="flex flex-wrap gap-2 mb-4">
@@ -276,7 +276,7 @@ export default function IndexPage() {
             </div>
             
             <div className="w-full lg:w-[calc(50%-12px)]">
-              <Card isHoverable className="w-full h-full">
+              <Card isHoverable className="w-full h-full hover:text-default-500">
                 <div className="relative overflow-hidden h-72 md:h-80">
                   <Image
                     src="https://placehold.co/1600x800/C23F0E/FFFFFF?text=Buffalo+Cleaning+Platform"
@@ -291,7 +291,7 @@ export default function IndexPage() {
                 </div>
                 <CardBody>
                   <h3 className="text-2xl font-bold mb-2">Buffalo Cleaning Services Platform</h3>
-                  <p className="text-foreground-500 mb-4">
+                  <p className="mb-4">
                     A full featured web application for managing cleaning services, including scheduling, payments, and customer management.
                   </p>
                   <div className="flex flex-wrap gap-2 mb-4">
@@ -389,7 +389,7 @@ export default function IndexPage() {
                     <div>
                       <p className="font-bold text-lg">Omar Dames</p>
                       <p className="text-foreground-500">Founder, Buffalo Sparkling Cleaners
-                        
+
                       </p>
                     </div>
                   </div>
