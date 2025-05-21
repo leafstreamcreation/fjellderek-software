@@ -174,14 +174,14 @@ export default function AboutPage() {
           <div className="text-center mb-12">
             <Chip color="primary" variant="flat" className="mb-4">Recognition</Chip>
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Certifications</h2>
-            <p className="text-foreground-500 max-w-2xl mx-auto">
+            {/* <p className="text-foreground-500 max-w-2xl mx-auto">
               Professional certifications and industry recognition for my work.
-            </p>
+            </p> */}
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
             <div>
-              <h3 className="text-2xl font-bold mb-6 text-center md:text-left">Certifications</h3>
+              {/* <h3 className="text-2xl font-bold mb-6 text-center md:text-left">Certifications</h3> */}
               <div className="space-y-4">
                 {certifications.map((cert, index) => (
                   <Card key={index} className="shadow-md">
@@ -239,6 +239,7 @@ export default function AboutPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
+              isDisabled
               size="lg"
               color="secondary"
               variant="solid"

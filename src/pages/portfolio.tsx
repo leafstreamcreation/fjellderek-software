@@ -106,6 +106,7 @@ export default function PortfolioPage() {
                 </CardBody>
                 <CardFooter className="flex justify-between">
                   <Button 
+                    isDisabled
                     color="primary"
                     variant="flat"
                     radius="md"
@@ -118,6 +119,7 @@ export default function PortfolioPage() {
                     Live Demo
                   </Button>
                   <Button 
+                    isDisabled
                     color="secondary"
                     variant="flat"
                     radius="md"

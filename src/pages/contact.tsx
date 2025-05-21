@@ -234,7 +234,7 @@ export default function ContactPage() {
                       <div className="flex space-x-3">
                         <Button
                           as={Link}
-                          href="https://github.com"
+                          href="https://github.com/leafstreamcreation"
                           target="_blank"
                           rel="noopener noreferrer"
                           variant="flat"
@@ -250,7 +250,7 @@ export default function ContactPage() {
                         </Button>
                         <Button
                           as={Link}
-                          href="https://linkedin.com"
+                          href="https://linkedin.com/in/fjelldereksoftware"
                           target="_blank"
                           rel="noopener noreferrer"
                           variant="flat"
@@ -265,6 +265,7 @@ export default function ContactPage() {
                           </svg>
                         </Button>
                         <Button
+                          isDisabled
                           as={Link}
                           href="https://twitter.com"
                           target="_blank"
@@ -298,6 +299,7 @@ export default function ContactPage() {
                         Prefer a face-to-face discussion? Book a time that works for you.
                       </p>
                       <Button
+                        isDisabled
                         as={Link}
                         href="https://calendly.com"
                         target="_blank"
