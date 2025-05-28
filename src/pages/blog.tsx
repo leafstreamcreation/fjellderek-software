@@ -240,7 +240,7 @@ export default function BlogPage() {
       </section>
 
       {/* Newsletter Signup */}
-      <section className="max-w-7xl mx-auto px-4 py-16 mt-12">
+      {/* <section className="max-w-7xl mx-auto px-4 py-16 mt-12">
         <div className="bg-gradient-to-r from-primary-800 to-primary-900 rounded-3xl p-8 md:p-12 text-white">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div>
@@ -294,7 +294,7 @@ export default function BlogPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Related Links */}
       <section className="max-w-7xl mx-auto px-4 py-12">
@@ -303,9 +303,9 @@ export default function BlogPage() {
           <Button as={Link} href="/portfolio" size="lg" radius="full" variant="bordered" color="primary">
             View Portfolio
           </Button>
-          <Button as={Link} href="/toolkits" size="lg" radius="full" variant="bordered" color="success">
+          {/* <Button as={Link} href="/toolkits" size="lg" radius="full" variant="bordered" color="success">
             Toolkits
-          </Button>
+          </Button> */}
           <Button as={Link} href="/contact" size="lg" radius="full" variant="solid" color="secondary">
             Contact Me
           </Button>

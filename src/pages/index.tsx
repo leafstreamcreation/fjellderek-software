@@ -425,7 +425,7 @@ export default function IndexPage() {
               </Button>
               <Button
                 as={Link}
-                href="mailto:shouldergiant@icloud.com"
+                href="mailto:derek@fjellworks.dev"
                 size="lg"
                 variant="bordered"
                 radius="full"
