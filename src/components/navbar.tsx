@@ -17,8 +17,8 @@ import { siteConfig } from "@/config/site";
 import { ThemeSwitch } from "@/components/theme-switch";
 import {
   Logo,
-  GithubIcon,
-  LinkedInIcon,
+  // GithubIcon,
+  // LinkedInIcon,
   HamburgerMenuIcon
 } from "@/components/icons";
 
@@ -64,7 +64,7 @@ export const Navbar = () => {
         <DrawerContent>
           <DrawerHeader className="flex items-center gap-1">
           <Logo />
-          <p className="font-bold text-inherit">FJELL</p>
+          <p className="font-bold text-inherit">Fjellworks</p>
           </DrawerHeader>
               <DrawerBody>
                   <Link
@@ -125,7 +125,7 @@ export const Navbar = () => {
             href="/"
           >
             <Logo />
-            <p className="font-bold text-inherit">FJELL</p>
+            <p className="font-bold text-inherit">Fjellworks</p>
           </Link>
         </NavbarBrand>
         <LargeScreenOptions isLargeScreen={!screenWidthIsMobile}></LargeScreenOptions>

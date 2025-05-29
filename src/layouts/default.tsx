@@ -17,7 +17,7 @@ export default function DefaultLayout({
         <span className="text-yellow-500">Copyright&nbsp;</span>
         <span>2025</span>
         <HeartFilledIcon className="w-4 h-4 mx-1 text-danger" />
-        <span className="text-sky-500">Fjellderek&nbsp;Software</span>
+        <span className="text-sky-500">Fjellworks.dev</span>
       </footer>
     </div>
   );

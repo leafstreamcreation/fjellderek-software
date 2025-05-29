@@ -63,7 +63,7 @@ export default function AboutPage() {
             <div className="w-full lg:w-1/2 space-y-6 text-center lg:text-left">
               <Chip color="secondary" variant="flat" className="mb-2">Full Stack Developer & AI Specialist</Chip>
               <h1 className="text-4xl md:text-5xl font-bold leading-tight">
-                About <span className="text-secondary-400">Fjell Derek</span>
+                About <span className="text-secondary-400">Me</span>
               </h1>
               <p className="text-lg md:text-xl opacity-90">
                 I'm a passionate software developer with expertise in building innovative, scalable applications that solve real-world problems. With a focus on AI-powered solutions and modern web technologies, I help businesses transform their digital presence.
