@@ -132,7 +132,7 @@ export const Navbar = () => {
       </NavbarContent>
 
       <NavbarContent
-        className="flex basis-1/5 basis-full"
+        className="flex basis-full"
         justify="end"
       >
         <NavbarItem className="flex gap-2">

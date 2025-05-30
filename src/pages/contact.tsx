@@ -14,7 +14,7 @@ import {
   ModalBody,
   ModalFooter,
   useDisclosure,
-  Divider
+  // Divider
 } from "@heroui/react";
 
 export default function ContactPage() {
