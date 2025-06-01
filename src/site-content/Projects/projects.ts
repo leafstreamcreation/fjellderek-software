@@ -5,7 +5,7 @@ export * from "./types.ts";
 export const projects: Project[] = [
   {
     id: 1,
-    title: "AI Analytics Dashboard",
+    title: "RustDesk Self Hosted Deployment",
     description: "A comprehensive analytics platform using machine learning to generate actionable business insights from complex datasets.",
     category: "ai",
     image: "https://placehold.co/800x500/0DA6D4/FFFFFF?text=AI+Analytics+Dashboard",
