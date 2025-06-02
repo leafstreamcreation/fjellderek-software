@@ -6,14 +6,14 @@ export const projects: Project[] = [
   {
     id: 1,
     title: "RustDesk Self Hosted Deployment",
-    description: "A comprehensive analytics platform using machine learning to generate actionable business insights from complex datasets.",
-    category: "ai",
+    description: "self-hosted remote desktop solution with end-to-end encryption",
+    category: "self hosted",
     image: "https://placehold.co/800x500/0DA6D4/FFFFFF?text=AI+Analytics+Dashboard",
-    tags: ["React", "Python", "TensorFlow", "AWS"],
+    tags: ["Nginx", "Python", "Flask", "Docker"],
     featured: true,
-    demoUrl: "https://demo.example.com/ai-analytics",
-    caseStudyUrl: "/case-studies/ai-analytics",
-    longDescription: "This AI-powered analytics dashboard transforms raw business data into actionable insights through advanced machine learning algorithms. The platform includes predictive analytics, anomaly detection, and automated reporting features that help businesses make data-driven decisions quickly and accurately. Built with a React frontend and Python backend using TensorFlow for machine learning models."
+    demoUrl: "https://demo.example.com/RustDesk",
+    caseStudyUrl: "/case-studies/RustDesk",
+    longDescription: "This project involves deploying RustDesk, a self-hosted remote desktop solution, with a focus on security and performance. The deployment includes setting up Nginx as a reverse proxy, configuring Flask for backend services, and using Docker for containerization. The solution provides end-to-end encryption for secure remote access, making it suitable for both personal and enterprise use cases."
   },
   {
     id: 2,
