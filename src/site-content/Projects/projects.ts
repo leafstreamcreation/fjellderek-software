@@ -9,35 +9,35 @@ export const projects: Project[] = [
     description: "self-hosted remote desktop solution with end-to-end encryption",
     category: "self hosted",
     image: "https://placehold.co/800x500/0DA6D4/FFFFFF?text=AI+Analytics+Dashboard",
-    tags: ["Nginx", "Python", "Flask", "Docker"],
+    tags: ["Raspberry Pi", "Linux", "PM2", "Node.js"],
     featured: true,
     demoUrl: "https://demo.example.com/RustDesk",
     caseStudyUrl: "/case-studies/RustDesk",
-    longDescription: "This project involves deploying RustDesk, a self-hosted remote desktop solution, with a focus on security and performance. The deployment includes setting up Nginx as a reverse proxy, configuring Flask for backend services, and using Docker for containerization. The solution provides end-to-end encryption for secure remote access, making it suitable for both personal and enterprise use cases."
+    longDescription: "This project involves deploying RustDesk, a self-hosted remote desktop solution, with a focus on security and performance. The solution provides end-to-end encryption for secure remote access, making it suitable for both personal and enterprise use cases."
   },
   {
     id: 2,
-    title: "Next-Gen E-Commerce Platform",
-    description: "A full-featured online shopping experience with AI-powered product recommendations and advanced search capabilities.",
-    category: "fullstack",
-    image: "https://placehold.co/800x500/123758/FFFFFF?text=E-Commerce+Platform",
-    tags: ["Next.js", "Node.js", "MongoDB", "Stripe"],
+    title: "MailU Self Hosted Email Server",
+    description: "A complete self-hosted email server solution with spam filtering and webmail access.",
+    category: "self hosted",
+    image: "https://placehold.co/800x500/123758/FFFFFF?text=MailU+SMTP+Server",
+    tags: ["Docker", "Nginx", "Postfix", "Dovecot", "BASH", "Custom Certificate Management"],
     featured: true,
-    demoUrl: "https://demo.example.com/ecommerce",
-    caseStudyUrl: "/case-studies/ecommerce",
-    longDescription: "This modern e-commerce platform delivers a seamless shopping experience with personalized product recommendations powered by AI algorithms. The application features real-time inventory management, secure payment processing with Stripe, and a responsive design that works perfectly across all devices. Built with Next.js for frontend and Node.js with MongoDB for backend services."
+    demoUrl: "https://demo.example.com/mailu",
+    caseStudyUrl: "/case-studies/mailu",
+    longDescription: "This project sets up MailU, a self-hosted email server solution that provides a complete email service with features like spam filtering, webmail access, and custom domain support. The deployment is optimized for security and performance, using Docker for containerization and Nginx for reverse proxying. The solution includes custom certificate management for secure email communication."
   },
   {
     id: 3,
-    title: "Smart City Management Platform",
-    description: "An integrated IoT and AI solution for modern urban management, processing real-time data from thousands of sensors.",
-    category: "ai",
-    image: "https://placehold.co/800x500/C23F0E/FFFFFF?text=Smart+City+Platform",
-    tags: ["React", "Python", "TensorFlow", "IoT", "AWS"],
+    title: "Kanboard Project Management Tool",
+    description: "A self-hosted Kanban project management tool for teams to track tasks and projects efficiently.",
+    category: "self hosted",
+    image: "https://placehold.co/800x500/C23F0E/FFFFFF?text=Kanboard+Project+Management",
+    tags: ["Docker", "Nginx", "SMTP", "BASH", "Custom Certificate Management"],
     featured: true,
-    demoUrl: "https://demo.example.com/smart-city",
-    caseStudyUrl: "/case-studies/smart-city",
-    longDescription: "This comprehensive smart city management platform integrates data from thousands of IoT sensors to optimize urban resources and improve quality of life. The system includes modules for traffic management, energy optimization, waste management, and public safety monitoring. The platform uses advanced AI algorithms to predict and prevent urban issues before they occur."
+    demoUrl: "https://demo.example.com/kanboard",
+    caseStudyUrl: "/case-studies/kanboard",
+    longDescription: "This project involves deploying Kanboard, a self-hosted Kanban project management tool that allows teams to visualize and manage their tasks and projects efficiently. The solution includes features like task tracking, project timelines, and team collaboration tools. It is designed to be lightweight and easy to deploy, making it suitable for small to medium-sized teams."
   },
   {
     id: 4,
