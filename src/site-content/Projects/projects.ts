@@ -51,52 +51,5 @@ export const projects: Project[] = [
     caseStudyUrl: "/case-studies/lake-effect-cleaning",
     longDescription: "Lake Effect Cleaning is a comprehensive platform designed to connect clients with local cleaning professionals. The platform allows users to book cleaning services, make secure payments, and leave reviews for the services received. Built with a modern tech stack including Node.js, React, and MongoDB, the platform provides a seamless user experience with features like real-time availability, service customization, and automated notifications."
   },
-  {
-    id: 5,
-    title: "Healthcare Patient Portal",
-    description: "A secure, HIPAA-compliant patient portal allowing users to access medical records, schedule appointments, and communicate with providers.",
-    category: "fullstack",
-    image: "https://placehold.co/800x500/123758/FFFFFF?text=Healthcare+Portal",
-    tags: ["React", "Node.js", "PostgreSQL", "HIPAA"],
-    featured: false,
-    demoUrl: "https://demo.example.com/patient-portal",
-    caseStudyUrl: "/case-studies/patient-portal",
-    longDescription: "This HIPAA-compliant healthcare portal provides a secure interface for patients to access their medical records, schedule appointments, and communicate with healthcare providers. The platform includes features for prescription refills, telehealth consultations, and secure messaging. Built with strict attention to security and privacy requirements using industry best practices."
-  },
-  {
-    id: 6,
-    title: "Predictive Maintenance System",
-    description: "An industrial IoT solution that uses machine learning to predict equipment failures before they occur, minimizing downtime.",
-    category: "ai",
-    image: "https://placehold.co/800x500/C23F0E/FFFFFF?text=Predictive+Maintenance",
-    tags: ["Python", "TensorFlow", "IoT", "AWS"],
-    featured: false,
-    demoUrl: "https://demo.example.com/predictive-maintenance",
-    caseStudyUrl: "/case-studies/predictive-maintenance",
-    longDescription: "This predictive maintenance system uses machine learning algorithms to analyze sensor data from industrial equipment and predict potential failures before they occur. The solution has helped manufacturing clients reduce downtime by up to 78% and maintenance costs by 35%. The system includes real-time monitoring dashboards, alert mechanisms, and detailed analytics on equipment performance."
-  },
-  {
-    id: 7,
-    title: "Educational Learning Platform",
-    description: "An interactive learning management system with adaptive content delivery based on student performance and learning patterns.",
-    category: "web",
-    image: "https://placehold.co/800x500/0DA6D4/FFFFFF?text=Learning+Platform",
-    tags: ["React", "Node.js", "MongoDB", "ML"],
-    featured: false,
-    demoUrl: "https://demo.example.com/learning-platform",
-    caseStudyUrl: "/case-studies/learning-platform",
-    longDescription: "This comprehensive learning management system revolutionizes education by adapting content delivery based on individual student performance and learning patterns. The platform includes interactive lessons, progress tracking, assessment tools, and a recommendation engine that suggests personalized learning resources. The system has been implemented in multiple educational institutions with significant improvements in student engagement and outcomes."
-  },
-  {
-    id: 8,
-    title: "Supply Chain Optimization Platform",
-    description: "A logistics and supply chain management system using AI to optimize routes, inventory, and delivery scheduling.",
-    category: "fullstack",
-    image: "https://placehold.co/800x500/123758/FFFFFF?text=Supply+Chain",
-    tags: ["React", "Node.js", "PostgreSQL", "AI", "Google Maps API"],
-    featured: false,
-    demoUrl: "https://demo.example.com/supply-chain",
-    caseStudyUrl: "/case-studies/supply-chain",
-    longDescription: "This supply chain optimization platform uses advanced AI algorithms to streamline logistics operations, optimize delivery routes, manage inventory levels, and improve overall supply chain efficiency. The system includes real-time tracking, predictive analytics for demand forecasting, and automated scheduling tools that have helped clients reduce operational costs by up to 25% while improving delivery times and customer satisfaction."
-  },
+
 ];
