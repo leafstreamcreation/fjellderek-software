@@ -41,7 +41,7 @@ export const projects: Project[] = [
   },
   {
     id: 4,
-    title: "Lake Effect Cleaning",
+    title: "Pine Bridge",
     description: "A comprehensive cleaning service platform that connects clients with local cleaning professionals, offering booking, payment, and review features.",
     category: "web",
     image: "https://placehold.co/800x500/0DA6D4/FFFFFF?text=Lake+Effect+Cleaning",
@@ -49,7 +49,7 @@ export const projects: Project[] = [
     featured: true,
     demoUrl: "https://demo.example.com/lake-effect-cleaning",
     caseStudyUrl: "/case-studies/lake-effect-cleaning",
-    longDescription: "Lake Effect Cleaning is a comprehensive platform designed to connect clients with local cleaning professionals. The platform allows users to book cleaning services, make secure payments, and leave reviews for the services received. Built with a modern tech stack including Node.js, React, and MongoDB, the platform provides a seamless user experience with features like real-time availability, service customization, and automated notifications."
+    longDescription: "Pine Bridge is a comprehensive platform designed to connect clients with local cleaning professionals. The platform allows users to book cleaning services, make secure payments, and leave reviews for the services received. Built with a modern tech stack including Node.js, React, and MongoDB, the platform provides a seamless user experience with features like real-time availability, service customization, and automated notifications."
   },
 
 ];
