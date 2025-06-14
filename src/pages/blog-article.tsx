@@ -203,6 +203,7 @@ export default function BlogArticlePage() {
               <div className="flex md:hidden justify-center gap-3 my-8">
                 <Button
                   variant="flat"
+                  isDisabled
                   color="primary"
                   aria-label="Share on Twitter"
                   className="rounded-full"
@@ -217,6 +218,7 @@ export default function BlogArticlePage() {
                 <Button
                   variant="flat"
                   color="primary"
+                  isDisabled
                   aria-label="Share on LinkedIn"
                   className="rounded-full"
                   startContent={
@@ -229,6 +231,7 @@ export default function BlogArticlePage() {
                 </Button>
                 <Button
                   variant="flat" 
+                  isDisabled
                   color="secondary"
                   aria-label="Save Article"
                   className="rounded-full"
@@ -257,6 +260,7 @@ export default function BlogArticlePage() {
               </p>
               <Button
                 as={Link}
+                isDisabled
                 href="/toolkits/sensor-drift-correction"
                 variant="flat"
                 color="secondary"
@@ -274,7 +278,13 @@ export default function BlogArticlePage() {
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-3xl font-bold mb-8">Related Articles</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {SensorDriftIOT.relatedPosts.map((post) => (
+            {(SensorDriftIOT.relatedPosts as Array<{
+              id: string | number;
+              image: string;
+              title: string;
+              category: string;
+              excerpt: string;
+            }>).map((post) => (
               <Card key={post.id} isHoverable className="h-full">
                 <CardHeader className="p-0 overflow-hidden">
                   <Image
@@ -318,7 +328,7 @@ export default function BlogArticlePage() {
       {/* Comment & Next Steps */}
       <section className="py-16">
         <div className="max-w-4xl mx-auto px-4">
-          <Tabs aria-label="Blog options" color="primary" size="lg" radius="md">
+          {/* <Tabs aria-label="Blog options" color="primary" size="lg" radius="md">
             <Tab key="comments" title="Comments (3)">
               <Card className="my-4">
                 <CardBody>
@@ -370,7 +380,7 @@ export default function BlogArticlePage() {
                 </CardBody>
               </Card>
             </Tab>
-          </Tabs>
+          </Tabs> */}
           
           <div className="flex justify-between items-center mt-12">
             <Button
@@ -388,6 +398,7 @@ export default function BlogArticlePage() {
             
             <Button
               as={Link}
+              isDisabled
               href="/subscribe"
               color="secondary"
               variant="flat"

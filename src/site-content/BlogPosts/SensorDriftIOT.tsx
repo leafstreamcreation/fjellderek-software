@@ -124,19 +124,19 @@ function updateCalibrationModel(
   image: "https://placehold.co/1200x600/123758/FFFFFF?text=Sensor+Drift",
   tags: ["IoT", "Sensors", "Machine Learning", "Data Processing"],
   relatedPosts: [
-    {
-      id: 2,
-      title: "Procedural Cloud Generation for WebGL",
-      excerpt: "A deep dive into generating realistic volumetric clouds with WebGL shaders, optimized for real-time rendering in browser environments.",
-      image: "https://placehold.co/600x400/0DA6D4/FFFFFF?text=Procedural+Clouds",
-      category: "Dev Tips"
-    },
-    {
-      id: 3,
-      title: "Optimizing Rotated Rectangle Collision Detection",
-      excerpt: "A performant approach to handling rotated rectangle collisions in 2D game development with JavaScript and WebGL.",
-      image: "https://placehold.co/600x400/C23F0E/FFFFFF?text=Rotated+Rectangles",
-      category: "Dev Tips"
-    }
+    // {
+    //   id: 2,
+    //   title: "Procedural Cloud Generation for WebGL",
+    //   excerpt: "A deep dive into generating realistic volumetric clouds with WebGL shaders, optimized for real-time rendering in browser environments.",
+    //   image: "https://placehold.co/600x400/0DA6D4/FFFFFF?text=Procedural+Clouds",
+    //   category: "Dev Tips"
+    // },
+    // {
+    //   id: 3,
+    //   title: "Optimizing Rotated Rectangle Collision Detection",
+    //   excerpt: "A performant approach to handling rotated rectangle collisions in 2D game development with JavaScript and WebGL.",
+    //   image: "https://placehold.co/600x400/C23F0E/FFFFFF?text=Rotated+Rectangles",
+    //   category: "Dev Tips"
+    // }
   ]
 };
