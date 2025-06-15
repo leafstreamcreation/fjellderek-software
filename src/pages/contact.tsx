@@ -75,6 +75,7 @@ export default function ContactPage() {
     setIsSubmitting(true);
     
     // Simulate API call
+    // TODO: Replace simulated call with an api call to my Mailu server
     try {
       await new Promise(resolve => setTimeout(resolve, 1000));
       onOpen(); // Show success modal
@@ -114,7 +115,7 @@ export default function ContactPage() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex flex-col lg:flex-row gap-12">
             {/* Contact Form */}
-            <div className="w-full lg:w-2/3">
+            {/* <div className="w-full lg:w-2/3">
               <Card className="p-2 shadow-xl">
                 <CardBody className="p-6">
                   <h2 className="text-2xl font-semibold mb-6">Send a Message</h2>
@@ -196,7 +197,7 @@ export default function ContactPage() {
                   </form>
                 </CardBody>
               </Card>
-            </div>
+            </div> */}
             
             {/* Contact Info */}
             <div className="w-full lg:w-1/3">
