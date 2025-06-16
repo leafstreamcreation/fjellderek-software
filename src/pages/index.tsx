@@ -19,7 +19,7 @@ export default function IndexPage() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
             <div className="w-full lg:w-1/2 space-y-6">
-              <Chip color="secondary" variant="flat" className="mb-2">Full Stack Developer & AI Automation Specialist</Chip>
+              <Chip color="secondary" variant="flat" className="mb-2">Full Stack Developer, DevOps, & AI Automation Specialist</Chip>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
                 Transforming <span className="text-secondary-400">Ideas</span> into <span className="text-secondary-400">Intelligent</span> Solutions
               </h1>
