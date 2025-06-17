@@ -145,6 +145,40 @@ export default function IndexPage() {
                 </CardFooter>
               </Card>
             </div>
+
+            <div className="w-full md:w-[calc(33.333%-16px)]">
+              <Card className="w-full h-full shadow-lg hover:shadow-xl transition-shadow">
+                <CardHeader className="pb-0 flex flex-col items-center text-center">
+                  <div className="bg-primary-100 dark:bg-primary-900 p-4 rounded-full mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="text-primary-500">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                    </svg>
+                  </div>
+                  <h3 className="text-2xl font-semibold">Developer Operations</h3>
+                </CardHeader>
+                <CardBody className="text-center">
+                  <p className="text-foreground-500">
+                    Streamlined DevOps practices to enhance your development lifecycle. CI/CD pipelines, containerization, and cloud infrastructure management for efficient deployment and scaling.
+                  </p>
+                  <div className="flex flex-wrap justify-center gap-2 mt-4">
+                    <Chip size="sm" color="secondary" variant="flat">CI/CD</Chip>
+                    <Chip size="sm" color="secondary" variant="flat">Docker</Chip>
+                    <Chip size="sm" color="secondary" variant="flat">Cloud</Chip>
+                  </div>
+                </CardBody>
+                <CardFooter className="justify-center">
+                  <Button 
+                    as={Link} 
+                    color="primary" 
+                    variant="flat" 
+                    radius="md"
+                    href="/services"
+                  >
+                    Learn More
+                  </Button>
+                </CardFooter>
+              </Card>
+            </div>
             
             <div className="w-full md:w-[calc(33.333%-16px)]">
               <Card className="w-full h-full shadow-lg hover:shadow-xl transition-shadow">
