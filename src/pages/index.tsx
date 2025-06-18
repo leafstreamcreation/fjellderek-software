@@ -313,8 +313,8 @@ export default function IndexPage() {
               <Card isHoverable className="w-full h-full hover:text-default-500">
                 <div className="relative overflow-hidden h-72 md:h-80">
                   <Image
-                    src="https://placehold.co/1600x800/C23F0E/FFFFFF?text=Buffalo+Cleaning+Platform"
-                    alt="Buffalo Cleaning Platform"
+                    src="https://placehold.co/1600x800/C23F0E/FFFFFF?text=Pine+Bridge+Cleaning"
+                    alt="Pine Bridge Cleaning Services"
                     className="object-cover w-full h-full transition-transform duration-500 hover:scale-105"
                     width={800}
                     height={500}
@@ -324,12 +324,12 @@ export default function IndexPage() {
                   </div>
                 </div>
                 <CardBody>
-                  <h3 className="text-2xl font-bold mb-2">Buffalo Cleaning Services Platform</h3>
+                  <h3 className="text-2xl font-bold mb-2">Pine Bridge Cleaning Services Platform</h3>
                   <p className="mb-4">
                     A full featured web application for managing cleaning services, including scheduling, payments, and customer management.
                   </p>
                   <div className="flex flex-wrap gap-2 mb-4">
-                    <Chip size="sm" variant="flat" color="secondary">Next.js</Chip>
+                    <Chip size="sm" variant="flat" color="secondary">HeroUI</Chip>
                     <Chip size="sm" variant="flat" color="secondary">Node.js</Chip>
                     <Chip size="sm" variant="flat" color="secondary">MongoDB</Chip>
                   </div>
