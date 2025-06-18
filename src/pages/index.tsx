@@ -273,8 +273,8 @@ export default function IndexPage() {
               <Card isHoverable className="w-full h-full hover:text-default-500">
                 <div className="relative overflow-hidden h-60">
                   <Image
-                    src="https://placehold.co/800x500/123758/FFFFFF?text=Cocina+De+Viaje"
-                    alt="Cocina De Viaje"
+                    src="https://placehold.co/800x500/123758/FFFFFF?text=Self+Hosted+SMTP"
+                    alt="Mailu Self-Hosted SMTP"
                     className="object-cover w-full h-full transition-transform duration-500 hover:scale-105"
                     width={800}
                     height={500}
@@ -284,14 +284,14 @@ export default function IndexPage() {
                   </div>
                 </div>
                 <CardBody>
-                  <h3 className="text-2xl font-bold mb-2">Cocina de Viaje</h3>
+                  <h3 className="text-2xl font-bold mb-2">Mailu Self Hosted SMTP</h3>
                   <p className="mb-4">
-                    An interactive travel and cooking platform using AI to book catering and suggest recipes based on travel destinations and local ingredients.
+                    A self-hosted email server solution that provides a secure and private email experience, with full control over your data.
                   </p>
                   <div className="flex flex-wrap gap-2 mb-4">
-                    <Chip size="sm" variant="flat" color="secondary">Next.js</Chip>
-                    <Chip size="sm" variant="flat" color="secondary">Node.js</Chip>
-                    <Chip size="sm" variant="flat" color="secondary">MongoDB</Chip>
+                    <Chip size="sm" variant="flat" color="secondary">Docker</Chip>
+                    <Chip size="sm" variant="flat" color="secondary">Nginx</Chip>
+                    <Chip size="sm" variant="flat" color="secondary">Postfix/Dovecot</Chip>
                   </div>
                 </CardBody>
                 <CardFooter>
