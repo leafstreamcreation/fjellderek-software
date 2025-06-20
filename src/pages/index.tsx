@@ -313,8 +313,8 @@ export default function IndexPage() {
               <Card isHoverable className="w-full h-full hover:text-default-500">
                 <div className="relative overflow-hidden h-72 md:h-80">
                   <Image
-                    src="https://placehold.co/1600x800/C23F0E/FFFFFF?text=Pine+Bridge+Cleaning"
-                    alt="Pine Bridge Cleaning Services"
+                    src="https://placehold.co/1600x800/C23F0E/FFFFFF?text=Spruce+Bridge+Cleaning"
+                    alt="Spruce Bridge Cleaning Services"
                     className="object-cover w-full h-full transition-transform duration-500 hover:scale-105"
                     width={800}
                     height={500}
@@ -324,7 +324,7 @@ export default function IndexPage() {
                   </div>
                 </div>
                 <CardBody>
-                  <h3 className="text-2xl font-bold mb-2">Pine Bridge Cleaning Services Platform</h3>
+                  <h3 className="text-2xl font-bold mb-2">Spruce Bridge Cleaning Services Platform</h3>
                   <p className="mb-4">
                     A full featured web application for managing cleaning services, including scheduling, payments, and customer management.
                   </p>
@@ -412,7 +412,7 @@ export default function IndexPage() {
                     </svg>
                   </div>
                   <p className="text-foreground-800 dark:text-foreground-200 text-lg mb-6 italic">
-                    "Our e-commerce platform needed a complete overhaul to meet modern demands. The new system not only looks beautiful but has increased our conversion rates by 38%. The entire development process was smooth and professional from start to finish."
+                    "Derek's expertise in web development and DevOps has been a game-changer for our startup. The platform he built for us is not only robust but also incredibly user-friendly. His ability to understand our vision and translate it into a functional product is impressive."
                   </p>
                   <div className="flex items-center">
                     <Avatar 
@@ -422,7 +422,7 @@ export default function IndexPage() {
                     />
                     <div>
                       <p className="font-bold text-lg">Omar Dames</p>
-                      <p className="text-foreground-500">Founder, Buffalo Sparkling Cleaners
+                      <p className="text-foreground-500">Founder, Spruce Bride Cleaning Services
 
                       </p>
                     </div>
