@@ -105,7 +105,7 @@ export default function PortfolioPage() {
                   </div>
                 </CardBody>
                 <CardFooter className="flex justify-between">
-                  <Button 
+                  {/* <Button 
                     isDisabled
                     color="primary"
                     variant="flat"
@@ -130,7 +130,7 @@ export default function PortfolioPage() {
                     }}
                   >
                     Case Study
-                  </Button>
+                  </Button> */}
                 </CardFooter>
               </Card>
             ))}
