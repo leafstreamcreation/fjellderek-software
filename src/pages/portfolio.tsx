@@ -29,10 +29,10 @@ export default function PortfolioPage() {
     ? projects 
     : projects.filter(project => project.category === selectedCategory);
   
-  const openProjectModal = (project: Project) => {
-    setSelectedProject(project);
-    onOpen();
-  };
+  // const openProjectModal = (project: Project) => {
+  //   setSelectedProject(project);
+  //   onOpen();
+  // };
 
   return (
     <DefaultLayout>
