@@ -1,9 +1,7 @@
-import { useState } from "react";
+// import { useState } from "react";
 import DefaultLayout from "@/layouts/default";
 import { 
-  Button, 
-  Input, 
-  Textarea, 
+  Button,  
   Card, 
   CardBody, 
   Link, 
@@ -18,81 +16,81 @@ import {
 } from "@heroui/react";
 
 export default function ContactPage() {
-  const { isOpen, onOpen, onClose } = useDisclosure();
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: ""
-  });
-  const [errors, setErrors] = useState<Record<string, string>>({});
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { isOpen, /*onOpen,*/ onClose } = useDisclosure();
+  // const [formData, setFormData] = useState({
+  //   name: "",
+  //   email: "",
+  //   subject: "",
+  //   message: ""
+  // });
+  // const [errors, setErrors] = useState<Record<string, string>>({});
+  // const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
+  // const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  //   const { name, value } = e.target;
+  //   setFormData(prev => ({
+  //     ...prev,
+  //     [name]: value
+  //   }));
     
-    // Clear error when user types
-    if (errors[name]) {
-      setErrors(prev => ({
-        ...prev,
-        [name]: ""
-      }));
-    }
-  };
+  //   // Clear error when user types
+  //   if (errors[name]) {
+  //     setErrors(prev => ({
+  //       ...prev,
+  //       [name]: ""
+  //     }));
+  //   }
+  // };
 
-  const validateForm = () => {
-    const newErrors: Record<string, string> = {};
+  // const validateForm = () => {
+  //   const newErrors: Record<string, string> = {};
     
-    if (!formData.name.trim()) {
-      newErrors.name = "Name is required";
-    }
+  //   if (!formData.name.trim()) {
+  //     newErrors.name = "Name is required";
+  //   }
     
-    if (!formData.email.trim()) {
-      newErrors.email = "Email is required";
-    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-      newErrors.email = "Please enter a valid email";
-    }
+  //   if (!formData.email.trim()) {
+  //     newErrors.email = "Email is required";
+  //   } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+  //     newErrors.email = "Please enter a valid email";
+  //   }
     
-    if (!formData.message.trim()) {
-      newErrors.message = "Message is required";
-    } else if (formData.message.length < 10) {
-      newErrors.message = "Message must be at least 10 characters";
-    }
+  //   if (!formData.message.trim()) {
+  //     newErrors.message = "Message is required";
+  //   } else if (formData.message.length < 10) {
+  //     newErrors.message = "Message must be at least 10 characters";
+  //   }
     
-    setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
-  };
+  //   setErrors(newErrors);
+  //   return Object.keys(newErrors).length === 0;
+  // };
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+  // const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  //   e.preventDefault();
     
-    if (!validateForm()) return;
+  //   if (!validateForm()) return;
     
-    setIsSubmitting(true);
+  //   setIsSubmitting(true);
     
-    // Simulate API call
-    // TODO: Replace simulated call with an api call to my Mailu server
-    try {
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      onOpen(); // Show success modal
+  //   // Simulate API call
+  //   // TODO: Replace simulated call with an api call to my Mailu server
+  //   try {
+  //     await new Promise(resolve => setTimeout(resolve, 1000));
+  //     onOpen(); // Show success modal
       
-      // Reset form
-      setFormData({
-        name: "",
-        email: "",
-        subject: "",
-        message: ""
-      });
-    } catch (error) {
-      console.error("Error submitting form:", error);
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
+  //     // Reset form
+  //     setFormData({
+  //       name: "",
+  //       email: "",
+  //       subject: "",
+  //       message: ""
+  //     });
+  //   } catch (error) {
+  //     console.error("Error submitting form:", error);
+  //   } finally {
+  //     setIsSubmitting(false);
+  //   }
+  // };
 
   return (
     <DefaultLayout>
