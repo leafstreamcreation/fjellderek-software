@@ -233,8 +233,8 @@ export default function IndexPage() {
               <Card isHoverable className="w-full h-full hover:text-default-500">
                 <div className="relative overflow-hidden h-60">
                   <Image
-                    src="https://placehold.co/800x500/0DA6D4/FFFFFF?text=Langflow+Resume+Writer"
-                    alt="Langflow Resume Writer"
+                    src="https://placehold.co/800x500/0DA6D4/FFFFFF?text=N8N+Social+Media+Agents"
+                    alt="N8N Social Media Agents"
                     className="object-cover w-full h-full transition-transform duration-500 hover:scale-105"
                     width={800}
                     height={500}
@@ -244,14 +244,14 @@ export default function IndexPage() {
                   </div>
                 </div>
                 <CardBody className="">
-                  <h3 className="text-2xl font-bold mb-2">Langflow Resume Writer</h3>
+                  <h3 className="text-2xl font-bold mb-2">N8N Social Media Agents</h3>
                   <p className="mb-4">
-                    A powerful AI-driven resume builder that tailors resumes to job descriptions, enhancing job application success rates.
+                    AI driven N8N agents that scout social media trends and generate content ideas, automating the creative process for social media managers.
                   </p>
                   <div className="flex flex-wrap gap-2 mb-4">
                     <Chip size="sm" variant="flat" color="secondary">React</Chip>
                     <Chip size="sm" variant="flat" color="secondary">Python</Chip>
-                    <Chip size="sm" variant="flat" color="secondary">TensorFlow</Chip>
+                    <Chip size="sm" variant="flat" color="secondary">N8N</Chip>
                   </div>
                 </CardBody>
                 <CardFooter>
