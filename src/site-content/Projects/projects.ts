@@ -51,5 +51,16 @@ export const projects: Project[] = [
     caseStudyUrl: "/case-studies/lake-effect-cleaning",
     longDescription: "Pine Bridge is a comprehensive platform designed to connect clients with local cleaning professionals. The platform allows users to book cleaning services, make secure payments, and leave reviews for the services received. Built with a modern tech stack including Node.js, React, and MongoDB, the platform provides a seamless user experience with features like real-time availability, service customization, and automated notifications."
   },
-
+  {
+    id: 5,
+    title: "N8N Social Media Agents",
+    description: "AI driven N8N agents that scout social media trends and generate content ideas, automating the creative process for social media managers.",
+    category: "AI",
+    image: "https://placehold.co/800x500/0DA6D4/FFFFFF?text=AI+Analytics+Dashboard",
+    tags: ["React", "Python", "N8N", "LLM"],
+    featured: true,
+    demoUrl: "https://demo.example.com/N8N-Social-Media-Agents",
+    caseStudyUrl: "/case-studies/N8N-Social-Media-Agents",
+    longDescription: "This project involves creating AI-driven agents using N8N that scout social media platforms for trends and generate content ideas. The agents leverage large language models (LLMs) to analyze social media data, identify emerging trends, and suggest creative content ideas for social media managers. This automation streamlines the content creation process, allowing teams to focus on strategy and engagement rather than manual trend analysis."
+  },
 ];

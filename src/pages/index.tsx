@@ -252,6 +252,7 @@ export default function IndexPage() {
                     <Chip size="sm" variant="flat" color="secondary">React</Chip>
                     <Chip size="sm" variant="flat" color="secondary">Python</Chip>
                     <Chip size="sm" variant="flat" color="secondary">N8N</Chip>
+                    <Chip size="sm" variant="flat" color="secondary">LLM</Chip>
                   </div>
                 </CardBody>
                 <CardFooter>

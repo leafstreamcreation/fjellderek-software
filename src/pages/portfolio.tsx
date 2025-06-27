@@ -22,8 +22,8 @@ import { Project, projects } from "@/site-content/Projects/projects";
 
 export default function PortfolioPage() {
   const [selectedCategory, setSelectedCategory] = useState("all");
-  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
-  const { isOpen, onOpen, onClose } = useDisclosure();
+  const [selectedProject/*, setSelectedProject*/] = useState<Project | null>(null);
+  const { isOpen, /*onOpen,*/ onClose } = useDisclosure();
 
   const filteredProjects = selectedCategory === "all" 
     ? projects 
