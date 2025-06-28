@@ -15,8 +15,8 @@ import {
   BreadcrumbItem,
   Tooltip,
   Snippet,
-  Tabs,
-  Tab
+  // Tabs,
+  // Tab
 } from "@heroui/react";
 
 import { SensorDriftIOT } from "@/site-content/BlogPosts/SensorDriftIOT";
