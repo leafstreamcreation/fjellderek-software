@@ -120,16 +120,16 @@ export default function IndexPage() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
                   </div>
-                  <h3 className="text-2xl font-semibold">AI & ML Solutions</h3>
+                  <h3 className="text-2xl font-semibold">AI & Agent Solutions</h3>
                 </CardHeader>
                 <CardBody className="text-center">
                   <p className="text-foreground-500">
                     Custom AI implementations that transform your business capabilities. From predictive analytics to natural language processing and computer vision applications.
                   </p>
                   <div className="flex flex-wrap justify-center gap-2 mt-4">
-                    <Chip size="sm" color="primary" variant="flat">TensorFlow</Chip>
-                    <Chip size="sm" color="primary" variant="flat">PyTorch</Chip>
-                    <Chip size="sm" color="primary" variant="flat">OpenAI</Chip>
+                    <Chip size="sm" color="primary" variant="flat">LLM</Chip>
+                    <Chip size="sm" color="primary" variant="flat">Rag</Chip>
+                    <Chip size="sm" color="primary" variant="flat">N8N</Chip>
                   </div>
                 </CardBody>
                 <CardFooter className="justify-center">
