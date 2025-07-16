@@ -21,11 +21,11 @@ export default function AboutPage() {
     { name: "JavaScript", level: 90 },
     { name: "TypeScript", level: 85 },
     { name: "React", level: 92 },
-    { name: "Next.js", level: 88 },
+    { name: "N8N", level: 88 },
     { name: "Node.js", level: 80 },
     { name: "Python", level: 75 },
-    { name: "TensorFlow", level: 70 },
-    { name: "AWS", level: 78 },
+    { name: "Docker", level: 70 },
+    { name: "Spring Boot", level: 78 },
   ];
 
 
