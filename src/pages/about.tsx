@@ -113,13 +113,13 @@ export default function AboutPage() {
             <h3 className="text-xl font-semibold mb-6">Additional Technologies</h3>
             <div className="flex flex-wrap justify-center gap-3">
               <Chip variant="flat" color="primary">Docker</Chip>
-              <Chip variant="flat" color="primary">GraphQL</Chip>
+              <Chip variant="flat" color="primary">Java</Chip>
               <Chip variant="flat" color="primary">MongoDB</Chip>
               <Chip variant="flat" color="primary">PostgreSQL</Chip>
-              <Chip variant="flat" color="secondary">Redux</Chip>
+              <Chip variant="flat" color="secondary">Maven</Chip>
               <Chip variant="flat" color="secondary">Tailwind CSS</Chip>
-              <Chip variant="flat" color="secondary">Firebase</Chip>
-              <Chip variant="flat" color="secondary">CI/CD</Chip>
+              <Chip variant="flat" color="secondary">Vue</Chip>
+              <Chip variant="flat" color="secondary">Angular</Chip>
               <Chip variant="flat" color="primary">Jest</Chip>
               <Chip variant="flat" color="primary">Cypress</Chip>
             </div>
