@@ -54,8 +54,9 @@ export default function AboutPage() {
               <div className="relative">
                 <div className="absolute -top-4 -left-4 w-48 h-48 bg-secondary-500/20 rounded-full animate-pulse"></div>
                 <Avatar 
-                  src="https://placehold.co/400x400/0DA6D4/FFFFFF?text=FD" 
+                  src="Fjellderek.jpeg" 
                   className="w-64 h-64 border-4 border-white shadow-xl z-10"
+                  classNames={{ img: "scale-150 translate-y-16 translate-x-4" }}
                   alt="Fjell Derek"
                 />
               </div>
