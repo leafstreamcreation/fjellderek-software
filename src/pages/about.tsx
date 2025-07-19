@@ -17,6 +17,8 @@ import { experience } from "@/site-content/Experience/experience";
 import { certifications } from "@/site-content/Experience/certifications";
 
 export default function AboutPage() {
+  //TODO: replace with prior skills data
+  //TODO: retrieve from fjell api
   const skills = [
     { name: "JavaScript", level: 90 },
     { name: "TypeScript", level: 85 },
