@@ -4,47 +4,74 @@ import {
   Link,
   Card,
   CardBody,
-  // CardHeader,
-  // CardFooter,
   Image,
   Chip,
   Avatar,
   Divider,
   Progress,
+  Input,
+  Dropdown,
+  DropdownTrigger,
+  DropdownMenu,
+  DropdownItem,
+  Selection,
+  Accordion,
+  AccordionItem,
+  ButtonGroup,
 } from "@heroui/react";
 
 import { experience } from "@/site-content/Experience/experience";
 import { certifications } from "@/site-content/Experience/certifications";
+import { Skill, Group, Filter, groups } from "@/site-content/Skills/skills";
+import { PrimarySkill, SubSkills } from "@/components/skill";
+import { useState } from "react";
+import { HamburgerMenuIcon } from "@/components/icons";
 
 export default function AboutPage() {
-  //TODO: replace with prior skills data
-  //TODO: retrieve from fjell api
-  const skills = [
-    { name: "JavaScript", level: 90 },
-    { name: "TypeScript", level: 85 },
-    { name: "React", level: 92 },
-    { name: "N8N", level: 88 },
-    { name: "Node.js", level: 80 },
-    { name: "Python", level: 75 },
-    { name: "Docker", level: 70 },
-    { name: "Spring Boot", level: 78 },
+  // Skills state management
+  const [groupSelection, setGroupSelection] = useState<Selection>(new Set(["frontend"]));
+  const [groupKey, setGroupKey] = useState("frontend");
+  const [searchKey, setSearchKey] = useState("");
+  const [selectedSkillKey, setSelectedSkillKey] = useState<Selection>(new Set());
+  const [sortSelection, setSortSelection] = useState<"none" | "alphabetic-ascending" | "alphabetic-descending" | "years" | "proficiency">("none");
+  const [showAllSkills, setShowAllSkills] = useState(false);
+
+  // Featured skills (8 skills from different categories)
+  const featuredSkills = [
+    groups.frontend.skills.find(s => s.name === "JavaScript") || groups.frontend.skills[0],
+    groups.frontend.skills.find(s => s.name === "TypeScript") || groups.frontend.skills[1],
+    groups.frontend.skills.find(s => s.name === "React.js") || groups.frontend.skills[2],
+    groups.backend.skills.find(s => s.name === "NodeJS") || groups.backend.skills[0],
+    groups.backend.skills.find(s => s.name === "Python") || groups.backend.skills[1],
+    groups.devops.skills.find(s => s.name === "Docker") || groups.devops.skills[0],
+    groups.devops.skills.find(s => s.name === "CI/CD") || groups.devops.skills[1],
+    groups.qa.skills.find(s => s.name === "Jest") || groups.qa.skills[0],
   ];
 
+  const sortFunctions = {
+    "none": (_a: Skill, _b: Skill) => 0,
+    "alphabetic-ascending": (a: Skill, b: Skill) => new Intl.Collator("en").compare(a.name, b.name),
+    "alphabetic-descending": (a: Skill, b: Skill) => new Intl.Collator("en").compare(b.name, a.name),
+    "years": (a: Skill, b: Skill) => (b.years || 0) - (a.years || 0),
+    "proficiency": (a: Skill, b: Skill) => b.proficiency - a.proficiency,
+  };
 
-  // const awards = [
-  //   {
-  //     title: "Innovation Award",
-  //     organization: "Tech Leaders Summit",
-  //     year: 2023,
-  //     description: "Recognized for groundbreaking work in AI-powered analytics solutions."
-  //   },
-  //   {
-  //     title: "Best Web Application",
-  //     organization: "Developer Excellence Awards",
-  //     year: 2022,
-  //     description: "Awarded for exceptional user experience and technical implementation."
-  //   }
-  // ];
+  function handleSelection(selection: Selection) {
+    const selectedKey = Array.from(selection).join(', ');
+    setSearchKey("");
+    setGroupKey(selectedKey);
+    setGroupSelection(selection);
+    setSortSelection("none");
+    if (groups[selectedKey].featuredFilters) setSearchKey(groups[selectedKey].featuredFilters[0]?.name || "");
+  }
+
+  function filterButtonColor(filterName: string) {
+    return searchKey.toLowerCase().includes(filterName.toLowerCase()) ? "primary" : "default";
+  }
+
+  function sortButtonColor(selection: "none" | "alphabetic-ascending" | "alphabetic-descending" | "years" | "proficiency") {
+    return selection === sortSelection ? "primary" : "default";
+  }
 
   return (
     <DefaultLayout>
@@ -93,24 +120,182 @@ export default function AboutPage() {
             </p>
           </div>
           
+          {/* Featured Skills */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-            {skills.map((skill, index) => (
+            {featuredSkills.map((skill, index) => (
               <Card key={index} className="shadow-md">
                 <CardBody>
                   <div className="flex justify-between items-center mb-2">
                     <h3 className="text-xl font-semibold">{skill.name}</h3>
-                    <Chip size="sm">{skill.level}%</Chip>
+                    <Chip size="sm">{skill.proficiency}%</Chip>
                   </div>
                   <Progress 
-                    value={skill.level} 
+                    value={skill.proficiency} 
                     color={index % 2 === 0 ? "primary" : "secondary"}
                     className="h-2"
                     aria-label={`${skill.name} skill level`}
                   />
+                  {skill.description && (
+                    <p className="text-small text-foreground-500 mt-2">{skill.description}</p>
+                  )}
                 </CardBody>
               </Card>
             ))}
           </div>
+          
+          {/* Toggle for All Skills */}
+          <div className="text-center mb-8">
+            <Button
+              color="secondary"
+              variant={showAllSkills ? "solid" : "bordered"}
+              onPress={() => setShowAllSkills(!showAllSkills)}
+              size="lg"
+            >
+              {showAllSkills ? "Show Less" : "View All Skills"}
+            </Button>
+          </div>
+
+          {/* All Skills Section */}
+          {showAllSkills && (
+            <div className="max-w-4xl mx-auto">
+              <Card fullWidth className="my-8">
+                <CardBody className="items-center overflow-hidden">
+                  <Dropdown shouldBlockScroll={false}>
+                    <DropdownTrigger>
+                      <Button size="lg" startContent={<HamburgerMenuIcon />} color="default" className="text-content2 mb-3">
+                        Choose Category
+                      </Button>
+                    </DropdownTrigger>
+                    <DropdownMenu 
+                      disallowEmptySelection
+                      aria-label="Skill category options"
+                      selectedKeys={groupSelection}
+                      selectionMode="single"
+                      variant="flat"
+                      onSelectionChange={handleSelection}
+                    >
+                      {Object.values(groups).map((group: Group) => (
+                        <DropdownItem key={group.name}>
+                          {group.label}
+                        </DropdownItem>
+                      ))}
+                    </DropdownMenu>
+                  </Dropdown>
+                  
+                  <Divider />
+                  
+                  <Accordion>
+                    <AccordionItem 
+                      key="1"
+                      aria-label="Filter and sort options"
+                      textValue="Filter and sort options"
+                      title={
+                        <div className="inline-block max-w-lg text-center justify-center">
+                          <span className="text-2xl font-bold text-secondary-500">{groups[groupKey].title}</span>
+                        </div>
+                      }
+                      subtitle={
+                        <div className="inline-block max-w-lg text-center justify-center">
+                          <p className="text-foreground-500 mt-2">{groups[groupKey].description}</p>
+                        </div>
+                      }
+                      classNames={{ trigger: "flex-col", title: "text-center", indicator: "rotate-90" }}
+                    >
+                      <Divider />
+                      
+                      <div className="my-4 flex items-center justify-between">
+                        <span className="ml-2 mr-4 text-xl font-semibold inline text-foreground">Filters</span>
+                        <Input 
+                          classNames={{ label: "text-xs" }} 
+                          label="Applied Filter:" 
+                          size="lg" 
+                          value={searchKey} 
+                          onValueChange={setSearchKey} 
+                          isClearable 
+                        />
+                      </div>
+                      
+                      <div className="grid grid-cols-2 gap-2">
+                        {groups[groupKey].featuredFilters?.map((filter: Filter) => (
+                          <Button 
+                            key={filter.name} 
+                            color={filterButtonColor(filter.name)} 
+                            size="sm"
+                            variant="bordered"
+                            onPress={() => setSearchKey(filter.name)}
+                          >
+                            {filter.label}
+                          </Button>
+                        ))}
+                      </div>
+                      
+                      <div className="flex flex-col">
+                        <span className="ml-2 mb-2 mt-4 text-xl font-semibold text-foreground">Sort By</span>
+                        <ButtonGroup fullWidth size="sm" radius="full" color="default">
+                          <Button color={sortButtonColor("none")} onPress={() => setSortSelection("none")}>None</Button>
+                          <Button color={sortButtonColor("alphabetic-ascending")} onPress={() => setSortSelection("alphabetic-ascending")}>Name</Button>
+                          <Button color={sortButtonColor("alphabetic-descending")} onPress={() => setSortSelection("alphabetic-descending")}>Name Z-A</Button>
+                          <Button color={sortButtonColor("years")} onPress={() => setSortSelection("years")}>Years</Button>
+                          <Button color={sortButtonColor("proficiency")} onPress={() => setSortSelection("proficiency")}>Level</Button>
+                        </ButtonGroup>
+                      </div>
+                    </AccordionItem>
+                  </Accordion>
+                </CardBody>
+              </Card>
+
+              {/* Skills Accordion */}
+              <Accordion 
+                selectionMode="single" 
+                selectionBehavior="replace" 
+                itemClasses={{ 
+                  trigger: "justify-between", 
+                  startContent: "w-3/4 grow", 
+                  titleWrapper: "w-0 flex-none" 
+                }}
+                selectedKeys={selectedSkillKey}
+                onSelectionChange={setSelectedSkillKey}
+                className="max-w-4xl"
+              >  
+                {groups[groupKey].skills
+                  .slice()
+                  .sort(sortFunctions[sortSelection])
+                  .map((skill: Skill) => {
+                    if (skill.name.toLowerCase().includes(searchKey.toLowerCase()) || 
+                        skill.keys?.some(key => key.toLowerCase().includes(searchKey.toLowerCase()))) {
+                      
+                      if (skill.subSkills && skill.subSkills.length > 0) {
+                        return (
+                          <AccordionItem 
+                            key={skill.name}
+                            aria-label={`${skill.name} proficiency: ${skill.proficiency}, years experience: ${skill.years || 0}`}
+                            textValue={`${skill.name} proficiency: ${skill.proficiency}, years experience: ${skill.years || 0}`}
+                            classNames={{ base: "max-w-4xl", content: "mx-4" }}
+                            startContent={<PrimarySkill skill={skill} />}
+                          >
+                            <SubSkills skill={skill} />
+                          </AccordionItem>
+                        );
+                      } else {
+                        return (
+                          <AccordionItem 
+                            key={skill.name}
+                            aria-label={`${skill.name} proficiency: ${skill.proficiency}, years experience: ${skill.years || 0}`}
+                            textValue={`${skill.name} proficiency: ${skill.proficiency}, years experience: ${skill.years || 0}`}
+                            hideIndicator
+                            classNames={{ base: "max-w-4xl pointer-events-none" }}
+                            startContent={<PrimarySkill skill={skill} />}
+                          >
+                          </AccordionItem>
+                        );
+                      }
+                    }
+                    return null;
+                  })
+                }
+              </Accordion>
+            </div>
+          )}
           
           <div className="text-center">
             <h3 className="text-xl font-semibold mb-6">Additional Technologies</h3>
@@ -177,14 +362,10 @@ export default function AboutPage() {
           <div className="text-center mb-12">
             <Chip color="primary" variant="flat" className="mb-4">Recognition</Chip>
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Certifications</h2>
-            {/* <p className="text-foreground-500 max-w-2xl mx-auto">
-              Professional certifications and industry recognition for my work.
-            </p> */}
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
             <div>
-              {/* <h3 className="text-2xl font-bold mb-6 text-center md:text-left">Certifications</h3> */}
               <div className="space-y-4">
                 {certifications.map((cert, index) => (
                   <Card key={index} className="shadow-md">
@@ -209,24 +390,6 @@ export default function AboutPage() {
                 ))}
               </div>
             </div>
-            
-            {/* <div>
-              <h3 className="text-2xl font-bold mb-6 text-center md:text-left mt-8 md:mt-0">Awards</h3>
-              <div className="space-y-4">
-                {awards.map((award, index) => (
-                  <Card key={index} className="bg-gradient-to-r from-primary-100 to-transparent dark:from-primary-900/40 dark:to-transparent">
-                    <CardBody>
-                      <div className="flex justify-between items-start mb-2">
-                        <h4 className="text-lg font-semibold">{award.title}</h4>
-                        <Chip size="sm" variant="flat" color="secondary">{award.year}</Chip>
-                      </div>
-                      <p className="text-sm text-foreground-500 mb-2">{award.organization}</p>
-                      <p className="text-foreground-600 dark:text-foreground-400">{award.description}</p>
-                    </CardBody>
-                  </Card>
-                ))}
-              </div>
-            </div> */}
           </div>
         </div>
       </section>
