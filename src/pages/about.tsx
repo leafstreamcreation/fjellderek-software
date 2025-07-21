@@ -38,14 +38,14 @@ export default function AboutPage() {
 
   // Featured skills (8 skills from different categories)
   const featuredSkills = [
-    groups.frontend.skills.find(s => s.name === "JavaScript") || groups.frontend.skills[0],
-    groups.frontend.skills.find(s => s.name === "TypeScript") || groups.frontend.skills[1],
-    groups.frontend.skills.find(s => s.name === "React.js") || groups.frontend.skills[2],
-    groups.backend.skills.find(s => s.name === "NodeJS") || groups.backend.skills[0],
-    groups.backend.skills.find(s => s.name === "Python") || groups.backend.skills[1],
-    groups.devops.skills.find(s => s.name === "Docker") || groups.devops.skills[0],
-    groups.devops.skills.find(s => s.name === "CI/CD") || groups.devops.skills[1],
-    groups.qa.skills.find(s => s.name === "Jest") || groups.qa.skills[0],
+    groups.all.skills.find(s => s.name === "JavaScript") || groups.all.skills[0],
+    groups.all.skills.find(s => s.name === "Typescript") || groups.all.skills[1],
+    groups.all.skills.find(s => s.name === "React.js") || groups.all.skills[2],
+    groups.all.skills.find(s => s.name === "NodeJS") || groups.all.skills[3],
+    groups.all.skills.find(s => s.name === "Python") || groups.all.skills[4],
+    groups.all.skills.find(s => s.name === "Docker") || groups.all.skills[5],
+    groups.all.skills.find(s => s.name === "CI/CD") || groups.all.skills[6],
+    groups.all.skills.find(s => s.name === "Jest") || groups.all.skills[7],
   ];
 
   const sortFunctions = {
