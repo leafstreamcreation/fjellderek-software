@@ -417,6 +417,7 @@ export default function AboutPage() {
                 </svg>
               }
             >
+              //TODO: implement resume download functionality 
               Download Resume
             </Button>
             <Button
