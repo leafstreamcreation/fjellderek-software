@@ -27,6 +27,52 @@ import { PrimarySkill, SubSkills } from "@/components/skill";
 import { useState } from "react";
 import { HamburgerMenuIcon } from "@/components/icons";
 
+// Resume types with their corresponding file names and descriptions
+const resumeOptions = [
+  {
+    key: "fullstack",
+    label: "Full Stack Developer",
+    description: "React, Node.js, TypeScript, PostgreSQL",
+    fileName: "fjellderek-fullstack-resume.pdf",
+    icon: "🚀"
+  },
+  {
+    key: "devops",
+    label: "DevOps Engineer", 
+    description: "Docker, Kubernetes, CI/CD, AWS",
+    fileName: "fjellderek-devops-resume.pdf",
+    icon: "⚙️"
+  },
+  {
+    key: "ai",
+    label: "AI/ML Developer",
+    description: "Python, TensorFlow, PyTorch, LangChain",
+    fileName: "fjellderek-ai-resume.pdf",
+    icon: "🤖"
+  },
+  {
+    key: "frontend",
+    label: "Frontend Specialist",
+    description: "React, Vue, Angular, Tailwind CSS",
+    fileName: "fjellderek-frontend-resume.pdf",
+    icon: "🎨"
+  },
+  {
+    key: "backend",
+    label: "Backend Engineer",
+    description: "Node.js, Python, Java, Microservices",
+    fileName: "fjellderek-backend-resume.pdf",
+    icon: "🔧"
+  },
+  {
+    key: "mobile",
+    label: "Mobile Developer",
+    description: "React Native, Flutter, iOS, Android",
+    fileName: "fjellderek-mobile-resume.pdf",
+    icon: "📱"
+  }
+];
+
 export default function AboutPage() {
   // Skills state management
   const [groupSelection, setGroupSelection] = useState<Selection>(new Set(["frontend"]));
@@ -35,6 +81,10 @@ export default function AboutPage() {
   const [selectedSkillKey, setSelectedSkillKey] = useState<Selection>(new Set());
   const [sortSelection, setSortSelection] = useState<"none" | "alphabetic-ascending" | "alphabetic-descending" | "years" | "proficiency">("none");
   const [showAllSkills, setShowAllSkills] = useState(false);
+  
+  // Resume download state
+  const [selectedResume, setSelectedResume] = useState<Selection>(new Set(["fullstack"]));
+  const [isDownloading, setIsDownloading] = useState(false);
 
   // Featured skills (8 skills from different categories)
   const featuredSkills = [
@@ -72,6 +122,54 @@ export default function AboutPage() {
   function sortButtonColor(selection: "none" | "alphabetic-ascending" | "alphabetic-descending" | "years" | "proficiency") {
     return selection === sortSelection ? "primary" : "default";
   }
+
+  // Resume download handler
+  const handleResumeDownload = async () => {
+    const selectedResumeKey = Array.from(selectedResume)[0] as string;
+    const resume = resumeOptions.find(r => r.key === selectedResumeKey);
+    
+    if (!resume) {
+      console.error("No resume selected");
+      return;
+    }
+
+    setIsDownloading(true);
+    
+    try {
+      const response = await fetch(`/${resume.fileName}`);
+      
+      if (!response.ok) {
+        throw new Error(`Resume not found: ${response.status}`);
+      }
+      
+      const blob = await response.blob();
+      const url = window.URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = resume.fileName;
+      link.setAttribute('aria-label', `Download ${resume.label} resume`);
+      
+      // Trigger download
+      document.body.appendChild(link);
+      link.click();
+      
+      // Cleanup
+      document.body.removeChild(link);
+      window.URL.revokeObjectURL(url);
+      
+    } catch (error) {
+      console.error('Failed to download resume:', error);
+      // You could add a toast notification here
+      alert(`Failed to download resume. The ${resume.label} resume file may not be available yet.`);
+    } finally {
+      setIsDownloading(false);
+    }
+  };
+
+  const getSelectedResumeInfo = () => {
+    const selectedKey = Array.from(selectedResume)[0] as string;
+    return resumeOptions.find(r => r.key === selectedKey) || resumeOptions[0];
+  };
 
   return (
     <DefaultLayout>
@@ -404,22 +502,60 @@ export default function AboutPage() {
             Download my resume to learn more about my experience, or get in touch to discuss your project needs.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              isDisabled
-              size="lg"
-              color="secondary"
-              variant="solid"
-              radius="full"
-              className="font-medium text-lg px-8"
-              startContent={
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-                </svg>
-              }
+            {/* Resume Download Dropdown Button */}
+            <Dropdown 
+              shouldBlockScroll={false}
+              aria-label="Resume download options"
             >
-              //TODO: implement resume download functionality 
-              Download Resume
-            </Button>
+              <DropdownTrigger>
+                <Button
+                  size="lg"
+                  color="secondary"
+                  variant="solid"
+                  radius="full"
+                  className="font-medium text-lg px-8"
+                  isLoading={isDownloading}
+                  startContent={
+                    !isDownloading && (
+                      <svg 
+                        xmlns="http://www.w3.org/2000/svg" 
+                        className="h-5 w-5" 
+                        fill="none" 
+                        viewBox="0 0 24 24" 
+                        stroke="currentColor"
+                        aria-hidden="true"
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                      </svg>
+                    )
+                  }
+                  aria-label={`Download resume - Currently selected: ${getSelectedResumeInfo().label}`}
+                >
+                  Download Resume
+                </Button>
+              </DropdownTrigger>
+              <DropdownMenu
+                aria-label="Select resume type to download"
+                selectedKeys={selectedResume}
+                selectionMode="single"
+                onSelectionChange={setSelectedResume}
+                variant="flat"
+                className="max-w-xs"
+              >
+                {resumeOptions.map((resume) => (
+                  <DropdownItem 
+                    key={resume.key}
+                    description={resume.description}
+                    startContent={<span className="text-lg" role="img" aria-label={`${resume.label} icon`}>{resume.icon}</span>}
+                    onPress={handleResumeDownload}
+                    aria-label={`Download ${resume.label} resume focused on ${resume.description}`}
+                  >
+                    {resume.label}
+                  </DropdownItem>
+                ))}
+              </DropdownMenu>
+            </Dropdown>
+
             <Button
               as={Link}
               href="/contact"
@@ -428,10 +564,18 @@ export default function AboutPage() {
               radius="full"
               className="font-medium text-lg px-8 bg-white/10 backdrop-blur-sm text-white"
               endContent={
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg 
+                  xmlns="http://www.w3.org/2000/svg" 
+                  className="h-5 w-5" 
+                  fill="none" 
+                  viewBox="0 0 24 24" 
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 5l7 7-7 7M5 5l7 7-7 7" />
                 </svg>
               }
+              aria-label="Navigate to contact page"
             >
               Contact Me
             </Button>
