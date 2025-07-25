@@ -33,42 +33,42 @@ const resumeOptions = [
     key: "fullstack",
     label: "Full Stack Developer",
     description: "React, Node.js, TypeScript, PostgreSQL",
-    fileName: "fjellderek-fullstack-resume.pdf",
+    fileName: "derek-fullstack-resume.pdf",
     icon: "🚀"
   },
   {
     key: "devops",
     label: "DevOps Engineer", 
     description: "Docker, Kubernetes, CI/CD, AWS",
-    fileName: "fjellderek-devops-resume.pdf",
+    fileName: "derek-devops-resume.pdf",
     icon: "⚙️"
   },
   {
     key: "ai",
-    label: "AI/ML Developer",
-    description: "Python, TensorFlow, PyTorch, LangChain",
-    fileName: "fjellderek-ai-resume.pdf",
+    label: "AI Automation Specialist",
+    description: "N8N, RAG, Python, AI Tools",
+    fileName: "derek-ai-resume.pdf",
     icon: "🤖"
   },
   {
     key: "frontend",
     label: "Frontend Specialist",
     description: "React, Vue, Angular, Tailwind CSS",
-    fileName: "fjellderek-frontend-resume.pdf",
+    fileName: "derek-frontend-resume.pdf",
     icon: "🎨"
   },
   {
     key: "backend",
     label: "Backend Engineer",
-    description: "Node.js, Python, Java, Microservices",
-    fileName: "fjellderek-backend-resume.pdf",
+    description: "Node.js, TypeScript, Java, Microservices",
+    fileName: "derek-backend-resume.pdf",
     icon: "🔧"
   },
   {
     key: "mobile",
     label: "Mobile Developer",
-    description: "React Native, Flutter, iOS, Android",
-    fileName: "fjellderek-mobile-resume.pdf",
+    description: "GoogleVR, Unity, iOS, Android",
+    fileName: "derek-mobile-resume.pdf",
     icon: "📱"
   }
 ];
