@@ -6,7 +6,7 @@ export type Project = {
     image: string;
     tags: string[];
     featured: boolean;
-    demoUrl: string;
-    caseStudyUrl: string;
+    demoUrl?: string;
+    caseStudyUrl?: string;
     longDescription: string;
   };

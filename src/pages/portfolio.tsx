@@ -22,17 +22,17 @@ import { Project, projects } from "@/site-content/Projects/projects";
 
 export default function PortfolioPage() {
   const [selectedCategory, setSelectedCategory] = useState("all");
-  const [selectedProject/*, setSelectedProject*/] = useState<Project | null>(null);
-  const { isOpen, /*onOpen,*/ onClose } = useDisclosure();
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const { isOpen, onOpen, onClose } = useDisclosure();
 
   const filteredProjects = selectedCategory === "all" 
     ? projects 
     : projects.filter(project => project.category === selectedCategory);
   
-  // const openProjectModal = (project: Project) => {
-  //   setSelectedProject(project);
-  //   onOpen();
-  // };
+  const openProjectModal = (project: Project) => {
+    setSelectedProject(project);
+    onOpen();
+  };
 
   return (
     <DefaultLayout>
@@ -67,9 +67,11 @@ export default function PortfolioPage() {
             onSelectionChange={(key) => setSelectedCategory(String(key))}
           >
             <Tab key="all" title="All Projects" />
-            <Tab key="web" title="Web Development" />
-            <Tab key="ai" title="AI & ML" />
             <Tab key="fullstack" title="Full Stack" />
+            <Tab key="ai" title="AI" />
+            <Tab key="frontend" title="Frontend" />
+            <Tab key="backend" title="Backend" />
+            <Tab key="selfhosted" title="Self Hosting" />
           </Tabs>
           
           {/* Projects Grid */}
@@ -105,8 +107,7 @@ export default function PortfolioPage() {
                   </div>
                 </CardBody>
                 <CardFooter className="flex justify-between">
-                  {/* <Button 
-                    isDisabled
+                  <Button 
                     color="primary"
                     variant="flat"
                     radius="md"
@@ -114,12 +115,11 @@ export default function PortfolioPage() {
                     as={Link}
                     href={project.demoUrl}
                     target="_blank"
-                    className="flex-1 mr-2"
+                    className={ project.demoUrl ? "flex-1 mr-2" : "hidden"}
                   >
                     Live Demo
                   </Button>
                   <Button 
-                    isDisabled
                     color="secondary"
                     variant="flat"
                     radius="md"
@@ -129,8 +129,8 @@ export default function PortfolioPage() {
                       openProjectModal(project);
                     }}
                   >
-                    Case Study
-                  </Button> */}
+                    { project.caseStudyUrl ? "View Case Study" : "Details" }
+                  </Button>
                 </CardFooter>
               </Card>
             ))}
@@ -195,7 +195,7 @@ export default function PortfolioPage() {
               <p className="text-foreground-700 dark:text-foreground-300 mb-4">
                 {selectedProject.longDescription}
               </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+              {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
                 <div className="bg-content2 p-4 rounded-lg">
                   <h4 className="font-bold mb-2">Key Features</h4>
                   <ul className="list-disc pl-5">
@@ -213,7 +213,7 @@ export default function PortfolioPage() {
                     ))}
                   </ul>
                 </div>
-              </div>
+              </div> */}
             </ModalBody>
             <ModalFooter>
               <Button
@@ -228,13 +228,16 @@ export default function PortfolioPage() {
                 href={selectedProject.demoUrl}
                 target="_blank"
                 color="primary"
+                className={selectedProject.demoUrl ? "" : "hidden"}
               >
                 View Live Demo
               </Button>
               <Button
+                isDisabled
                 as={Link}
                 href={selectedProject.caseStudyUrl}
                 color="secondary"
+                className={selectedProject.demoUrl ? "" : "hidden"}
               >
                 Full Case Study
               </Button>
