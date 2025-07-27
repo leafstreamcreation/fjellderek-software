@@ -33,71 +33,71 @@ const blogPosts = [
     readTime: "8 min read",
     image: "https://placehold.co/600x400/123758/FFFFFF?text=Sensor+Drift"
   },
-  // {
-  //   id: 2,
-  //   title: "Procedural Cloud Generation for WebGL",
-  //   excerpt: "A deep dive into generating realistic volumetric clouds with WebGL shaders, optimized for real-time rendering in browser environments.",
-  //   author: {
-  //     name: "Derek Fjell",
-  //     avatar: "https://placehold.co/100/123758/FFFFFF?text=DF"
-  //   },
-  //   date: "April 28, 2025",
-  //   category: "Dev Tips",
-  //   readTime: "12 min read",
-  //   image: "https://placehold.co/600x400/0DA6D4/FFFFFF?text=Procedural+Clouds"
-  // },
-  // {
-  //   id: 3,
-  //   title: "Optimizing Rotated Rectangle Collision Detection",
-  //   excerpt: "A performant approach to handling rotated rectangle collisions in 2D game development with JavaScript and WebGL.",
-  //   author: {
-  //     name: "Derek Fjell",
-  //     avatar: "https://placehold.co/100/123758/FFFFFF?text=DF"
-  //   },
-  //   date: "April 15, 2025",
-  //   category: "Dev Tips",
-  //   readTime: "10 min read",
-  //   image: "https://placehold.co/600x400/C23F0E/FFFFFF?text=Rotated+Rectangles"
-  // },
-  // {
-  //   id: 4,
-  //   title: "Building a Virtualized 3D Mouse for Web Applications",
-  //   excerpt: "Creating an intuitive 3D navigation interface for complex web applications using Three.js and pointer events.",
-  //   author: {
-  //     name: "Derek Fjell",
-  //     avatar: "https://placehold.co/100/123758/FFFFFF?text=DF"
-  //   },
-  //   date: "March 30, 2025",
-  //   category: "Dev Tips",
-  //   readTime: "15 min read",
-  //   image: "https://placehold.co/600x400/123758/FFFFFF?text=3D+Mouse"
-  // },
-  // {
-  //   id: 5,
-  //   title: "Unifying Gamepad and Keyboard Input in Web Games",
-  //   excerpt: "Designing a flexible input system that seamlessly handles both keyboard and gamepad controllers for web-based games.",
-  //   author: {
-  //     name: "Derek Fjell",
-  //     avatar: "https://placehold.co/100/123758/FFFFFF?text=DF"
-  //   },
-  //   date: "March 18, 2025",
-  //   category: "Tech Reviews",
-  //   readTime: "9 min read",
-  //   image: "https://placehold.co/600x400/0DA6D4/FFFFFF?text=Input+Systems"
-  // },
-  // {
-  //   id: 6,
-  //   title: "Modern Encryption Approaches for Progressive Web Apps",
-  //   excerpt: "Implementation strategies for client-side encryption in PWAs to ensure data security while maintaining offline functionality.",
-  //   author: {
-  //     name: "Derek Fjell",
-  //     avatar: "https://placehold.co/100/123758/FFFFFF?text=DF"
-  //   },
-  //   date: "March 5, 2025",
-  //   category: "Tech Reviews",
-  //   readTime: "11 min read",
-  //   image: "https://placehold.co/600x400/C23F0E/FFFFFF?text=PWA+Encryption"
-  // }
+  {
+    id: 2,
+    title: "Procedural Cloud Generation for WebGL",
+    excerpt: "A deep dive into generating realistic volumetric clouds with WebGL shaders, optimized for real-time rendering in browser environments.",
+    author: {
+      name: "Derek Fjell",
+      avatar: "https://placehold.co/100/123758/FFFFFF?text=DF"
+    },
+    date: "April 28, 2025",
+    category: "Dev Tips",
+    readTime: "12 min read",
+    image: "https://placehold.co/600x400/0DA6D4/FFFFFF?text=Procedural+Clouds"
+  },
+  {
+    id: 3,
+    title: "Optimizing Rotated Rectangle Collision Detection",
+    excerpt: "A performant approach to handling rotated rectangle collisions in 2D game development with JavaScript and WebGL.",
+    author: {
+      name: "Derek Fjell",
+      avatar: "https://placehold.co/100/123758/FFFFFF?text=DF"
+    },
+    date: "April 15, 2025",
+    category: "Dev Tips",
+    readTime: "10 min read",
+    image: "https://placehold.co/600x400/C23F0E/FFFFFF?text=Rotated+Rectangles"
+  },
+  {
+    id: 4,
+    title: "Building a Virtualized 3D Mouse for Web Applications",
+    excerpt: "Creating an intuitive 3D navigation interface for complex web applications using Three.js and pointer events.",
+    author: {
+      name: "Derek Fjell",
+      avatar: "https://placehold.co/100/123758/FFFFFF?text=DF"
+    },
+    date: "March 30, 2025",
+    category: "Dev Tips",
+    readTime: "15 min read",
+    image: "https://placehold.co/600x400/123758/FFFFFF?text=3D+Mouse"
+  },
+  {
+    id: 5,
+    title: "Unifying Gamepad and Keyboard Input in Web Games",
+    excerpt: "Designing a flexible input system that seamlessly handles both keyboard and gamepad controllers for web-based games.",
+    author: {
+      name: "Derek Fjell",
+      avatar: "https://placehold.co/100/123758/FFFFFF?text=DF"
+    },
+    date: "March 18, 2025",
+    category: "Tech Reviews",
+    readTime: "9 min read",
+    image: "https://placehold.co/600x400/0DA6D4/FFFFFF?text=Input+Systems"
+  },
+  {
+    id: 6,
+    title: "Modern Encryption Approaches for Progressive Web Apps",
+    excerpt: "Implementation strategies for client-side encryption in PWAs to ensure data security while maintaining offline functionality.",
+    author: {
+      name: "Derek Fjell",
+      avatar: "https://placehold.co/100/123758/FFFFFF?text=DF"
+    },
+    date: "March 5, 2025",
+    category: "Tech Reviews",
+    readTime: "11 min read",
+    image: "https://placehold.co/600x400/C23F0E/FFFFFF?text=PWA+Encryption"
+  }
 ];
 
 // Categories for filtering
