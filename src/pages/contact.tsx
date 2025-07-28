@@ -1,4 +1,4 @@
-// import { useState } from "react";
+import { useState } from "react";
 import DefaultLayout from "@/layouts/default";
 import { 
   Button,  
@@ -12,85 +12,88 @@ import {
   ModalBody,
   ModalFooter,
   useDisclosure,
-  // Divider
+  Divider,
+  Input,
+  Textarea
 } from "@heroui/react";
 
 export default function ContactPage() {
-  const { isOpen, /*onOpen,*/ onClose } = useDisclosure();
-  // const [formData, setFormData] = useState({
-  //   name: "",
-  //   email: "",
-  //   subject: "",
-  //   message: ""
-  // });
-  // const [errors, setErrors] = useState<Record<string, string>>({});
-  // const [isSubmitting, setIsSubmitting] = useState(false);
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: ""
+  });
+  const [errors, setErrors] = useState<Record<string, string>>({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  // const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-  //   const { name, value } = e.target;
-  //   setFormData(prev => ({
-  //     ...prev,
-  //     [name]: value
-  //   }));
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
     
-  //   // Clear error when user types
-  //   if (errors[name]) {
-  //     setErrors(prev => ({
-  //       ...prev,
-  //       [name]: ""
-  //     }));
-  //   }
-  // };
+    // Clear error when user types
+    if (errors[name]) {
+      setErrors(prev => ({
+        ...prev,
+        [name]: ""
+      }));
+    }
+  };
 
-  // const validateForm = () => {
-  //   const newErrors: Record<string, string> = {};
+  const validateForm = () => {
+    const newErrors: Record<string, string> = {};
     
-  //   if (!formData.name.trim()) {
-  //     newErrors.name = "Name is required";
-  //   }
+    if (!formData.name.trim()) {
+      newErrors.name = "Name is required";
+    }
     
-  //   if (!formData.email.trim()) {
-  //     newErrors.email = "Email is required";
-  //   } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-  //     newErrors.email = "Please enter a valid email";
-  //   }
+    if (!formData.email.trim()) {
+      newErrors.email = "Email is required";
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      newErrors.email = "Please enter a valid email";
+    }
     
-  //   if (!formData.message.trim()) {
-  //     newErrors.message = "Message is required";
-  //   } else if (formData.message.length < 10) {
-  //     newErrors.message = "Message must be at least 10 characters";
-  //   }
+    if (!formData.message.trim()) {
+      newErrors.message = "Message is required";
+    } else if (formData.message.length < 10) {
+      newErrors.message = "Message must be at least 10 characters";
+    }
     
-  //   setErrors(newErrors);
-  //   return Object.keys(newErrors).length === 0;
-  // };
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
 
-  // const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-  //   e.preventDefault();
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
     
-  //   if (!validateForm()) return;
+    if (!validateForm()) return;
     
-  //   setIsSubmitting(true);
+    setIsSubmitting(true);
     
-  //   // Simulate API call
-  //   // TODO: Replace simulated call with an api call to my Mailu server
-  //   try {
-  //     await new Promise(resolve => setTimeout(resolve, 1000));
-  //     onOpen(); // Show success modal
+    // Simulate API call
+    // TODO: Replace simulated call with an api call to my Mailu server
+    try {
       
-  //     // Reset form
-  //     setFormData({
-  //       name: "",
-  //       email: "",
-  //       subject: "",
-  //       message: ""
-  //     });
-  //   } catch (error) {
-  //     console.error("Error submitting form:", error);
-  //   } finally {
-  //     setIsSubmitting(false);
-  //   }
-  // };
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      onOpen(); // Show success modal
+      
+      // Reset form
+      setFormData({
+        name: "",
+        email: "",
+        subject: "",
+        message: ""
+      });
+    } catch (error) {
+      console.error("Error submitting form:", error);
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <DefaultLayout>
@@ -113,7 +116,7 @@ export default function ContactPage() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex flex-col lg:flex-row gap-12">
             {/* Contact Form */}
-            {/* <div className="w-full lg:w-2/3">
+            <div className="w-full lg:w-2/3">
               <Card className="p-2 shadow-xl">
                 <CardBody className="p-6">
                   <h2 className="text-2xl font-semibold mb-6">Send a Message</h2>
@@ -195,7 +198,7 @@ export default function ContactPage() {
                   </form>
                 </CardBody>
               </Card>
-            </div> */}
+            </div>
             
             {/* Contact Info */}
             <div className="w-full lg:w-1/3">
@@ -284,10 +287,10 @@ export default function ContactPage() {
                     </div>
                     
                     {/* Divider */}
-                    {/* <Divider className="my-8" /> */}
+                    <Divider className="my-8" />
                     
                     {/* Schedule a Meeting */}
-                    {/* <div>
+                    <div>
                       <h3 className="text-lg font-medium mb-4 flex items-center">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5 mr-2 text-secondary-500">
                           <path fillRule="evenodd" d="M6.75 2.25A.75.75 0 017.5 3v1.5h9V3A.75.75 0 0118 3v1.5h.75a3 3 0 013 3v11.25a3 3 0 01-3 3H5.25a3 3 0 01-3-3V7.5a3 3 0 013-3H6V3a.75.75 0 01.75-.75zm13.5 9a1.5 1.5 0 00-1.5-1.5H5.25a1.5 1.5 0 00-1.5 1.5v7.5a1.5 1.5 0 001.5 1.5h13.5a1.5 1.5 0 001.5-1.5v-7.5z" clipRule="evenodd" />
@@ -316,7 +319,7 @@ export default function ContactPage() {
                       >
                         Book a 30-minute call
                       </Button>
-                    </div> */}
+                    </div>
                   </div> 
                 </CardBody>
               </Card>
