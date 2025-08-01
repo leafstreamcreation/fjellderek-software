@@ -20,8 +20,8 @@ import {
 export default function ContactPage() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [formData, setFormData] = useState({
-    name: "",
-    email: "",
+    senderName: "",
+    senderEmail: "",
     subject: "",
     message: ""
   });
@@ -47,14 +47,14 @@ export default function ContactPage() {
   const validateForm = () => {
     const newErrors: Record<string, string> = {};
     
-    if (!formData.name.trim()) {
-      newErrors.name = "Name is required";
+    if (!formData.senderName.trim()) {
+      newErrors.senderName = "Name is required";
     }
-    
-    if (!formData.email.trim()) {
-      newErrors.email = "Email is required";
-    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-      newErrors.email = "Please enter a valid email";
+
+    if (!formData.senderEmail.trim()) {
+      newErrors.senderEmail = "Email is required";
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.senderEmail)) {
+      newErrors.senderEmail = "Please enter a valid email";
     }
     
     if (!formData.message.trim()) {
@@ -74,17 +74,23 @@ export default function ContactPage() {
     
     setIsSubmitting(true);
     
-    // Simulate API call
-    // TODO: Replace simulated call with an api call to my Mailu server
     try {
-      
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      await fetch(import.meta.env.VITE_CONTACT_ENDPOINT, {
+        method: "POST",
+        mode: "cors",
+        headers: {
+          "Content-Type": "application/json",
+          "x-api-key": import.meta.env.VITE_API_KEY
+        },
+        body: JSON.stringify(formData)
+      });
+
       onOpen(); // Show success modal
       
       // Reset form
       setFormData({
-        name: "",
-        email: "",
+        senderName: "",
+        senderEmail: "",
         subject: "",
         message: ""
       });
@@ -126,14 +132,14 @@ export default function ContactPage() {
                         <Input
                           label="Your Name"
                           placeholder="John Doe"
-                          name="name"
-                          value={formData.name}
+                          name="senderName"
+                          value={formData.senderName}
                           onChange={handleChange}
-                          color={errors.name ? "danger" : "primary"}
+                          color={errors.senderName ? "danger" : "primary"}
                           variant="bordered"
                           radius="sm"
                           isRequired
-                          errorMessage={errors.name}
+                          errorMessage={errors.senderName}
                           className="w-full"
                         />
                       </div>
@@ -141,15 +147,15 @@ export default function ContactPage() {
                         <Input
                           label="Email Address"
                           placeholder="johndoe@example.com"
-                          name="email"
+                          name="senderEmail"
                           type="email"
-                          value={formData.email}
+                          value={formData.senderEmail}
                           onChange={handleChange}
-                          color={errors.email ? "danger" : "primary"}
+                          color={errors.senderEmail ? "danger" : "primary"}
                           variant="bordered"
                           radius="sm"
                           isRequired
-                          errorMessage={errors.email}
+                          errorMessage={errors.senderEmail}
                           className="w-full"
                         />
                       </div>
