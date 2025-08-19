@@ -71,9 +71,9 @@ export default function ContactPage() {
     const { senderName, senderEmail, subject, message } = formData;
 
     const mailRequest = {
-      from: senderEmail,
+      senderEmail,
       replyTo: senderEmail,
-      to: import.meta.env.VITE_DESTINATION_ADDRESS,
+      destination: import.meta.env.VITE_DESTINATION_ADDRESS,
       subject: `Contact Form: ${subject}`,
       text: `From: ${senderName} (${senderEmail})\n\nMessage:\n${message}`,
       html: `
