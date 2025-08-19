@@ -67,6 +67,26 @@ export default function ContactPage() {
     return Object.keys(newErrors).length === 0;
   };
 
+  const composeMailRequest = () => {
+    const { senderName, senderEmail, subject, message } = formData;
+
+    const mailRequest = {
+      from: senderEmail,
+      replyTo: senderEmail,
+      to: import.meta.env.VITE_DESTINATION_ADDRESS,
+      subject: `Contact Form: ${subject}`,
+      text: `From: ${senderName} (${senderEmail})\n\nMessage:\n${message}`,
+      html: `
+        <h3>Contact Form Submission</h3>
+        <p><strong>From:</strong> ${senderName} (${senderEmail})</p>
+        <p><strong>Subject:</strong> ${subject}</p>
+        <p><strong>Message:</strong></p>
+        <p>${message.replace(/\n/g, '<br>')}</p>
+      `
+    };
+    return JSON.stringify(mailRequest);
+  }
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     
@@ -75,6 +95,7 @@ export default function ContactPage() {
     setIsSubmitting(true);
     
     try {
+      const payload = composeMailRequest();
       await fetch(import.meta.env.VITE_CONTACT_ENDPOINT, {
         method: "POST",
         mode: "cors",
@@ -82,9 +103,8 @@ export default function ContactPage() {
           "Content-Type": "application/json",
           "x-api-key": import.meta.env.VITE_API_KEY
         },
-        body: JSON.stringify(formData)
+        body: payload
       });
-
       onOpen(); // Show success modal
       
       // Reset form
