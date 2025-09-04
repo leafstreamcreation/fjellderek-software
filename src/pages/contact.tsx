@@ -96,12 +96,13 @@ export default function ContactPage() {
     
     try {
       const payload = composeMailRequest();
+      //TODO: encrypt api key header before sending
       await fetch(import.meta.env.VITE_CONTACT_ENDPOINT, {
         method: "POST",
         mode: "cors",
         headers: {
           "Content-Type": "application/json",
-          "x-api-key": import.meta.env.VITE_API_KEY
+          "x-api-key": ""//import.meta.env.VITE_API_KEY
         },
         body: payload
       });
