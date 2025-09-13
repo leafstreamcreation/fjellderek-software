@@ -70,6 +70,9 @@ export default function ContactPage() {
   const composeMailRequest = () => {
     const { senderName, senderEmail, subject, message } = formData;
 
+    const iv = crypto.getRandomValues(new Uint8Array(12));
+    const salt = crypto.getRandomValues(new Uint8Array(16));
+
     const mailRequest = {
       senderEmail,
       replyTo: senderEmail,
@@ -83,6 +86,8 @@ export default function ContactPage() {
         <p><strong>Message:</strong></p>
         <p>${message.replace(/\n/g, '<br>')}</p>
       `
+      ,iv: Array.from(iv),
+      salt: Array.from(salt)
     };
     return JSON.stringify(mailRequest);
   }
