@@ -17,7 +17,7 @@ import {
   Textarea
 } from "@heroui/react";
 
-export default function ContactPage() {
+const crypto = window.crypto;
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [formData, setFormData] = useState({
     senderName: "",
@@ -73,7 +73,7 @@ export default function ContactPage() {
     const iv = crypto.getRandomValues(new Uint8Array(12));
     const salt = crypto.getRandomValues(new Uint8Array(16));
 
-    const mailRequest = {
+    return {
       senderEmail,
       replyTo: senderEmail,
       destination: import.meta.env.VITE_DESTINATION_ADDRESS,
@@ -85,12 +85,43 @@ export default function ContactPage() {
         <p><strong>Subject:</strong> ${subject}</p>
         <p><strong>Message:</strong></p>
         <p>${message.replace(/\n/g, '<br>')}</p>
-      `
-      ,iv: Array.from(iv),
-      salt: Array.from(salt)
+      `,
+      iv,
+      salt
     };
-    return JSON.stringify(mailRequest);
-  }
+  };
+
+  const encryptApiKey = async (iv: Uint8Array, salt: Uint8Array) => {
+    const baseKey = await crypto.subtle.importKey(
+      "raw",
+      new TextEncoder().encode(process.env.VITE_API_SECRET || ""),
+      { name: "PBKDF2" },
+      false,
+      ["deriveKey"]
+    );
+    const derivedKey = await crypto.subtle.deriveKey(
+      {
+        name: "PBKDF2",
+        salt,
+        iterations: process.env.VITE_PBKDF2_ITERATIONS ? parseInt(process.env.VITE_PBKDF2_ITERATIONS) : 100000,
+        hash: "SHA-256"
+      },
+      baseKey,
+      { name: "AES-GCM", length: 256 },
+      false,
+      ["encrypt"]
+    );
+    const encrypted = await crypto.subtle.encrypt(
+      { 
+        name: "AES-GCM", 
+        iv,
+        tagLength: process.env.VITE_AES_TAG_LENGTH ? parseInt(process.env.VITE_AES_TAG_LENGTH) : 128
+      },
+      derivedKey,
+      new TextEncoder().encode(process.env.VITE_API_CIPHER || "")
+    );
+    return encrypted; // Return the encrypted API key
+  };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -101,15 +132,29 @@ export default function ContactPage() {
     
     try {
       const payload = composeMailRequest();
-      //TODO: encrypt api key header before sending
+      const apiKeyEncrypted = await encryptApiKey(
+        payload.iv, 
+        payload.salt
+      );
+      // Convert ArrayBuffer to base64 string
+      const arrayBufferToBase64 = (buffer: ArrayBuffer) => {
+        let binary = '';
+        const bytes = new Uint8Array(buffer);
+        for (let i = 0; i < bytes.byteLength; i++) {
+          binary += String.fromCharCode(bytes[i]);
+        }
+        return window.btoa(binary);
+      };
+      const apiKeyEncryptedBase64 = arrayBufferToBase64(apiKeyEncrypted);
+
       await fetch(import.meta.env.VITE_CONTACT_ENDPOINT, {
         method: "POST",
         mode: "cors",
         headers: {
           "Content-Type": "application/json",
-          "x-api-key": ""//import.meta.env.VITE_API_KEY
+          "x-api-key": apiKeyEncryptedBase64
         },
-        body: payload
+        body: JSON.stringify(payload)
       });
       onOpen(); // Show success modal
       
