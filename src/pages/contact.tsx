@@ -17,7 +17,8 @@ import {
   Textarea
 } from "@heroui/react";
 
-const crypto = window.crypto;
+const ContactPage = () => {
+  const crypto = window.crypto;
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [formData, setFormData] = useState({
     senderName: "",
@@ -437,4 +438,6 @@ const crypto = window.crypto;
       </Modal>
     </DefaultLayout>
   );
-}
+};
+
+export default ContactPage;
