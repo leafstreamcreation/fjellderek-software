@@ -138,6 +138,8 @@ const ContactPage = () => {
         payload.salt
       );
       // Convert ArrayBuffer to base64 string
+
+      //include IV and salt concatenated with the api key buffer
       const arrayBufferToBase64 = (buffer: ArrayBuffer) => {
         let binary = '';
         const bytes = new Uint8Array(buffer);
