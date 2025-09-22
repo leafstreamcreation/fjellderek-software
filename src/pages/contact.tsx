@@ -132,12 +132,12 @@ const ContactPage = () => {
     setIsSubmitting(true);
     
     try {
+      //TODO: rewrite to consolidate iv and salt into x-api-key header
       const payload = composeMailRequest();
       const apiKeyEncrypted = await encryptApiKey(
         payload.iv, 
         payload.salt
       );
-      // Convert ArrayBuffer to base64 string
 
       //include IV and salt concatenated with the api key buffer
       const arrayBufferToBase64 = (buffer: ArrayBuffer) => {
