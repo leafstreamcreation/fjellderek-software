@@ -71,9 +71,6 @@ const ContactPage = () => {
   const composeMailRequest = () => {
     const { senderName, senderEmail, subject, message } = formData;
 
-    const iv = crypto.getRandomValues(new Uint8Array(12));
-    const salt = crypto.getRandomValues(new Uint8Array(16));
-
     return {
       senderEmail,
       replyTo: senderEmail,
@@ -86,13 +83,15 @@ const ContactPage = () => {
         <p><strong>Subject:</strong> ${subject}</p>
         <p><strong>Message:</strong></p>
         <p>${message.replace(/\n/g, '<br>')}</p>
-      `,
-      iv,
-      salt
+      `
     };
   };
 
-  const encryptApiKey = async (iv: Uint8Array, salt: Uint8Array) => {
+  const encryptApiKey = async () => {
+    
+    const iv = crypto.getRandomValues(new Uint8Array(12));
+    const salt = crypto.getRandomValues(new Uint8Array(16));
+
     const baseKey = await crypto.subtle.importKey(
       "raw",
       new TextEncoder().encode(process.env.VITE_API_SECRET || ""),
@@ -121,6 +120,8 @@ const ContactPage = () => {
       derivedKey,
       new TextEncoder().encode(process.env.VITE_API_CIPHER || "")
     );
+    encrypted
+    //todo: add iv and salt to the encrypted result
     return encrypted; // Return the encrypted API key
   };
 
