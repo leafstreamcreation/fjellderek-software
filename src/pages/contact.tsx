@@ -115,14 +115,17 @@ const ContactPage = () => {
       { 
         name: "AES-GCM", 
         iv,
-        tagLength: process.env.VITE_AES_TAG_LENGTH ? parseInt(process.env.VITE_AES_TAG_LENGTH) : 128
+        tagLength: parseInt(process.env.VITE_AES_TAG_LENGTH || "128")
       },
       derivedKey,
       new TextEncoder().encode(process.env.VITE_API_CIPHER || "")
     );
-    encrypted
+    const fullKey = new Uint8Array(salt.byteLength + iv.byteLength + encrypted.byteLength);
+    fullKey.set(salt, 0);
+    fullKey.set(iv, salt.byteLength);
+    fullKey.set(new Uint8Array(encrypted), salt.byteLength + iv.byteLength);
     //todo: add iv and salt to the encrypted result
-    return encrypted; // Return the encrypted API key
+    return fullKey; // Return the encrypted API key
   };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
