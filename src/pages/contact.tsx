@@ -89,8 +89,8 @@ const ContactPage = () => {
 
   const encryptApiKey = async () => {
     
-    const iv = crypto.getRandomValues(new Uint8Array(12));
-    const salt = crypto.getRandomValues(new Uint8Array(16));
+    const iv = crypto.getRandomValues(new Uint8Array(parseInt(process.env.VITE_AES_IV_LENGTH || "12")));
+    const salt = crypto.getRandomValues(new Uint8Array(parseInt(process.env.VITE_PBKDF2_SALT_LENGTH || "16")));
 
     const baseKey = await crypto.subtle.importKey(
       "raw",
@@ -103,7 +103,7 @@ const ContactPage = () => {
       {
         name: "PBKDF2",
         salt,
-        iterations: process.env.VITE_PBKDF2_ITERATIONS ? parseInt(process.env.VITE_PBKDF2_ITERATIONS) : 100000,
+        iterations: parseInt(process.env.VITE_PBKDF2_ITERATIONS || "100000"),
         hash: "SHA-256"
       },
       baseKey,
@@ -121,11 +121,10 @@ const ContactPage = () => {
       new TextEncoder().encode(process.env.VITE_API_CIPHER || "")
     );
     const fullKey = new Uint8Array(salt.byteLength + iv.byteLength + encrypted.byteLength);
-    fullKey.set(salt, 0);
-    fullKey.set(iv, salt.byteLength);
-    fullKey.set(new Uint8Array(encrypted), salt.byteLength + iv.byteLength);
-    //todo: add iv and salt to the encrypted result
-    return fullKey; // Return the encrypted API key
+    fullKey.set(new Uint8Array(encrypted), 0);
+    fullKey.set(iv, encrypted.byteLength);
+    fullKey.set(salt, encrypted.byteLength + iv.byteLength);
+    return fullKey;
   };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -138,21 +137,14 @@ const ContactPage = () => {
     try {
       //TODO: rewrite to consolidate iv and salt into x-api-key header
       const payload = composeMailRequest();
-      const apiKeyEncrypted = await encryptApiKey(
-        payload.iv, 
-        payload.salt
-      );
+      const apiKeyEncrypted = await encryptApiKey();
+      
+      let binary = '';
+      for (let i = 0; i < apiKeyEncrypted.byteLength; i++) {
+        binary += String.fromCharCode(apiKeyEncrypted[i]);
+      }
 
-      //include IV and salt concatenated with the api key buffer
-      const arrayBufferToBase64 = (buffer: ArrayBuffer) => {
-        let binary = '';
-        const bytes = new Uint8Array(buffer);
-        for (let i = 0; i < bytes.byteLength; i++) {
-          binary += String.fromCharCode(bytes[i]);
-        }
-        return window.btoa(binary);
-      };
-      const apiKeyEncryptedBase64 = arrayBufferToBase64(apiKeyEncrypted);
+      const apiKeyEncryptedBase64 = window.btoa(binary);
 
       await fetch(import.meta.env.VITE_CONTACT_ENDPOINT, {
         method: "POST",
