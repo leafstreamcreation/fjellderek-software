@@ -89,12 +89,12 @@ const ContactPage = () => {
 
   const encryptApiKey = async () => {
     
-    const iv = crypto.getRandomValues(new Uint8Array(parseInt(process.env.VITE_AES_IV_LENGTH || "12")));
-    const salt = crypto.getRandomValues(new Uint8Array(parseInt(process.env.VITE_PBKDF2_SALT_LENGTH || "16")));
+    const iv = crypto.getRandomValues(new Uint8Array(parseInt(import.meta.env.VITE_AES_IV_LENGTH || "12")));
+    const salt = crypto.getRandomValues(new Uint8Array(parseInt(import.meta.env.VITE_PBKDF2_SALT_LENGTH || "16")));
 
     const baseKey = await crypto.subtle.importKey(
       "raw",
-      new TextEncoder().encode(process.env.VITE_API_SECRET || ""),
+      new TextEncoder().encode(import.meta.env.VITE_API_SECRET || ""),
       { name: "PBKDF2" },
       false,
       ["deriveKey"]
@@ -103,7 +103,7 @@ const ContactPage = () => {
       {
         name: "PBKDF2",
         salt,
-        iterations: parseInt(process.env.VITE_PBKDF2_ITERATIONS || "100000"),
+        iterations: parseInt(import.meta.env.VITE_PBKDF2_ITERATIONS || "100000"),
         hash: "SHA-256"
       },
       baseKey,
@@ -115,16 +115,16 @@ const ContactPage = () => {
       { 
         name: "AES-GCM", 
         iv,
-        tagLength: parseInt(process.env.VITE_AES_TAG_LENGTH || "128")
+        tagLength: parseInt(import.meta.env.VITE_AES_TAG_LENGTH || "128")
       },
       derivedKey,
-      new TextEncoder().encode(process.env.VITE_API_CIPHER || "")
+      new TextEncoder().encode(import.meta.env.VITE_API_CIPHER || "")
     );
     const fullKey = new Uint8Array(salt.byteLength + iv.byteLength + encrypted.byteLength);
     fullKey.set(new Uint8Array(encrypted), 0);
     fullKey.set(iv, encrypted.byteLength);
     fullKey.set(salt, encrypted.byteLength + iv.byteLength);
-    return fullKey;
+    return fullKey
   };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
